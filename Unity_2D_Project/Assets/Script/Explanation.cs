@@ -46,4 +46,8 @@ public class Explanation : MonoBehaviour
     // 7. 카메라 세팅
     //    1) Player에 카메라를 고정시키는 방법중 쉬운 방법은 Player Object에 메인 카메라를 집어넣으면 된다.
     //    2) 그 후 메인 카메라의 위치를 Player의 중심으로 맞춰준다. (x, y모두 0)
+
+    // 8. AI 행동로직 생성하기
+    //    1) 우선적으로 AI가 어떤 행동을 할지 결정하고 진행해야 한다.
+    //    2) 보통 AI 행동 로직을 생성할 땐 Random을 이용하여 생성한다.
 }

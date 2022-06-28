@@ -17,7 +17,7 @@ public class Player_Move : MonoBehaviour
         ani = GetComponent<Animator>();
     }
 
-    void Update()
+    void Update()   // 1회 입력을 해서 진행할 경우 그냥 Update 사용
     {
         // Jump
         if (Input.GetButtonDown("Jump") && !ani.GetBool("isJumping"))    // GetBool : 현재 진행중인 animation의 값 받아오기
@@ -44,7 +44,7 @@ public class Player_Move : MonoBehaviour
             ani.SetBool("isWalking", true);
     }
 
-    void FixedUpdate()
+    void FixedUpdate()  // 물리기반 Update
     {
         // 캐릭터가 데굴데굴 구를경우 Rigidbody에서 Constraints에 Freeze Rotation Z를 체크해줘야 한다.
         // RayCast : Object 검색을 위해 Ray를 쏘는 방식(일종의 레이저)
