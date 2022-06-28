@@ -35,4 +35,15 @@ public class Explanation : MonoBehaviour
     //    1) 프로젝트를 진행하면서 공기저항을 넣게 되면 우리가 생각했던거 보다 Object가 늦게 떯어질 수 있다.
     //    2) 이때 Project setting -> Physics 2D에서 중력 값을 설정하면 프로젝트 모든 물체의 중력을 바꿀 수 있다.
     //    3) 모든 프로젝트에 건들이기 싫고 한 Object의 중력만 바꾸고 싶다면 Rigidbody의 Gravity Scale을 통해 바꿀 수 있다.
+
+    // 6. 타일팔레트
+    //    1) Window -> 2D -> Tile Palette를 통해 생성할 수 있다. (Tile Palette : 타일을 사용하기 위해 모아둔 프리펩)
+    //    2) 팔레트를 생성했다면 사용할 Sprites를 끌어와 저장한다. (쓰기 편하게 위치 정돈 하기)
+    //    3) Hierarchy에 2D Object -> TileMap을 통해 TileMap을 생성한다.
+    //    4) 생성한 TileMap을 팔레트를 이용하여 Map을 그린다.
+    //    5) 생성한 TileMap에 TileMap Collider 2D Component를 생성하면 Collider를 생성할 수 있다.
+
+    // 7. 카메라 세팅
+    //    1) Player에 카메라를 고정시키는 방법중 쉬운 방법은 Player Object에 메인 카메라를 집어넣으면 된다.
+    //    2) 그 후 메인 카메라의 위치를 Player의 중심으로 맞춰준다. (x, y모두 0)
 }
