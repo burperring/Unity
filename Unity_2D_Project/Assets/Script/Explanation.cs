@@ -31,4 +31,8 @@ public class Explanation : MonoBehaviour
     //    4) 생성했다면 화살표를 눌러 Conditions에 해당 매개변수를 추가해준다.
     //    5) Has Exit Time을 True로 설정하면 이전 애니메이션이 끝나기 전까지 다음 애니메이션을 진행하지 않는다.
 
+    //  5. 중력 값 설정하기
+    //    1) 프로젝트를 진행하면서 공기저항을 넣게 되면 우리가 생각했던거 보다 Object가 늦게 떯어질 수 있다.
+    //    2) 이때 Project setting -> Physics 2D에서 중력 값을 설정하면 프로젝트 모든 물체의 중력을 바꿀 수 있다.
+    //    3) 모든 프로젝트에 건들이기 싫고 한 Object의 중력만 바꾸고 싶다면 Rigidbody의 Gravity Scale을 통해 바꿀 수 있다.
 }
