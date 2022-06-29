@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+    public GameManager gameManager;
     public float jumpPower;
     public float maxSpeed;
     Rigidbody2D rigid;
@@ -78,8 +79,53 @@ public class Player_Move : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
-            OnDamaged(collision.transform.position);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            // Attack
+            if (rigid.velocity.y < 0 && transform.position.y > collision.transform.position.y)
+                OnAttack(collision.transform);
+            else // Damaged
+                OnDamaged(collision.transform.position);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Items")
+        {
+            // Point
+            bool isBronze = collision.gameObject.name.Contains("Bronze");
+            bool isSilver = collision.gameObject.name.Contains("Silver");
+            bool isGold = collision.gameObject.name.Contains("Gold");
+
+            if(isBronze)
+                gameManager.stagePoint += 10;
+            else if(isSilver)
+                gameManager.stagePoint += 50;
+            else if(isGold)
+                gameManager.stagePoint += 100;
+
+            // Deactive Item
+            collision.gameObject.SetActive(false);
+        }
+        else if(collision.gameObject.tag == "Finish")
+        {
+            // Next Stage
+            gameManager.NextStage();
+        }
+    }
+
+    void OnAttack(Transform enemy)
+    {
+        // Point
+        gameManager.stagePoint += 100;
+
+        // Reaction Force
+        rigid.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+
+        // Enemy Die
+        EnemyMove enemyMove = enemy.GetComponent<EnemyMove>();
+        enemyMove.OnDamaged();
     }
 
     void OnDamaged(Vector2 targetPos)

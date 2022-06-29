@@ -7,6 +7,7 @@ public class EnemyMove : MonoBehaviour
     Rigidbody2D rigid;
     Animator ani;
     SpriteRenderer sRenderer;
+    CapsuleCollider2D col;
     public int nextMove;
 
     private void Awake()
@@ -14,6 +15,7 @@ public class EnemyMove : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         sRenderer = GetComponent<SpriteRenderer>();
+        col = GetComponent<CapsuleCollider2D>();
 
         EnemyNextMove();
     }
@@ -60,5 +62,28 @@ public class EnemyMove : MonoBehaviour
         // Recursive
         // Invoek : 주어진 시간이 지난 뒤, 지정된 함수를 실행하는 함수
         Invoke("EnemyNextMove", nextInvokeTime);     // 5초 딜레이를 준 재귀함수
+    }
+
+    public void OnDamaged()
+    {
+        // Sprite Alpha
+        sRenderer.color = new Color(1, 1, 1, 0.4f);
+
+        // Sprite Flip Y
+        sRenderer.flipY = true;
+
+        // Collider Disable
+        col.enabled = false;
+
+        // Die Effect Jump
+        rigid.AddForce(Vector2.up * 2.5f, ForceMode2D.Impulse);
+
+        // Destroy
+        Invoke("DeActive", 5);
+    }
+
+    void DeActive()
+    {
+        gameObject.SetActive(false);
     }
 }
