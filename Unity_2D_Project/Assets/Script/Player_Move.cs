@@ -75,4 +75,37 @@ public class Player_Move : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+            OnDamaged(collision.transform.position);
+    }
+
+    void OnDamaged(Vector2 targetPos)
+    {
+        // Animation
+        ani.SetTrigger("doDamaged");
+
+        // Change Layer (Immortal Active)
+        gameObject.layer = 11;
+
+        // View Alpha
+        sRender.color = new Color(1, 1, 1, 0.4f);   // Color의 4번째 값은 투명도를 나타낸다.
+
+        // Reaction Force
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc, 1)*9, ForceMode2D.Impulse);
+
+        Invoke("OffDamaged", 2);
+    }
+
+    void OffDamaged()
+    {
+        // Change Layer (Immortal Active)
+        gameObject.layer = 10;
+
+        // View Alpha
+        sRender.color = new Color(1, 1, 1, 1);
+    }
 }

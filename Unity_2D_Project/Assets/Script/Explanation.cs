@@ -50,4 +50,6 @@ public class Explanation : MonoBehaviour
     // 8. AI 행동로직 생성하기
     //    1) 우선적으로 AI가 어떤 행동을 할지 결정하고 진행해야 한다.
     //    2) 보통 AI 행동 로직을 생성할 땐 Random을 이용하여 생성한다.
+    //    3) 재귀함수를 사용할 경우 딜레이 없이 구현하는 것은 위험하다. (Invoke를 통해 딜레이를 구현해준다.)
+    //    4) Emeny와 Spike끼리 충돌을 하지 않게 하기위해서 Project Setting -> Physics2D 제일 아래 체크박스를 통해 설정할 수 있다.
 }

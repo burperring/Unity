@@ -47,13 +47,11 @@ public class EnemyMove : MonoBehaviour
         ani.SetInteger("EnemyWalkSpeed", nextMove);  // SetInteger("들어간 애니메이션 함수", 값)
 
         EnemyInvoke();
-
-        // EnemyNextMove();     // 딜레이 없이 재귀함수를 사용하는 것은 위험하다.
     }
 
     void EnemyInvoke()
     {
-        float nextInvokeTime = Random.Range(1.5f, 3.5f);
+        float nextInvokeTime = Random.Range(2f, 5f);
 
         // Filp Sprite
         if (nextMove != 0)
