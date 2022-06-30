@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0309201A-A69D-FAE8-90AD-A628B61BB153}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Samples.Runtime", "Unity.2D.Animation.Samples.Runtime.csproj", "{317D2BF2-C325-D07A-ECE8-43472C5184AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.PixelPerfect.Samples", "Unity.2D.PixelPerfect.Samples.csproj", "{36B7F825-1F43-3E12-032D-4FBFAD271880}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Samples.Dependency", "Unity.2D.Animation.Samples.Dependency.csproj", "{F49D93FD-860A-345F-E848-C0C171CD9884}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0309201A-A69D-FAE8-90AD-A628B61BB153}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Samples.Runtime", "Unity.2D.Animation.Samples.Runtime.csproj", "{317D2BF2-C325-D07A-ECE8-43472C5184AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Samples.Dependency", "Unity.2D.Animation.Samples.Dependency.csproj", "{F49D93FD-860A-345F-E848-C0C171CD9884}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{D015E0E0-E4F0-3A46-6B71-9E5A30454754}"
 EndProject
@@ -21,22 +21,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F49D93FD-860A-345F-E848-C0C171CD9884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F49D93FD-860A-345F-E848-C0C171CD9884}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F49D93FD-860A-345F-E848-C0C171CD9884}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F49D93FD-860A-345F-E848-C0C171CD9884}.Release|Any CPU.Build.0 = Release|Any CPU
 		{317D2BF2-C325-D07A-ECE8-43472C5184AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{317D2BF2-C325-D07A-ECE8-43472C5184AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{317D2BF2-C325-D07A-ECE8-43472C5184AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{317D2BF2-C325-D07A-ECE8-43472C5184AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B7F825-1F43-3E12-032D-4FBFAD271880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0309201A-A69D-FAE8-90AD-A628B61BB153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49D93FD-860A-345F-E848-C0C171CD9884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49D93FD-860A-345F-E848-C0C171CD9884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49D93FD-860A-345F-E848-C0C171CD9884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49D93FD-860A-345F-E848-C0C171CD9884}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D015E0E0-E4F0-3A46-6B71-9E5A30454754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D015E0E0-E4F0-3A46-6B71-9E5A30454754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D015E0E0-E4F0-3A46-6B71-9E5A30454754}.Release|Any CPU.ActiveCfg = Release|Any CPU
