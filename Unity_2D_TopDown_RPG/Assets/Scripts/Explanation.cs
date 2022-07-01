@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Explan : MonoBehaviour
 {
+    // ** Player에 넣은 카메라가 혼자 굴러다닐 경우 Player의 Rigidbody에서 z축을 고정시켜주면 문제가 해결된다.
+    // ** Public 인자값 꼭 넣어주기
+
     // 1. Rule Tile : 규칙을 정할 수 있는 타일
     //    1) Unity에서 기본적으로 제공하는 방식이 아니다.
     //    2) 구글에서 2D Extra 검색 -> GitHub -> 2d-extras 다운로드
@@ -28,4 +31,17 @@ public class Explan : MonoBehaviour
     //    5) Assets Pixels Per Unit의 값을 가지고 있는 Pixel 해상도와 같게 만들어주면 된다.
     //    6) X, Y, Stretch Fill을 true로 바꿔줘야 한다.
 
+    // 5. 애니메이션 세팅
+    //    1) 애니메이션 세팅할 때 Setting -> Transition Duration을 0 으로 세팅하면 움직임 변화를 바로 보여줄 수 있다.
+    //    2) 움직임 애니메이션을 진행할 때 키 입력을 꾹 누르고 있으면 값이 계속 들어가게 되어서 애니메이션이 실행되지 않는다.
+    //    3) 프로그래밍을 통해 강제적으로 키 입력을 한번만 넣어주면 된다.
+    //    4) 애니메이션에서 방향전환이 바로바로 실행되지 않는 경우 animator 세팅에서 can transition to self를 해제해야 한다.
+    //    5) 여러개의 이미지를 통한 애니메이션이 아닌 특정 이미지가 움직이는 애니메이션을 만들기 위해서는 Animator 컴포넌트에 Animator Controller와 Animation을 넣어줘야 한다.
+    //    6) Animator Controller와 Animation은 마우스 우클릭을 통해 생성할 수 있다.
+    //    7) 세팅이 완료되면 Window -> Animation 창을 열어 애니메이션을 제작하면 된다.
+
+    // 6. UI 세팅
+    //    1) 특정 이미지를 늘어뜨리지 않고 외곽은 그대로 냅둔 채 안쪽만 채워넣기 위해서는 Image Type을 Sliced로 변경한다.
+    //    2) Sliced를 사용하기 위해서는 Sprite Editor에 들어가서 Border값을 지정해줘야 한다.
+    //    3) 이미지를 양끝으로 가득채우기 위해서는 Ctrl + Shift + Alt를 모두 누른 다음 stretch에 원하는 위치를 선택하여 설정한다.
 }
