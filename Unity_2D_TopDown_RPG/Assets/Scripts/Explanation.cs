@@ -44,4 +44,9 @@ public class Explan : MonoBehaviour
     //    1) 특정 이미지를 늘어뜨리지 않고 외곽은 그대로 냅둔 채 안쪽만 채워넣기 위해서는 Image Type을 Sliced로 변경한다.
     //    2) Sliced를 사용하기 위해서는 Sprite Editor에 들어가서 Border값을 지정해줘야 한다.
     //    3) 이미지를 양끝으로 가득채우기 위해서는 Ctrl + Shift + Alt를 모두 누른 다음 stretch에 원하는 위치를 선택하여 설정한다.
+
+    // 7. 대화창 세팅
+    //    1) 대화 데이터를 저장할 땐 Dictionary 변수를 사용한다.
+    //    2) Dictionary 변수는 Key값과 Key와 연결된 Value 2개를 사용하는 변수로 Type을 2개를 꼭 작성해줘야 한다.
+    //    3) 반환 값이 있는 재귀함수는 return까지 꼭 써줘야 한다.
 }
