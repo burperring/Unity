@@ -62,14 +62,15 @@
     <Analyzer Include="C:\Users\USER\Unity_Program\Unity\Unity_2D_TopDown_RPG\Library\PackageCache\com.unity.entities@0.51.0-preview.32\Unity.Entities\SourceGenerators\Unity.Entities.SourceGen.AuthoringComponent.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\QuestManager.cs" />
     <Compile Include="Assets\TopDown 2D RPG BE3\ReadMe\Scripts\ReadmeBE3.cs" />
     <Compile Include="Assets\Scripts\PlayerAction.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Explanation.cs" />
+    <Compile Include="Assets\Scripts\QuestData.cs" />
     <Compile Include="Assets\Scripts\ObjData.cs" />
     <Compile Include="Assets\Scripts\TalkManager.cs" />
-    <Compile Include="Assets\Scripts\QuestManager.cs" />
-    <Compile Include="Assets\Scripts\QuestData.cs" />
+    <Compile Include="Assets\Scripts\TypeEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
