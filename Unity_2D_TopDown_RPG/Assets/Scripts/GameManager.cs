@@ -9,16 +9,34 @@ public class GameManager : MonoBehaviour
     public QuestManager questManager;
     public TypeEffect talk;
     public Image portraitImg;
+    public GameObject menuSet;
     public GameObject scanObject;
+    public GameObject player;
     public Animator PortraitAnim;
     public Animator talkPanel;
     public Sprite prevProtrait;
+    public Text questText;
     public bool isActionPanel;
     public int talkIndex;
 
+    bool isNameUi;
+
     void Start()
     {
-        Debug.Log(questManager.CheckQuest());
+        GameLoad();
+        questText.text = questManager.CheckQuest();
+    }
+
+    void Update()
+    {
+        // Sub Menu
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (menuSet.activeSelf)
+                menuSet.SetActive(false);
+            else
+                menuSet.SetActive(true);
+        }
     }
 
     public void Action(GameObject Object)
@@ -26,7 +44,16 @@ public class GameManager : MonoBehaviour
         // Get Current Object
         scanObject = Object;
         ObjData objData = scanObject.GetComponent<ObjData>();
+
+        // Set Talk Text
         Talk(objData.id, objData.isNpc);
+
+        // Set NPC Name
+        if (isNameUi)
+        {
+            Text name = talk.nameUi.GetComponentInChildren<Text>();
+            name.text = Object.name;
+        }
 
         // Visible Talk for Action
         talkPanel.SetBool("isShow", isActionPanel);
@@ -54,7 +81,7 @@ public class GameManager : MonoBehaviour
         {
             isActionPanel = false;
             talkIndex = 0;
-            Debug.Log(questManager.CheckQuest(id));
+            questText.text = questManager.CheckQuest(id);
             return;  // void return은 강제종료 역할
         }
 
@@ -67,6 +94,10 @@ public class GameManager : MonoBehaviour
             portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));    // Parse() : 문자열을 해당 타입으로 변환해주는 함수
             portraitImg.color = new Color(1, 1, 1, 1);
 
+            // Check NPC Name
+            isNameUi = true;
+            talk.nameUi.SetActive(isNameUi);
+
             // Animation Portrait
             if (prevProtrait != portraitImg.sprite)
             {
@@ -78,6 +109,10 @@ public class GameManager : MonoBehaviour
         {
             talk.SetMsg(talkData);
 
+            // Check NPC Name
+            isNameUi = false;
+            talk.nameUi.SetActive(isNameUi);
+
             // Hide Portrait
             portraitImg.color = new Color(1, 1, 1, 0);
         }
@@ -85,5 +120,42 @@ public class GameManager : MonoBehaviour
         // Next Talk
         isActionPanel = true;
         talkIndex++;
+    }
+
+    public void GameSave()
+    {
+        // Save
+        PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
+        PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+        PlayerPrefs.SetFloat("PlayerZ", player.transform.position.z);
+        PlayerPrefs.SetInt("QuestId", questManager.questId);
+        PlayerPrefs.SetInt("QuestActionIndex", questManager.questActionIndex);
+        PlayerPrefs.Save();
+
+        menuSet.SetActive(false);
+    }
+
+    public void GameLoad()
+    {
+        if (!PlayerPrefs.HasKey("PlayerX"))
+            return;
+
+        // Load
+        float x = PlayerPrefs.GetFloat("PlayerX");
+        float y = PlayerPrefs.GetFloat("PlayerY");
+        float z = PlayerPrefs.GetFloat("PlayerZ");
+        int questId = PlayerPrefs.GetInt("QuestId");
+        int questActionIndex = PlayerPrefs.GetInt("QuestActionIndex");
+
+        player.transform.position = new Vector3(x, y, z);
+        questManager.questId = questId;
+        questManager.questActionIndex = questActionIndex;
+        questManager.ControlObject();
+    }
+
+    public void GameExit()
+    {
+        // Game Exit : 에디터에서는 실행되지 않는다.
+        Application.Quit();
     }
 }

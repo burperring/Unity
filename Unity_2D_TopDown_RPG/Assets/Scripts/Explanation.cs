@@ -44,9 +44,14 @@ public class Explan : MonoBehaviour
     //    1) 특정 이미지를 늘어뜨리지 않고 외곽은 그대로 냅둔 채 안쪽만 채워넣기 위해서는 Image Type을 Sliced로 변경한다.
     //    2) Sliced를 사용하기 위해서는 Sprite Editor에 들어가서 Border값을 지정해줘야 한다.
     //    3) 이미지를 양끝으로 가득채우기 위해서는 Ctrl + Shift + Alt를 모두 누른 다음 stretch에 원하는 위치를 선택하여 설정한다.
+    //    4) GameObject 기본 함수는 인스펙터 창에서 바로 할당이 가능하다. (ex Menu Set의 Button들은 클릭 함수 생성에 Menu Set을 그대로 가져오면 기본적인 GameObject 함수를 사용할 수 있다.)
 
     // 7. 대화창 세팅
     //    1) 대화 데이터를 저장할 땐 Dictionary 변수를 사용한다.
     //    2) Dictionary 변수는 Key값과 Key와 연결된 Value 2개를 사용하는 변수로 Type을 2개를 꼭 작성해줘야 한다.
     //    3) 반환 값이 있는 재귀함수는 return까지 꼭 써줘야 한다.
+
+    // 8. 세이브 위치
+    //    1) PlayerPrefs를 이용하여 세이브를 진행하면 레지스트리에 저장된다
+    //    2) 레지스트리 편집기 -> HKEY_CURRENT_USER -> Software -> 회사이름 -> 게임이름에 저장된다.
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TypeEffect : MonoBehaviour
 {
     public GameObject EndCursor;
+    public GameObject nameUi;
     public int CharPerSeconds;
     public bool isAnimation;
 
