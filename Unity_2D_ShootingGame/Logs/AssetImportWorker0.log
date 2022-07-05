@@ -1,0 +1,258 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.4f1 (cb45f9cae8b7) revision 13321721'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'ko' Physical Memory: 16194 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/USER/Unity_Program/Unity/Unity_2D_ShootingGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+11643
+Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/Unity_2D_ShootingGame
+C:/Users/USER/Unity_Program/Unity/Unity_2D_ShootingGame
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 89.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/USER/Unity_Program/Unity/Unity_2D_ShootingGame/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f14)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56208
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007237 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 92.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.672 seconds
+Domain Reload Profiling:
+	ReloadAssembly (673ms)
+		BeginReloadAssembly (69ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (488ms)
+			LoadAssemblies (67ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (108ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (300ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (67ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (92ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (92ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005675 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\Unity_2D_ShootingGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\Unity_2D_ShootingGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.146 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1147ms)
+		BeginReloadAssembly (209ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (121ms)
+		EndReloadAssembly (817ms)
+			LoadAssemblies (78ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (398ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (35ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (235ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3286 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (86.1 KB). Loaded Objects now: 3744.
+Memory consumption went from 121.9 MB to 121.8 MB.
+Total: 3.312800 ms (FindLiveObjects: 0.396200 ms CreateObjectMapping: 0.287200 ms MarkObjects: 2.548100 ms  DeleteObjects: 0.080200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 147469.766055 seconds.
+  path: Assets/Vertical 2D Shooting BE4/Readme.asset
+  artifactKey: Guid(6ac5469e80d7f7f4e9a960ddeb8cd922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4/Readme.asset using Guid(6ac5469e80d7f7f4e9a960ddeb8cd922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e525bc2f6ed8fa9b09cb2893b43661a5') in 0.034094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Vertical 2D Shooting BE4
+  artifactKey: Guid(ceabce2dd7071e744a514450bb3166ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4 using Guid(ceabce2dd7071e744a514450bb3166ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65900bcdd91e2e6e85914320e3b5f3e0') in 0.004409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.971748 seconds.
+  path: Assets/Vertical 2D Shooting BE4/ReadMe
+  artifactKey: Guid(505340f928d81ae48ae4ae7f7e5bdf5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4/ReadMe using Guid(505340f928d81ae48ae4ae7f7e5bdf5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72530bc3e2e00c8559f565ce51702208') in 0.008313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.405076 seconds.
+  path: Assets/Vertical 2D Shooting BE4/Demo
+  artifactKey: Guid(bdf6f28a93b691f4694e3865cbe940e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4/Demo using Guid(bdf6f28a93b691f4694e3865cbe940e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca25efb765625b5f6879304010bfc79') in 0.007220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.313608 seconds.
+  path: Assets/Vertical 2D Shooting BE4/ReadMe/Icon.png
+  artifactKey: Guid(44b5bbb9155e66d4caeefd36a792b021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4/ReadMe/Icon.png using Guid(44b5bbb9155e66d4caeefd36a792b021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '170cab7d47b64db4a6c9766451ea4c95') in 0.043242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.911208 seconds.
+  path: Assets/Vertical 2D Shooting BE4/ReadMe/Scripts
+  artifactKey: Guid(64fbe532e9201c14e9e5ee276fabe0c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4/ReadMe/Scripts using Guid(64fbe532e9201c14e9e5ee276fabe0c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beffe5c334ce82e2de3f5cf18dece186') in 0.006474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.961695 seconds.
+  path: Assets/Vertical 2D Shooting BE4/ReadMe/Scripts/Editor
+  artifactKey: Guid(b17ec9fb7b9968048ac28e0666c80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4/ReadMe/Scripts/Editor using Guid(b17ec9fb7b9968048ac28e0666c80964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23d19d7650ab6b09b798daa0f988ac0b') in 0.005863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.166254 seconds.
+  path: Assets/Vertical 2D Shooting BE4/Demo/Demo.unity
+  artifactKey: Guid(f9312a69555081f47addc76be0e71b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vertical 2D Shooting BE4/Demo/Demo.unity using Guid(f9312a69555081f47addc76be0e71b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '817c3d6432dc789881b820fa80b3add7') in 0.006159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.399134 seconds.
+  path: Assets/Sprites/Background Grid.png
+  artifactKey: Guid(116f5946c869de149b064ad08c6b7e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background Grid.png using Guid(116f5946c869de149b064ad08c6b7e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79d9d4c12ca230ca65b0ccfdc32959e0') in 0.059173 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/Explosion.png
+  artifactKey: Guid(54eba9c24be4c474180c23dcccfd6630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Explosion.png using Guid(54eba9c24be4c474180c23dcccfd6630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e8b349b789169becd461f41140d8fd') in 0.034429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Fade Black.png
+  artifactKey: Guid(d66ea73d2b9d0a042817ebbe8a328b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fade Black.png using Guid(d66ea73d2b9d0a042817ebbe8a328b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fd3964e10db73d7fe254fc0baa5c015') in 0.016618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Sprites/Enemies.png
+  artifactKey: Guid(138040323294fd440a3a823e5d70ad01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies.png using Guid(138040323294fd440a3a823e5d70ad01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20f0703f058578326b1dfbf7320aa524') in 0.046303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Boom.png
+  artifactKey: Guid(1b274654f1967224e892dc9c7c1f2625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Boom.png using Guid(1b274654f1967224e892dc9c7c1f2625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '521f6848cb2a36c5722fe97b56f8b66b') in 0.022513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/User Interface.png
+  artifactKey: Guid(6875e9ca69087ec4782ba183e2643e08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/User Interface.png using Guid(6875e9ca69087ec4782ba183e2643e08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46b918daa7bd7edc64ca49044f85c02') in 0.031135 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
