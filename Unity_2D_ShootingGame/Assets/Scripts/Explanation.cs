@@ -19,4 +19,9 @@ public class Explanation : MonoBehaviour
     //    3) 프리펩을 이용해 오브젝트를 생성하게 되면 계속 쌓이게 되므로 Destroy()를 이용하여 파괴해야 한다.
     //    4) 코드에서 생성한 프리펩을 사용하기 위해서는 Destroy()의 반대인 Instantiate()를 사용해야 한다. 
     //              Instantiate(프리펩, 생성위치, 오브젝트 방향)(type 4) : 매개변수 오브젝트를 생성하는 함수
+
+    // 4. Vector를 단위Vector로 변경하는 방법
+    //    1) Vector2, Vector3 모두 사용이 가능하다.
+    //    2) Vector로 저장한 값에 .normalized를 쓰면 된다.
+    //    3) .normalized를 쓰면 벡터가 단위 값(1)로 변한된다.
 }

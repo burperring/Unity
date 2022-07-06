@@ -13,9 +13,13 @@ public class Player : MonoBehaviour
     public float power;
     public float maxShotDelay;  // 최대
     public float curShotDelay;  // 현재
+    public float maxLifeDelay;  // 최대
+    public float curLifeDelay;  // 현재
 
     public GameObject bulletObjA;
     public GameObject bulletObjB;
+
+    public GameManager manager;
 
     Animator anim;
 
@@ -30,6 +34,11 @@ public class Player : MonoBehaviour
         Move();
         Fire();
         Reload();
+
+        if (curLifeDelay < maxLifeDelay)
+            anim.SetBool("isDmg", true);
+        else if (curLifeDelay >= maxLifeDelay)
+            anim.SetBool("isDmg", false);
     }
 
     void Move()
@@ -139,10 +148,12 @@ public class Player : MonoBehaviour
     {
         // 실시간 Delay 추가
         curShotDelay += Time.deltaTime;
+        curLifeDelay += Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // Player State
         if(collision.gameObject.tag == "Border")
         {
             switch(collision.gameObject.name)
@@ -160,6 +171,17 @@ public class Player : MonoBehaviour
                     isTouchRight = true;
                     break;
             }
+        }
+        else if ((collision.gameObject.tag == "Enemy") || (collision.gameObject.tag == "EnemyBullet"))
+        {
+            // Player Invincibility(무적) Time
+            if (curLifeDelay < maxLifeDelay)
+                return;
+
+            // Player Hit
+            manager.RespawnPlayer();
+            gameObject.SetActive(false);
+            curLifeDelay = 0;
         }
     }
 

@@ -4,19 +4,68 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public string enemyName;
     public float speed;
     public int health;
 
+    public float maxShotDelay;  // 최대
+    public float curShotDelay;  // 현재
+
     public Sprite[] sprites;
+    public GameObject bulletObjA;
+    public GameObject bulletObjB;
+    public GameObject player;
 
     SpriteRenderer spriteRenderer;
-    Rigidbody2D rigid;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rigid = GetComponent<Rigidbody2D>();
-        rigid.velocity = Vector2.down * speed;
+    }
+
+    void Update()
+    {
+        Fire();
+        Reload();
+    }
+
+    void Fire()
+    {
+        // maxDelay까지 기다리지 않았다면 Fire를 실행하지 않는다.
+        if (curShotDelay < maxShotDelay)
+            return;
+
+        if(enemyName == "S")
+        {
+            GameObject bullet = Instantiate(bulletObjA, transform.position, transform.rotation);
+            Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
+
+            // Target(player) Vector = Target Position - Enemy Position
+            Vector3 dirVec = player.transform.position - transform.position;
+            rigid.AddForce(dirVec.normalized * 6, ForceMode2D.Impulse);
+        }
+        else if(enemyName == "L")
+        {
+            GameObject bulletR = Instantiate(bulletObjB, transform.position + Vector3.right * 0.3f, transform.rotation);
+            GameObject bulletL = Instantiate(bulletObjB, transform.position + Vector3.left * 0.3f, transform.rotation);
+            Rigidbody2D rigidR = bulletR.GetComponent<Rigidbody2D>();
+            Rigidbody2D rigidL = bulletL.GetComponent<Rigidbody2D>();
+
+            // Target(player) Vector = Target Position - Enemy Position
+            Vector3 dirVecR = player.transform.position - (transform.position + Vector3.right * 0.3f);
+            Vector3 dirVecL = player.transform.position - (transform.position + Vector3.left * 0.3f);
+
+            rigidR.AddForce(dirVecR.normalized * 4, ForceMode2D.Impulse);
+            rigidL.AddForce(dirVecL.normalized * 4, ForceMode2D.Impulse);
+        }
+
+        curShotDelay = 0;
+    }
+
+    void Reload()
+    {
+        // 실시간 Delay 추가
+        curShotDelay += Time.deltaTime;
     }
 
     void OnHit(int dmg)
