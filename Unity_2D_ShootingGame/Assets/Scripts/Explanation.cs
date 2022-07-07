@@ -24,4 +24,11 @@ public class Explanation : MonoBehaviour
     //    1) Vector2, Vector3 모두 사용이 가능하다.
     //    2) Vector로 저장한 값에 .normalized를 쓰면 된다.
     //    3) .normalized를 쓰면 벡터가 단위 값(1)로 변한된다.
+
+    // 5. UI 세팅
+    //    1) UI를 세팅할 때 기준 해상도에 따라 UI 크기를 유지하기 위해서는 Canvas Scaler -> UI Scale Mode -> Scale With Screen Size로 세팅한다.
+    //    2) Scale With Screen Size : 기준 해상도의 UI 크기 유지
+    //    3) Reference Resolution에서 Canvas Scaler(기준 해상도 값)을 설정해줘야 한다.
+    //    4) 세자리마다 쉼표를 넣는 숫자를 세팅하기 위해서는 .ToString()이 아닌 string.Format()으로 세팅해야 한다.
+    //    5) string.Format("{0:n0}", 인자값) : 해당 인자값을 세자리마디 쉼표로 나눠주는 숫자 양식으로 변환하라
 }

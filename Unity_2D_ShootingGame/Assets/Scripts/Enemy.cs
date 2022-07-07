@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public float speed;
     public int health;
+    public int enemyScore;
 
     public float maxShotDelay;  // 최대
     public float curShotDelay;  // 현재
@@ -76,6 +77,10 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
+            // Player Get Score
+            Player playerLogic = player.GetComponent<Player>();
+            playerLogic.score += enemyScore;
+
             Destroy(gameObject);
         }
     }

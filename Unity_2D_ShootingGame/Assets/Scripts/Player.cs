@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     public bool isTouchLeft;
     public bool isTouchRight;
 
+    public int life;
+    public int score;
+
     public float speed;
     public float power;
     public float maxShotDelay;  // √÷¥Î
@@ -179,8 +182,21 @@ public class Player : MonoBehaviour
                 return;
 
             // Player Hit
-            manager.RespawnPlayer();
+            life--;
+            manager.UpdateLifeIcon(life);
+
+            if(life == 0)
+            {
+                manager.GameOver();
+            }
+            else
+            {
+                // Respawn Player
+                manager.RespawnPlayer();
+            }
+
             gameObject.SetActive(false);
+            Destroy(collision.gameObject);
             curLifeDelay = 0;
         }
     }
