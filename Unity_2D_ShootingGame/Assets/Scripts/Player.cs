@@ -12,8 +12,13 @@ public class Player : MonoBehaviour
     public int life;
     public int score;
 
+    public int boomCount;
+    public int maxBoomCount;
+    public float maxBoomDelay;  // 최대
+    public float curBoomDelay;  // 현재
+    public int power;
+    public int maxPower;
     public float speed;
-    public float power;
     public float maxShotDelay;  // 최대
     public float curShotDelay;  // 현재
     public float maxLifeDelay;  // 최대
@@ -21,6 +26,7 @@ public class Player : MonoBehaviour
 
     public GameObject bulletObjA;
     public GameObject bulletObjB;
+    public GameObject boomEffect;
 
     public GameManager manager;
 
@@ -29,6 +35,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
+        manager.UpdateBoomIcon(boomCount);
     }
 
     void Update()
@@ -36,6 +43,7 @@ public class Player : MonoBehaviour
         // Encapsulation(캡슐화)
         Move();
         Fire();
+        Boom();
         Reload();
 
         if (curLifeDelay < maxLifeDelay)
@@ -147,11 +155,46 @@ public class Player : MonoBehaviour
         curShotDelay = 0;
     }
 
+    void Boom()
+    {
+        if (!Input.GetButton("Fire2") || boomCount <= 0)
+            return;
+
+        // maxDelay까지 기다리지 않았다면 Boom을 실행하지 않는다.
+        if (curBoomDelay < maxBoomDelay)
+            return;
+
+        boomCount--;
+        manager.UpdateBoomIcon(boomCount);
+
+        // Effect Visible
+        boomEffect.SetActive(true);
+        Invoke("OffBoomEffect", 2f);
+
+        // Remove Enemy
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            Enemy enemyLogic = enemies[i].GetComponent<Enemy>();
+            enemyLogic.OnHit(1000);
+        }
+
+        // Remove Enemy Bullet
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        for (int i = 0; i < enemyBullets.Length; i++)
+        {
+            Destroy(enemyBullets[i]);
+        }
+
+        curBoomDelay = 0;
+    }
+
     void Reload()
     {
         // 실시간 Delay 추가
         curShotDelay += Time.deltaTime;
         curLifeDelay += Time.deltaTime;
+        curBoomDelay += Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -199,6 +242,39 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             curLifeDelay = 0;
         }
+        else if(collision.gameObject.tag == "Item")
+        {
+            Item item = collision.GetComponent<Item>();
+
+            switch(item.type)
+            {
+                case "Coin":
+                    score += 50;
+                    break;
+                case "Power":
+                    if (power == maxPower)
+                        score += 300;
+                    else
+                        power++;
+                    break;
+                case "Boom":
+                    if (boomCount == maxBoomCount)
+                        score += 300;
+                    else
+                    {
+                        boomCount++;
+                        manager.UpdateBoomIcon(boomCount);
+                    }
+                    break;
+            }
+            // Eat Item
+            Destroy(collision.gameObject);
+        }
+    }
+
+    void OffBoomEffect()
+    {
+        boomEffect.SetActive(false);
     }
 
     void OnTriggerExit2D(Collider2D collision)

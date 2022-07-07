@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: M
-  speed: 5
-  health: 15
+  speed: 8
+  health: 10
   enemyScore: 200
   maxShotDelay: 2
   curShotDelay: 0
@@ -162,4 +162,7 @@ MonoBehaviour:
   - {fileID: -7844560889915226194, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
   bulletObjA: {fileID: 0}
   bulletObjB: {fileID: 0}
+  itemCoin: {fileID: 2732656272659620397, guid: df3d0537c1e974745b7cfa91782ca226, type: 3}
+  itemPower: {fileID: 3057451726737807000, guid: 9d3c93fe540f70148934e876e92e3c6a, type: 3}
+  itemBoom: {fileID: 8376581314945570179, guid: 2cdeaca7894bb2848b0604da105a994d, type: 3}
   player: {fileID: 0}
