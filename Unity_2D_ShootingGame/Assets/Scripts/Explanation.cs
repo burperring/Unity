@@ -31,4 +31,7 @@ public class Explanation : MonoBehaviour
     //    3) Reference Resolution에서 Canvas Scaler(기준 해상도 값)을 설정해줘야 한다.
     //    4) 세자리마다 쉼표를 넣는 숫자를 세팅하기 위해서는 .ToString()이 아닌 string.Format()으로 세팅해야 한다.
     //    5) string.Format("{0:n0}", 인자값) : 해당 인자값을 세자리마디 쉼표로 나눠주는 숫자 양식으로 변환하라
+
+    // 6. 스크롤링
+    //    1) 게임하는 배경 밖에서 사용을 다한 배경을 다시 앞으로 보내는 기법
 }
