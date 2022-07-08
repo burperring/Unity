@@ -20,11 +20,29 @@ public class Enemy : MonoBehaviour
     public GameObject itemBoom;
     public GameObject player;
 
+    public ObjectManager objectManager;
+
     SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void OnEnable()     // 컴포넌트가 활성화 될 때 호출되는 생명주기함수
+    {
+        switch(enemyName)
+        {
+            case "L":
+                health = 50;
+                break;
+            case "M":
+                health = 10;
+                break;
+            case "S":
+                health = 2;
+                break;
+        }
     }
 
     void Update()
@@ -41,7 +59,8 @@ public class Enemy : MonoBehaviour
 
         if(enemyName == "S")
         {
-            GameObject bullet = Instantiate(bulletObjA, transform.position, transform.rotation);
+            GameObject bullet = objectManager.MakeObj("BulletEnemyA");
+            bullet.transform.position = transform.position;
             Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
 
             // Target(player) Vector = Target Position - Enemy Position
@@ -50,8 +69,10 @@ public class Enemy : MonoBehaviour
         }
         else if(enemyName == "L")
         {
-            GameObject bulletR = Instantiate(bulletObjB, transform.position + Vector3.right * 0.3f, transform.rotation);
-            GameObject bulletL = Instantiate(bulletObjB, transform.position + Vector3.left * 0.3f, transform.rotation);
+            GameObject bulletR = objectManager.MakeObj("BulletEnemyB");
+            GameObject bulletL = objectManager.MakeObj("BulletEnemyB");
+            bulletR.transform.position = transform.position + Vector3.right * 0.3f;
+            bulletL.transform.position = transform.position + Vector3.left * 0.3f;
             Rigidbody2D rigidR = bulletR.GetComponent<Rigidbody2D>();
             Rigidbody2D rigidL = bulletL.GetComponent<Rigidbody2D>();
 
@@ -91,22 +112,26 @@ public class Enemy : MonoBehaviour
             int ran = Random.Range(0, 20);
             if(ran < 5)         // Coin
             {
-                Instantiate(itemCoin, transform.position, itemCoin.transform.rotation);
+                GameObject itemCoin = objectManager.MakeObj("ItemCoin");
+                itemCoin.transform.position = transform.position;
             }
             else if(ran < 7)    // Power
             {
-                Instantiate(itemPower, transform.position, itemCoin.transform.rotation);
+                GameObject itemPower = objectManager.MakeObj("ItemPower");
+                itemPower.transform.position = transform.position;
             }
             else if(ran < 8)    // Boom
             {
-                Instantiate(itemBoom, transform.position, itemCoin.transform.rotation);
+                GameObject itemBoom = objectManager.MakeObj("ItemBoom");
+                itemBoom.transform.position = transform.position;
             }
             else
             {
                 Debug.Log("Not Item");
             }
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            transform.rotation = Quaternion.identity;   // 기본ㄴ 회전값 = 0으로 되돌려 놓기
         }
     }
 
@@ -117,15 +142,17 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "BorderBullet")
-            Destroy(gameObject);
+        if (collision.gameObject.tag == "BorderBullet") {
+            gameObject.SetActive(false);
+            transform.rotation = Quaternion.identity;
+        }
         else if(collision.gameObject.tag == "PlayerBullet")
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             OnHit(bullet.dmg);
 
             // Destroy Player Bullet
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] enemyObjs;
+    public string[] enemyObjs;
     public Transform[] spawnPoints;
 
     public float maxSpawnDelay;
@@ -17,8 +17,14 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Image[] lifeImage;
     public Image[] boomImage;
+    public ObjectManager objectManager;
 
     Animator anim;
+
+    void Awake()
+    {
+        enemyObjs = new string[] { "EnemyL", "EnemyM", "EnemyS" };
+    }
 
     void Update()
     {
@@ -41,14 +47,14 @@ public class GameManager : MonoBehaviour
         // Random Enemy
         int ranEnemy = Random.Range(0, 3);
         int ranPoint = Random.Range(0, 9);
-        GameObject enemy = Instantiate(enemyObjs[ranEnemy], 
-                                       spawnPoints[ranPoint].position, 
-                                       spawnPoints[ranPoint].rotation);
+        GameObject enemy = objectManager.MakeObj(enemyObjs[ranEnemy]);
+        enemy.transform.position = spawnPoints[ranPoint].position;
 
         Rigidbody2D rigid = enemy.GetComponent<Rigidbody2D>();
         Enemy enemyLogic = enemy.GetComponent<Enemy>();
         // 생성되지 않은 오브젝트가 생성된 player에 접근할 수 없다. 그러므로 GameManager를 통해 생성과 동시에 player 정보를 제공하는 방식을 사용한다.
-        enemyLogic.player = player;     
+        enemyLogic.player = player;
+        enemyLogic.objectManager = objectManager;
 
         // Enemy Spawn
         if (ranPoint == 5 || ranPoint == 7)         // Right
