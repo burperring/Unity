@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     public GameManager gameManager;
     public ObjectManager objectManager;
 
+    public GameObject[] followers;
+
     Animator anim;
 
     void Awake()
@@ -121,7 +123,7 @@ public class Player : MonoBehaviour
                 rigid3C.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 rigid3L.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 break;
-            case 4: // Power four
+            default: // Power four
                 GameObject bullet4R = objectManager.MakeObj("BulletPlayerA");
                 GameObject bullet4C = objectManager.MakeObj("BulletPlayerB");
                 GameObject bullet4L = objectManager.MakeObj("BulletPlayerA");
@@ -135,44 +137,6 @@ public class Player : MonoBehaviour
                 rigid4R.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 rigid4C.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 rigid4L.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                break;
-            case 5: // Power five
-                GameObject bullet5R = objectManager.MakeObj("BulletPlayerB");
-                GameObject bullet5RS = objectManager.MakeObj("BulletPlayerA");
-                GameObject bullet5L = objectManager.MakeObj("BulletPlayerB");
-                GameObject bullet5LS = objectManager.MakeObj("BulletPlayerA");
-                bullet5R.transform.position = transform.position + Vector3.right * 0.23f;
-                bullet5RS.transform.position = transform.position + Vector3.right * 0.6f;
-                bullet5L.transform.position = transform.position + Vector3.left * 0.23f;
-                bullet5LS.transform.position = transform.position + Vector3.left * 0.6f;
-
-                Rigidbody2D rigid5R = bullet5R.GetComponent<Rigidbody2D>();
-                Rigidbody2D rigid5RS = bullet5RS.GetComponent<Rigidbody2D>();
-                Rigidbody2D rigid5L = bullet5L.GetComponent<Rigidbody2D>();
-                Rigidbody2D rigid5LS = bullet5LS.GetComponent<Rigidbody2D>();
-                rigid5R.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                rigid5RS.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                rigid5L.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                rigid5LS.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                break;
-            case 6: // Power six
-                GameObject bullet6R = objectManager.MakeObj("BulletPlayerB");
-                GameObject bullet6CR = objectManager.MakeObj("BulletPlayerB");
-                GameObject bullet6CL = objectManager.MakeObj("BulletPlayerB");
-                GameObject bullet6L = objectManager.MakeObj("BulletPlayerB");
-                bullet6R.transform.position = transform.position + Vector3.right * 0.75f;
-                bullet6CR.transform.position = transform.position + Vector3.right * 0.23f;
-                bullet6CL.transform.position = transform.position + Vector3.left * 0.23f;
-                bullet6L.transform.position = transform.position + Vector3.left * 0.75f;
-
-                Rigidbody2D rigid6R = bullet6R.GetComponent<Rigidbody2D>();
-                Rigidbody2D rigid6CR = bullet6CR.GetComponent<Rigidbody2D>();
-                Rigidbody2D rigid6CL = bullet6CL.GetComponent<Rigidbody2D>();
-                Rigidbody2D rigid6L = bullet6L.GetComponent<Rigidbody2D>();
-                rigid6R.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                rigid6CR.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                rigid6CL.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-                rigid6L.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 break;
         }
 
@@ -304,8 +268,10 @@ public class Player : MonoBehaviour
                 case "Power":
                     if (power == maxPower)
                         score += 300;
-                    else
+                    else {
                         power++;
+                        AddFollower();
+                    }
                     break;
                 case "Boom":
                     if (boomCount == maxBoomCount)
@@ -321,6 +287,16 @@ public class Player : MonoBehaviour
             // Eat Item
             collision.gameObject.SetActive(false);
         }
+    }
+
+    void AddFollower()
+    {
+        if (power == 5)
+            followers[0].SetActive(true);
+        if (power == 6)
+            followers[1].SetActive(true);
+        if (power == 7)
+            followers[2].SetActive(true);
     }
 
     void OffBoomEffect()
