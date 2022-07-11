@@ -1084,6 +1084,7 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
   spawnPoints:
   - {fileID: 948790580}
   - {fileID: 1412853760}
@@ -1347,7 +1348,7 @@ GameObject:
   - component: {fileID: 572480739}
   - component: {fileID: 572480738}
   - component: {fileID: 572480740}
-  - component: {fileID: 572480741}
+  - component: {fileID: 572480744}
   - component: {fileID: 572480742}
   - component: {fileID: 572480743}
   m_Layer: 0
@@ -1462,32 +1463,6 @@ MonoBehaviour:
   - {fileID: 388523668}
   - {fileID: 474066042}
   - {fileID: 962227592}
---- !u!61 &572480741
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572480737}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.4}
-  m_EdgeRadius: 0
 --- !u!50 &572480742
 Rigidbody2D:
   serializedVersion: 4
@@ -1529,6 +1504,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &572480744
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572480737}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.1}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!1 &648922971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,7 +1969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764471570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6501994, y: 5.007023, z: 2.116115}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1997,6 +1988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9bcb06e2b3d1f47b018a1e03425864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyBPrefab: {fileID: 1716950131187866924, guid: 037d4775b47f59c429b1f281b153dfc4, type: 3}
   enemyLPrefab: {fileID: 1332036045043336993, guid: 64bdd21d2f1794341b84d17962801fd7, type: 3}
   enemyMPrefab: {fileID: 3738060095205318528, guid: 000b337a44aa5bf4592da42914a7a12a, type: 3}
   enemySPrefab: {fileID: 3747331677641912720, guid: 313b60f6ca4962347b3b9ed64d4dcf70, type: 3}
@@ -2007,6 +1999,8 @@ MonoBehaviour:
   bulletPlayerBPrefab: {fileID: 1330054092302734847, guid: 0ba6f84d40932094c96bb39aa015ca99, type: 3}
   bulletEnemyAPrefab: {fileID: 1330054092302734847, guid: 24bc1e06da7d6454e8b9e4a9364bd77b, type: 3}
   bulletEnemyBPrefab: {fileID: 1330054092302734847, guid: bc8b0e19e3d22364e90c7d59637c0cde, type: 3}
+  bulletBossAPrefab: {fileID: 1330054092302734847, guid: 4a3c14c4ac1abcb4388a988e77a2a9a5, type: 3}
+  bulletBossBPrefab: {fileID: 1330054092302734847, guid: 0e16a7feabb62da4d9283033ad762561, type: 3}
   bulletFollowerPrefab: {fileID: 8556448516013412104, guid: 0f7fff90087eaab47a0464169edf6f9b, type: 3}
 --- !u!1 &797291941
 GameObject:

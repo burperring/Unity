@@ -189,15 +189,27 @@ public class Player : MonoBehaviour
         // Remove Enemy Bullet
         GameObject[] enemyBulletA = objectManager.GetPool("BulletEnemyA");
         GameObject[] enemyBulletB = objectManager.GetPool("BulletEnemyB");
+        GameObject[] bossBulletA = objectManager.GetPool("BulletBossA");
+        GameObject[] bossBulletB = objectManager.GetPool("BulletBossB");
 
         for (int i = 0; i < enemyBulletA.Length; i++) {
             if(enemyBulletA[i].activeSelf)
                 enemyBulletA[i].SetActive(false);
         }
-        for (int i = 0; i < enemyBulletB.Length; i++)
-        {
+        for (int i = 0; i < enemyBulletB.Length; i++){
             if (enemyBulletB[i].activeSelf)
                 enemyBulletB[i].SetActive(false);
+        }
+        for (int i = 0; i < bossBulletA.Length; i++){
+            if (bossBulletA[i].activeSelf)
+                bossBulletA[i].SetActive(false);
+        }
+        for (int i = 0; i < bossBulletB.Length; i++){
+            if (bossBulletB[i].activeSelf)
+            {
+                bossBulletB[i].SetActive(false);
+                bossBulletB[i].transform.rotation = Quaternion.identity;
+            }
         }
 
         curBoomDelay = 0;
