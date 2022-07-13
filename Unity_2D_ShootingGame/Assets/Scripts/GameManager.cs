@@ -7,6 +7,13 @@ using System.IO;        // 파일을 읽기 위해 사용
 
 public class GameManager : MonoBehaviour
 {
+    public int FinalStage;
+    public int StageCount;
+    public Animator stageAnim;
+    public Animator clearAnim;
+    public Animator fadeAnim;
+    public Transform playerPos;
+
     public string[] enemyObjs;
     public Transform[] spawnPoints;
 
@@ -15,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
     public GameObject gameoverSet;
+    public GameObject gameclearSet;
     public Text scoreText;
     public Image[] lifeImage;
     public Image[] boomImage;
@@ -24,15 +32,52 @@ public class GameManager : MonoBehaviour
     public int spawnIndex;
     public bool spawnEnd;
 
-    public int StageCount;
-
     Animator anim;
+    float delayCount;
 
     void Awake()
     {
         spawnList = new List<Spawn>();
         enemyObjs = new string[] { "EnemyS", "EnemyM", "EnemyL", "EnemyB" };
-        //ReadSpawnFile();
+        StageStart();
+    }
+
+    public void StageStart()
+    {
+        curSpawnDelay = 0;
+        Player playerLogic = player.GetComponent<Player>();
+        if (playerLogic.life < 3)
+            playerLogic.life++;
+        UpdateLifeIcon(playerLogic.life);
+
+        // Stage UI Load
+        stageAnim.SetTrigger("On");
+        stageAnim.GetComponent<Text>().text = "STAGE " + StageCount;
+
+        // Player Repos
+        player.transform.position = playerPos.position;
+
+        // Enemy Spawn File Read
+        ReadSpawnFile();
+
+        // Fade In
+        fadeAnim.SetTrigger("In");
+    }
+
+    public void StageEnd()
+    {
+        // Clear UI Load
+        clearAnim.SetTrigger("On");
+
+        // Fade Out
+        fadeAnim.SetTrigger("Out");
+
+        // Stage Increment
+        StageCount++;
+        if (StageCount > FinalStage)
+            Invoke("GameClear", 6);
+        else
+            Invoke("StageStart", 5);
     }
 
     void ReadSpawnFile()
@@ -51,11 +96,19 @@ public class GameManager : MonoBehaviour
             string line = stringReader.ReadLine();
 
             if (line == null)
+            {
+                if (StageCount != FinalStage)
+                {
+                    Invoke("StageEnd", delayCount + 13);
+                    delayCount = 0;
+                }
                 break;
+            }
 
             // 3. Create Spawn Data
             Spawn spawnData = new Spawn();
             spawnData.delay = float.Parse(line.Split(',')[0]);
+            delayCount += spawnData.delay;
             spawnData.type = line.Split(',')[1];
             spawnData.point = int.Parse(line.Split(',')[2]);
             spawnList.Add(spawnData);
@@ -63,7 +116,6 @@ public class GameManager : MonoBehaviour
 
         // 4. File Close
         stringReader.Close();
-        StageCount++;
 
         // 5. Apply First Spawn Delay
         nextSpawnDelay = spawnList[0].delay;
@@ -71,9 +123,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (spawnEnd)
-            ReadSpawnFile();
-
         curSpawnDelay += Time.deltaTime;
 
         if (curSpawnDelay > nextSpawnDelay && !spawnEnd)
@@ -104,27 +153,6 @@ public class GameManager : MonoBehaviour
             case "B":
                 enemyIndex = 3;
                 break;
-            case "LS":
-                enemyIndex = 0;
-                Player playerLogicS = player.GetComponent<Player>();
-                if(playerLogicS.life < 3)
-                    playerLogicS.life++;
-                UpdateLifeIcon(playerLogicS.life);
-                break;
-            case "LM":
-                enemyIndex = 1;
-                Player playerLogicM = player.GetComponent<Player>();
-                if (playerLogicM.life < 3)
-                    playerLogicM.life++;
-                UpdateLifeIcon(playerLogicM.life);
-                break;
-            case "LL":
-                enemyIndex = 2;
-                Player playerLogicL = player.GetComponent<Player>();
-                if (playerLogicL.life < 3)
-                    playerLogicL.life++;
-                UpdateLifeIcon(playerLogicL.life);
-                break;
         }
 
         int enemyPoint = spawnList[spawnIndex].point;
@@ -135,6 +163,7 @@ public class GameManager : MonoBehaviour
         Enemy enemyLogic = enemy.GetComponent<Enemy>();
         // 생성되지 않은 오브젝트가 생성된 player에 접근할 수 없다. 그러므로 GameManager를 통해 생성과 동시에 player 정보를 제공하는 방식을 사용한다.
         enemyLogic.player = player;
+        enemyLogic.gameManager = this;
         enemyLogic.objectManager = objectManager;
 
         // Enemy Spawn
@@ -207,9 +236,23 @@ public class GameManager : MonoBehaviour
         player.SetActive(true);
     }
 
+    public void CallExplosion(Vector3 pos, string type)
+    {
+        GameObject explosion = objectManager.MakeObj("Explosion");
+        Explosion explosionLogic = explosion.GetComponent<Explosion>();
+
+        explosion.transform.position = pos;
+        explosionLogic.StartExplosion(type);
+    }
+
     public void GameOver()
     {
         gameoverSet.SetActive(true);
+    }
+
+    public void GameClear()
+    {
+        gameclearSet.SetActive(true);
     }
 
     public void GameRetry()

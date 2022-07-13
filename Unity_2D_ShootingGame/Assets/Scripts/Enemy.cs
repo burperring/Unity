@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public GameObject player;
 
     public ObjectManager objectManager;
+    public GameManager gameManager;
 
     Animator anim;
     SpriteRenderer spriteRenderer;
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour
         switch(enemyName)
         {
             case "B":
-                health = 5000;
+                health = 3000;
                 Invoke("Stop", 2);
                 break;
             case "L":
@@ -350,6 +351,11 @@ public class Enemy : MonoBehaviour
 
             gameObject.SetActive(false);
             transform.rotation = Quaternion.identity;   // 기본ㄴ 회전값 = 0으로 되돌려 놓기
+            gameManager.CallExplosion(transform.position, enemyName);
+
+            // Boss Kill
+            if(enemyName == "B")
+                gameManager.StageEnd();
         }
     }
 
