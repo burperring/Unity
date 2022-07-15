@@ -9,15 +9,15 @@ C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker3
 -projectPath
-C:/Users/USER/Unity_Program/Unity/Pokemon_DP_Project
+C:/Users/USER/Unity_Program/Unity/Unity_2D_TopDown_RPG
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker3.log
 -srvPort
-1053
-Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/Pokemon_DP_Project
-C:/Users/USER/Unity_Program/Unity/Pokemon_DP_Project
+2575
+Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/Unity_2D_TopDown_RPG
+C:/Users/USER/Unity_Program/Unity/Unity_2D_TopDown_RPG
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,11 +47,11 @@ C:/Users/USER/Unity_Program/Unity/Pokemon_DP_Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 145.28 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 165.91 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/USER/Unity_Program/Unity/Pokemon_DP_Project/Assets
+[Subsystems] Discovering subsystems at path C:/Users/USER/Unity_Program/Unity/Unity_2D_TopDown_RPG/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -70,94 +70,95 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008101 seconds.
+Registered in 0.007683 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 151.17 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 157.90 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.785 seconds
+- Completed reload, in  0.889 seconds
 Domain Reload Profiling:
-	ReloadAssembly (786ms)
-		BeginReloadAssembly (78ms)
+	ReloadAssembly (889ms)
+		BeginReloadAssembly (77ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (588ms)
+		EndReloadAssembly (691ms)
 			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (122ms)
+			SetupTypeCache (127ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (378ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (466ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (68ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (151ms)
+				InitializePlatformSupportModulesInManaged (71ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (158ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (98ms)
-				ProcessInitializeOnLoadMethodAttributes (58ms)
+				ProcessInitializeOnLoadAttributes (179ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013350 seconds.
+Registered in 0.012559 seconds.
+Android Extension - Scanning For ADB Devices 4430 ms
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\Pokemon_DP_Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\Pokemon_DP_Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\Unity_2D_TopDown_RPG\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\Unity_2D_TopDown_RPG\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 143.16 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 152.49 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-TypeManager.Initialize took: 99ms
+TypeManager.Initialize took: 95ms
 Mono: successfully reloaded assembly
-- Completed reload, in  1.845 seconds
+- Completed reload, in  1.810 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1846ms)
-		BeginReloadAssembly (213ms)
+	ReloadAssembly (1811ms)
+		BeginReloadAssembly (123ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (122ms)
-		EndReloadAssembly (1473ms)
-			LoadAssemblies (103ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (1544ms)
+			LoadAssemblies (111ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (386ms)
+			SetupTypeCache (405ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (73ms)
-			SetupLoadedEditorAssemblies (843ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (881ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (24ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (143ms)
-				BeforeProcessingInitializeOnLoad (161ms)
-				ProcessInitializeOnLoadAttributes (386ms)
-				ProcessInitializeOnLoadMethodAttributes (121ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				RefreshPlugins (153ms)
+				BeforeProcessingInitializeOnLoad (171ms)
+				ProcessInitializeOnLoadAttributes (405ms)
+				ProcessInitializeOnLoadMethodAttributes (122ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.08 ms, found 5 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.07 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6055 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (222.5 KB). Loaded Objects now: 6495.
-Memory consumption went from 229.7 MB to 229.5 MB.
-Total: 8.149100 ms (FindLiveObjects: 0.782900 ms CreateObjectMapping: 0.812300 ms MarkObjects: 6.309700 ms  DeleteObjects: 0.236400 ms)
+Unloading 6062 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (222.4 KB). Loaded Objects now: 6502.
+Memory consumption went from 229.9 MB to 229.7 MB.
+Total: 6.832800 ms (FindLiveObjects: 0.470000 ms CreateObjectMapping: 0.507800 ms MarkObjects: 5.629900 ms  DeleteObjects: 0.223500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:DOTSType/UnityEditor.Snap.SnapSettingsWindow: f9222ca038e3b283f9222ca038e3b283 -> 
@@ -401,6 +402,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.Entities.Serialization.DotsSerialization+FolderNode: 91c8e158cbb67e5891c8e158cbb67e58 -> 
   custom:DOTSType/UnityEditor.TestTools.TestRunner.Api.CallbacksHolder: 72c4d65bdbf9ba6a72c4d65bdbf9ba6a -> 
   custom:DOTSType/UnityEditor.AudioMixerGroupEditor: b77916ee3c1761e4b77916ee3c1761e4 -> 
+  custom:DOTSType/Explan: 388b5099dc2b3047388b5099dc2b3047 -> 
   custom:DOTSType/UnityEditor.StreamingControllerEditor: 25f1475a967e5c3725f1475a967e5c37 -> 
   custom:DOTSType/Unity.Scenes.PrefabLoadResult: 918f88ace2c521c2918f88ace2c521c2 -> 
   custom:DOTSType/UnityEditor.Audio.AudioMixerGroupController: f02871a0b6633f97f02871a0b6633f97 -> 
@@ -540,6 +542,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.Deformations.SkinMatrix: 17a3a1586559250f17a3a1586559250f -> 
   custom:DOTSType/TMPro.TMP_PackageResourceImporterWindow: f31c9f1fc09fecb9f31c9f1fc09fecb9 -> 
   custom:DOTSType/UnityEditor.Timeline.Signals.SignalReceiverInspector: b43c3a51a65efd4cb43c3a51a65efd4c -> 
+  custom:DOTSType/ReadmeEditorBE3: d38fd7858f539839d38fd7858f539839 -> 
   custom:DOTSType/TMPro.TMP_PackageUtilities: 1229ae89d6ab8ddb1229ae89d6ab8ddb -> 
   custom:DOTSType/UnityEditor.ViewModeTool: 902b806b001f25bf902b806b001f25bf -> 
   custom:DOTSType/UnityEditor.AudioEchoFilterEditor: 18ad45821e848e4018ad45821e848e40 -> 
@@ -673,14 +676,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Timeline.TimelineAssetInspector: ab92f3da90b94d02ab92f3da90b94d02 -> 
   custom:DOTSType/UnityEditor.PackageManager.UI.Internal.PackageSelectionObject: b531ad4385690df3b531ad4385690df3 -> 
   custom:DOTSType/UnityEditor.Timeline.Signals.SignalEmitterInspector: 610ef3fb9b98e190610ef3fb9b98e190 -> 
-  custom:DOTSType/UnityEditor.Audio.AudioMixerEffectController: a071f9ff84b78070a071f9ff84b78070 -> 
+  custom:DOTSType/PlayerAction: e1e7d49ae3b356ece1e7d49ae3b356ec -> 
   custom:DOTSType/UnityEditor.Search.SearchQueryAsset: 362191cdd3b1da60362191cdd3b1da60 -> 
+  custom:DOTSType/UnityEditor.Audio.AudioMixerEffectController: a071f9ff84b78070a071f9ff84b78070 -> 
   custom:DOTSType/Unity.Transforms.RotationEulerZXY: 0f0d1589ff9feba10f0d1589ff9feba1 -> 
   custom:DOTSType/UnityEditor.GenericInspector: 2c00da8eb375842b2c00da8eb375842b -> 
   custom:DOTSType/UnityEngine.Rigidbody2D: 9d6c0155946d7ee39d6c0155946d7ee3 -> 
   custom:DOTSType/UnityEditor.U2D.Animation.SkinningCachePersistentState: b344efecaf3e573bb344efecaf3e573b -> 
   custom:DOTSType/UnityEditor.UI.SliderEditor: 8539b825f033ae1a8539b825f033ae1a -> 
   custom:DOTSType/UnityEditor.Tilemaps.LineBrushEditor: f405879fd7c48a8ff405879fd7c48a8f -> 
+  custom:DOTSType/TypeEffect: 3fbe7e617bb42ba73fbe7e617bb42ba7 -> 
   custom:DOTSType/UnityEditor.DeviceSimulation.SimulatorWindow: a46d2bec2e2cffa4a46d2bec2e2cffa4 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:DOTSType/UnityEditorInternal.AssemblyDefinitionReferenceAsset: 8d8cf0c1a16725ee8d8cf0c1a16725ee -> 
@@ -935,6 +940,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:DOTSType/UnityEngine.CustomRenderTexture: 8c0d0b8bc26b7a068c0d0b8bc26b7a06 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnMouseEnterMessageListener: 5ac631611faae0035ac631611faae003 -> 
+  custom:DOTSType/ReadmeBE3: 58e2941a474005c358e2941a474005c3 -> 
   custom:DOTSType/UnityEditor.OcclusionCullingWindow: b3fa360b2548ba22b3fa360b2548ba22 -> 
   custom:DOTSType/Unity.Entities.Editor.HierarchyWindow: bcf64e188f93bf72bcf64e188f93bf72 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnJointBreak2DMessageListener: a8b76952c6d9c48aa8b76952c6d9c48a -> 
@@ -984,6 +990,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/ObjData: 1f28106da9f2d5b81f28106da9f2d5b8 -> 
   custom:DOTSType/UnityEngine.PointEffector2D: 204e8d3d45170d19204e8d3d45170d19 -> 
   custom:DOTSType/Unity.VisualScripting.ScriptGraphAsset: 6c09b82dd61a6f6d6c09b82dd61a6f6d -> 
+  custom:DOTSType/TalkManager: ddaf4531426c3485ddaf4531426c3485 -> 
   custom:DOTSType/UnityEngine.LightProbes: d75a9b7e5d0e2f01d75a9b7e5d0e2f01 -> 
   custom:DOTSType/UnityEditor.GraphicsSettingsInspector: a78fa07dd8023eeca78fa07dd8023eec -> 
   custom:DOTSType/UnityEngine.StreamingController: 9dab080ca681a9949dab080ca681a994 -> 
@@ -1308,6 +1315,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.U2D.Path.ScriptablePathInspector: 833196d779f81d47833196d779f81d47 -> 
   custom:DOTSType/UnityEditor.ShaderImporterInspector+ShaderProperties: ac6aa3d850e6f093ac6aa3d850e6f093 -> 
   custom:DOTSType/UnityEditor.BuildPlayerWindow: 8d63aa8b211332828d63aa8b21133282 -> 
+  custom:DOTSType/QuestManager: 2141f95f6203fcd02141f95f6203fcd0 -> 
   custom:DOTSType/UnityEditor.Collider3DEditorBase: d94775a1b984b216d94775a1b984b216 -> 
   custom:DOTSType/UnityEngine.U2D.Animation.SpriteResolver: f938be452f588444f938be452f588444 -> 
   custom:DOTSType/UnityEditor.AnimationClipEditor: 65ce9649820dee5c65ce9649820dee5c -> 
@@ -1466,7 +1474,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.Tilemaps.AnimatedTileEditor: 99f780c5e96a013b99f780c5e96a013b -> 
   custom:DOTSType/UnityEngine.ParticleSystemForceField: fa6b80d1775593aafa6b80d1775593aa -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnJointBreakMessageListener: 1ae78d623d5c9d8d1ae78d623d5c9d8d -> 
-  custom:DOTSType/Player: 9bac697cb8be35a19bac697cb8be35a1 -> 
   custom:DOTSType/UnityEditor.SceneManagement.MainStage: 0c39c417e1c500cd0c39c417e1c500cd -> 
   custom:DOTSType/Unity.Entities.CompanionLink: b2420b0bc12eba27b2420b0bc12eba27 -> 
   custom:DOTSType/UnityEditor.Search.TransactionViewer: b0f9b99d2b9c0d65b0f9b99d2b9c0d65 -> 
