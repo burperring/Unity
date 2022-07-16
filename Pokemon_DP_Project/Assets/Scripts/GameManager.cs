@@ -5,17 +5,24 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Text talkText;
+    public GameObject talkPanel;
     public GameObject scanObject;
+    public bool isAction;
 
-    public void Action(GameObject Object)
+    public void Action(GameObject scanObj)
     {
-        // Get Current Object
-        scanObject = Object;
-        ObjData objData = scanObject.GetComponent<ObjData>();
-    }
+        if (isAction)
+        {
+            isAction = false;
+        }
+        else
+        {
+            isAction = true;      
+            scanObject = scanObj;
+            talkText.text = scanObject.name;
+        }
 
-    void Update()
-    {
-        
+        talkPanel.SetActive(isAction);
     }
 }

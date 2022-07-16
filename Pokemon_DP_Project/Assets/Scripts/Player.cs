@@ -31,15 +31,16 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Move Value
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
+        h = gameManager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
+        v = gameManager.isAction ? 0 : Input.GetAxisRaw("Vertical");
         isRunMove = Input.GetButton("Run");
 
         // Check Button Down & Up
-        bool hDown = Input.GetButtonDown("Horizontal");
-        bool vDown = Input.GetButtonDown("Vertical");
-        bool hUp = Input.GetButtonUp("Horizontal");
-        bool vUp = Input.GetButtonUp("Vertical");
+        bool hDown = gameManager.isAction ? false : Input.GetButtonDown("Horizontal");
+        bool vDown = gameManager.isAction ? false : Input.GetButtonDown("Vertical");
+        bool hUp = gameManager.isAction ? false : Input.GetButtonUp("Horizontal");
+        bool vUp = gameManager.isAction ? false : Input.GetButtonUp("Vertical");
+        bool checkBike = gameManager.isAction ? false : Input.GetButtonDown("Bike");
 
         // Check Horizontal Move
         if (hDown)
@@ -78,16 +79,16 @@ public class Player : MonoBehaviour
         }
 
         // Bike Check
-        if(Input.GetButtonDown("Bike"))
+        if (checkBike)
         {
-            if(!anim.GetBool("isBike"))
+            if (!anim.GetBool("isBike"))
                 anim.SetBool("isBike", true);
             else
                 anim.SetBool("isBike", false);
         }
 
         // Bike Count Check
-        if(anim.GetBool("isBike"))
+        if (anim.GetBool("isBike"))
         {
             if (Input.GetButtonDown("Run"))
                 bikeCount = bikeCount == 2 ? 0 : bikeCount + 1;
@@ -122,15 +123,12 @@ public class Player : MonoBehaviour
         else
             rigid.velocity = isRunMove ? moveVec * runSpeed : moveVec * walkSpeed;
 
-        // Ray(스캔할 경우 대부분 Ray를 활용한다)
-        Debug.DrawRay(rigid.position, dirVec * 0.7f, new Color(0, 1, 0)); // DrawRay(쏘는 위치, 쏘는 길이, 색깔)
-        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 1.0f, LayerMask.GetMask("Object")); // Raycast(쏘는 위치, 쏘는 방향, 쏘는 길이, 찾는 값)
+        // Ray
+        Debug.DrawRay(rigid.position, dirVec * 0.7f, new Color(0, 1, 0));
+        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 1.0f, LayerMask.GetMask("Object"));
 
-        // Find Object
-        if (rayHit.collider != null)
-        {
+        if(rayHit.collider != null)
             scanObject = rayHit.collider.gameObject;
-        }
         else
             scanObject = null;
     }

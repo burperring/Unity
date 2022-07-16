@@ -77,7 +77,6 @@ public class TalkManager : MonoBehaviour
     {
         if(!talkData.ContainsKey(id))  // ContainsKey() : Dictionary에 Key가 존재하는지 검사
         {
-            
             if (!talkData.ContainsKey(id - id % 10))
                 // 퀘스트 맨 처음 대사마저 없을 때 기본 대사를 가지고 온다.
                 return GetTalk(id - id % 100, talkIndex);
