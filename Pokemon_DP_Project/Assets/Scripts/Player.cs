@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public GameManager gameManager;
+    static public Player player;
 
+    public GameManager gameManager;
+    public TalkManager talkManager;
+    public BoxCollider2D boxCollider;
+    
     public float walkSpeed;
     public float runSpeed;
     public float[] bikeSpeed;
     public int bikeCount;
+    public int startPos;
+    public string currentMapName;
 
     Rigidbody2D rigid;
     Animator anim;
@@ -20,6 +28,23 @@ public class Player : MonoBehaviour
     bool isHorizonMove;
     bool isRunMove;
     Vector3 dirVec;
+
+    private void Start()
+    {
+        if (player == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameManager);
+
+            boxCollider = GetComponent<BoxCollider2D>();
+
+            player = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     void Awake()
     {
@@ -132,4 +157,18 @@ public class Player : MonoBehaviour
         else
             scanObject = null;
     }
+
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.tag == "StairDown")
+    //    {
+    //       startPos += 10;
+    //        SceneManager.LoadScene("Stage " + gameManager.stage + "-" + (gameManager.floor - 1));
+    //    }
+    //    else if (collision.tag == "StairUp")
+    //    {
+    //        startPos += 20;
+    //        SceneManager.LoadScene("Stage " + gameManager.stage + "-" + (gameManager.floor + 1));
+    //    }
+    //}
 }
