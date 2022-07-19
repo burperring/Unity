@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public bool isAction;
     public int talkIndex;
     public int stage;
-    public int floor;
+    public int count;
 
     private void Awake()
     {

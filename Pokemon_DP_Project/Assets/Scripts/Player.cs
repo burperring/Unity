@@ -157,18 +157,4 @@ public class Player : MonoBehaviour
         else
             scanObject = null;
     }
-
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == "StairDown")
-    //    {
-    //       startPos += 10;
-    //        SceneManager.LoadScene("Stage " + gameManager.stage + "-" + (gameManager.floor - 1));
-    //    }
-    //    else if (collision.tag == "StairUp")
-    //    {
-    //        startPos += 20;
-    //        SceneManager.LoadScene("Stage " + gameManager.stage + "-" + (gameManager.floor + 1));
-    //    }
-    //}
 }
