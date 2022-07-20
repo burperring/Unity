@@ -46,12 +46,17 @@ public class TransferMap : MonoBehaviour
                 SceneManager.LoadScene("Stage " + (gameManager.stage - 1) + "-0");
                 player.transform.position = new Vector3(target.position.x, target.position.y, target.position.z);
                 player.transform.position = target.position;
+                player.isInHouse = false;
             }
             else if (gameObject.tag == "DoorIn" && v == 1)
             {
+                if (player.isBike)
+                    return;
+
                 SceneManager.LoadScene("Stage " + gameManager.stage + "-" + gameManager.count);
                 player.transform.position = new Vector3(target.position.x, target.position.y, target.position.z);
                 player.transform.position = target.position;
+                player.isInHouse = true;
             }
         }
     }

@@ -43,7 +43,16 @@ public class GameManager : MonoBehaviour
 
         talkPanel.SetActive(isAction);
     }
-    
+
+    public void Action(int id)
+    {
+        // Bike Talk¿ª ¿ß«— Action
+        isAction = true;
+        Talk(id);
+
+        talkPanel.SetActive(isAction);
+    }
+
     void Talk(int id)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);

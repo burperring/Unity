@@ -18,10 +18,14 @@ public class Player : MonoBehaviour
     public int bikeCount;
     public int startPos;
     public string currentMapName;
+    public bool isInHouse;          // 현재 집 안, 밖을 체크하는 값
+    public bool isBikeTalk;         // 집안에서 자전거를 타려고 했을 경우 대화창
+    public bool isBike;             // 자전거를 타고 있을 경우 집 안으로 들어오지 못함
 
     Rigidbody2D rigid;
     Animator anim;
     GameObject scanObject;
+    GameObject npcObject;
 
     float h;
     float v;
@@ -106,10 +110,34 @@ public class Player : MonoBehaviour
         // Bike Check
         if (checkBike)
         {
-            if (!anim.GetBool("isBike"))
-                anim.SetBool("isBike", true);
+            if (!isInHouse)
+            {
+                if (!anim.GetBool("isBike"))
+                {
+                    anim.SetBool("isBike", true);
+                    isBike = true;
+                }
+                else
+                {
+                    anim.SetBool("isBike", false);
+                    isBike = false;
+                }
+            }
             else
-                anim.SetBool("isBike", false);
+            {
+                // Bike Talk
+                gameManager.Action(1000);
+                isBikeTalk = true;
+            }
+        }
+
+        if(isBikeTalk && Input.GetButtonDown("Jump"))
+        {
+            gameManager.Action(1000);
+        }
+        else if(!gameManager.isAction)
+        {
+            isBikeTalk = false;
         }
 
         // Bike Count Check
@@ -128,6 +156,14 @@ public class Player : MonoBehaviour
             dirVec = Vector3.left;
         else if (hDown && h == 1)
             dirVec = Vector3.right;
+
+        if(npcObject != null)
+        {
+            if(npcObject.transform.position.y > player.transform.position.y)
+                npcObject.transform.position = new Vector3(npcObject.transform.position.x, npcObject.transform.position.y, 1);
+            else if(npcObject.transform.position.y < player.transform.position.y)
+                npcObject.transform.position = new Vector3(npcObject.transform.position.x, npcObject.transform.position.y, -1);
+        }
 
         // Scan Object
         if (Input.GetButtonDown("Jump") && scanObject != null)
@@ -156,5 +192,34 @@ public class Player : MonoBehaviour
             scanObject = rayHit.collider.gameObject;
         else
             scanObject = null;
+
+        // Npc Find
+        RaycastHit2D npcHit1 = Physics2D.Raycast(rigid.position, new Vector3(-1,1,0), 1.0f, LayerMask.GetMask("Npc"));
+        RaycastHit2D npcHit2 = Physics2D.Raycast(rigid.position, Vector3.up, 1.0f, LayerMask.GetMask("Npc"));
+        RaycastHit2D npcHit3 = Physics2D.Raycast(rigid.position, new Vector3(1, 1, 0), 1.0f, LayerMask.GetMask("Npc"));
+        RaycastHit2D npcHit4 = Physics2D.Raycast(rigid.position, Vector3.right, 1.0f, LayerMask.GetMask("Npc"));
+        RaycastHit2D npcHit5 = Physics2D.Raycast(rigid.position, new Vector3(1, -1, 0), 1.0f, LayerMask.GetMask("Npc"));
+        RaycastHit2D npcHit6 = Physics2D.Raycast(rigid.position, Vector3.down, 1.0f, LayerMask.GetMask("Npc"));
+        RaycastHit2D npcHit7 = Physics2D.Raycast(rigid.position, new Vector3(-1, -1, 0), 1.0f, LayerMask.GetMask("Npc"));
+        RaycastHit2D npcHit8 = Physics2D.Raycast(rigid.position, Vector3.left, 1.0f, LayerMask.GetMask("Npc"));
+
+        if (npcHit1.collider != null)
+            npcObject = npcHit1.collider.gameObject;
+        else if (npcHit2.collider != null)
+            npcObject = npcHit2.collider.gameObject;
+        else if (npcHit3.collider != null)
+            npcObject = npcHit3.collider.gameObject;
+        else if (npcHit4.collider != null)
+            npcObject = npcHit4.collider.gameObject;
+        else if (npcHit5.collider != null)
+            npcObject = npcHit5.collider.gameObject;
+        else if (npcHit6.collider != null)
+            npcObject = npcHit6.collider.gameObject;
+        else if (npcHit7.collider != null)
+            npcObject = npcHit7.collider.gameObject;
+        else if (npcHit8.collider != null)
+            npcObject = npcHit8.collider.gameObject;
+        else
+            npcObject = null;
     }
 }
