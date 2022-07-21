@@ -62,15 +62,16 @@
     <Analyzer Include="C:\Users\USER\Unity_Program\Unity\Pokemon_DP_Project\Library\PackageCache\com.unity.entities@0.51.0-preview.32\Unity.Entities\SourceGenerators\Unity.Entities.SourceGen.AuthoringComponent.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\NpcQuestMove.cs" />
+    <Compile Include="Assets\Scripts\QuestData.cs" />
     <Compile Include="Assets\Scripts\TransferMap.cs" />
     <Compile Include="Assets\Scripts\ObjData.cs" />
+    <Compile Include="Assets\Scripts\QuestManager.cs" />
     <Compile Include="Assets\Scripts\TalkManager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\HouseAdress.cs" />
     <Compile Include="Assets\Scripts\StartPoint.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\QuestManager.cs" />
-    <Compile Include="Assets\Scripts\QuestData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

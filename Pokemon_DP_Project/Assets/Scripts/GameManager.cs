@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     static public GameManager gameManager;
 
     public TalkManager talkManager;
+    public QuestManager questManager;
 
     public Text talkText;
     public GameObject canvas;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
         if (gameManager == null)
         {
             DontDestroyOnLoad(talkManager);
+            DontDestroyOnLoad(questManager);
             DontDestroyOnLoad(canvas);
 
             gameManager = this;
@@ -36,11 +38,13 @@ public class GameManager : MonoBehaviour
 
     public void Action(GameObject scanObj)
     {
+        // Get Current Object
         isAction = true;      
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
         Talk(objData.id);
 
+        // Visible Talk for Action
         talkPanel.SetActive(isAction);
     }
 
@@ -55,17 +59,23 @@ public class GameManager : MonoBehaviour
 
     void Talk(int id)
     {
-        string talkData = talkManager.GetTalk(id, talkIndex);
+        // Set Talk Data
+        int questTalkIndex = questManager.GetQuestTalkIndex(id);
+        string talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
 
+        // End Talk
         if (talkData == null)
         {
             talkIndex = 0;
             isAction = false;
+            questManager.CheckQuest(id);
             return;
         }
 
+        // Continue Talk
         talkText.text = talkData;
 
+        // Next Talk
         isAction = true;
         talkIndex++;
     }

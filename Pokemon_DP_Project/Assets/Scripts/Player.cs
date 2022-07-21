@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
         // Scan Object
         if (Input.GetButtonDown("Jump") && scanObject != null)
         {
-            gameManager.Action(scanObject);
+            gameManager.Action(scanObject); 
         }
     }
 
@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
 
         // Ray
         Debug.DrawRay(rigid.position, dirVec * 0.7f, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 1.0f, LayerMask.GetMask("Object"));
+        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 1.0f, LayerMask.GetMask("Object", "Npc"));
 
         if(rayHit.collider != null)
             scanObject = rayHit.collider.gameObject;

@@ -602,6 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2000
+  isNpc: 0
 --- !u!1 &165931357
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2000
+  isNpc: 0
 --- !u!1 &235362328
 GameObject:
   m_ObjectHideFlags: 0
@@ -7047,6 +7049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4000
+  isNpc: 0
 --- !u!1 &476174178
 GameObject:
   m_ObjectHideFlags: 0
@@ -7778,7 +7781,7 @@ GameObject:
   - component: {fileID: 969759809}
   - component: {fileID: 969759808}
   m_Layer: 0
-  m_Name: UpStairPoint
+  m_Name: DownStairPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7796,7 +7799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1fb956b5a851b48939f7f1265aec11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: UpStairPoint
+  startPoint: DownStairPoint
 --- !u!61 &969759809
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7963,6 +7966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2000
+  isNpc: 0
 --- !u!1 &1038012863
 GameObject:
   m_ObjectHideFlags: 0
@@ -8319,7 +8323,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -9147,6 +9151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2000
+  isNpc: 0
 --- !u!1 &1356477043
 GameObject:
   m_ObjectHideFlags: 0
@@ -9192,6 +9197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   talkManager: {fileID: 316780306}
+  questManager: {fileID: 1394263252}
   talkText: {fileID: 165931359}
   canvas: {fileID: 1038012863}
   talkPanel: {fileID: 774019991}
@@ -9244,7 +9250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2370a8149d7522d409302ddd9ab1f573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questId: 0
+  questId: 10
+  questActionIndex: 0
 --- !u!1 &1517708180
 GameObject:
   m_ObjectHideFlags: 0
@@ -9448,7 +9455,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -37011000, guid: e9b47d68e70d027459cb12301d2bdd7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9522,6 +9529,8 @@ MonoBehaviour:
   startPos: 0
   currentMapName: 
   isInHouse: 1
+  isBikeTalk: 0
+  isBike: 0
 --- !u!95 &1585132870
 Animator:
   serializedVersion: 4
@@ -11224,6 +11233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3000
+  isNpc: 0
 --- !u!1 &1753396405
 GameObject:
   m_ObjectHideFlags: 0
