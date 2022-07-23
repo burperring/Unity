@@ -23,15 +23,15 @@ public class Player : MonoBehaviour
     public bool isBike;             // 자전거를 타고 있을 경우 집 안으로 들어오지 못함
 
     Rigidbody2D rigid;
-    Animator anim;
-    GameObject scanObject;
-    GameObject npcObject;
+    public Animator anim;
+    public GameObject scanObject;
+    public GameObject npcObject;
 
     float h;
     float v;
     bool isHorizonMove;
     bool isRunMove;
-    Vector3 dirVec;
+    public Vector3 dirVec;
 
     private void Start()
     {

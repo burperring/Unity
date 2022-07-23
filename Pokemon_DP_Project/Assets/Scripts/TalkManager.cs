@@ -35,7 +35,7 @@ public class TalkManager : MonoBehaviour
         // ----- Nomal Talk Data -----
 
         // ----- Quest Talk Data -----
-        talkData.Add(10 + 1000000, new string[] { "엄마: 아까 용식이가 너를 찾아왔단다", "무슨 일인지는 모르겠다만 아주 급한 일인가 봐!" });
+        talkData.Add(10 + 1000000, new string[] { "엄마: 아까 용식이가 너를 찾아왔단다", "무슨 일인지는 모르겠다만 아주 급한 일인가 봐!", "서둘러 용식이에게 가보렴" });
 
         talkData.Add(11 + 1000000, new string[] { "엄마: 맞다 풀숲에 들어가면 안 된단다! \n야생의 포켓몬이 달려드니까", "네 포켓몬이 있다면 \n괜찮을지 모르겠지만..." });
 

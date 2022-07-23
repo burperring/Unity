@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class NpcMove
+public class NpcData
 {
     // Npc Move Check
     public bool npcMove;
@@ -18,12 +18,15 @@ public class NpcMove
 public class NpcManager : MonoBehaviour
 {
     [SerializeField]
-    public NpcMove npc;
+    public NpcData npc;
     public float speed;
     public int walkCount;
+    public bool moveCheck;
+    public bool isStopTalk = true;      // Npc와 대화를 진행할 경우 Npc를 멈추게 하는 값
+    public bool npcCanMove = true;
 
+    private Player player;
     private int currentWalkCount;
-    protected bool npcCanMove = true;
 
     Animator anim;
 
@@ -31,17 +34,73 @@ public class NpcManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(MoveCoroutine());
+        // Quest 전달 Npc가 아닌 반복적으로 움직이는 Npc의 경우 바로 움직이게 만들어준다.
+        if(npc.repeatNpc)
+            StartCoroutine(MoveCoroutine());
     }
 
     private void Awake()
     {
+        player = FindObjectOfType<Player>();
         anim = GetComponent<Animator>();
     }
 
-    void Move(string dir)
+    private void Update()
+    {
+        // 대화 시작으로 인해 Npc 움직임을 강제적으로 멈춘 경우 해당 대화가 끝났을 때 다시 움직이게 만들어준다.
+        if (!player.gameManager.isAction && !isStopTalk)
+        {
+            isStopTalk = true;
+            player.gameManager.isAction = true;
+        }
+    }
+
+    public void Move(string dir)
     {
         StartCoroutine(MoveNpc(dir));
+    }
+
+    void PlayerLook()
+    {
+        // Set Player Look, RatHit Position
+        if (player.npcObject != null)
+        {
+            isStopTalk = false;
+
+            if (player.npcObject.transform.position.y > player.transform.position.y)
+            {
+                player.anim.SetInteger("vAxisRaw", 1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.up;
+            }
+            else if (player.npcObject.transform.position.y < player.transform.position.y)
+            {
+                player.anim.SetInteger("vAxisRaw", -1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.down;
+            }
+            else if (player.npcObject.transform.position.x > player.transform.position.x)
+            {
+                player.anim.SetInteger("hAxisRaw", 1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.right;
+            }
+            else if (player.npcObject.transform.position.x < player.transform.position.x)
+            {
+                player.anim.SetInteger("hAxisRaw", -1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.left;
+            }
+        }
+    }
+
+    void PlayerTalk()
+    {
+        // 강제적으로 마주본 캐릭터와 대화하게 만든다.
+        if(player.scanObject != null)
+        {
+            player.gameManager.Action(player.scanObject);
+        }
     }
 
     IEnumerator MoveNpc(string dir)
@@ -53,29 +112,45 @@ public class NpcManager : MonoBehaviour
 
         switch (dir)
         {
+            case "Start":
+                player.gameManager.isAction = true;
+                break;
+            case "Finish":
+                player.gameManager.isAction = false;
+                break;
             case "Up":
+                moveCheck = npc.npcMove ? true : false;
                 dirVec.y = 1f;
                 break;
             case "Down":
+                moveCheck = npc.npcMove ? true : false;
                 dirVec.y = -1f;
                 break;
             case "Right":
+                moveCheck = npc.npcMove ? true : false;
                 dirVec.x = 1f;
                 break;
             case "Left":
+                moveCheck = npc.npcMove ? true : false;
                 dirVec.x = -1f;
                 break;
             case "Walk":
                 npc.npcMove = true;
+                moveCheck = false;
                 break;
             case "Stop":
                 npc.npcMove = false;
+                moveCheck = false;
+                break;
+            case "Talk":
+                PlayerLook();
+                Invoke("PlayerTalk", 0.1f);
                 break;
         }
 
         anim.SetFloat("vAxisRaw", dirVec.x);
         anim.SetFloat("hAxisRaw", dirVec.y);
-        anim.SetBool("isWalking", npc.npcMove);
+        anim.SetBool("isWalking", moveCheck);
 
         while (currentWalkCount < walkCount)
         {
@@ -84,14 +159,17 @@ public class NpcManager : MonoBehaviour
             else
                 transform.Translate(dirVec.x * 0, dirVec.y * 0, dirVec.z);
 
-            currentWalkCount++;
+            if (npc.npcMove)
+                currentWalkCount++;
+            else
+                currentWalkCount += 5;
 
             yield return new WaitForSeconds(0.01f);
         }
 
         currentWalkCount = 0;
 
-        anim.SetBool("isWalking", npc.npcMove);
+        anim.SetBool("isWalking", moveCheck);
 
         // While 무한정 도는 것을 막기 위한 장치
         npcCanMove = true;
@@ -99,14 +177,14 @@ public class NpcManager : MonoBehaviour
 
     IEnumerator MoveCoroutine()
     {
-        if(npc.direction.Length != 0)
+        if (npc.direction.Length != 0)
         {
-            for(int i = 0; i < npc.direction.Length; i++)
+            for (int i = 0; i < npc.direction.Length; i++)
             {
                 // 실질적 이동구간
                 yield return new WaitUntil(() => npcCanMove);
                 Move(npc.direction[i]);
-                
+
                 // Check Repeat Npc
                 if (npc.repeatNpc)
                     if (i == npc.direction.Length - 1)
