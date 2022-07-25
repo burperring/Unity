@@ -9718,7 +9718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ad99b5a9fbbf14ab402eeea0fe408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1356477045}
+  gameManager: {fileID: 1989031956}
   transferMapName: UpStair
   target: {fileID: 2013703247}
 --- !u!1 &929309362
@@ -11151,7 +11151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 69871283, guid: b8bbf0311f0a71f41afd0098cbdadac8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11254,7 +11254,6 @@ MonoBehaviour:
     npcMove: 1
     repeatNpc: 0
     direction: []
-  beforeNpc: {fileID: 0}
   speed: 0.01
   walkCount: 100
   moveCheck: 0
@@ -12288,61 +12287,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1356477043
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1356477044}
-  - component: {fileID: 1356477045}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1356477044
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356477043}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1356477045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356477043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f8baa0a12077d4cbd43855a3d5553d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  talkManager: {fileID: 0}
-  questManager: {fileID: 0}
-  talkText: {fileID: 165931359}
-  canvas: {fileID: 0}
-  talkPanel: {fileID: 774019991}
-  scanObject: {fileID: 0}
-  isAction: 0
-  talkIndex: 0
-  stage: 1
-  count: 1
-  doQuestNumber: 0
 --- !u!1 &1635268426
 GameObject:
   m_ObjectHideFlags: 0
@@ -13245,6 +13189,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1989031955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989031957}
+  - component: {fileID: 1989031956}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1989031956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989031955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f8baa0a12077d4cbd43855a3d5553d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talkManager: {fileID: 0}
+  questManager: {fileID: 0}
+  talkText: {fileID: 0}
+  canvas: {fileID: 0}
+  talkPanel: {fileID: 0}
+  scanObject: {fileID: 0}
+  isAction: 0
+  talkIndex: 0
+  stage: 1
+  count: 2
+  beforeStage: 0
+  beforeCount: 0
+  doQuestNumber: 0
+--- !u!4 &1989031957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989031955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2013703246
 GameObject:
   m_ObjectHideFlags: 0
@@ -13774,7 +13775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ad99b5a9fbbf14ab402eeea0fe408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1356477045}
+  gameManager: {fileID: 1989031956}
   transferMapName: OutDoor
   target: {fileID: 1635268427}
 --- !u!1 &2053465588

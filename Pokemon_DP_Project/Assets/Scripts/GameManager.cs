@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public int talkIndex;
     public int stage;
     public int count;
+    public int beforeStage;
+    public int beforeCount;
     public int doQuestNumber;
 
     private void Awake()

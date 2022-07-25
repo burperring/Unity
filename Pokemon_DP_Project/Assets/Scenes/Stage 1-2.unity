@@ -9206,6 +9206,7 @@ MonoBehaviour:
   talkIndex: 0
   stage: 1
   count: 2
+  doQuestNumber: 0
 --- !u!1 &1394263250
 GameObject:
   m_ObjectHideFlags: 0
@@ -9455,7 +9456,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: -37011000, guid: e9b47d68e70d027459cb12301d2bdd7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9531,10 +9532,13 @@ MonoBehaviour:
   isInHouse: 1
   isBikeTalk: 0
   isBike: 0
+  isQuestTalk: 0
+  isQuestNpcMove: 0
+  anim: {fileID: 0}
   scanObject: {fileID: 0}
   npcObject: {fileID: 0}
-  h: 0
-  v: 0
+  beforeNpc: {fileID: 0}
+  dirVec: {x: 0, y: 0, z: 0}
 --- !u!95 &1585132870
 Animator:
   serializedVersion: 4
