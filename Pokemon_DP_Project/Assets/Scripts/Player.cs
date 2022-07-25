@@ -18,14 +18,17 @@ public class Player : MonoBehaviour
     public int bikeCount;
     public int startPos;
     public string currentMapName;
-    public bool isInHouse;          // 현재 집 안, 밖을 체크하는 값
-    public bool isBikeTalk;         // 집안에서 자전거를 타려고 했을 경우 대화창
-    public bool isBike;             // 자전거를 타고 있을 경우 집 안으로 들어오지 못함
+    public bool isInHouse;                  // 현재 집 안, 밖을 체크하는 값
+    public bool isBikeTalk;                 // 집안에서 자전거를 타려고 했을 경우 대화창
+    public bool isBike;                     // 자전거를 타고 있을 경우 집 안으로 들어오지 못함
+    public bool isQuestTalk = false;        // 퀘스트로 인한 강제적인 대화창인지 확인
+    public bool isQuestNpcMove = false;     // 퀘스트로 인해 NPC가 강제적으로 움직이는 중인가
 
     Rigidbody2D rigid;
     public Animator anim;
     public GameObject scanObject;
     public GameObject npcObject;
+    public GameObject beforeNpc;
 
     float h;
     float v;
@@ -166,9 +169,21 @@ public class Player : MonoBehaviour
         }
 
         // Scan Object
-        if (Input.GetButtonDown("Jump") && scanObject != null)
+        if (Input.GetButtonDown("Jump") && scanObject != null && !isQuestTalk && !isQuestNpcMove)
         {
             gameManager.Action(scanObject); 
+        }
+
+        if (isQuestNpcMove)
+        {
+            if (Input.GetButtonDown("Jump") && scanObject != null && isQuestTalk)
+            {
+                gameManager.Action(scanObject);
+            }
+            if (Input.GetButtonDown("Jump") && scanObject == null && beforeNpc != null && isQuestTalk)
+            {
+                gameManager.Action(beforeNpc);
+            }
         }
     }
 

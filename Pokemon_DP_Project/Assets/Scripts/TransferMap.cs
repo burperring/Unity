@@ -23,7 +23,7 @@ public class TransferMap : MonoBehaviour
         v = Input.GetAxisRaw("Vertical");
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Player")
         {

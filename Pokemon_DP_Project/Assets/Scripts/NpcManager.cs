@@ -52,6 +52,7 @@ public class NpcManager : MonoBehaviour
         {
             isStopTalk = true;
             player.gameManager.isAction = true;
+            player.isQuestTalk = false;
         }
     }
 
@@ -69,24 +70,66 @@ public class NpcManager : MonoBehaviour
 
             if (player.npcObject.transform.position.y > player.transform.position.y)
             {
+                dirVec.y = -1;
                 player.anim.SetInteger("vAxisRaw", 1);
                 player.anim.SetBool("isChange", true);
                 player.dirVec = Vector3.up;
             }
             else if (player.npcObject.transform.position.y < player.transform.position.y)
             {
+                dirVec.y = 1;
                 player.anim.SetInteger("vAxisRaw", -1);
                 player.anim.SetBool("isChange", true);
                 player.dirVec = Vector3.down;
             }
             else if (player.npcObject.transform.position.x > player.transform.position.x)
             {
+                dirVec.x = -1;
                 player.anim.SetInteger("hAxisRaw", 1);
                 player.anim.SetBool("isChange", true);
                 player.dirVec = Vector3.right;
             }
             else if (player.npcObject.transform.position.x < player.transform.position.x)
             {
+                dirVec.x = 1;
+                player.anim.SetInteger("hAxisRaw", -1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.left;
+            }
+        }
+    }
+
+    void LongPlayerLook()
+    {
+        // Set Player Look, RatHit Position
+        if (player.beforeNpc != null)
+        {
+            isStopTalk = false;
+
+            if (player.beforeNpc.transform.position.y > player.transform.position.y)
+            {
+                dirVec.y = -1;
+                player.anim.SetInteger("vAxisRaw", 1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.up;
+            }
+            else if (player.beforeNpc.transform.position.y < player.transform.position.y)
+            {
+                dirVec.y = 1;
+                player.anim.SetInteger("vAxisRaw", -1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.down;
+            }
+            else if (player.beforeNpc.transform.position.x > player.transform.position.x)
+            {
+                dirVec.x = -1;
+                player.anim.SetInteger("hAxisRaw", 1);
+                player.anim.SetBool("isChange", true);
+                player.dirVec = Vector3.right;
+            }
+            else if (player.beforeNpc.transform.position.x < player.transform.position.x)
+            {
+                dirVec.x = 1;
                 player.anim.SetInteger("hAxisRaw", -1);
                 player.anim.SetBool("isChange", true);
                 player.dirVec = Vector3.left;
@@ -100,6 +143,15 @@ public class NpcManager : MonoBehaviour
         if(player.scanObject != null)
         {
             player.gameManager.Action(player.scanObject);
+            player.beforeNpc = player.scanObject;
+        }
+    }
+
+    void LongPlayerTalk()
+    {
+        if (player.beforeNpc != null)
+        {
+            player.gameManager.Action(player.beforeNpc);
         }
     }
 
@@ -143,8 +195,14 @@ public class NpcManager : MonoBehaviour
                 moveCheck = false;
                 break;
             case "Talk":
+                player.isQuestTalk = true;
                 PlayerLook();
                 Invoke("PlayerTalk", 0.1f);
+                break;
+            case "LongTalk":
+                player.isQuestTalk = true;
+                LongPlayerLook();
+                Invoke("LongPlayerTalk", 0.1f);
                 break;
         }
 

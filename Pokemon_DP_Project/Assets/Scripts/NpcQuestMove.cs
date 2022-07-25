@@ -15,15 +15,15 @@ public class NpcQuestMove : MonoBehaviour
     public NpcMove npcMove;
     public int questNumber;
     public int questTrigger;
-    public bool isNpcTransY;
     public NpcManager npcManager;
+    public GameObject NextQuest;
 
-    private QuestManager questManager;
+    private Player player;
     private GameManager gameManager;
 
     private void Awake()
     {
-        questManager = FindObjectOfType<QuestManager>();
+        player = FindObjectOfType<Player>();
         gameManager = FindObjectOfType<GameManager>();
 
         // Check Finish Quest Destroy
@@ -31,16 +31,7 @@ public class NpcQuestMove : MonoBehaviour
             NpcQuestMove.Destroy(this.gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (questManager.questId == questTrigger)
-        {
-            StartCoroutine(MoveCoroutine());
-            Debug.Log(questManager.GetQuestTalkIndex(questTrigger));
-        }
-    }
-
-    IEnumerator MoveCoroutine()
+    public IEnumerator MoveCoroutine()
     {
         if (npcMove.direction.Length != 0)
         {
@@ -52,8 +43,15 @@ public class NpcQuestMove : MonoBehaviour
                 npcManager.Move(npcMove.direction[i]);
             }
 
+            if(NextQuest == null)
+                player.beforeNpc = null;
+
+            player.isQuestNpcMove = false;
+
             // Set Finish Quest Number
             gameManager.doQuestNumber = questNumber;
+
+            // Delete Qeust Trigger
             NpcQuestMove.Destroy(this.gameObject);
         }
     }
