@@ -4,28 +4,19 @@ using UnityEngine;
 
 public class HouseAdress : MonoBehaviour
 {
-    public GameManager gameManager;
-    public Animator anim;
-
     public int stage;
     public int count;
 
+    private GameManager gameManager;
+
     private void Awake()
     {
-        anim = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         gameManager.stage = stage;
         gameManager.count = count;
-
-        if(gameManager.beforeStage == stage && gameManager.beforeCount == count)
-        {
-            anim.SetTrigger("onTrigger");
-
-            gameManager.stage = 0;
-            gameManager.count = 0;
-        }
     }
 }

@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class TransferMap : MonoBehaviour
 {
-    public GameManager gameManager;
     public string transferMapName;
     public Transform target;
 
+    private GameManager gameManager;
     private Player player;
 
     float v;
     
     void Start()
     {
-        player = FindObjectOfType<Player>();   
+        player = FindObjectOfType<Player>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -32,20 +33,22 @@ public class TransferMap : MonoBehaviour
             if (gameObject.tag == "StairDown")
             {
                 SceneManager.LoadScene("Stage " + gameManager.stage + "-" + (gameManager.count - 1));
+                gameManager.count--;
                 player.transform.position = new Vector3(target.position.x, target.position.y, target.position.z);
                 player.transform.position = target.position;
             }
             else if (gameObject.tag == "StairUp")
             {
                 SceneManager.LoadScene("Stage " + gameManager.stage + "-" + (gameManager.count + 1));
+                gameManager.count++;
                 player.transform.position = new Vector3(target.position.x, target.position.y, target.position.z);
                 player.transform.position = target.position;
             }
             else if (gameObject.tag == "DoorOut" && v == -1)
             {
-                gameManager.beforeStage = gameManager.stage;
-                gameManager.beforeCount = gameManager.count;
                 SceneManager.LoadScene("Stage " + (gameManager.stage - 1) + "-0");
+                gameManager.stage--;
+                gameManager.count = 0;
                 player.transform.position = new Vector3(target.position.x, target.position.y, target.position.z);
                 player.transform.position = target.position;
                 player.isInHouse = false;
