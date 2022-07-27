@@ -35,15 +35,15 @@ public class TalkManager : MonoBehaviour
         // ----- Nomal Talk Data -----
 
         // ----- Quest Talk Data -----
+        // Quest_10_Start
         talkData.Add(10 + 1000000, new string[] { "엄마: 아까 용식이가 너를 찾아왔단다", "무슨 일인지는 모르겠다만 아주 급한 일인가 봐!", "서둘러 용식이에게 가보렴" });
-
         talkData.Add(11 + 1000000, new string[] { "엄마: 맞다 풀숲에 들어가면 안 된단다! \n야생의 포켓몬이 달려드니까", "네 포켓몬이 있다면 \n괜찮을지 모르겠지만..." });
-
         talkData.Add(12 + 1000000, new string[] { "엄마: 용식이 집을 못찾았어?", "용식이 집은 위에서 왼쪽 집이야" });
-
-        talkData.Add(12 + 2000000, new string[] { "용식: 뭐야?", "어라, 너 잖아!?!!", "이봐! 호수에 갈 테니까 \n빨리 와!", "알겠어? 늦으면 \n벌금 100만 원이야!" });
-
+        talkData.Add(12 + 2000000, new string[] { "콰당!!!!", "용식: 뭐야-?", "어라, 너 잖아!?!!", "이봐! 호수에 갈 테니까 \n빨리 와!", "알겠어? 늦으면 \n벌금 100만 원이야!" });
         talkData.Add(13 + 2000000, new string[] { "용식: 아! 깜빡한 게 있다!" });
+        talkData.Add(14 + 2000000, new string[] { "용식: 아! 깜빡한 게 있다!" });
+        // Quest_10_Done
+        // ----- Quest Talk Data -----
     }
 
     public string GetTalk(int id, int talkIndex)

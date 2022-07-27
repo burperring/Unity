@@ -14,7 +14,6 @@ public class NpcQuestMove : MonoBehaviour
     [SerializeField]
     public NpcMove npcMove;
     public int questNumber;
-    public int questTrigger;
     public NpcManager npcManager;
     public GameObject NextQuest;
 

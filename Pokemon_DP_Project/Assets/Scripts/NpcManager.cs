@@ -29,8 +29,10 @@ public class NpcManager : MonoBehaviour
     private int currentWalkCount;
 
     Animator anim;
+    SpriteRenderer sprite;
 
     Vector3 dirVec;
+    Vector3 beforeDir;
 
     private void Start()
     {
@@ -42,6 +44,7 @@ public class NpcManager : MonoBehaviour
     private void Awake()
     {
         player = FindObjectOfType<Player>();
+        sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
@@ -170,29 +173,45 @@ public class NpcManager : MonoBehaviour
             case "Finish":
                 player.gameManager.isAction = false;
                 break;
+            case "Appear":
+                sprite.color = new Color(1, 1, 1, 1);
+                break;
+            case "Disappear":
+                sprite.color = new Color(1, 1, 1, 0);
+                break;
             case "Up":
                 moveCheck = npc.npcMove ? true : false;
                 dirVec.y = 1f;
+                beforeDir.y = 1f;
+                beforeDir.x = 0;
                 break;
             case "Down":
                 moveCheck = npc.npcMove ? true : false;
                 dirVec.y = -1f;
+                beforeDir.y = -1f;
+                beforeDir.x = 0;
                 break;
             case "Right":
                 moveCheck = npc.npcMove ? true : false;
                 dirVec.x = 1f;
+                beforeDir.y = 0;
+                beforeDir.x = 1f;
                 break;
             case "Left":
                 moveCheck = npc.npcMove ? true : false;
                 dirVec.x = -1f;
+                beforeDir.y = 0;
+                beforeDir.x = -1f;
                 break;
             case "Walk":
                 npc.npcMove = true;
                 moveCheck = false;
+                dirVec = beforeDir;
                 break;
             case "Stop":
                 npc.npcMove = false;
                 moveCheck = false;
+                dirVec = beforeDir;
                 break;
             case "Talk":
                 player.isQuestTalk = true;
@@ -212,7 +231,7 @@ public class NpcManager : MonoBehaviour
 
         while (currentWalkCount < walkCount)
         {
-            if (npc.npcMove)
+            if (npc.npcMove && moveCheck)
                 transform.Translate(dirVec.x * speed, dirVec.y * speed, dirVec.z);
             else
                 transform.Translate(dirVec.x * 0, dirVec.y * 0, dirVec.z);

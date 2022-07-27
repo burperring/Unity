@@ -47,6 +47,8 @@ public class TransferMap : MonoBehaviour
             else if (gameObject.tag == "DoorOut" && v == -1)
             {
                 SceneManager.LoadScene("Stage " + (gameManager.stage - 1) + "-0");
+                gameManager.beforeStage = gameManager.stage;
+                gameManager.beforeCount = gameManager.count;
                 gameManager.stage--;
                 gameManager.count = 0;
                 player.transform.position = new Vector3(target.position.x, target.position.y, target.position.z);

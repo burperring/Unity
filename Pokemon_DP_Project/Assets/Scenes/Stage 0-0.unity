@@ -489,7 +489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec59e32eaf647b4ab55ef07c7f1d4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   stage: 1
   count: 3
 --- !u!61 &211833124
@@ -697,6 +696,7 @@ GameObject:
   - component: {fileID: 283736581}
   - component: {fileID: 283736582}
   - component: {fileID: 283736583}
+  - component: {fileID: 283736584}
   m_Layer: 0
   m_Name: PlayerHouseAdressTrigger
   m_TagString: Untagged
@@ -757,9 +757,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec59e32eaf647b4ab55ef07c7f1d4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1584786307}
   stage: 1
   count: 1
+--- !u!114 &283736584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283736580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670d54107b6157c4bb89354646f94fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorTrigger: {fileID: 1584786310}
+  houseAdress: {fileID: 283736583}
+--- !u!1 &300838808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300838809}
+  - component: {fileID: 300838810}
+  m_Layer: 0
+  m_Name: Quest_10_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &300838809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300838808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1895525585}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &300838810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300838808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafa78a3554920a44b7d9e756b0d73a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcMove:
+    direction:
+    - Start
+    - Appear
+    - Down
+    - Stop
+    - Down
+    - Talk
+    - Walk
+    - Right
+    - Right
+    - Right
+    - Stop
+    - Right
+    - Walk
+    - Left
+    - Left
+    - Left
+    - Stop
+    - Down
+    - Talk
+    - Walk
+    - Up
+    - Disappear
+    - Finish
+  questNumber: 12
+  npcManager: {fileID: 654173609}
+  NextQuest: {fileID: 0}
 --- !u!1 &446304022
 GameObject:
   m_ObjectHideFlags: 0
@@ -16376,6 +16462,8 @@ GameObject:
   - component: {fileID: 654173605}
   - component: {fileID: 654173607}
   - component: {fileID: 654173608}
+  - component: {fileID: 654173609}
+  - component: {fileID: 654173610}
   m_Layer: 9
   m_Name: DragonSick
   m_TagString: Untagged
@@ -16424,8 +16512,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 555625910, guid: a6cd46a2b24b3f743936db3d814c3b32, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 906236161, guid: a6cd46a2b24b3f743936db3d814c3b32, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16443,7 +16531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654173604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: 14, z: 0}
+  m_LocalPosition: {x: -6.5, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16490,6 +16578,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2000000
   isNpc: 1
+--- !u!114 &654173609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654173604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5eb7ecee33f85c4bba99d95ecd57e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc:
+    npcMove: 1
+    repeatNpc: 0
+    direction: []
+  speed: 0.04
+  walkCount: 25
+  moveCheck: 0
+  isStopTalk: 1
+  npcCanMove: 1
+--- !u!95 &654173610
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654173604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 35d68eeab97a7b34c8bbed995c56bb59, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &699467609
 GameObject:
   m_ObjectHideFlags: 0
@@ -21411,6 +21540,7 @@ GameObject:
   - component: {fileID: 1584786309}
   - component: {fileID: 1584786308}
   - component: {fileID: 1584786307}
+  - component: {fileID: 1584786310}
   m_Layer: 0
   m_Name: PlayerHouseDoor
   m_TagString: Untagged
@@ -21505,6 +21635,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1584786310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584786306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd04f8ec1ed692408af1dee0dd129b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1629746304
 GameObject:
   m_ObjectHideFlags: 0
@@ -22614,6 +22756,78 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1895525584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1895525585}
+  - component: {fileID: 1895525587}
+  - component: {fileID: 1895525586}
+  m_Layer: 0
+  m_Name: Quest_10_2_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1895525585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895525584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.5, y: 14.3, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.7, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300838809}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895525586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895525584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25463c74a788d47419b506eb0a798aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcQuestMove: {fileID: 300838810}
+--- !u!61 &1895525587
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895525584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1933246990
 GameObject:
   m_ObjectHideFlags: 0
@@ -22693,7 +22907,7 @@ GameObject:
   - component: {fileID: 2013703248}
   - component: {fileID: 2013703249}
   m_Layer: 0
-  m_Name: DoorInPoint
+  m_Name: PlayerDoorInPoint
   m_TagString: DoorIn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22752,7 +22966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1fb956b5a851b48939f7f1265aec11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: DoorInPoint
+  startPoint: PlayerDoorInPoint
 --- !u!1 &2043249035
 GameObject:
   m_ObjectHideFlags: 0

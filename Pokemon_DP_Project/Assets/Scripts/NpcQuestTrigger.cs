@@ -17,11 +17,11 @@ public class NpcQuestTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (questManager.questId + questManager.questActionIndex == npcQuestMove.questTrigger)
+        if (questManager.questId + questManager.questActionIndex == npcQuestMove.questNumber)
         {
             player.isQuestNpcMove = true;
             StartCoroutine(npcQuestMove.MoveCoroutine());
-            Debug.Log(questManager.GetQuestTalkIndex(npcQuestMove.questTrigger));
+            Debug.Log(questManager.GetQuestTalkIndex(npcQuestMove.questNumber));
         }
     }
 }

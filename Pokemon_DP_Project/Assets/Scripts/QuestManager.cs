@@ -17,8 +17,8 @@ public class QuestManager : MonoBehaviour
 
     void GenerateData()
     {
-        // 1000000 : Player Mom
-        questList.Add(10, new QuestData("용식이와 만나기", new int[] { 1000000, 1000000, 2000000, 2000000 }));
+        // 1000000 : Player Mom     2000000 : DragonSick
+        questList.Add(10, new QuestData("용식이와 만나기", new int[] { 1000000, 1000000, 2000000, 2000000, 2000000 }));
 
         // Dummy Data
         questList.Add(20, new QuestData("퀘스트 올 클리어", new int[] { 0 }));
