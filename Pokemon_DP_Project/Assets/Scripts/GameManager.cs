@@ -10,10 +10,11 @@ public class GameManager : MonoBehaviour
     public TalkManager talkManager;
     public QuestManager questManager;
 
-    public Text talkText;
+    public TypeEffect talk;
     public GameObject canvas;
     public GameObject talkPanel;
     public GameObject scanObject;
+    public AudioSource audioSource;
 
     public bool isAction;
     public int talkIndex;
@@ -63,8 +64,20 @@ public class GameManager : MonoBehaviour
     void Talk(int id)
     {
         // Set Talk Data
-        int questTalkIndex = questManager.GetQuestTalkIndex(id);
-        string talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+        int questTalkIndex = 0;
+        string talkData = "";
+
+        // Check Type Effect Anim
+        if (talk.isAnimation)
+        {
+            talk.SetMsg("");
+            return;
+        }
+        else
+        {
+            questTalkIndex = questManager.GetQuestTalkIndex(id);
+            talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+        }
 
         // End Talk
         if (talkData == null)
@@ -76,7 +89,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Continue Talk
-        talkText.text = talkData;
+        talk.SetMsg(talkData);
 
         // Next Talk
         isAction = true;

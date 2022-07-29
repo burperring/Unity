@@ -614,6 +614,8 @@ GameObject:
   - component: {fileID: 165931358}
   - component: {fileID: 165931360}
   - component: {fileID: 165931359}
+  - component: {fileID: 165931361}
+  - component: {fileID: 165931362}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -684,6 +686,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165931357}
   m_CullTransparentMesh: 1
+--- !u!114 &165931361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165931357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41194e4e287428446b4fd040bc0d7c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charPerSeconds: 15
+  isAnimation: 0
+  EndCursor: {fileID: 1085869630}
+  msgText: {fileID: 165931359}
+  audioSource: {fileID: 165931362}
+--- !u!82 &165931362
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165931357}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2d044c651d0d28248b6fb8b5493f64a0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &231671319
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ad99b5a9fbbf14ab402eeea0fe408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1356477045}
   transferMapName: DownStair
   target: {fileID: 969759810}
 --- !u!1 &234369795
@@ -9198,14 +9312,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkManager: {fileID: 316780306}
   questManager: {fileID: 1394263252}
-  talkText: {fileID: 165931359}
+  talk: {fileID: 165931361}
   canvas: {fileID: 1038012863}
   talkPanel: {fileID: 774019991}
   scanObject: {fileID: 0}
+  audioSource: {fileID: 165931362}
   isAction: 0
   talkIndex: 0
   stage: 1
   count: 2
+  beforeStage: 0
+  beforeCount: 0
   doQuestNumber: 0
 --- !u!1 &1394263250
 GameObject:

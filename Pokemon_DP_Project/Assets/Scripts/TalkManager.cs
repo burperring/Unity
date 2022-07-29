@@ -31,7 +31,10 @@ public class TalkManager : MonoBehaviour
         talkData.Add(1000000, new string[] { "엄마: 오랜만에 집에 들어왔구나", "집에서 쉬었다 가렴." });
 
         // DragonSick
-        talkData.Add(2000000, new string[] { "용식: 이 문장이 뜬다면 뭔가 잘못된거야..." });
+        talkData.Add(2000000, new string[] { "용식: 어!! 우리집에는 무슨 일이야?", "난 오랜만에 집에 쉬러왔지..", "너도 오랜만에 집에서 쉬는건 어때?" });
+
+        // DragonSickMom
+        talkData.Add(3000000, new string[] { "용식엄마: 용식이 찾으러 왔나?" });
         // ----- Nomal Talk Data -----
 
         // ----- Quest Talk Data -----
@@ -41,7 +44,8 @@ public class TalkManager : MonoBehaviour
         talkData.Add(12 + 1000000, new string[] { "엄마: 용식이 집을 못찾았어?", "용식이 집은 위에서 왼쪽 집이야" });
         talkData.Add(12 + 2000000, new string[] { "콰당!!!!", "용식: 뭐야-?", "어라, 너 잖아!?!!", "이봐! 호수에 갈 테니까 \n빨리 와!", "알겠어? 늦으면 \n벌금 100만 원이야!" });
         talkData.Add(13 + 2000000, new string[] { "용식: 아! 깜빡한 게 있다!" });
-        talkData.Add(14 + 2000000, new string[] { "용식: 아! 깜빡한 게 있다!" });
+        talkData.Add(14 + 3000000, new string[] { "용식엄마: 아 용식이 찾아왔구나?", "그 애 방금 나갔었는데 \n바로 돌아왔지 뭐니", "정말 가만히 있지를 않는구나 \n누굴 닮아서 저럴까?" });
+        talkData.Add(14 + 2000000, new string[] { "용식: ...가방이랑 \n모험노트도 들고 가볼까", "오!! 빨리 호수에 가자", "도로에서 기다릴 테니까 \n늦으면 벌금 1000만 원이야!" });
         // Quest_10_Done
         // ----- Quest Talk Data -----
     }

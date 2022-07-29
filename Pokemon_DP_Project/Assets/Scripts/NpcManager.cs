@@ -71,14 +71,16 @@ public class NpcManager : MonoBehaviour
         {
             isStopTalk = false;
 
-            if (player.npcObject.transform.position.y > player.transform.position.y)
+            if (player.npcObject.transform.position.y > player.transform.position.y && 
+                Mathf.Abs(player.npcObject.transform.position.y - player.transform.position.y) > 0.7f)
             {
                 dirVec.y = -1;
                 player.anim.SetInteger("vAxisRaw", 1);
                 player.anim.SetBool("isChange", true);
                 player.dirVec = Vector3.up;
             }
-            else if (player.npcObject.transform.position.y < player.transform.position.y)
+            else if (player.npcObject.transform.position.y < player.transform.position.y &&
+                Mathf.Abs(player.npcObject.transform.position.y - player.transform.position.y) > 0.7f)
             {
                 dirVec.y = 1;
                 player.anim.SetInteger("vAxisRaw", -1);
@@ -109,14 +111,16 @@ public class NpcManager : MonoBehaviour
         {
             isStopTalk = false;
 
-            if (player.beforeNpc.transform.position.y > player.transform.position.y)
+            if (player.beforeNpc.transform.position.y > player.transform.position.y &&
+                 Mathf.Abs(player.beforeNpc.transform.position.y - player.transform.position.y) > 0.7f)
             {
                 dirVec.y = -1;
                 player.anim.SetInteger("vAxisRaw", 1);
                 player.anim.SetBool("isChange", true);
                 player.dirVec = Vector3.up;
             }
-            else if (player.beforeNpc.transform.position.y < player.transform.position.y)
+            else if (player.beforeNpc.transform.position.y < player.transform.position.y &&
+                Mathf.Abs(player.beforeNpc.transform.position.y - player.transform.position.y) > 0.7f)
             {
                 dirVec.y = 1;
                 player.anim.SetInteger("vAxisRaw", -1);
@@ -239,7 +243,7 @@ public class NpcManager : MonoBehaviour
             if (npc.npcMove)
                 currentWalkCount++;
             else
-                currentWalkCount += 5;
+                currentWalkCount += 2;
 
             yield return new WaitForSeconds(0.01f);
         }
