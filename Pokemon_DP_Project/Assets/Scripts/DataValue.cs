@@ -6,7 +6,8 @@
 
 // ----- NPC -----
 // 1000000 : Player Mom             2000000 : Dragon Sick(Friend)
-// 3000000 : Dragon Sick Mom
+// 3000000 : Dragon Sick Mom        4000000 : Player Villige Girl
+// 5000000 : Player Villige Man
 // ----- NPC -----
 
 // ----- Object -----
