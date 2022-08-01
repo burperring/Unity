@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\NpcQuestMove.cs" />
+    <Compile Include="Assets\Scripts\SetNpcTrigger.cs" />
     <Compile Include="Assets\Scripts\DoorAnimTrigger.cs" />
     <Compile Include="Assets\Scripts\NpcManager.cs" />
     <Compile Include="Assets\Scripts\QuestData.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Assets\Scripts\HouseAdress.cs" />
     <Compile Include="Assets\Scripts\StartPoint.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\SetNpcTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

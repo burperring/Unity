@@ -49,7 +49,7 @@ public class NpcQuestMove : MonoBehaviour
 
             // Set Finish Quest Number
             gameManager.doQuestNumber = questNumber;
-
+            
             // Delete Qeust Trigger
             NpcQuestMove.Destroy(this.gameObject);
         }

@@ -31,10 +31,16 @@ public class TalkManager : MonoBehaviour
         talkData.Add(1000000, new string[] { "엄마: 오랜만에 집에 들어왔구나", "집에서 쉬었다 가렴." });
 
         // DragonSick
-        talkData.Add(2000000, new string[] { "용식: 어!! 우리집에는 무슨 일이야?", "난 오랜만에 집에 쉬러왔지..", "너도 오랜만에 집에서 쉬는건 어때?" });
+        talkData.Add(2000000, new string[] { "용식: 어!! 우리집에는 무슨 일이야?", "난 오랜만에 집에 쉬러왔지...", "너도 오랜만에 집에서 쉬는건 어때?" });
 
         // DragonSickMom
         talkData.Add(3000000, new string[] { "용식엄마: 용식이 찾으러 왔나?" });
+
+        // Player Villige Girl
+        talkData.Add(4000000, new string[] { "여자주민: 우리 마을은 정말 살기 좋은거 같아!", "조용하고 공기도 좋고..." });
+
+        // Player Villige Man
+        talkData.Add(5000000, new string[] { "남자주민: 나는 우리 마을의 꽃밭을 관리하고 있어", "생긴거와 다르다는 말 많이들어" });
         // ----- Nomal Talk Data -----
 
         // ----- Quest Talk Data -----
@@ -52,7 +58,8 @@ public class TalkManager : MonoBehaviour
         // Quest_20_Done
 
         // Quest_30_Start
-        talkData.Add(20 + 2000000, new string[] { "용식: " });
+        talkData.Add(30 + 5000000, new string[] { "남자주민: 여행 나가는 거야?", "풀숲을 조심해!", "야생의 포켓몬이 달려드니깐" });
+        talkData.Add(30 + 2000000, new string[] { "용식: " });
         // Quest_30_Done
         // ----- Quest Talk Data -----
     }
