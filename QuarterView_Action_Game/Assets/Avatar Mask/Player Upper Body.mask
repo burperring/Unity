@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player Upper Body
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Bone_Body
+    m_Weight: 1
+  - m_Path: Bone_Body/Body
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Neck
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Neck/Bone_Head
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Neck/Bone_Head/Bone_Head_end
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Neck/Bone_Head/Head
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_L
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_L/Bone_Arm_L
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_L/Bone_Arm_L/Bone_Arm_L_end
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_L/Bone_Arm_L/LeftHand
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_R
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_R/Bone_Arm_R
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_R/Bone_Arm_R/Bone_Arm_R_end
+    m_Weight: 1
+  - m_Path: Bone_Body/Bone_Shoulder_R/Bone_Arm_R/RightHand
+    m_Weight: 1
+  - m_Path: Bone_Leg_L
+    m_Weight: 0
+  - m_Path: Bone_Leg_L/Bone_Foot_L
+    m_Weight: 1
+  - m_Path: Bone_Leg_L/Bone_Foot_L/Bone_Foot_L_end
+    m_Weight: 1
+  - m_Path: Bone_Leg_L/Bone_Foot_L/RightFoot
+    m_Weight: 1
+  - m_Path: Bone_Leg_R
+    m_Weight: 0
+  - m_Path: Bone_Leg_R/Bone_Foot_R
+    m_Weight: 1
+  - m_Path: Bone_Leg_R/Bone_Foot_R/Bone_Foot_R_end
+    m_Weight: 1
+  - m_Path: Bone_Leg_R/Bone_Foot_R/LeftFoot
+    m_Weight: 1
