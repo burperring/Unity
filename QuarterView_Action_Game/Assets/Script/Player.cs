@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public bool[] hasWeapons;
     public GameObject[] grenades;
     public Camera followCamera;
+    public GameObject throwGrenade;
 
     // Player Variable
     public int ammo;
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public int maxHasGrenade;
 
-    float fireDelay;
+    float fireDelay = 1f;
     float hAxis;
     float vAxis;
     int equipWeaponIndex = -1;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
     bool wDown;         // Shift : 걷기
     bool jDown;         // Space : 점프
     bool fDown;         // Mouse 0 : 공격
+    bool gDown;         // G : 수류탄 던지기
     bool rDown;         // R : 재장전
     bool xDown;         // Mouse 1 : 회피
     bool iDown;         // E : 상호작용
@@ -43,6 +45,8 @@ public class Player : MonoBehaviour
     bool isSwap;
     bool isFireReady;
     bool isReload;
+    bool isBorder;
+    bool isDamage;
 
     // Player Move Vec
     Vector3 moveVec;
@@ -50,6 +54,7 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;
     Animator anim;
+    MeshRenderer[] meshs;
 
     GameObject nearObject;
     Weapon equipWeapon;
@@ -58,6 +63,7 @@ public class Player : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
+        meshs = GetComponentsInChildren<MeshRenderer>();
     }
 
     void Update()
@@ -66,6 +72,7 @@ public class Player : MonoBehaviour
         Move();
         Turn();
         Jump();
+        Grenade();
         Attack();
         Reload();
         Dodge();
@@ -80,6 +87,7 @@ public class Player : MonoBehaviour
         wDown = Input.GetButton("Walk");
         jDown = Input.GetButtonDown("Jump");
         fDown = Input.GetButton("Fire1");
+        gDown = Input.GetButtonDown("Fire2");
         rDown = Input.GetButtonDown("Reload");
         xDown = Input.GetButtonDown("Dash");
         iDown = Input.GetButtonDown("Interation");
@@ -97,7 +105,8 @@ public class Player : MonoBehaviour
             moveVec = dodgeVec;
 
         // Rigidbody에서 Freeze Rotation X, Z를 true로 해줘야 캐릭터가 쓰러지지 않는다.
-        transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
+        if(!isBorder)
+            transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
 
         anim.SetBool("isRun", moveVec != Vector3.zero);
         anim.SetBool("isWalk", wDown);
@@ -106,7 +115,10 @@ public class Player : MonoBehaviour
     void Turn()
     {
         // 1. Player Look for Keyboard
-        transform.LookAt(transform.position + moveVec);
+        if(equipWeapon == null || equipWeapon.type != Weapon.Type.Melee)
+            transform.LookAt(transform.position + moveVec);
+        else if(isFireReady)
+            transform.LookAt(transform.position + moveVec);     // 근접 무기의 경우 공격하는 동안 바라보는 방향 고정
 
         // 2. Player Look for Mouse (Attack)
         if (fDown)
@@ -117,6 +129,7 @@ public class Player : MonoBehaviour
             {
                 Vector3 nextVec = rayHit.point - transform.position;          // rayHit.point : RaycastHit가 닿은 위치
                 nextVec.y = 0;
+
                 transform.LookAt(transform.position + nextVec);
             }
         }
@@ -130,6 +143,32 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump", true);
             anim.SetTrigger("doJump");
             isJump = true;
+        }
+    }
+
+    void Grenade()
+    {
+        if (hasGrenade == 0)
+            return;
+
+        if(gDown && !isReload && !isSwap)
+        {
+            Ray ray = followCamera.ScreenPointToRay(Input.mousePosition);     // ScreenPointToRay() : 스크린에서 월드로 Ray를 쏘는 함수
+            RaycastHit rayHit;
+            if (Physics.Raycast(ray, out rayHit, 100))   // out : return 처럼 반환값을 주어진 변수에 저장하는 키워드
+            {
+                Vector3 nextVec = rayHit.point - transform.position;          // rayHit.point : RaycastHit가 닿은 위치
+                nextVec.y = 13;
+
+                // Produce Grenade
+                GameObject instantGrenade = Instantiate(throwGrenade, transform.position, transform.rotation);
+                Rigidbody rigidGrenade = instantGrenade.GetComponent<Rigidbody>();
+                rigidGrenade.AddForce(nextVec, ForceMode.Impulse);
+                rigidGrenade.AddTorque(Vector3.back * 10, ForceMode.Impulse);
+
+                hasGrenade--;
+                grenades[hasGrenade].SetActive(false);
+            }
         }
     }
 
@@ -261,6 +300,46 @@ public class Player : MonoBehaviour
         }
     }
 
+    void FreezeRotation()
+    {
+        rigid.angularVelocity = Vector3.zero;
+    }
+
+    void StopToWall()
+    {
+        Debug.DrawRay(transform.position, transform.forward * 5, Color.green);
+        isBorder = Physics.Raycast(transform.position, moveVec, 2, LayerMask.GetMask("Wall"));  // 현재 위치에서 움직이려는 방향으로 2 거리에 벽이 있으면 true 반환
+    }
+
+    IEnumerator OnDamage()
+    {
+        isDamage = true;
+
+        for (int i = 0; i < 3; i++)
+        {
+            foreach (MeshRenderer mesh in meshs)
+            {
+                mesh.material.color = Color.gray;
+            }
+            yield return new WaitForSeconds(0.17f);
+            foreach (MeshRenderer mesh in meshs)
+            {
+                mesh.material.color = Color.white;
+            }
+            yield return new WaitForSeconds(0.17f);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        isDamage = false;
+    }
+
+    void FixedUpdate()
+    {
+        FreezeRotation();
+        StopToWall();
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Floor")
@@ -309,6 +388,15 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "Weapon")
             nearObject = other.gameObject;
+        else if (other.tag == "EnemyBullet")
+        {
+            if (!isDamage)
+            {
+                Bullet enemyBullet = other.GetComponent<Bullet>();
+                health -= enemyBullet.damage;
+                StartCoroutine(OnDamage());
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)

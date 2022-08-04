@@ -58,11 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Weapon.cs" />
     <Compile Include="Assets\Script\Ex.cs" />
+    <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\Orbit.cs" />
     <Compile Include="Assets\Script\FollowCamera.cs" />
     <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Script\Grenade.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
