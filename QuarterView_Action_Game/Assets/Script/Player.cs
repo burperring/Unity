@@ -311,9 +311,12 @@ public class Player : MonoBehaviour
         isBorder = Physics.Raycast(transform.position, moveVec, 2, LayerMask.GetMask("Wall"));  // 현재 위치에서 움직이려는 방향으로 2 거리에 벽이 있으면 true 반환
     }
 
-    IEnumerator OnDamage()
+    IEnumerator OnDamage(bool isBossAtk)
     {
         isDamage = true;
+
+        if (isBossAtk)
+            rigid.AddForce(transform.forward * -25, ForceMode.Impulse);
 
         for (int i = 0; i < 3; i++)
         {
@@ -328,6 +331,9 @@ public class Player : MonoBehaviour
             }
             yield return new WaitForSeconds(0.17f);
         }
+
+        if (isBossAtk)
+            rigid.velocity = Vector3.zero;
 
         yield return new WaitForSeconds(0.5f);
 
@@ -394,8 +400,14 @@ public class Player : MonoBehaviour
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
                 health -= enemyBullet.damage;
-                StartCoroutine(OnDamage());
+
+                bool isBossAtk = other.name == "Boss Melee Area";
+                StartCoroutine(OnDamage(isBossAtk));
             }
+            
+            // If Player Range Monster Missile Attack Disable Monster Missile
+            if (other.GetComponent<Rigidbody>() != null)
+                Destroy(other.gameObject);
         }
     }
 
