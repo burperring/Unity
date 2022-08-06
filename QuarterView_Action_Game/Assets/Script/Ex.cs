@@ -41,3 +41,10 @@
 //    6) 만약 지형이 바뀌었다면 다시 Bake를 진행해서 NavMesh를 다시 생성해줘야 한다.
 //    7) 특정한 설정을 하지 않고 해당 AI가 물리충돌을 일으키게 된다면 충돌에 대한 물리속도에 변화가 발생하여 움직임의 변화가 발생한다. (제대로 움직이지 않는다.)
 //    8) rigidbody의 velocity와 angularVelocity의 값을 0으로 세팅하면 충돌에도 물리속도 변화가 없다.
+
+// 6. UI 세팅
+//    1) 만약 픽셀을 이용한 UI를 만들고 있다면 Canvas의 Pixel Perfect를 true로 설정해줘야 한다.
+//    2) UI에서 어떤 해상도여도 크기를 동일하게 출력하기 위해서 Canvas Scaler의 UI Scale Mode를 Scale With Screen Size로 설정해야 한다.
+//    3) UI에서 텍스트 세팅을 진행할 때 매번 크기를 잡아주기 귀찮고 값이 일정 값 이상 벗어나게 된다면 글자가 안보이는 경우가 발생한다.
+//      이때 Width, Height을 0, 0으로 세팅하고 Horizontal Overflow, Vertical Overflow의 값을 Overflow로 세팅해주면 된다.
+//    4) 텍스트가 흐리게 보일경우 Scale 값을 0.5로 세팅하고 폰트사이즈를 2배로 키우면 훨씬 선명해진다.
