@@ -10,9 +10,11 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth;
     public int curHealth;
+    public int score;
     public Transform target;
     public BoxCollider meleeArea;
     public GameObject bullet;
+    public GameObject[] coins;
     public bool isChase;
     public bool isAttack;
     public bool isDead;
@@ -22,6 +24,8 @@ public class Enemy : MonoBehaviour
     public MeshRenderer[] meshs;
     public NavMeshAgent nav;
     public Animator anim;
+
+    public GameManager gameManager;
 
     private void Awake()
     {
@@ -198,6 +202,31 @@ public class Enemy : MonoBehaviour
 
             anim.SetTrigger("doDie");
 
+            // Add Player Score
+            Player player = target.GetComponent<Player>();
+            player.score += score;
+
+            // Respawn Coin
+            int ranCoin = Random.Range(0, 3);
+            Instantiate(coins[ranCoin], transform.position, Quaternion.identity);
+
+            // Check Death Enemy
+            switch(enemyType)
+            {
+                case Type.A:
+                    gameManager.enemyCntA--;
+                    break;
+                case Type.B:
+                    gameManager.enemyCntB--;
+                    break;
+                case Type.C:
+                    gameManager.enemyCntC--;
+                    break;
+                case Type.D:
+                    gameManager.enemyCntD--;
+                    break;
+            }
+
             // Enemy Death Action
             if (isGrenade)
             {
@@ -215,8 +244,7 @@ public class Enemy : MonoBehaviour
                 rigid.AddForce(reactVec * 5, ForceMode.Impulse);
             }
 
-            if(enemyType != Type.D)
-                Destroy(gameObject, 4);
+            Destroy(gameObject, 4);
         }
     }
 }
