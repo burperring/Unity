@@ -1,0 +1,247 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'ko' Physical Memory: 16194 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker8
+-projectPath
+C:/Users/USER/Unity_Program/Unity/QuarterView_Action_Game
+-logFile
+Logs/AssetImportWorker8.log
+-srvPort
+6755
+Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/QuarterView_Action_Game
+C:/Users/USER/Unity_Program/Unity/QuarterView_Action_Game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 100.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/USER/Unity_Program/Unity/QuarterView_Action_Game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f14)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007823 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 94.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.690 seconds
+Domain Reload Profiling:
+	ReloadAssembly (691ms)
+		BeginReloadAssembly (75ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (493ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (110ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (293ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (95ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (130ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005853 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\QuarterView_Action_Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\QuarterView_Action_Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.103 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1104ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (859ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (276ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (393ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (243ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3431 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (111.1 KB). Loaded Objects now: 3891.
+Memory consumption went from 122.7 MB to 122.5 MB.
+Total: 3.339000 ms (FindLiveObjects: 0.296100 ms CreateObjectMapping: 0.324800 ms MarkObjects: 2.599300 ms  DeleteObjects: 0.118200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 13142.354310 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 10-Audio.wav
+  artifactKey: Guid(071e5d5bdeb478746927080a2b18c5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 10-Audio.wav using Guid(071e5d5bdeb478746927080a2b18c5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c09ac9d902653baa73d669d8c16334e') in 0.124208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 16-Audio.wav
+  artifactKey: Guid(b6ffe1fb51eac3e419f6a7f43694cb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 16-Audio.wav using Guid(b6ffe1fb51eac3e419f6a7f43694cb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec36cdfe2a5eec9c15571a92c276a2f') in 0.013077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 27-Audio.wav
+  artifactKey: Guid(2ebec63f97bff5b4297dfca4f605c672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 27-Audio.wav using Guid(2ebec63f97bff5b4297dfca4f605c672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06aba4beb3550debf6c3c1c83c4054ed') in 0.014119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 30-Audio.wav
+  artifactKey: Guid(27eb110229c1c2940b9e1cf4c05d2d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 30-Audio.wav using Guid(27eb110229c1c2940b9e1cf4c05d2d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0ca1e363cd523e0a8da02c9d7e25aa') in 0.013469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 25-Audio.wav
+  artifactKey: Guid(d982ed62eb524e042814e3f5e6c45365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 25-Audio.wav using Guid(d982ed62eb524e042814e3f5e6c45365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b78fa084b303c4e5815cd693b01e678') in 0.012491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 12-Audio.wav
+  artifactKey: Guid(30d86af66b44dea418980eaeec35dcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 12-Audio.wav using Guid(30d86af66b44dea418980eaeec35dcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9ca0e5d0a0d129377ed6da8a4f0d345') in 0.012780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 28-Audio.wav
+  artifactKey: Guid(3e64e1c9f6856814c9beeedddba28085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 28-Audio.wav using Guid(3e64e1c9f6856814c9beeedddba28085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb7629a97e4c3da70fb55ad682d291f6') in 0.015626 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 13-Audio.wav
+  artifactKey: Guid(214703d4bec78a34f980ea6353c598f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 13-Audio.wav using Guid(214703d4bec78a34f980ea6353c598f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e98c048fdef88ab2c116b4e784098b') in 0.014267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 26-Audio.wav
+  artifactKey: Guid(485d5d916988a1849ab14a7d44a79cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 26-Audio.wav using Guid(485d5d916988a1849ab14a7d44a79cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bac59a69348d91e0739a6b38d67b807e') in 0.012924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 17-Audio.wav
+  artifactKey: Guid(9418997ac6c37094e8a0076e4fb92864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 17-Audio.wav using Guid(9418997ac6c37094e8a0076e4fb92864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83eb72c82595ea5b252e0d3a41120e66') in 0.013262 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.921328 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 2-Audio.wav
+  artifactKey: Guid(23eec9c94cd24a54087125f67f12f5a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 2-Audio.wav using Guid(23eec9c94cd24a54087125f67f12f5a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bc53e6ca35b6ecf0ce7f59a2888428f') in 0.013483 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 6-Audio.wav
+  artifactKey: Guid(c4ef324bf90bc9b45878c7e5acf7e4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 6-Audio.wav using Guid(c4ef324bf90bc9b45878c7e5acf7e4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38eded08083f10294c31c2e03dac382e') in 0.016829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 9-Audio.wav
+  artifactKey: Guid(2227cea3c6513a8418c2e66b6e823f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 9-Audio.wav using Guid(2227cea3c6513a8418c2e66b6e823f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f7e70eb94ba4527532ab86fc0d3ca7') in 0.013504 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 5-Audio.wav
+  artifactKey: Guid(152baa2c7a679d547883e6585674da7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footstep(Snow and Grass)/Stepssingle sound/snow/Snow1 5-Audio.wav using Guid(152baa2c7a679d547883e6585674da7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '599be5e24b46bd7bd68092610e9f531f') in 0.014305 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

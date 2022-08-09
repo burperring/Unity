@@ -24,8 +24,11 @@ public class Enemy : MonoBehaviour
     public MeshRenderer[] meshs;
     public NavMeshAgent nav;
     public Animator anim;
+    public AudioSource missileSound;
 
     public GameManager gameManager;
+
+    bool isDamage;
 
     private void Awake()
     {
@@ -103,6 +106,9 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isDamage)
+            return;
+
         if(other.tag == "Melee")
         {
             Weapon weapon = other.GetComponent<Weapon>();
@@ -128,6 +134,9 @@ public class Enemy : MonoBehaviour
 
     public void HitByGrenade(Vector3 explosionPos)
     {
+        if (isDamage)
+            return;
+
         curHealth -= 150;       // Grenade Damage = 150
         Vector3 reactVec = transform.position - explosionPos;
 
@@ -168,6 +177,8 @@ public class Enemy : MonoBehaviour
                 Rigidbody rigidBullet = instantBullet.GetComponent<Rigidbody>();
                 rigidBullet.velocity = transform.forward * 20;
 
+                missileSound.Play();
+
                 yield return new WaitForSeconds(2f);
 
                 break;
@@ -182,6 +193,7 @@ public class Enemy : MonoBehaviour
     {
         foreach(MeshRenderer mesh in meshs)
             mesh.material.color = Color.red;
+        isDamage = true;
 
         yield return new WaitForSeconds(0.1f);
 
@@ -189,6 +201,9 @@ public class Enemy : MonoBehaviour
         {
             foreach (MeshRenderer mesh in meshs)
                 mesh.material.color = Color.white;
+            isDamage = false;
+
+            yield return new WaitForSeconds(0.1f);
         }
         else
         {

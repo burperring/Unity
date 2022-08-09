@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour
 {
     public RectTransform uiGroup;
     public Animator anim;
+    public AudioSource buySound;
 
     public GameObject[] itemObject;
     public Transform[] itemPos;
@@ -38,6 +39,8 @@ public class Shop : MonoBehaviour
             StartCoroutine(bankrupTalk());
             return;
         }
+
+        buySound.Play();
 
         StopCoroutine(buyTalk());
         StartCoroutine(buyTalk());

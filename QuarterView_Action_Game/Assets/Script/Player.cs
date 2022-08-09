@@ -13,6 +13,15 @@ public class Player : MonoBehaviour
     public Weapon equipWeapon;
     public GameManager gameManager;
 
+    // Sound
+    public AudioSource[] weaponSound;
+    public AudioSource[] reloadSound;
+    public AudioSource walkSound;
+    public AudioSource coinSound;
+    public AudioSource ammoSound;
+    public AudioSource heartSound;
+    public AudioSource shopEnterSound;
+
     // Player Variable
     public int score;
     public int ammo;
@@ -43,6 +52,8 @@ public class Player : MonoBehaviour
     bool sDown3;        // 3 : 머신건
 
     // Check Player Action
+    float walkWaitTime = 0.26f;
+    float walkTimer = 0.26f;
     bool isJump;
     bool isDodge;
     bool isSwap;
@@ -68,13 +79,12 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         meshs = GetComponentsInChildren<MeshRenderer>();
-
-        Debug.Log(PlayerPrefs.GetInt("MaxScore"));
-        //PlayerPrefs.SetInt("MaxScore", 112500);
     }
 
     void Update()
     {
+        walkTimer += Time.deltaTime;
+
         GetInput();
         Move();
         Turn();
@@ -118,6 +128,13 @@ public class Player : MonoBehaviour
         // Rigidbody에서 Freeze Rotation X, Z를 true로 해줘야 캐릭터가 쓰러지지 않는다.
         if(!isBorder)
             transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
+
+        // Walk Sound Play
+        if (walkTimer > walkWaitTime && !isDodge && !isJump && (Mathf.Abs(hAxis) > 0 || Mathf.Abs(vAxis) > 0))
+        {
+            walkSound.Play();
+            walkTimer = 0f;
+        }
 
         anim.SetBool("isRun", moveVec != Vector3.zero);
         anim.SetBool("isWalk", wDown);
@@ -195,6 +212,17 @@ public class Player : MonoBehaviour
         // Attack
         if(fDown && isFireReady && !isDodge && !isSwap && !isShop && !isDead)
         {
+            // Weapon Sound Play
+            if(equipWeapon.type == Weapon.Type.Melee)
+                weaponSound[equipWeaponIndex].Play();
+            else
+            {
+                if(equipWeapon.curAmmo == 0)
+                    weaponSound[3].Play();
+                else
+                    weaponSound[equipWeaponIndex].Play();
+            }
+
             equipWeapon.Use();
             anim.SetTrigger(equipWeapon.type == Weapon.Type.Melee ? "doSwing" : "doShot");
             fireDelay = 0;
@@ -217,7 +245,9 @@ public class Player : MonoBehaviour
             anim.SetTrigger("doReload");
             isReload = true;
 
-            Invoke("ReloadOut", 3f);
+            reloadSound[equipWeaponIndex].Play();
+
+            Invoke("ReloadOut", equipWeaponIndex == 1 ? 2.2f : 2.8f);
         }
     }
 
@@ -311,6 +341,7 @@ public class Player : MonoBehaviour
             else if (nearObject.tag == "Shop")
             {
                 Shop shop = nearObject.GetComponent<Shop>();
+                shopEnterSound.Play();
                 shop.Enter(this);
                 isShop = true;
             }
@@ -388,21 +419,25 @@ public class Player : MonoBehaviour
             switch(item.type)
             {
                 case Item.Type.Ammo:
+                    ammoSound.Play();
                     ammo += item.value;
                     if (ammo > maxAmmo)
                         ammo = maxAmmo;
                     break;
                 case Item.Type.Coin:
+                    coinSound.Play();
                     coin += item.value;
                     if (coin > maxCoin)
                         coin = maxCoin;
                     break;
                 case Item.Type.Heart:
+                    heartSound.Play();
                     health += item.value;
                     if (health > maxHealth)
                         health = maxHealth;
                     break;
                 case Item.Type.Grenade:
+                    ammoSound.Play();
                     grenades[hasGrenade].SetActive(true);
                     hasGrenade += item.value;
                     if (hasGrenade > maxHasGrenade)

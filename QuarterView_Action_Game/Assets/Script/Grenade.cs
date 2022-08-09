@@ -8,6 +8,8 @@ public class Grenade : MonoBehaviour
     public GameObject effectObject;
     public Rigidbody rigid;
 
+    public AudioSource grenadeSound;
+
     void Start()
     {
         StartCoroutine(Explosion());
@@ -20,6 +22,8 @@ public class Grenade : MonoBehaviour
         rigid.angularVelocity = Vector3.zero;
         meshObject.SetActive(false);
         effectObject.SetActive(true);
+
+        grenadeSound.Play();
 
                           // 구체모양의 레이캐스팅(모든 오브젝트) : 시작점, 반지름 길이, Ray 쏘는 방향, Ray 쏘는 길이, 레이어마스크)
         RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, 15, Vector3.up, 0f, LayerMask.GetMask("Enemy"));
