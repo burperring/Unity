@@ -56,8 +56,8 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Editor\CopyMaterialParameter.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Editor\UniversalToonGUI.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Editor\CopyMaterialParameter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Editor\Unity.UniversalToonShader.Urp.Editor.asmdef" />
@@ -350,6 +350,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>

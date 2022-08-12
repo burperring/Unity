@@ -56,29 +56,29 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\SpringBoneSetupErrorWindow.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\SpringBoneEditorActions.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\SpringColliderEditorActions.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\SaveSpringBoneSetupWindow.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\AngleLimitsPropertyInfo.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\SpringBoneWindow.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringBoneInspector.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\InspectorPropertyInfo.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringPanelColliderInspector.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\SpringBoneGUIStyles.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\Utility\FindGameObjectsWindow.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringBonePivotInspector.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\SpringBoneEditorActions.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\GUIElements.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringManagerInspector.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\SpringBoneGUIStyles.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\Utility\SetObjectParentWindow.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\Utility\Inspector3DRenderer.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\AutoSpringBoneSetup.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringPanelColliderInspector.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringCapsuleColliderInspector.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\InspectorFloatSlider.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\MirrorSpringBoneWindow.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\SpringColliderEditorActions.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\InspectorPropertyInfo.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringManagerInspector.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\SpringBoneSetupErrorWindow.cs" />
+    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringBoneInspector.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\LoadSpringBoneSetupWindow.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringColliderBoneSelector.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\MirrorSpringBoneWindow.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\AutoSpringBoneSetup.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\Utility\SetObjectParentWindow.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\AngleLimitsPropertyInfo.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Windows\SaveSpringBoneSetupWindow.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\Utility\FindGameObjectsWindow.cs" />
     <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringSphereColliderInspector.cs" />
-    <Compile Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\GUI\Inspectors\SpringBonePivotInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanSpringBone-release-1.1\Editor\com.unity.animations.springbone.editor.asmdef" />
@@ -368,6 +368,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
