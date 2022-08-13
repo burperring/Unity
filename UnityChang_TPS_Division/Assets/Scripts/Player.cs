@@ -1,126 +1,156 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController), typeof(PlayerInput))]
 public class Player : MonoBehaviour
 {
-    // Player Status Setting
-    public float donwSpeed;
-    public float walkSpeed;
-    public float runSpeed;
-    public float jumpPower;
+    // Player Status
+    [SerializeField]
+    private float playerCrawlSpeed = 1.5f;
+    [SerializeField]
+    private float playerWalkSpeed = 3.0f;
+    [SerializeField]
+    private float playerRunSpeed = 6.0f;
+    [SerializeField]
+    private float jumpHeight = 1.5f;
+    [SerializeField]
+    private float gravityValue = -9.81f;
+    [SerializeField]
+    private float rotationSpeed = 8f;
 
-    // Player Input Button Value
-    private float hAxis;        // Horizontal
-    private float vAxis;        // Vertical
-    private bool runDown;       // Run : Left Shift
-    private bool jumpDown;      // Jump : Spacebar
-    private bool getDown;       // DownUp : Ctrl
-    private bool sDown1;        // Weapon1 : 1
-    private bool sDown2;        // Weapon2 : 2
-    private bool sDown3;        // Hand : 3
+    // GetComponent
+    private CharacterController controller;
+    private PlayerInput playerInput;
+    private Transform cameraTransform;
+    private Animator anim;
 
-    // Check Player Action
-    float jumpDelay = 0.9f;
-    float jumpTime = 0.9f;
-    bool isMove;
-    bool isDown;
+    // Player Setting
+    public bool isEquipWeapon;
+    public bool isAim;
+    
+    private float playerSpeed;
+    private bool groundedPlayer;
+    private bool isCrawl;
 
-    Vector3 moveVec;
+    // Weapon
+    // Player -> Character1_Reference -> CH_Hips -> CH_Spine -> CH_Chest -> CH_UpperChest -> CH_UpperChest
+    // -> CH_Shou_R -> CH_Hand_R -> COL_Hand_R 위치에 무기 세팅
 
-    Rigidbody rigid;
-    Animator anim;
+    // Player Input Controller Setting
+    private InputAction moveAction;
+    private InputAction jumpAction;
+    private InputAction crawlAction;
+    private InputAction runAction;
+    private InputAction weapon1Action;
+    private InputAction weapon2Action;
+    private InputAction handAction;
 
-    private void Awake()
+    private Vector3 playerVelocity;
+
+    private void Start()
     {
-        rigid = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
+        playerInput = GetComponent<PlayerInput>();
         anim = GetComponent<Animator>();
+        cameraTransform = Camera.main.transform;
+        moveAction = playerInput.actions["Move"];
+        jumpAction = playerInput.actions["Jump"];
+        crawlAction = playerInput.actions["Crawl"];
+        runAction = playerInput.actions["Run"];
+        weapon1Action = playerInput.actions["Weapon1"];
+        weapon2Action = playerInput.actions["Weapon2"];
+        handAction = playerInput.actions["Hand"];
     }
 
     void Update()
     {
-        jumpTime += Time.deltaTime;
-
-        GetInput();
-        MoveCheck();
-        Move();
-        Jump();
+        PlayerMove();
+        RotateCamera();
+        PlayerDownUp();
         Swap();
-        UpDown();
     }
 
-    void GetInput()
+    void PlayerMove()
     {
-        hAxis = Input.GetAxisRaw("Horizontal");
-        vAxis = Input.GetAxisRaw("Vertical");
-        runDown = Input.GetButton("Run");
-        jumpDown = Input.GetButtonDown("Jump");
-        getDown = Input.GetButtonDown("DownUp");
-        sDown1 = Input.GetButtonDown("Weapon1");
-        sDown2 = Input.GetButtonDown("Weapon2");
-        sDown3 = Input.GetButtonDown("Weapon3");
-    }
-
-    void MoveCheck()
-    {
-        if (Mathf.Abs(hAxis) > 0 || Mathf.Abs(vAxis) > 0)
-            isMove = true;
-        else
-            isMove = false;
-    }
-
-    void Move()
-    {
-        if (isDown && vAxis == 0)
+        groundedPlayer = controller.isGrounded;
+        if (groundedPlayer && playerVelocity.y < 0)
         {
-            anim.SetFloat("Vertical", vAxis);
-            return;
+            playerVelocity.y = 0f;
         }
 
-        moveVec = new Vector3(hAxis, 0, vAxis).normalized;
+        Vector2 input = moveAction.ReadValue<Vector2>();
+        Vector3 move = new Vector3(input.x, 0, input.y);
+        move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
+        move.y = 0f;
 
-        transform.position += moveVec * (isDown ? donwSpeed : runDown ? runSpeed : walkSpeed) * Time.deltaTime;
+        if (Mathf.Abs(input.x) > 0 || Mathf.Abs(input.y) > 0)
+            playerSpeed = isCrawl ? playerCrawlSpeed : runAction.IsPressed() ? playerRunSpeed : playerWalkSpeed;
+        else
+            playerSpeed = 0f;
 
-        anim.SetFloat("Horizontal", hAxis);
-        anim.SetFloat("Vertical", vAxis);
-        anim.SetFloat("Speed", isMove ? isDown ? donwSpeed : runDown ? runSpeed : walkSpeed : 0);
+        controller.Move(move * Time.deltaTime * playerSpeed);
+
+        anim.SetFloat("Speed", playerSpeed);
+        anim.SetFloat("Horizontal", input.x);
+        anim.SetFloat("Vertical", input.y);
+
+        // Changes the height position of the player..
+        if (jumpAction.triggered && groundedPlayer)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            anim.SetTrigger("doJump");
+        }
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 
-    void Jump()
+    void RotateCamera()
     {
-        if (!isDown && jumpDown && jumpTime > jumpDelay)
+        Debug.Log(isAim);
+
+        if (isAim && !isCrawl)
         {
-            rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
-            anim.SetTrigger("doJump");
-            jumpTime = 0f;
+            Quaternion targetRotation = Quaternion.Euler(0, cameraTransform.eulerAngles.y + 40f, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
+        else
+        {
+            Quaternion targetRotation = Quaternion.Euler(0, cameraTransform.eulerAngles.y, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
+    }
+
+    void PlayerDownUp()
+    {
+        if(crawlAction.triggered && !isCrawl)
+        {
+            isCrawl = true;
+            anim.SetBool("isDown", true);
+        }
+        else if (crawlAction.triggered && isCrawl)
+        {
+            isCrawl = false;
+            anim.SetBool("isDown", false);
         }
     }
 
     void Swap()
     {
-        if (sDown1 || sDown2)
-        {
-            anim.SetBool("isStrafing", true);
-            jumpDelay = 1.5f;
-        }
-        else if (sDown3)
-        {
-            anim.SetBool("isStrafing", false);
-            jumpDelay = 0.9f;
-        }
-    }
+        anim.SetBool("isAiming", isAim);
 
-    void UpDown()
-    {
-        if (getDown && !isDown)
+        if (weapon1Action.triggered || weapon2Action.triggered)
         {
-            anim.SetBool("isDown", true);
-            isDown = true;
+            if (isEquipWeapon)
+                anim.SetTrigger("doStrafing");
+
+            isEquipWeapon = true;
+            anim.SetBool("isStrafing", true);
         }
-        else if (getDown && isDown)
+        else if(handAction.triggered)
         {
-            anim.SetBool("isDown", false);
-            isDown = false;
+            isEquipWeapon = false;
+            anim.SetBool("isStrafing", false);
         }
     }
 }
