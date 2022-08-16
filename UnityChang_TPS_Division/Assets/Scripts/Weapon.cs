@@ -14,4 +14,7 @@ public class Weapon : MonoBehaviour
     public int maxAmmo;
     [SerializeField]
     public int curAmmo;
+
+    public GameObject bullletShell;
+    public Transform bulletEjectionPos;
 }

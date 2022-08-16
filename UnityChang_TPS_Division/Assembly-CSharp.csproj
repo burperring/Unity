@@ -67,12 +67,14 @@
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\DualTarget\MoveAimTarget.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerLookAt.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Scripts\ExampleHelpWindow.cs" />
+    <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\BossCamera\CustomLockCameraY.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\Scripting\ScriptingExample.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\2D\LoseSightWhenTargetsFallsOffThePlatform.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\2D\MouseScrollZoom2D.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Scripts\MixingCameraBlend.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\Trigger volumes\GenericTrigger.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\DualTarget\PointAtAimTarget.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\BossCamera\BossLookAt.cs" />
@@ -84,13 +86,12 @@
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\CameraMagnets\CameraMagnetProperty.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Scripts\SpawnInCircle.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Scripts\PlayerMoveOnSphere.cs" />
+    <Compile Include="Assets\Scripts\DestroyShell.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\CameraMagnets\CameraMagnetTargetController.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Models\UnityCharacter\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Models\UnityCharacter\Scripts\CharacterMovementNoCamera.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Scripts\ActivateCamOnPlay.cs" />
     <Compile Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Shared\Scripts\ActivateCameraWithDistance.cs" />
-    <Compile Include="Assets\Scripts\BulletController.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\FadeOutNearbyObjects\FadeOut.shader" />
@@ -101,6 +102,7 @@
     <None Include="Assets\Download\Samples\Cinemachine\2.8.6\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
     <None Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Runtime\Shaders\UniversalToonHead.hlsl" />
     <None Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Runtime\Shaders\UniversalToonOutline.hlsl" />
+    <None Include="Assets\Audio\PlayerVoice\unity-chan_voice_list.txt" />
     <None Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Runtime\Shaders\UniversalToonInput.hlsl" />
     <None Include="Assets\Download\UnityChanSSU_URP-release-1.0.2\Packages\UnityChanToonShaderVer2_Project-urp-2.4.0\Runtime\Shaders\UniversalToonBodyShadingGradeMap.hlsl" />
   </ItemGroup>

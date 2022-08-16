@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
     private bool groundedPlayer;
     private bool isCrawl;
     private bool isRoot;
+    private bool isReload;
 
     // Weapon
     // Player -> Character1_Reference -> CH_Hips -> CH_Spine -> CH_Chest -> CH_UpperChest -> CH_UpperChest
@@ -74,6 +75,7 @@ public class Player : MonoBehaviour
     private InputAction weapon2Action;
     private InputAction handAction;
     private InputAction rootAction;
+    private InputAction reloadAction;
 
     private Vector3 playerVelocity;
 
@@ -96,6 +98,7 @@ public class Player : MonoBehaviour
         weapon2Action = playerInput.actions["Weapon2"];
         handAction = playerInput.actions["Hand"];
         rootAction = playerInput.actions["Root"];
+        reloadAction = playerInput.actions["Reload"];
 
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -107,6 +110,7 @@ public class Player : MonoBehaviour
         PlayerMove();
         RotateCamera();
         PlayerDownUp();
+        Reload();
         ShootGun();
         Swap();
         Root();
@@ -189,25 +193,54 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void ShootGun()
+    private void Reload()
     {
         if (!isEquipWeapon)
             return;
+        if ((equipWeaponIndex == 0 && equipCurAmmo1 == weaponValue[weaponIndex[0]].maxAmmo) ||
+            equipWeaponIndex == 1 && equipCurAmmo2 == weaponValue[weaponIndex[1]].maxAmmo)
+            return;
 
-        anim.SetBool("isShooting", shootAction.IsPressed());
+        if(reloadAction.triggered && !isAim && !isCrawl && !isRoot)
+        {
+            anim.SetTrigger("doReload");
+            isReload = true;
+
+            Invoke("ReloadOut", 1.5f);
+        }
+    }
+
+    private void ReloadOut()
+    {
+        if(equipWeaponIndex == 0)
+            equipCurAmmo1 = weaponValue[weaponIndex[0]].maxAmmo;
+        else if(equipWeaponIndex == 1)
+            equipCurAmmo2 = weaponValue[weaponIndex[1]].maxAmmo;
+
+        isReload = false;
+    }
+
+    private void ShootGun()
+    {
+        if (!isEquipWeapon || isRoot || isReload)
+            return;
+        if (isCrawl && !isAim)
+            return;
+        if ((equipCurAmmo1 == 0 && equipWeaponIndex == 0) || (equipCurAmmo2 == 0 && equipWeaponIndex == 1))
+        {
+            anim.SetBool("isShooting", false);
+            return;
+        }
 
         // Shoot Bullet
         if (shootAction.IsPressed() && rate > equipShotRate)
         {
-            if (equipCurAmmo1 == 0 && equipWeaponIndex == 0)
-                return;
-            if (equipCurAmmo2 == 0 && equipWeaponIndex == 1)
-                return;
-
             RaycastHit hit;
 
             GameObject bullet = Instantiate(bulletPrefab, barrelTransform.position, Quaternion.identity, bulletParent);
             BulletController bulletController = bullet.GetComponent<BulletController>();
+
+            ShellEjection();
 
             if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity))
             {
@@ -220,6 +253,8 @@ public class Player : MonoBehaviour
                 bulletController.hit = false;
             }
 
+            anim.SetBool("isShooting", true);
+
             if (equipWeaponIndex == 0)
                 equipCurAmmo1--;
             else if (equipWeaponIndex == 1)
@@ -227,6 +262,21 @@ public class Player : MonoBehaviour
 
             rate = 0;
         }
+        else if (!shootAction.IsPressed())
+            anim.SetBool("isShooting", false);
+    }
+
+    void ShellEjection()
+    {
+        // Cartridge Ejection
+        GameObject instantShell = Instantiate(weaponValue[weaponIndex[equipWeaponIndex]].bullletShell,
+                                             weaponValue[weaponIndex[equipWeaponIndex]].bulletEjectionPos.position,
+                                             weaponValue[weaponIndex[equipWeaponIndex]].bulletEjectionPos.rotation);
+
+        Rigidbody shellRigid = instantShell.GetComponent<Rigidbody>();
+        Vector3 shellVec = weaponValue[weaponIndex[equipWeaponIndex]].bulletEjectionPos.forward * Random.Range(-5, -4) + Vector3.up * Random.Range(3, 5);
+        shellRigid.AddForce(shellVec, ForceMode.Impulse);
+        shellRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
     }
 
     void Swap()
@@ -296,8 +346,11 @@ public class Player : MonoBehaviour
 
                 if (weaponCount == 2)
                 {
+                    Debug.Log(weaponCount);
                     if (weaponIndex[0] == wp.weaponIndex || weaponIndex[1] == wp.weaponIndex)
                         return;
+
+                    Debug.Log("In!!!");
 
                     weapon[weaponIndex[equipWeaponIndex]].SetActive(false);
                     weaponIndex[equipWeaponIndex] = wp.weaponIndex;
@@ -312,6 +365,8 @@ public class Player : MonoBehaviour
                         equipCurAmmo1 = weaponValue[weaponIndex[equipWeaponIndex]].maxAmmo;
                     else if(equipWeaponIndex == 1)
                         equipCurAmmo2 = weaponValue[weaponIndex[equipWeaponIndex]].maxAmmo;
+
+                    nearObject.SetActive(false);
                 }
                 else
                 {
