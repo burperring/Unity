@@ -29,6 +29,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     public Transform bulletDecalParent;
 
+    // Player Sound
+    [SerializeField]
+    private AudioSource walkSound;
+    [SerializeField]
+    private AudioSource runSound;
+    [SerializeField]
+    private AudioSource[] jumpSound;
+    [SerializeField]
+    private AudioSource[] weaponSound;
+
     // GetComponent
     private CharacterController controller;
     private PlayerInput playerInput;
@@ -38,13 +48,15 @@ public class Player : MonoBehaviour
     // Player Setting
     public bool isEquipWeapon;
     public bool isAim;
-    
+
     private float playerSpeed;
     private float rate = 1f;
     private bool groundedPlayer;
+    private bool isJump;
     private bool isCrawl;
     private bool isRoot;
     private bool isReload;
+    private bool isMoveSound;
 
     // Weapon
     // Player -> Character1_Reference -> CH_Hips -> CH_Spine -> CH_Chest -> CH_UpperChest -> CH_UpperChest
@@ -121,6 +133,7 @@ public class Player : MonoBehaviour
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
+            isJump = false;
             playerVelocity.y = 0f;
         }
 
@@ -136,6 +149,14 @@ public class Player : MonoBehaviour
                 playerSpeed = isAim ? 0f : isEquipWeapon ? playerWalkSpeed : isRoot ? 0f : isCrawl ? playerCrawlSpeed : runAction.IsPressed() ? playerRunSpeed : playerWalkSpeed;
             else
                 playerSpeed = isRoot ? 0f : isCrawl ? playerCrawlSpeed : runAction.IsPressed() ? playerRunSpeed : playerWalkSpeed;
+
+            // Player Crawl, Walk, Run Sound
+            if (playerSpeed == playerCrawlSpeed)
+                return;
+            else if (playerSpeed == playerWalkSpeed && !isMoveSound && !isJump)
+                WalkSound();
+            else if (playerSpeed == playerRunSpeed && !isMoveSound && !isJump)
+                RunSound();
         }
         else
             playerSpeed = 0f;
@@ -149,12 +170,34 @@ public class Player : MonoBehaviour
         // Changes the height position of the player..
         if (jumpAction.triggered && groundedPlayer && !isAim && !shootAction.IsPressed())
         {
+            isJump = true;
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             anim.SetTrigger("doJump");
+            int rJump = Random.Range(0, 3);
+            jumpSound[rJump].Play();
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    void WalkSound()
+    {
+        isMoveSound = true;
+        walkSound.Play();
+        Invoke("MoveSoundOut", 0.49f);
+    }
+
+    void RunSound()
+    {
+        isMoveSound = true;
+        runSound.Play();
+        Invoke("MoveSoundOut", 0.33f);
+    }
+
+    void MoveSoundOut()
+    {
+        isMoveSound = false;
     }
 
     void RotateCamera()
@@ -213,9 +256,9 @@ public class Player : MonoBehaviour
     private void ReloadOut()
     {
         if(equipWeaponIndex == 0)
-            equipCurAmmo1 = weaponValue[weaponIndex[0]].maxAmmo;
+            equipCurAmmo1 = equipMaxAmmo;
         else if(equipWeaponIndex == 1)
-            equipCurAmmo2 = weaponValue[weaponIndex[1]].maxAmmo;
+            equipCurAmmo2 = equipMaxAmmo;
 
         isReload = false;
     }
@@ -253,6 +296,7 @@ public class Player : MonoBehaviour
                 bulletController.hit = false;
             }
 
+            weaponSound[weaponIndex[equipWeaponIndex]].Play();
             anim.SetBool("isShooting", true);
 
             if (equipWeaponIndex == 0)
@@ -346,11 +390,8 @@ public class Player : MonoBehaviour
 
                 if (weaponCount == 2)
                 {
-                    Debug.Log(weaponCount);
                     if (weaponIndex[0] == wp.weaponIndex || weaponIndex[1] == wp.weaponIndex)
                         return;
-
-                    Debug.Log("In!!!");
 
                     weapon[weaponIndex[equipWeaponIndex]].SetActive(false);
                     weaponIndex[equipWeaponIndex] = wp.weaponIndex;
@@ -376,9 +417,9 @@ public class Player : MonoBehaviour
                     weaponIndex[weaponCount] = wp.weaponIndex;
 
                     if(weaponCount == 0)
-                        equipCurAmmo1 = weaponValue[weaponIndex[equipWeaponIndex]].maxAmmo;
+                        equipCurAmmo1 = weaponValue[weaponIndex[0]].maxAmmo;
                     else if(weaponCount == 1)
-                        equipCurAmmo2 = weaponValue[weaponIndex[equipWeaponIndex]].maxAmmo;
+                        equipCurAmmo2 = weaponValue[weaponIndex[1]].maxAmmo;
 
                     weaponCount++;
                     nearObject.SetActive(false);
