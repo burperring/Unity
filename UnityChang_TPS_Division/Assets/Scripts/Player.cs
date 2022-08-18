@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private AudioSource runSound;
     [SerializeField]
+    private AudioSource reloadSound;
+    [SerializeField]
     private AudioSource[] jumpSound;
     [SerializeField]
     private AudioSource[] weaponSound;
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
     // Player Setting
     public bool isEquipWeapon;
     public bool isAim;
+    public bool isShoot;
 
     private float playerSpeed;
     private float rate = 1f;
@@ -65,6 +68,8 @@ public class Player : MonoBehaviour
     private GameObject[] weapon;
     [SerializeField]
     private Weapon[] weaponValue;
+    [SerializeField]
+    private GameObject[] weaponDropPrefabs;
 
     private int equipWeaponIndex;
     private int weaponCount = 0;
@@ -248,8 +253,9 @@ public class Player : MonoBehaviour
         {
             anim.SetTrigger("doReload");
             isReload = true;
+            reloadSound.Play();
 
-            Invoke("ReloadOut", 1.5f);
+            Invoke("ReloadOut", 2.2f);
         }
     }
 
@@ -278,6 +284,7 @@ public class Player : MonoBehaviour
         // Shoot Bullet
         if (shootAction.IsPressed() && rate > equipShotRate)
         {
+            isShoot = true;
             RaycastHit hit;
 
             GameObject bullet = Instantiate(bulletPrefab, barrelTransform.position, Quaternion.identity, bulletParent);
@@ -296,7 +303,7 @@ public class Player : MonoBehaviour
                 bulletController.hit = false;
             }
 
-            weaponSound[weaponIndex[equipWeaponIndex]].Play();
+            weaponSound[weaponIndex[equipWeaponIndex]].PlayOneShot(weaponSound[weaponIndex[equipWeaponIndex]].clip);
             anim.SetBool("isShooting", true);
 
             if (equipWeaponIndex == 0)
@@ -307,7 +314,10 @@ public class Player : MonoBehaviour
             rate = 0;
         }
         else if (!shootAction.IsPressed())
+        {
+            isShoot = false;
             anim.SetBool("isShooting", false);
+        }
     }
 
     void ShellEjection()
@@ -393,21 +403,36 @@ public class Player : MonoBehaviour
                     if (weaponIndex[0] == wp.weaponIndex || weaponIndex[1] == wp.weaponIndex)
                         return;
 
+                    // Create Drop Weapon Prefab
+                    Vector3 dropWeaponPos = new Vector3(this.transform.position.x, 
+                        weaponDropPrefabs[weaponIndex[equipWeaponIndex]].transform.position.y, this.transform.position.z);
+
                     weapon[weaponIndex[equipWeaponIndex]].SetActive(false);
+                    GameObject dropWeapon = Instantiate(weaponDropPrefabs[weaponIndex[equipWeaponIndex]],
+                        dropWeaponPos, weaponDropPrefabs[weaponIndex[equipWeaponIndex]].transform.rotation);
+                    Weapon dropWeaponComponent = dropWeapon.GetComponent<Weapon>();
+
+                    if (equipWeaponIndex == 0)
+                        dropWeaponComponent.curAmmo = equipCurAmmo1;
+                    else  if (equipWeaponIndex == 1)
+                        dropWeaponComponent.curAmmo = equipCurAmmo2;
+
+                    dropWeapon.SetActive(true);
+
+                    // Root Weapon Value
                     weaponIndex[equipWeaponIndex] = wp.weaponIndex;
                     weapon[weaponIndex[equipWeaponIndex]].SetActive(true);
-
-                    // Set Equip Weapon Value
+                    
                     equipDamage = weaponValue[weaponIndex[equipWeaponIndex]].damage;
                     equipShotRate = weaponValue[weaponIndex[equipWeaponIndex]].shotRate;
                     equipMaxAmmo = weaponValue[weaponIndex[equipWeaponIndex]].maxAmmo;
 
                     if(equipWeaponIndex == 0)
-                        equipCurAmmo1 = weaponValue[weaponIndex[equipWeaponIndex]].maxAmmo;
+                        equipCurAmmo1 = wp.curAmmo;
                     else if(equipWeaponIndex == 1)
-                        equipCurAmmo2 = weaponValue[weaponIndex[equipWeaponIndex]].maxAmmo;
+                        equipCurAmmo2 = wp.curAmmo;
 
-                    nearObject.SetActive(false);
+                    Destroy(nearObject);
                 }
                 else
                 {
@@ -416,13 +441,13 @@ public class Player : MonoBehaviour
 
                     weaponIndex[weaponCount] = wp.weaponIndex;
 
-                    if(weaponCount == 0)
-                        equipCurAmmo1 = weaponValue[weaponIndex[0]].maxAmmo;
-                    else if(weaponCount == 1)
-                        equipCurAmmo2 = weaponValue[weaponIndex[1]].maxAmmo;
+                    if (weaponCount == 0)
+                        equipCurAmmo1 = wp.curAmmo;
+                    else if (weaponCount == 1)
+                        equipCurAmmo2 = wp.curAmmo;
 
                     weaponCount++;
-                    nearObject.SetActive(false);
+                    Destroy(nearObject);
                 }
             }
         }
