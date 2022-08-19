@@ -10,6 +10,7 @@ public class BulletController : MonoBehaviour
     private float speed = 50f;
     private float timeToDestroy = 3f;
 
+    private Enemy enemy;
     protected Player player;
 
     public Vector3 target { get; set; }
@@ -17,6 +18,7 @@ public class BulletController : MonoBehaviour
 
     private void Awake()
     {
+        enemy = FindObjectOfType<Enemy>();
         player = FindObjectOfType<Player>();
     }
 
@@ -43,7 +45,12 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         ContactPoint contact = collision.GetContact(0);
-        Instantiate(bulletDecal, contact.point + contact.normal * .0001f, Quaternion.LookRotation(contact.normal), player.bulletDecalParent);
+
+        if (collision.gameObject.tag == "Enemy")
+            return;
+        else
+            Instantiate(bulletDecal, contact.point + contact.normal * .0001f, Quaternion.LookRotation(contact.normal), player.bulletDecalParent);
+        
         Destroy(gameObject);
     }
 }

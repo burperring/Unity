@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
     private int[] weaponIndex = { 99, 99 };
 
     // Equip Weapon Value
-    private float equipDamage;
+    public float equipDamage;
     private float equipShotRate;
     private int equipMaxAmmo;
     private int equipCurAmmo1;
