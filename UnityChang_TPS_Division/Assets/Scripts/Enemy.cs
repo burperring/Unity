@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,49 +15,180 @@ public class Enemy : MonoBehaviour
     float enemySightDistance = 0f;
     [SerializeField]
     LayerMask targetLayerMask = 0;
+    [SerializeField]
+    Transform[] wayPoints = null;
+    [SerializeField]
+    BoxCollider meleeArea;
 
+    private int count = 0;
+    private float enemySpeed;
+    private float missTarget = 0;
     private bool isDead = false;
+    private bool isMove;
+    private bool isChase;
+    private bool isAttack;
+    private bool doScream = false;
+
     private Rigidbody rigid;
     private Animator anim;
-    private Vector3 moveVec;
 
     protected Player player;
+
+    NavMeshAgent nav = null;
+    Transform target;
+
+    private void Start()
+    {
+        InvokeRepeating("MovetoNextWayPoint", 0f, 2f);
+    }
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        nav = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<Player>();
     }
 
     private void Update()
     {
         Sight();
+        enemyMove();
+        MissTarget();
+    }
+
+    private void FixedUpdate()
+    {
+        Targetting();
+    }
+
+    void enemyMove()
+    {
+        if(!isAttack)
+            isMove = nav.velocity == Vector3.zero ? false : true;
+
+        anim.SetBool("isMove", isMove);
+        anim.SetFloat("Speed", enemySpeed);
     }
 
     void Sight()
     {
         Collider[] findTargetCols = Physics.OverlapSphere(transform.position, enemySightDistance, targetLayerMask);
 
-        if(findTargetCols.Length > 0)
+        if (findTargetCols.Length > 0)
         {
             // Find Target and Check Pos
-            Transform target = findTargetCols[0].transform;
+            target = findTargetCols[0].transform;
             Vector3 targetDirection = (target.position - transform.position).normalized;
 
             // Check Target Angle
             float targetAngle = Vector3.Angle(targetDirection, transform.forward);
-            if(targetAngle < enemySightAngle * 0.5f)
+            if (targetAngle < enemySightAngle * 0.5f)
             {
                 if (Physics.Raycast(transform.position, targetDirection, out RaycastHit targetHit, enemySightDistance))
                 {
-                    if (targetHit.collider.tag == "Player")
+                    if (targetHit.collider.tag == "Player" && !isDead)
                     {
-                        //Debug.Log(findTargetCols[0].transform.position);
-                        //Debug.Log(targetDirection);
+                        CancelInvoke();
+
+                        if (!isChase && !doScream)
+                            StartCoroutine(Scream());
+
+                        if (doScream && !isAttack)
+                            Chase(target);
                     }
                 }
             }
+            else
+            {
+                target = null;
+            }
+        }
+    }
+
+    void MissTarget()
+    {
+        if (target == null && isChase)
+            missTarget += Time.deltaTime;
+
+        if (missTarget > 13)
+        {
+            isChase = false;
+            doScream = false;
+            missTarget = 0;
+            InvokeRepeating("MovetoNextWayPoint", 0f, 2f);
+        }
+    }
+
+    IEnumerator Scream()
+    {
+        isChase = true;
+        missTarget = 0;
+        nav.speed = 0;
+        anim.SetTrigger("doScream");
+        yield return new WaitForSeconds(2.5f);
+
+        doScream = true;
+    }
+
+    void Chase(Transform target)
+    {
+        nav.speed = 4.5f;
+        enemySpeed = 4.5f;
+        nav.SetDestination(target.position);
+    }
+
+    void MovetoNextWayPoint()
+    {
+        if (wayPoints.Length == 0)
+            return;
+
+        if (nav.velocity == Vector3.zero)
+        {
+            nav.speed = 0.5f;
+            enemySpeed = 0.5f;
+            nav.SetDestination(wayPoints[count++].position);
+
+            if (count >= wayPoints.Length)
+                count = 0;
+        }
+        
+    }
+
+    private void Targetting()
+    {
+        float targetRadius = 1f;
+        float targetRange = 1f;
+
+        RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius,
+            transform.forward, targetRange, LayerMask.GetMask("Player"));
+
+        if (rayHits.Length > 0 && !isAttack && !isDead)
+        {
+            StartCoroutine(Attack());
+        }
+    }
+
+    IEnumerator Attack()
+    {
+        if (!isAttack)
+        {
+            isAttack = true;
+            isChase = false;
+            isMove = false;
+            anim.SetTrigger("doAttack");
+
+            yield return new WaitForSeconds(0.3f);
+            meleeArea.enabled = true;
+
+            yield return new WaitForSeconds(1.6f);
+            meleeArea.enabled = false;
+
+            yield return new WaitForSeconds(0.1f);
+
+            isChase = true;
+            isMove = true;
+            isAttack = false;
         }
     }
 
@@ -80,6 +212,11 @@ public class Enemy : MonoBehaviour
             reactVec = reactVec.normalized;
             reactVec += Vector3.up;
             rigid.AddForce(reactVec * 2, ForceMode.Impulse);
+
+            // Enemy Dead Stop All
+            nav.speed = 0;
+            StopAllCoroutines();
+            CancelInvoke();
 
             if (!isDead)
                 anim.SetTrigger("doDead");

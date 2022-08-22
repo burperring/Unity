@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,6 +7,8 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     // Player Status
+    [SerializeField]
+    private float playerHealth;
     [SerializeField]
     private float playerCrawlSpeed = 1.5f;
     [SerializeField]
@@ -60,6 +64,8 @@ public class Player : MonoBehaviour
     private bool isRoot;
     private bool isReload;
     private bool isMoveSound;
+    private bool isDead = false;
+    private bool isDamage = false;
 
     // Weapon
     // Player -> Character1_Reference -> CH_Hips -> CH_Spine -> CH_Chest -> CH_UpperChest -> CH_UpperChest
@@ -166,14 +172,15 @@ public class Player : MonoBehaviour
         else
             playerSpeed = 0f;
 
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        if(!isDead)
+            controller.Move(move * Time.deltaTime * playerSpeed);
 
         anim.SetFloat("Speed", playerSpeed);
         anim.SetFloat("Horizontal", input.x);
         anim.SetFloat("Vertical", input.y);
 
         // Changes the height position of the player..
-        if (jumpAction.triggered && groundedPlayer && !isAim && !shootAction.IsPressed())
+        if (jumpAction.triggered && groundedPlayer && !isAim && !isDead && !isCrawl && !shootAction.IsPressed())
         {
             isJump = true;
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
@@ -458,9 +465,36 @@ public class Player : MonoBehaviour
         isRoot = false;
     }
 
+    void OnDie()
+    {
+        anim.SetTrigger("doDead");
+        isDead = true;
+    }
+
+    IEnumerator OnDamage()
+    {
+        isDamage = true;
+
+        if (playerHealth <= 0 && !isDead)
+            OnDie();
+
+        yield return new WaitForSeconds(1f);
+
+        isDamage = false;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Weapon")
             nearObject = other.gameObject;
+        else if(other.tag == "EnemyMelee")
+        {
+            if(!isDamage)
+            {
+                playerHealth -= 5;
+                Debug.Log(playerHealth);
+                StartCoroutine(OnDamage());
+            }
+        }
     }
 }
