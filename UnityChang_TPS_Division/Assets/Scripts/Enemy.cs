@@ -158,7 +158,7 @@ public class Enemy : MonoBehaviour
     private void Targetting()
     {
         float targetRadius = 1f;
-        float targetRange = 1f;
+        float targetRange = 0.6f;
 
         RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius,
             transform.forward, targetRange, LayerMask.GetMask("Player"));
@@ -178,10 +178,10 @@ public class Enemy : MonoBehaviour
             isMove = false;
             anim.SetTrigger("doAttack");
 
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.5f);
             meleeArea.enabled = true;
 
-            yield return new WaitForSeconds(1.6f);
+            yield return new WaitForSeconds(1.4f);
             meleeArea.enabled = false;
 
             yield return new WaitForSeconds(0.1f);

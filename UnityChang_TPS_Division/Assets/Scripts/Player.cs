@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
 {
     // Player Status
     [SerializeField]
-    private float playerHealth;
+    public float playerHealth;
+    [SerializeField]
+    public float playerMaxHealth;
     [SerializeField]
     private float playerCrawlSpeed = 1.5f;
     [SerializeField]
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject[] weaponDropPrefabs;
 
-    private int equipWeaponIndex;
+    public int equipWeaponIndex;
     private int weaponCount = 0;
     private int[] weaponIndex = { 99, 99 };
 
@@ -85,8 +87,8 @@ public class Player : MonoBehaviour
     public float equipDamage;
     private float equipShotRate;
     private int equipMaxAmmo;
-    private int equipCurAmmo1;
-    private int equipCurAmmo2;
+    public int equipCurAmmo1;
+    public int equipCurAmmo2;
 
     // Player Input Controller Setting
     private InputAction moveAction;
@@ -141,6 +143,9 @@ public class Player : MonoBehaviour
 
     void PlayerMove()
     {
+        if (isDead)
+            return;
+
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -172,8 +177,7 @@ public class Player : MonoBehaviour
         else
             playerSpeed = 0f;
 
-        if(!isDead)
-            controller.Move(move * Time.deltaTime * playerSpeed);
+        controller.Move(move * Time.deltaTime * playerSpeed);
 
         anim.SetFloat("Speed", playerSpeed);
         anim.SetFloat("Horizontal", input.x);
@@ -250,7 +254,7 @@ public class Player : MonoBehaviour
 
     private void Reload()
     {
-        if (!isEquipWeapon)
+        if (!isEquipWeapon || isDead)
             return;
         if ((equipWeaponIndex == 0 && equipCurAmmo1 == weaponValue[weaponIndex[0]].maxAmmo) ||
             equipWeaponIndex == 1 && equipCurAmmo2 == weaponValue[weaponIndex[1]].maxAmmo)
@@ -278,7 +282,7 @@ public class Player : MonoBehaviour
 
     private void ShootGun()
     {
-        if (!isEquipWeapon || isRoot || isReload)
+        if (!isEquipWeapon || isRoot || isReload || isDead)
             return;
         if (isCrawl && !isAim)
             return;
@@ -342,6 +346,9 @@ public class Player : MonoBehaviour
 
     void Swap()
     {
+        if (isDead)
+            return;
+
         anim.SetBool("isAiming", isAim);
 
         if (weapon1Action.triggered)
@@ -392,6 +399,9 @@ public class Player : MonoBehaviour
 
     void Root()
     {
+        if (isDead)
+            return;
+
         if (rootAction.triggered)
         {
             isRoot = true;
@@ -485,6 +495,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (isDead)
+            return;
+
         if (other.tag == "Weapon")
             nearObject = other.gameObject;
         else if(other.tag == "EnemyMelee")
@@ -492,7 +505,7 @@ public class Player : MonoBehaviour
             if(!isDamage)
             {
                 playerHealth -= 5;
-                Debug.Log(playerHealth);
+
                 StartCoroutine(OnDamage());
             }
         }
