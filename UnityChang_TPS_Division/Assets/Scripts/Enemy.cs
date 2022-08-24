@@ -20,6 +20,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     BoxCollider meleeArea;
 
+    // Enemy Move Sound
+    [SerializeField]
+    private AudioSource walkSound;
+    [SerializeField]
+    private AudioSource runSound;
+
     private int count = 0;
     private float enemySpeed;
     private float missTarget = 0;
@@ -125,6 +131,7 @@ public class Enemy : MonoBehaviour
         isChase = true;
         missTarget = 0;
         nav.speed = 0;
+        enemySpeed = 0;
         anim.SetTrigger("doScream");
         yield return new WaitForSeconds(2.5f);
 

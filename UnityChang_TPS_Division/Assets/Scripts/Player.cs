@@ -31,6 +31,14 @@ public class Player : MonoBehaviour
     private Transform bulletParent;
     [SerializeField]
     private float bulletHitMissDistance = 25f;
+    [SerializeField]
+    private float animationSmoothTime = 0.1f;
+    [SerializeField]
+    private Transform chestTransform;
+    [SerializeField]
+    private Transform aimTarget;
+    [SerializeField]
+    private float aimDistance = 10f;
 
     [SerializeField]
     public Transform bulletDecalParent;
@@ -106,6 +114,9 @@ public class Player : MonoBehaviour
 
     private GameObject nearObject = null;
 
+    Vector2 currentAnimationBlendVector;
+    Vector2 animationVelocity;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -141,6 +152,11 @@ public class Player : MonoBehaviour
         Root();
     }
 
+    private void LateUpdate()
+    {
+        TargetTransfrom();
+    }
+
     void PlayerMove()
     {
         if (isDead)
@@ -154,7 +170,9 @@ public class Player : MonoBehaviour
         }
 
         Vector2 input = moveAction.ReadValue<Vector2>();
-        Vector3 move = new Vector3(input.x, 0, input.y);
+        currentAnimationBlendVector = Vector2.SmoothDamp(currentAnimationBlendVector, input, ref animationVelocity, animationSmoothTime);
+
+        Vector3 move = new Vector3(currentAnimationBlendVector.x, 0, currentAnimationBlendVector.y);
         move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
         move.y = 0f;
 
@@ -167,9 +185,7 @@ public class Player : MonoBehaviour
                 playerSpeed = isRoot ? 0f : isCrawl ? playerCrawlSpeed : runAction.IsPressed() ? playerRunSpeed : playerWalkSpeed;
 
             // Player Crawl, Walk, Run Sound
-            if (playerSpeed == playerCrawlSpeed)
-                return;
-            else if (playerSpeed == playerWalkSpeed && !isMoveSound && !isJump)
+            if (playerSpeed == playerWalkSpeed && !isMoveSound && !isJump)
                 WalkSound();
             else if (playerSpeed == playerRunSpeed && !isMoveSound && !isJump)
                 RunSound();
@@ -180,8 +196,8 @@ public class Player : MonoBehaviour
         controller.Move(move * Time.deltaTime * playerSpeed);
 
         anim.SetFloat("Speed", playerSpeed);
-        anim.SetFloat("Horizontal", input.x);
-        anim.SetFloat("Vertical", input.y);
+        anim.SetFloat("Horizontal", currentAnimationBlendVector.x);
+        anim.SetFloat("Vertical", currentAnimationBlendVector.y);
 
         // Changes the height position of the player..
         if (jumpAction.triggered && groundedPlayer && !isAim && !isDead && !isCrawl && !shootAction.IsPressed())
@@ -303,6 +319,8 @@ public class Player : MonoBehaviour
 
             ShellEjection();
 
+            // Project Settings -> Physics -> Queries Hit Triggers 체크 해제
+            // 그래야 Trigger로 사용된 Collider는 Raycast가 무시할 수 있음
             if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity))
             {
                 bulletController.target = hit.point;
@@ -328,6 +346,31 @@ public class Player : MonoBehaviour
         {
             isShoot = false;
             anim.SetBool("isShooting", false);
+        }
+    }
+
+    void TargetTransfrom()
+    {
+        // Player Chest Move for Target Aim
+        aimTarget.position = cameraTransform.position + cameraTransform.forward * aimDistance + chestTransform.up * 2;
+
+        if (isAim && !isCrawl)
+        {
+            aimTarget.position += cameraTransform.right * 5f;
+            chestTransform.LookAt(aimTarget.position);
+        }
+        else if (!isAim && !isCrawl && isEquipWeapon && shootAction.IsPressed())
+        {
+            float hori = anim.GetFloat("Horizontal");
+            float ver = anim.GetFloat("Vertical");
+
+            aimTarget.position += cameraTransform.right * (5f + (-2f * hori) + Mathf.Abs(ver));
+
+            chestTransform.LookAt(aimTarget.position);
+        }
+        else
+        {
+            chestTransform.LookAt(aimTarget.position);
         }
     }
 
