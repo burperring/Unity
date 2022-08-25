@@ -76,6 +76,8 @@ public class Player : MonoBehaviour
     private bool isMoveSound;
     private bool isDead = false;
     private bool isDamage = false;
+    public bool isGameStart = false;
+    public bool isPause = false;
 
     // Weapon
     // Player -> Character1_Reference -> CH_Hips -> CH_Spine -> CH_Chest -> CH_UpperChest -> CH_UpperChest
@@ -109,10 +111,13 @@ public class Player : MonoBehaviour
     private InputAction handAction;
     private InputAction rootAction;
     private InputAction reloadAction;
+    private InputAction pauseAction;
 
     private Vector3 playerVelocity;
 
     private GameObject nearObject = null;
+
+    private GameManager gameManager;
 
     Vector2 currentAnimationBlendVector;
     Vector2 animationVelocity;
@@ -122,6 +127,7 @@ public class Player : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         anim = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
         cameraTransform = Camera.main.transform;
 
         // Game Input Set
@@ -135,14 +141,14 @@ public class Player : MonoBehaviour
         handAction = playerInput.actions["Hand"];
         rootAction = playerInput.actions["Root"];
         reloadAction = playerInput.actions["Reload"];
-
-        Cursor.lockState = CursorLockMode.Locked;
+        pauseAction = playerInput.actions["Pause"];
     }
 
     void Update()
     {
         rate += Time.deltaTime;
 
+        CursorSet();
         PlayerMove();
         RotateCamera();
         PlayerDownUp();
@@ -152,14 +158,21 @@ public class Player : MonoBehaviour
         Root();
     }
 
+    private void CursorSet()
+    {
+        if (isGameStart)
+            Cursor.lockState = CursorLockMode.Locked;
+    }
+
     private void LateUpdate()
     {
         TargetTransfrom();
+        Pause();
     }
 
     void PlayerMove()
     {
-        if (isDead)
+        if (isDead || !isGameStart)
             return;
 
         groundedPlayer = controller.isGrounded;
@@ -234,6 +247,9 @@ public class Player : MonoBehaviour
 
     void RotateCamera()
     {
+        if (!isGameStart)
+            return;
+
         if (isAim && !isCrawl)
         {
             Quaternion targetRotation = Quaternion.Euler(0, cameraTransform.eulerAngles.y + 40f, 0);
@@ -256,7 +272,10 @@ public class Player : MonoBehaviour
 
     void PlayerDownUp() // Player crawl
     {
-        if(crawlAction.triggered && !isCrawl)
+        if (!isGameStart)
+            return;
+
+        if (crawlAction.triggered && !isCrawl)
         {
             isCrawl = true;
             anim.SetBool("isDown", true);
@@ -270,7 +289,7 @@ public class Player : MonoBehaviour
 
     private void Reload()
     {
-        if (!isEquipWeapon || isDead)
+        if (!isEquipWeapon || isDead || !isGameStart)
             return;
         if ((equipWeaponIndex == 0 && equipCurAmmo1 == weaponValue[weaponIndex[0]].maxAmmo) ||
             equipWeaponIndex == 1 && equipCurAmmo2 == weaponValue[weaponIndex[1]].maxAmmo)
@@ -298,6 +317,9 @@ public class Player : MonoBehaviour
 
     private void ShootGun()
     {
+        if (!isGameStart)
+            return;
+
         if (!isEquipWeapon || isRoot || isReload || isDead)
             return;
         if (isCrawl && !isAim)
@@ -351,6 +373,9 @@ public class Player : MonoBehaviour
 
     void TargetTransfrom()
     {
+        if (!isGameStart)
+            return;
+
         // Player Chest Move for Target Aim
         aimTarget.position = cameraTransform.position + cameraTransform.forward * aimDistance + chestTransform.up * 2;
 
@@ -359,7 +384,7 @@ public class Player : MonoBehaviour
             aimTarget.position += cameraTransform.right * 5f;
             chestTransform.LookAt(aimTarget.position);
         }
-        else if (!isAim && !isCrawl && isEquipWeapon && shootAction.IsPressed())
+        else if (!isAim && !isCrawl && isEquipWeapon)
         {
             float hori = anim.GetFloat("Horizontal");
             float ver = anim.GetFloat("Vertical");
@@ -389,7 +414,7 @@ public class Player : MonoBehaviour
 
     void Swap()
     {
-        if (isDead)
+        if (isDead || !isGameStart)
             return;
 
         anim.SetBool("isAiming", isAim);
@@ -442,7 +467,7 @@ public class Player : MonoBehaviour
 
     void Root()
     {
-        if (isDead)
+        if (isDead || !isGameStart)
             return;
 
         if (rootAction.triggered)
@@ -516,6 +541,33 @@ public class Player : MonoBehaviour
     void RootOut()
     {
         isRoot = false;
+    }
+
+    void Pause()
+    {
+        if(pauseAction.triggered)
+        {
+            if(isPause == false)
+            {
+                Time.timeScale = 0;
+                isPause = true;
+                isGameStart = false;
+                Cursor.lockState = CursorLockMode.None;
+                gameManager.SetPausePanel();
+                return;
+            }
+            if(isPause == true)
+            {
+                gameManager.GameResume();
+            }
+        }
+    }
+
+    public void PauseOut()
+    {
+        Time.timeScale = 1;
+        isPause = false;
+        isGameStart = true;
     }
 
     void OnDie()

@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour
     private AudioSource walkSound;
     [SerializeField]
     private AudioSource runSound;
+    [SerializeField]
+    private AudioSource screamSound;
 
     private int count = 0;
     private float enemySpeed;
@@ -33,6 +35,7 @@ public class Enemy : MonoBehaviour
     private bool isMove;
     private bool isChase;
     private bool isAttack;
+    private bool isMoveSound;
     private bool doScream = false;
 
     private Rigidbody rigid;
@@ -75,6 +78,11 @@ public class Enemy : MonoBehaviour
 
         anim.SetBool("isMove", isMove);
         anim.SetFloat("Speed", enemySpeed);
+
+        if (enemySpeed == 0.5f && !isMoveSound)
+            WalkSound();
+        else if (enemySpeed == 4.5f && !isMoveSound)
+            RunSound();
     }
 
     void Sight()
@@ -115,7 +123,11 @@ public class Enemy : MonoBehaviour
     void MissTarget()
     {
         if (target == null && isChase)
+        {
             missTarget += Time.deltaTime;
+            nav.speed = 0f;
+            enemySpeed = 0f;
+        }
 
         if (missTarget > 13)
         {
@@ -126,12 +138,42 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    void WalkSound()
+    {
+        isMoveSound = true;
+        walkSound.Play();
+        StartCoroutine(MoveSoundOut());
+    }
+
+    void RunSound()
+    {
+        isMoveSound = true;
+        runSound.Play();
+        StartCoroutine(MoveSoundOut());
+    }
+
+    IEnumerator MoveSoundOut()
+    {
+        if (enemySpeed == 0.5f)
+        {
+            yield return new WaitForSeconds(2f);
+            isMoveSound = false;
+        }
+        else if(enemySpeed == 4.5f)
+        {
+            yield return new WaitForSeconds(0.33f);
+            isMoveSound = false;
+        }
+    }
+
     IEnumerator Scream()
     {
         isChase = true;
+        isMoveSound = false;
         missTarget = 0;
         nav.speed = 0;
         enemySpeed = 0;
+        screamSound.Play();
         anim.SetTrigger("doScream");
         yield return new WaitForSeconds(2.5f);
 
@@ -184,6 +226,9 @@ public class Enemy : MonoBehaviour
             isChase = false;
             isMove = false;
             anim.SetTrigger("doAttack");
+
+            nav.speed = 0f;
+            enemySpeed = 0f;
 
             yield return new WaitForSeconds(0.5f);
             meleeArea.enabled = true;

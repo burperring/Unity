@@ -8,14 +8,11 @@ public class GameManager : MonoBehaviour
     public GameObject gamePanel;
     public Text playerHealthText;
     public Text playerAmmoText;
+    public GameObject startPanel;
+    public GameObject pausePanel;
     public RectTransform playerHPBar;
 
-    protected Player player;
-
-    private void Awake()
-    {
-        player = FindObjectOfType<Player>();
-    }
+    public Player player;
 
     private void Update()
     {
@@ -37,5 +34,35 @@ public class GameManager : MonoBehaviour
             playerAmmoText.text = "-";
 
         playerHPBar.localScale = new Vector3(player.playerHealth / player.playerMaxHealth, 1, 1);
-    }    
+    }
+
+    public void GmaeStart()
+    {
+        startPanel.SetActive(false);
+        gamePanel.SetActive(true);
+        player.isGameStart = true;
+    }
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
+
+    public void SetPausePanel()
+    {
+        gamePanel.SetActive(false);
+        pausePanel.SetActive(true);
+    }
+
+    public void GameResume()
+    {
+        player.PauseOut();
+        OutPausePanel();
+    }
+
+    public void OutPausePanel()
+    {
+        pausePanel.SetActive(false);
+        gamePanel.SetActive(true);
+    }
 }
