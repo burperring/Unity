@@ -15,7 +15,7 @@ C:/Users/USER/Unity_Program/Unity/UnityChang_TPS_Division
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-5441
+4459
 Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/UnityChang_TPS_Division
 C:/Users/USER/Unity_Program/Unity/UnityChang_TPS_Division
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/USER/Unity_Program/Unity/UnityChang_TPS_Division
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 131.55 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 149.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.7f1 (24e8595d6d43)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,115 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008140 seconds.
+Registered in 0.007280 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 134.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 176.79 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.679 seconds
+- Completed reload, in  0.809 seconds
 Domain Reload Profiling:
-	ReloadAssembly (680ms)
-		BeginReloadAssembly (72ms)
+	ReloadAssembly (810ms)
+		BeginReloadAssembly (80ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (496ms)
-			LoadAssemblies (69ms)
+		EndReloadAssembly (616ms)
+			LoadAssemblies (78ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (106ms)
+			SetupTypeCache (128ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (310ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (395ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (135ms)
+				RefreshPlugins (177ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (117ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
+				ProcessInitializeOnLoadAttributes (151ms)
+				ProcessInitializeOnLoadMethodAttributes (56ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008766 seconds.
+Registered in 0.008334 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 131.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 161.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+Error saving file Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json. Error: System.IO.IOException: Sharing violation on path C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) [0x00055] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding) [0x00000] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool,System.Text.Encoding)
+  at System.IO.File.WriteAllText (System.String path, System.String contents, System.Text.Encoding encoding) [0x00034] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 
+  at UnityEditor.StateCache`1[T].SetState (UnityEngine.Hash128 key, T obj) [0x0004b] in <33518779906b403ba9f96eccba6a861b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.StateCache`1<UnityEditor.Tools/LayerSettings>:SetState (UnityEngine.Hash128,UnityEditor.Tools/LayerSettings)
+UnityEditor.Tools:set_lockedLayers (int)
+UnityEditor.Tools:OnEnable ()
+UnityEngine.ScriptableObject:CreateInstance (System.Type)
+UnityEngine.ScriptableObject:CreateInstance<UnityEditor.Tools> ()
+UnityEditor.Tools:get_get ()
+UnityEditor.Tools:get_visibleLayers ()
+UnityEditor.Animations.Rigging.BoneRendererUtils:.cctor () (at Library/PackageCache/com.unity.animation.rigging@1.1.1/Editor/Utils/BoneRendererUtils.cs:121)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.unity.animation.rigging@1.1.1/Editor/Utils/BoneRendererUtils.cs Line: 121)
+
 Mono: successfully reloaded assembly
-- Completed reload, in  1.446 seconds
+- Completed reload, in  1.725 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1447ms)
-		BeginReloadAssembly (112ms)
+	ReloadAssembly (1726ms)
+		BeginReloadAssembly (130ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (1213ms)
-			LoadAssemblies (94ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1467ms)
+			LoadAssemblies (113ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (281ms)
+			SetupTypeCache (325ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (67ms)
-			SetupLoadedEditorAssemblies (728ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (896ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (132ms)
-				BeforeProcessingInitializeOnLoad (126ms)
-				ProcessInitializeOnLoadAttributes (376ms)
-				ProcessInitializeOnLoadMethodAttributes (79ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (161ms)
+				BeforeProcessingInitializeOnLoad (150ms)
+				ProcessInitializeOnLoadAttributes (482ms)
+				ProcessInitializeOnLoadMethodAttributes (88ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.97 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5829 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 51 unused Assets / (0.8 MB). Loaded Objects now: 6290.
-Memory consumption went from 240.4 MB to 239.6 MB.
-Total: 4.248500 ms (FindLiveObjects: 0.485200 ms CreateObjectMapping: 0.551500 ms MarkObjects: 2.884000 ms  DeleteObjects: 0.327200 ms)
+Unloading 6248 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 52 unused Assets / (0.8 MB). Loaded Objects now: 6709.
+Memory consumption went from 257.0 MB to 256.2 MB.
+Total: 4.602600 ms (FindLiveObjects: 0.507100 ms CreateObjectMapping: 0.696600 ms MarkObjects: 3.052700 ms  DeleteObjects: 0.345500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,965 +185,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 16184.116705 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3020288507293f7785f3f346bba3279') in 0.012846 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008464 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.40 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.960 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1961ms)
-		BeginReloadAssembly (268ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (15ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (114ms)
-		EndReloadAssembly (1557ms)
-			LoadAssemblies (136ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (529ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (59ms)
-			SetupLoadedEditorAssemblies (735ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (38ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (231ms)
-				ProcessInitializeOnLoadAttributes (356ms)
-				ProcessInitializeOnLoadMethodAttributes (96ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (18ms)
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(c2ff91a42b25c934da55ac7fa3b89db9) path("Packages/com.unity.probuilder/Editor/EditorCore/RepairActions.cs") state(2)
-Script is not up to date after domain reload: guid(5beb7cb1a6d016b4a856f5112f2048fd) path("Packages/com.unity.probuilder/Editor/EditorCore/UnwrapParametersEditor.cs") state(2)
-Script is not up to date after domain reload: guid(48979d80dfe00104da221c9a1d70964a) path("Packages/com.unity.probuilder/Editor/EditorCore/VertexColorPalette.cs") state(2)
-Script is not up to date after domain reload: guid(b2832c5edf831bd45a81ea86f2f3c0db) path("Packages/com.unity.probuilder/Editor/EditorCore/MenuOption.cs") state(2)
-Script is not up to date after domain reload: guid(9b24935f60532d7428cbcb5df316e359) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/Extrude.cs") state(2)
-Script is not up to date after domain reload: guid(a49dc64944b24efab4e8dda777a3211a) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectEdgeRing.cs") state(2)
-Script is not up to date after domain reload: guid(6e4871d32a3aac4448c0c3f9e182f972) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Orientation.cs") state(2)
-Script is not up to date after domain reload: guid(071d390610ea548df87a9c03c370ced2) path("Packages/com.unity.probuilder/Runtime/Core/IntVec3.cs") state(2)
-Script is not up to date after domain reload: guid(583290e7bd3b4094b5cd671ab87b7bb2) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderMeshPreview.cs") state(2)
-Script is not up to date after domain reload: guid(aaf91fe98a345dc46b1839d422f87be2) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorShapeUtility.cs") state(2)
-Script is not up to date after domain reload: guid(589c2adb27cec4b26849162d3b624642) path("Packages/com.unity.probuilder/Editor/EditorCore/ProbuilderScaleTool.cs") state(2)
-Script is not up to date after domain reload: guid(3ee68c576d0d746729c62f6561e44b27) path("Packages/com.unity.probuilder/Runtime/Shapes/Cylinder.cs") state(2)
-Script is not up to date after domain reload: guid(d3c815396f3a64c2d925a2100e08e093) path("Packages/com.unity.settings-manager/Editor/Settings.cs") state(2)
-Script is not up to date after domain reload: guid(05fa18d180bd4dcea12922b6cff680e2) path("Packages/com.unity.probuilder/Editor/EditorCore/MeshDebugTool.cs") state(2)
-Script is not up to date after domain reload: guid(a00a369d82c4f7f47ae4dc5c2be474b8) path("Packages/com.unity.progrids/Runtime/IgnoreSnapAttribute.cs") state(2)
-Script is not up to date after domain reload: guid(90907e6bfb6afd145986768f6095c76d) path("Packages/com.unity.probuilder/Editor/EditorCore/PreferencesUpdater.cs") state(2)
-Script is not up to date after domain reload: guid(cd0eb60dd72b74385a28317c44ac6377) path("Packages/com.unity.probuilder/Runtime/Core/Face.cs") state(2)
-Script is not up to date after domain reload: guid(72b3f039440c77d4694f2f4e12ab229a) path("Packages/com.unity.probuilder/Editor/EditorCore/SelectionUtility.cs") state(2)
-Script is not up to date after domain reload: guid(a17a8a25b5ef051479efd66b56f58823) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorUtility.cs") state(2)
-Script is not up to date after domain reload: guid(146403a091a2c4d61976892730fa0c8d) path("Packages/com.unity.probuilder/Runtime/MeshOperations/Triangulation.cs") state(2)
-Script is not up to date after domain reload: guid(71cfb4d65045470facb2a2e1e41bec03) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/FlipFaceNormals.cs") state(2)
-Script is not up to date after domain reload: guid(99e7c5113a4eb574398293fbd74a61a6) path("Packages/com.unity.probuilder/Editor/EditorCore/ObjExporter.cs") state(2)
-Script is not up to date after domain reload: guid(12d2df8ff0d1e417e97df69e20c4c81b) path("Packages/com.unity.probuilder/Runtime/MeshOperations/MeshValidation.cs") state(2)
-Script is not up to date after domain reload: guid(6832442ae76f440d9a8a532b98ebfc57) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorMaterialUtility.cs") state(2)
-Script is not up to date after domain reload: guid(e835b73676a6e469aaac98a8b9ff3a48) path("Packages/com.unity.progrids/Tests/Editor/SnapOnSelectedAxisOnly.cs") state(2)
-Script is not up to date after domain reload: guid(9652f5ea32e3966499300efa0597ba92) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Util/PolygonGenerator.cs") state(2)
-Script is not up to date after domain reload: guid(3834e980d6387ed4eb6bb9461aba647f) path("Packages/com.unity.probuilder/Runtime/Shapes/Pipe.cs") state(2)
-Script is not up to date after domain reload: guid(487d22f1515eb1740a43a577b39ab977) path("Packages/com.unity.probuilder/Runtime/Shapes/Sprite.cs") state(2)
-Script is not up to date after domain reload: guid(72ae47ebb978a4f6fad1a2ba92c3c110) path("Packages/com.unity.probuilder/Runtime/Core/ObjectPool.cs") state(2)
-Script is not up to date after domain reload: guid(a88380604e5234adaa98158c5e10950c) path("Packages/com.unity.probuilder/Runtime/Core/HandleConstraint2D.cs") state(2)
-Script is not up to date after domain reload: guid(31b2d23ee6bb16a42bdc704a0b1df42c) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorHandleUtility.cs") state(2)
-Script is not up to date after domain reload: guid(dda436a9c8bbd4d109478acf25cd48d8) path("Packages/com.unity.probuilder/Runtime/Core/ColorPalette.cs") state(2)
-Script is not up to date after domain reload: guid(4ac8731d7c634e5489628370b54f476c) path("Packages/com.unity.probuilder/Runtime/Core/SharedVertex.cs") state(2)
-Script is not up to date after domain reload: guid(87dbab7c5aec0498a8ef34d8490bc9f6) path("Packages/com.unity.probuilder/Editor/EditorCore/ProbuilderRotateTool.cs") state(2)
-Script is not up to date after domain reload: guid(d3b407d7cf143004f8e7f9de0969d275) path("Packages/com.unity.progrids/Editor/ProGridsEnums.cs") state(2)
-Script is not up to date after domain reload: guid(9be31b6177ca0453e928692a20b33b2c) path("Packages/com.unity.probuilder/Runtime/MeshOperations/ElementSelection.cs") state(2)
-Script is not up to date after domain reload: guid(c8a5a39fbad44b97b5f27e8a2e28aecf) path("Packages/com.unity.probuilder/Editor/EditorCore/pb_ObjectArray.cs") state(2)
-Script is not up to date after domain reload: guid(4ce00895d9eb2924f8f0c484eb3879ce) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/SetTrigger.cs") state(2)
-Script is not up to date after domain reload: guid(aac023407bdc9df4db32c6aa0c29ef25) path("Packages/com.unity.probuilder/Runtime/MeshOperations/MeshTransform.cs") state(2)
-Script is not up to date after domain reload: guid(98bb5d899143343ec8ccadebc268824c) path("Packages/com.unity.probuilder/Runtime/Core/ColorUtility.cs") state(2)
-Script is not up to date after domain reload: guid(bedfc9d5ebff70f4896001f60a9b2790) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/TriangulationUtil.cs") state(2)
-Script is not up to date after domain reload: guid(59e0185ce9cbd4517a2762cb16e1f690) path("Packages/com.unity.probuilder/Runtime/MeshOperations/VertexEditing.cs") state(2)
-Script is not up to date after domain reload: guid(4d1e3d0e26dcfcb438a45fbbf9f23e92) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/CollapseVertices.cs") state(2)
-Script is not up to date after domain reload: guid(91e17c4725d568e4a8ade4766f774bfc) path("Packages/com.unity.progrids/Editor/Snapping.cs") state(2)
-Script is not up to date after domain reload: guid(9ec02f5604afd41069b873611f60c719) path("Packages/com.unity.progrids/Editor/ProGridsSettingsProvider.cs") state(2)
-Script is not up to date after domain reload: guid(08b58b81e1014e9a804abb4cd35c2eb3) path("Packages/com.unity.probuilder/Runtime/Core/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(d1266b9f3f7ac478b97ce34f935eadc3) path("Packages/com.unity.probuilder/Editor/EditorCore/MeshAndElementSelection.cs") state(2)
-Script is not up to date after domain reload: guid(b9ed23c5ac29d4227a634affc39ad4a4) path("Packages/com.unity.probuilder/Editor/EditorCore/PositionTool.cs") state(2)
-Script is not up to date after domain reload: guid(bb48793c33304c1ca4300c46c9c13b46) path("Packages/com.unity.probuilder/AssetIdRemapUtility/Editor/PackageImporter.cs") state(2)
-Script is not up to date after domain reload: guid(a943be722733e6741978a775d47f8e2c) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/DTSweepContext.cs") state(2)
-Script is not up to date after domain reload: guid(af7cbb59029d2420c960fa64da335888) path("Packages/com.unity.probuilder/Runtime/Core/SimpleTuple.cs") state(2)
-Script is not up to date after domain reload: guid(dd9d2fd81ebf44cca2949d833dd3a295) path("Packages/com.unity.probuilder/Editor/StateMachines/ShapeState_DrawBaseShape.cs") state(2)
-Script is not up to date after domain reload: guid(b38e0917ff1e4a54292a5137af265542) path("Packages/com.unity.probuilder/Editor/EditorCore/LightmapUVEditor.cs") state(2)
-Script is not up to date after domain reload: guid(92edb19c798910a47b4dec2660fcd96d) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Sets/ConstrainedPointSet.cs") state(2)
-Script is not up to date after domain reload: guid(13a653f5b84336c45b2c00b570775a87) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/KdTree.cs") state(2)
-Script is not up to date after domain reload: guid(445a15c2908f1374a8aaad33541a66b2) path("Packages/com.unity.progrids/Tests/Runtime/IgnoreSnapInterface.cs") state(2)
-Script is not up to date after domain reload: guid(957c62bbae19ee54cb800714912d2a2a) path("Packages/com.unity.probuilder/Runtime/Core/ProBuilderMeshSelection.cs") state(2)
-Script is not up to date after domain reload: guid(3b6cb19e1fd01b64487828605cda5643) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderSettingsProvider.cs") state(2)
-Script is not up to date after domain reload: guid(5963564d485624ab6ad4547f9451dbe6) path("Packages/com.unity.probuilder/Runtime/MeshOperations/MeshImporter.cs") state(2)
-Script is not up to date after domain reload: guid(4e7e1880876747d1823604bc506e3772) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/FlipFaceEdge.cs") state(2)
-Script is not up to date after domain reload: guid(bb977b126bc1b4f15813dcf9da9bb600) path("Packages/com.unity.probuilder/Runtime/Core/PolyShape.cs") state(2)
-Script is not up to date after domain reload: guid(9f685c26016f847298dc0af81e9322c3) path("Packages/com.unity.probuilder/Runtime/Shapes/Stairs.cs") state(2)
-Script is not up to date after domain reload: guid(9a0bfb7745b9acb4498a724deec39aec) path("Packages/com.unity.probuilder/Editor/EditorCore/VertexOnFaceEditor.cs") state(2)
-Script is not up to date after domain reload: guid(11887933ce4b13e4f9f5ec4163298397) path("Packages/com.unity.probuilder/Runtime/Core/ArrayUtility.cs") state(2)
-Script is not up to date after domain reload: guid(bed1bc9741072a14ebe8da808930d75b) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderMenuActionAttribute.cs") state(2)
-Script is not up to date after domain reload: guid(c15f177c3bca7664dba95c24a470e354) path("Packages/com.unity.probuilder/Runtime/Shapes/Plane.cs") state(2)
-Script is not up to date after domain reload: guid(e74c868e28c92e84abb0ae91f8496d26) path("Packages/com.unity.probuilder/External/Poly2Tri/Utility/FixedBitArray3.cs") state(2)
-Script is not up to date after domain reload: guid(d540a5c12642c5e40ba3b88fc8ae6c50) path("Packages/com.unity.probuilder/Editor/EditorCore/TooltipEditor.cs") state(2)
-Script is not up to date after domain reload: guid(eff25082b866e6d468d04fc8a3f22e71) path("Packages/com.unity.probuilder/Editor/EditorCore/MenuActionStyles.cs") state(2)
-Script is not up to date after domain reload: guid(cd4d30ee1f2db48c6be97ed8d2fc9da4) path("Packages/com.unity.probuilder/Runtime/Core/EntityBehaviour.cs") state(2)
-Script is not up to date after domain reload: guid(943eceaffe7b13b43bc1b1c129082f62) path("Packages/com.unity.probuilder/Runtime/Core/VertexPositioning.cs") state(2)
-Script is not up to date after domain reload: guid(b6f090373ec944f59a5423f485b2a776) path("Packages/com.unity.probuilder/Runtime/Shapes/Shape.cs") state(2)
-Script is not up to date after domain reload: guid(a4bb8ac278d3433ca7313bb5f90a2c52) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/ShrinkSelection.cs") state(2)
-Script is not up to date after domain reload: guid(6c262c1329a02fa49b5cb4c297106f3f) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderEditor.cs") state(2)
-Script is not up to date after domain reload: guid(2efa3d03c26294747aaa61c2a09ac41f) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/DTSweepConstraint.cs") state(2)
-Script is not up to date after domain reload: guid(a0ed74e97865f42cfbce844278aa8b52) path("Packages/com.unity.probuilder/Runtime/MeshOperations/UV/UVEditing.cs") state(2)
-Script is not up to date after domain reload: guid(3f1ca63a91b17724bbd99c8fa67e0180) path("Packages/com.unity.probuilder/Editor/EditorCore/MaterialPalette.cs") state(2)
-Script is not up to date after domain reload: guid(c8e7f2a60420444ba31322510285d625) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/OpenVertexColorEditor.cs") state(2)
-Script is not up to date after domain reload: guid(53aa5497892312842a4c059529cd2397) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/AdvancingFront.cs") state(2)
-Script is not up to date after domain reload: guid(a34d12b3d3eeda641bac82627738a726) path("Packages/com.unity.probuilder/External/Poly2Tri/Polygon/PolygonPoint.cs") state(2)
-Script is not up to date after domain reload: guid(e72ef48ce83a1ef4c9757c374633ea12) path("Packages/com.unity.probuilder/Editor/EditorCore/SceneDragAndDropListener.cs") state(2)
-Script is not up to date after domain reload: guid(74e7658b6a583464fa496ffe540ef91f) path("Packages/com.unity.probuilder/Editor/EditorCore/AutoUVEditor.cs") state(2)
-Script is not up to date after domain reload: guid(b3983d7c6b954ee69e23e75009a8b81d) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/TriangulateObject.cs") state(2)
-Script is not up to date after domain reload: guid(2347b9342bafaa845b0b25387d6fa381) path("Packages/com.unity.probuilder/Runtime/Core/SelectionPickerRendererStandard.cs") state(2)
-Script is not up to date after domain reload: guid(19a8719bbc0e11f46b9cd7b9debdfc12) path("Packages/com.unity.progrids/Editor/Preferences.cs") state(2)
-Script is not up to date after domain reload: guid(57444c075000242ea99e263cee940de2) path("Packages/com.unity.probuilder/Runtime/Core/ColliderBehaviour.cs") state(2)
-Script is not up to date after domain reload: guid(ac19f03e418a945ba9d37c7d32e5cecb) path("Packages/com.unity.probuilder/Runtime/Core/Projection.cs") state(2)
-Script is not up to date after domain reload: guid(168b876617d5b904ab8d161bbcc20900) path("Packages/com.unity.probuilder/Editor/EditorCore/UVRenderOptions.cs") state(2)
-Script is not up to date after domain reload: guid(0af7522e3732400388ebc019d869caf2) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/OpenVertexPositionEditor.cs") state(2)
-Script is not up to date after domain reload: guid(d42d456e720b1c5438d87059c69284bd) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/TriangulationConstraint.cs") state(2)
-Script is not up to date after domain reload: guid(881b617b0cb15574f93592b7b6a3e373) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/DTSweepPointComparator.cs") state(2)
-Script is not up to date after domain reload: guid(945d633938915ec42a2e6da38708d8b3) path("Packages/com.unity.probuilder/Runtime/Shapes/Door.cs") state(2)
-Script is not up to date after domain reload: guid(e41489573d46a4d039759c1808b22f3a) path("Packages/com.unity.probuilder/Editor/EditorCore/UndoUtility.cs") state(2)
-Script is not up to date after domain reload: guid(3a9ebc9851a2d8e4c868fa97dbbb35f6) path("Packages/com.unity.probuilder/Editor/EditorCore/IconUtility.cs") state(2)
-Script is not up to date after domain reload: guid(8707cf6fb25b1438b9a0f476f93a76fe) path("Packages/com.unity.settings-manager/Editor/ISettingsRepository.cs") state(2)
-Script is not up to date after domain reload: guid(ffab696c539c4041848596918dd4590f) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/MergeObjects.cs") state(2)
-Script is not up to date after domain reload: guid(afd663fb17a03f749915886536580b91) path("Packages/com.unity.probuilder/Editor/EditorCore/Model.cs") state(2)
-Script is not up to date after domain reload: guid(97626f417dcf4f68a68db312995f9e6b) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/ExtrudeEdges.cs") state(2)
-Script is not up to date after domain reload: guid(d1e5ea3aa2689d948af3903d68647ca0) path("Packages/com.unity.probuilder/Editor/EditorCore/UVEditor.cs") state(2)
-Script is not up to date after domain reload: guid(19a5e9b3c4e58415bbdc5ea80c5ba88f) path("Packages/com.unity.probuilder/Runtime/Core/WingedEdge.cs") state(2)
-Script is not up to date after domain reload: guid(daa26ef7aa9c82a47a06ddb6eefc0674) path("Packages/com.unity.probuilder/AssetIdRemapUtility/Editor/AssetIdRemapBuilderTreeView.cs") state(2)
-Script is not up to date after domain reload: guid(1376ed33245911e48ab91c560798f510) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/SetCollider.cs") state(2)
-Script is not up to date after domain reload: guid(1fa9c1c880d9b724f978f610d18852e7) path("Packages/com.unity.probuilder/Editor/EditorCore/SmoothGroupEditor.cs") state(2)
-Script is not up to date after domain reload: guid(5ef681a72ba0a044aa8da69030116d54) path("Packages/com.unity.probuilder/Runtime/Shapes/Cone.cs") state(2)
-Script is not up to date after domain reload: guid(fdbc8889effe4c9e82971613ad25e182) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectVertexColor.cs") state(2)
-Script is not up to date after domain reload: guid(601f62929862ecb48956dc2dca0a2498) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/NearestNeighbourList.cs") state(2)
-Script is not up to date after domain reload: guid(066d50a96f4a480fac834bf3b64a8c26) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/BridgeEdges.cs") state(2)
-Script is not up to date after domain reload: guid(9264fc220d4aaf645b44e788499db0db) path("Packages/com.unity.probuilder/Editor/EditorCore/MenuAction.cs") state(2)
-Script is not up to date after domain reload: guid(c3adccdd46845df47a5d11429dac1f82) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorMeshUtility.cs") state(2)
-Script is not up to date after domain reload: guid(1ececafedc41a4b4bb1be308a1512857) path("Packages/com.unity.probuilder/Editor/EditorCore/DimensionsEditor.cs") state(2)
-Script is not up to date after domain reload: guid(cc401b52b64c4b7b87078d8ae3e29b68) path("Packages/com.unity.probuilder/Editor/MenuActions/Export/ExportAsset.cs") state(2)
-Script is not up to date after domain reload: guid(054265503d1c00b4ebd680d24b2fae37) path("Packages/com.unity.probuilder/Runtime/Shapes/Sphere.cs") state(2)
-Script is not up to date after domain reload: guid(77b34bf9fb2a49f6a5d0d0117bcc4c46) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/GrowSelection.cs") state(2)
-Script is not up to date after domain reload: guid(dfce99e9d622b416d8522fc504aa4459) path("Packages/com.unity.probuilder/Runtime/Core/FaceRebuildData.cs") state(2)
-Script is not up to date after domain reload: guid(561f179dea8740f41a4a539592427f2b) path("Packages/com.unity.probuilder/Addons/Fbx.cs") state(2)
-Script is not up to date after domain reload: guid(bb4dcd11679b340ee8a7afb51cb0ccfc) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(df3a4cb75c674491b6a359529d7fbd82) path("Packages/com.unity.probuilder/Editor/MenuActions/Interaction/ToggleDragSelectionMode.cs") state(2)
-Script is not up to date after domain reload: guid(31c962280094e7146b53cd8abdfa5957) path("Packages/com.unity.progrids/Runtime/IgnoreSnap.cs") state(2)
-Script is not up to date after domain reload: guid(131b1d3bbc440834c88a294085679174) path("Packages/com.unity.probuilder/Runtime/Shapes/Torus.cs") state(2)
-Script is not up to date after domain reload: guid(4cc9cf63877040dea25dc65e54f3c9d5) path("Packages/com.unity.probuilder/Editor/EditorCore/ShapeMenuItems.cs") state(2)
-Script is not up to date after domain reload: guid(69fbd00be8d904b3da640e502905c345) path("Packages/com.unity.probuilder/Runtime/Core/Entity.cs") state(2)
-Script is not up to date after domain reload: guid(71908286421424641b33861431bc9b9d) path("Packages/com.unity.probuilder/Runtime/Core/EdgeLookup.cs") state(2)
-Script is not up to date after domain reload: guid(974a571913e44c97950e630fdbd7f879) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderToolManager.cs") state(2)
-Script is not up to date after domain reload: guid(2e8a07bcd05f44a0aa578517e042d91b) path("Packages/com.unity.probuilder/Runtime/Core/Bounds2D.cs") state(2)
-Script is not up to date after domain reload: guid(518e5a76add435648813be98dd71e2f8) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/HyperRect.cs") state(2)
-Script is not up to date after domain reload: guid(caa73878d8fb64ec1b9ba323a2158672) path("Packages/com.unity.probuilder/Runtime/MeshOperations/ExtrudeElements.cs") state(2)
-Script is not up to date after domain reload: guid(428fa7a76260b497d8306bc5162aa463) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorSnapping.cs") state(2)
-Script is not up to date after domain reload: guid(171bb48d73467244c9487173c12e2c46) path("Packages/com.unity.probuilder/Editor/EditorCore/EntityVisibility.cs") state(2)
-Script is not up to date after domain reload: guid(40af14f295f2434f9cfda219da2645a0) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/OpenSmoothingEditor.cs") state(2)
-Script is not up to date after domain reload: guid(f9e45af82f3d1428f9ccc2ac15f74603) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderMeshEditor.cs") state(2)
-Script is not up to date after domain reload: guid(b0c8bf4cfa4d461cb01b12bb9e3e42f9) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/DeleteFaces.cs") state(2)
-Script is not up to date after domain reload: guid(172d21c82259a0c428b3924edd908358) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/DuplicateFaces.cs") state(2)
-Script is not up to date after domain reload: guid(5c72c2f0fd523463292dc6eeb1fd7ab0) path("Packages/com.unity.probuilder/Runtime/Core/Clipping.cs") state(2)
-Script is not up to date after domain reload: guid(ffe60d522a0a4b0489a5bfe4bb6b4fb1) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectSmoothingGroup.cs") state(2)
-Script is not up to date after domain reload: guid(eba60849bb2104e85af3d2e25b022196) path("Packages/com.unity.probuilder/Runtime/Core/Spline.cs") state(2)
-Script is not up to date after domain reload: guid(ff8eab1edc549c8489031e8b952c1b56) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorToolbarLoader.cs") state(2)
-Script is not up to date after domain reload: guid(36dfd625ac38b4b62a04264b3819dc42) path("Packages/com.unity.probuilder/Runtime/Core/IntVec4.cs") state(2)
-Script is not up to date after domain reload: guid(4eb4b507ff52e40f58f68c2065e32636) path("Packages/com.unity.probuilder/Runtime/Core/TriggerBehaviour.cs") state(2)
-Script is not up to date after domain reload: guid(a629cb73b331b40449fd411043caf7d3) path("Packages/com.unity.probuilder/External/CSG/Classes/VertexUtility.cs") state(2)
-Script is not up to date after domain reload: guid(c7eb6fea243bbe045b0d90f776fe4013) path("Packages/com.unity.probuilder/Editor/EditorCore/MenuToolToggle.cs") state(2)
-Script is not up to date after domain reload: guid(d7bdf1318dc164d50a2e3c37cb09494a) path("Packages/com.unity.progrids/Tests/Editor/SnapOnAllAxes.cs") state(2)
-Script is not up to date after domain reload: guid(19fd4a6987194c66bf04e55e19aa466b) path("Packages/com.unity.probuilder/Editor/MenuActions/Interaction/ToggleDragRectMode.cs") state(2)
-Script is not up to date after domain reload: guid(d14f7e2694bf3944989ac7742561181c) path("Packages/com.unity.probuilder/Editor/EditorCore/CutTool.cs") state(2)
-Script is not up to date after domain reload: guid(23bf380528bb14b24942fe9d5e5a3abc) path("Packages/com.unity.probuilder/Runtime/Core/Transform2D.cs") state(2)
-Script is not up to date after domain reload: guid(166872da3f949e94e9594fb2de14257d) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderShapeEditor.cs") state(2)
-Script is not up to date after domain reload: guid(1edc484acd18fdb42b4421d1b707caaa) path("Packages/com.unity.probuilder/Editor/EditorCore/ToolbarGroup.cs") state(2)
-Script is not up to date after domain reload: guid(d0b5cffbc2ad41cb84067b39dedada94) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/ProBuilderize.cs") state(2)
-Script is not up to date after domain reload: guid(e4919131c75b7914b99be1a9252658bc) path("Packages/com.unity.probuilder/Editor/EditorCore/VertexManipulationTool.cs") state(2)
-Script is not up to date after domain reload: guid(2b3f77c5dfa698a478ad5d291674b8a5) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/DTSweep.cs") state(2)
-Script is not up to date after domain reload: guid(1f26c4d173d1ff0488349210afd77fa2) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorToolsContexts.cs") state(2)
-Script is not up to date after domain reload: guid(bb7d601e6d679aa4dbd856d20dda3f74) path("Packages/com.unity.probuilder/Editor/EditorCore/LogEditor.cs") state(2)
-Script is not up to date after domain reload: guid(c24f57f3f3c554e51ab791526e33e337) path("Packages/com.unity.settings-manager/Editor/UserSettings.cs") state(2)
-Script is not up to date after domain reload: guid(fcbb190e55f214989942c67a845676cf) path("Packages/com.unity.probuilder/Runtime/Core/Triangle.cs") state(2)
-Script is not up to date after domain reload: guid(53d27af1247a7d547aa00100fae732a0) path("Packages/com.unity.probuilder/Editor/MenuActions/Interaction/ToggleHandleOrientation.cs") state(2)
-Script is not up to date after domain reload: guid(2a29f58947000b048a0347b48bd16304) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderSettings.cs") state(2)
-Script is not up to date after domain reload: guid(2871f338d8894523bcde8a078df337c2) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/FillHole.cs") state(2)
-Script is not up to date after domain reload: guid(a0ae93cadae49f8488c27d0d40da0e99) path("Packages/com.unity.probuilder/Editor/EditorCore/Lightmapping.cs") state(2)
-Script is not up to date after domain reload: guid(23fb6d4a102f4c2188ef8afe61eb58e4) path("Packages/com.unity.probuilder/Editor/MenuActions/Export/ExportObj.cs") state(2)
-Script is not up to date after domain reload: guid(217ead35f8b54dcda0676459e0d25fdf) path("Packages/com.unity.probuilder/Editor/StateMachines/ShapeState_DrawHeightShape.cs") state(2)
-Script is not up to date after domain reload: guid(1da3e972186d944ca81f7581615c650d) path("Packages/com.unity.probuilder/Runtime/Core/EdgeUtility.cs") state(2)
-Script is not up to date after domain reload: guid(d6658a80b0b3b964281a5312b39c9203) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/DTSweepBasin.cs") state(2)
-Script is not up to date after domain reload: guid(6f435ddc17924dd18782195e161766ae) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectHole.cs") state(2)
-Script is not up to date after domain reload: guid(081df46fba1da4194b5f8c7fa73446e0) path("Packages/com.unity.probuilder/Runtime/MeshOperations/ConnectElements.cs") state(2)
-Script is not up to date after domain reload: guid(3033ae68453f7e54fa868c2610c9bc7d) path("Packages/com.unity.probuilder/Editor/MenuToggles/Geometry/CutToolToggle.cs") state(2)
-Script is not up to date after domain reload: guid(5abceb5fc06c0954682d5b5addb0c3d4) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorHandleDrawing.cs") state(2)
-Script is not up to date after domain reload: guid(9d65f00b82160e14fb2ab9bb2d2108ae) path("Packages/com.unity.probuilder/Editor/EditorCore/PlyExporter.cs") state(2)
-Script is not up to date after domain reload: guid(b0c5bae1215e224409318f415e45db0a) path("Packages/com.unity.probuilder/Editor/EditorCore/EntityEditor.cs") state(2)
-Script is not up to date after domain reload: guid(a6f7622c6d6346cca3539de7b00556a7) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/SubdivideObject.cs") state(2)
-Script is not up to date after domain reload: guid(9cfc7aced6c45c0499ba73f07e633bac) path("Packages/com.unity.probuilder/External/StlExporter/Code/pb_Stl_Exporter.cs") state(2)
-Script is not up to date after domain reload: guid(914c2d056412b4f1ca64740fc2cb1c66) path("Packages/com.unity.probuilder/Runtime/Core/PreferenceKeys.cs") state(2)
-Script is not up to date after domain reload: guid(f6274bb00b150de45a17cdf581bc41f5) path("Packages/com.unity.probuilder/Editor/EditorCore/VertexPositionEditor.cs") state(2)
-Script is not up to date after domain reload: guid(e8f0035a190335d408067f4bda8fbb49) path("Packages/com.unity.probuilder/Editor/EditorCore/ScriptingSymbolManager.cs") state(2)
-Script is not up to date after domain reload: guid(42d1d51e272f34868beefb1d9a2688f6) path("Packages/com.unity.probuilder/Runtime/Core/ProBuilderEnum.cs") state(2)
-Script is not up to date after domain reload: guid(8b73fbc8867750541be154ed40569dea) path("Packages/com.unity.probuilder/Editor/EditorCore/HandleGUI.cs") state(2)
-Script is not up to date after domain reload: guid(192dd82c3ebd3b647ae292174a2f36a6) path("Packages/com.unity.progrids/Editor/IconUtility.cs") state(2)
-Script is not up to date after domain reload: guid(add27a30fc9c74bb48a111f8b27c2c8a) path("Packages/com.unity.progrids/Editor/MenuItems.cs") state(2)
-Script is not up to date after domain reload: guid(a581c9a381f68455db0779169a94180c) path("Packages/com.unity.probuilder/Runtime/Core/SelectionModifierBehaviour.cs") state(2)
-Script is not up to date after domain reload: guid(f3ab6033657acd04e93e395ba82570ef) path("Packages/com.unity.probuilder/Editor/EditorCore/ConfigurableWindow.cs") state(2)
-Script is not up to date after domain reload: guid(cd9c9830c34380541ba162a9751bfb4e) path("Packages/com.unity.probuilder/Runtime/Shapes/Arch.cs") state(2)
-Script is not up to date after domain reload: guid(1113544478cee6a4caafac0b3b7a06f1) path("Packages/com.unity.probuilder/Runtime/Core/MeshHandle.cs") state(2)
-Script is not up to date after domain reload: guid(5f130a448e6f0cc45bacc05a4653fc41) path("Packages/com.unity.probuilder/Runtime/Core/SelectionPickerRendererHDRP.cs") state(2)
-Script is not up to date after domain reload: guid(b7bd43b2e3e547199420eec1d903ff30) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/BevelEdges.cs") state(2)
-Script is not up to date after domain reload: guid(cc6c734d87394ef99cf62171eb6fe416) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/FreezeTransform.cs") state(2)
-Script is not up to date after domain reload: guid(267c7f09b45427d4596b29d4c39055fa) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/TriangulationPoint.cs") state(2)
-Script is not up to date after domain reload: guid(7ebc93f048090074f80a100718d5a585) path("Packages/com.unity.probuilder/Editor/EditorCore/TextureMoveTool.cs") state(2)
-Script is not up to date after domain reload: guid(08ab9a4e4186d164cb67bda77d36ff4c) path("Packages/com.unity.probuilder/Editor/EditorCore/PreferenceDictionaryEditor.cs") state(2)
-Script is not up to date after domain reload: guid(7dc1dc9c919fa434c915ad64201952dd) path("Packages/com.unity.probuilder/External/StlExporter/Code/pb_Stl_Importer.cs") state(2)
-Script is not up to date after domain reload: guid(9be09300178708d4aaa608eed9697f1c) path("Packages/com.unity.probuilder/Editor/EditorCore/MaterialEditor.cs") state(2)
-Script is not up to date after domain reload: guid(bdc593ceb4be46bfab31b9c445ec89a2) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/SubdivideFaces.cs") state(2)
-Script is not up to date after domain reload: guid(f7ba37814af43bf41810a98b5811dee1) path("Packages/com.unity.progrids/Tests/Editor/IgnoreInterfaceIsRespected.cs") state(2)
-Script is not up to date after domain reload: guid(767365db77168f744af8685807ad7f4b) path("Packages/com.unity.settings-manager/Tests/Editor/SettingsTests.cs") state(2)
-Script is not up to date after domain reload: guid(223e1a5330ab8468782152a65e857f94) path("Packages/com.unity.settings-manager/Editor/SettingsGUILayout.cs") state(2)
-Script is not up to date after domain reload: guid(b04279a9fe7348798c260ea6516c1a4c) path("Packages/com.unity.probuilder/Editor/MenuActions/Export/ExportStlBinary.cs") state(2)
-Script is not up to date after domain reload: guid(50a4f82d9b25145fb91d03a7bef21d24) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorHandleDrawingScopes.cs") state(2)
-Script is not up to date after domain reload: guid(624538515085b4f498dc59dc27eb69ce) path("Packages/com.unity.probuilder/Editor/EditorCore/DrawShapeTool.cs") state(2)
-Script is not up to date after domain reload: guid(d563a6b12a743cf4399b92cf5366da6f) path("Packages/com.unity.probuilder/External/Poly2Tri/Polygon/Polygon.cs") state(2)
-Script is not up to date after domain reload: guid(cd856323da4211845ae7b4c7a54b294f) path("Packages/com.unity.probuilder/Runtime/Core/ProBuilderMeshFunction.cs") state(2)
-Script is not up to date after domain reload: guid(e5d62e0d1462c4f02ae2aae1659cb748) path("Packages/com.unity.probuilder/Runtime/Core/ProBuilderSnapping.cs") state(2)
-Script is not up to date after domain reload: guid(0ab80081d3e2f274ba76a692cdcfa8d9) path("Packages/com.unity.progrids/Editor/ProGridsEditor.cs") state(2)
-Script is not up to date after domain reload: guid(3208ba508d5e047c7bd843fc986a4f7a) path("Packages/com.unity.probuilder/Runtime/Core/MeshUtility.cs") state(2)
-Script is not up to date after domain reload: guid(088aa88f028654951ae27130f3556aae) path("Packages/com.unity.probuilder/Runtime/Core/Submesh.cs") state(2)
-Script is not up to date after domain reload: guid(8cefaab4396434cd9b6db510b6458a3d) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderEditorShortcuts.cs") state(2)
-Script is not up to date after domain reload: guid(20257f54bb007a547b7cb64d633a1664) path("Packages/com.unity.probuilder/AssetIdRemapUtility/Editor/AssetIdRemapBuilderEditor.cs") state(2)
-Script is not up to date after domain reload: guid(62ca02619442b364a81cca5a30c687d4) path("Packages/com.unity.progrids/Editor/Changelog.cs") state(2)
-Script is not up to date after domain reload: guid(924ccbaae96a57b438f256c6e54c1df8) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectLoop.cs") state(2)
-Script is not up to date after domain reload: guid(14789abc21c8f4551995149f67010e23) path("Packages/com.unity.probuilder/External/CSG/Classes/Model.cs") state(2)
-Script is not up to date after domain reload: guid(0b49a83783b3e5944b25d6c66eaa11e9) path("Packages/com.unity.probuilder/Runtime/Core/Math.cs") state(2)
-Script is not up to date after domain reload: guid(48543f8899b046f69c530e1c1a54e5cd) path("Packages/com.unity.probuilder/Runtime/Core/ShapeGenerator.cs") state(2)
-Script is not up to date after domain reload: guid(8c1d6bd74068a5242b4a72adf38b704b) path("Packages/com.unity.probuilder/Editor/EditorCore/PreferencesInternal.cs") state(2)
-Script is not up to date after domain reload: guid(1f8949d910842a4418d15c6bc1749be5) path("Packages/com.unity.progrids/Editor/SemVer.cs") state(2)
-Script is not up to date after domain reload: guid(05147f3a976fb174d987bc71dc70dee2) path("Packages/com.unity.probuilder/Editor/EditorCore/MenuItems.cs") state(2)
-Script is not up to date after domain reload: guid(0dc75b34a006d47f48c004031e6ef14d) path("Packages/com.unity.settings-manager/Editor/UserSettingsProvider.cs") state(2)
-Script is not up to date after domain reload: guid(906ae4b0ce907194cb4d1d255e03675b) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Sets/PointSet.cs") state(2)
-Script is not up to date after domain reload: guid(8e2e054ed623847d29efb1262605e8ef) path("Packages/com.unity.settings-manager/Editor/PackageSettingsRepository.cs") state(2)
-Script is not up to date after domain reload: guid(2e82491da45686848bf17df39975ff3c) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorToolbarMenuItems.cs") state(2)
-Script is not up to date after domain reload: guid(1ca002da428252441b92f28d83c8a65f) path("Packages/com.unity.probuilder/Runtime/Shapes/ProBuilderShape.cs") state(2)
-Script is not up to date after domain reload: guid(1c567d9c5b825d24ba6a00bef45ec0dc) path("Packages/com.unity.probuilder/Runtime/Core/Changelog.cs") state(2)
-Script is not up to date after domain reload: guid(7208f6e564fc928478322837a693d724) path("Packages/com.unity.probuilder/Editor/EditorCore/TooltipContent.cs") state(2)
-Script is not up to date after domain reload: guid(daab597c96b98b840aff1e885c4ca0f0) path("Packages/com.unity.probuilder/Runtime/Core/SemVer.cs") state(2)
-Script is not up to date after domain reload: guid(a6bc50937fe34666940ca23931be5344) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/SetPivotToSelection.cs") state(2)
-Script is not up to date after domain reload: guid(66b1c4a9ec825c7458f935aae34d66b1) path("Packages/com.unity.progrids/Editor/ToggleContent.cs") state(2)
-Script is not up to date after domain reload: guid(3e99f90a32784f4d9ff62732e1265f23) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/SmartConnect.cs") state(2)
-Script is not up to date after domain reload: guid(c42a9b51604094d6bbfebd218854a539) path("Packages/com.unity.probuilder/Runtime/Core/WingedEdgeEnumerator.cs") state(2)
-Script is not up to date after domain reload: guid(e7409d52cc9eb094db503a26dd4ae064) path("Packages/com.unity.probuilder/Editor/EditorCore/PolyShapeTool.cs") state(2)
-Script is not up to date after domain reload: guid(7b0368f3d533f4c379d9a83478864e0d) path("Packages/com.unity.probuilder/Runtime/Core/BezierShape.cs") state(2)
-Script is not up to date after domain reload: guid(7ea67431821494cfca380c0e07258751) path("Packages/com.unity.settings-manager/Editor/Attributes.cs") state(2)
-Script is not up to date after domain reload: guid(a13a61fc9c33c4835beb1b3728c1718a) path("Packages/com.unity.probuilder/Editor/MenuActions/Interaction/ToggleHandlePivotPoint.cs") state(2)
-Script is not up to date after domain reload: guid(77656e4f6ab6544caa81cbd3e5784e03) path("Packages/com.unity.probuilder/Runtime/Core/RaycastHit.cs") state(2)
-Script is not up to date after domain reload: guid(2fa4bbd1a7ccee24783998770d56522e) path("Packages/com.unity.probuilder/AssetIdRemapUtility/Editor/AssetIdRemapEditor.cs") state(2)
-Script is not up to date after domain reload: guid(e8fa221ea996bd7459f869e6d809a95d) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/IKdTree.cs") state(2)
-Script is not up to date after domain reload: guid(add8532bafe747b88ea53556bd2e74e8) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/FlipObjectNormals.cs") state(2)
-Script is not up to date after domain reload: guid(563aeff009644264e815e6de1439e784) path("Packages/com.unity.probuilder/Editor/EditorCore/LicenseEditor.cs") state(2)
-Script is not up to date after domain reload: guid(e985069a91a74567a338b55beddbf74c) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/OpenUVEditor.cs") state(2)
-Script is not up to date after domain reload: guid(5cf10ee5e4b44eaca6e769bf235f7f5a) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/MirrorObjects.cs") state(2)
-Script is not up to date after domain reload: guid(48b3897a5481441a8c9468e28fd54c53) path("Packages/com.unity.probuilder/Editor/MenuActions/Export/ExportStlAscii.cs") state(2)
-Script is not up to date after domain reload: guid(c33579cdea5c8442e90e443cf7bcfee9) path("Packages/com.unity.probuilder/Editor/EditorCore/Version.cs") state(2)
-Script is not up to date after domain reload: guid(9c90a3667d9b2154bb538feb303989f8) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/DTSweepEdgeEvent.cs") state(2)
-Script is not up to date after domain reload: guid(9dc4bcf4f01eb4e34a13eb79da442b28) path("Packages/com.unity.progrids/Editor/ProGridsSceneToolbar.cs") state(2)
-Script is not up to date after domain reload: guid(b2fe48040b5714c059f9d4a7796cafd7) path("Packages/com.unity.probuilder/Runtime/Core/TransformUtility.cs") state(2)
-Script is not up to date after domain reload: guid(a08405bf933b15f4882645f9cb359193) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorStyles.cs") state(2)
-Script is not up to date after domain reload: guid(fc2e025c327cbba4ca8373dd8923ff88) path("Packages/com.unity.probuilder/External/Poly2Tri/Utility/FixedArray3.cs") state(2)
-Script is not up to date after domain reload: guid(29c44195d73b34ee98215150a8031c2c) path("Packages/com.unity.probuilder/Runtime/Core/ShapeFactory.cs") state(2)
-Script is not up to date after domain reload: guid(7fd9f5ac1b5cea54386d6497a518c29f) path("Packages/com.unity.probuilder/Editor/EditorCore/TextureTool.cs") state(2)
-Script is not up to date after domain reload: guid(5fb3641deade84f238d59ad03971b64c) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/OffsetElements.cs") state(2)
-Script is not up to date after domain reload: guid(3d263593a085cdf469778e9ea07ba483) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/ITriangulatable.cs") state(2)
-Script is not up to date after domain reload: guid(ea5ea1cec364039478a51772a04726e0) path("Packages/com.unity.probuilder/Runtime/Core/UnwrapParameters.cs") state(2)
-Script is not up to date after domain reload: guid(908a5a36f516c3048abadede5920d5d7) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/KdTreeNode.cs") state(2)
-Script is not up to date after domain reload: guid(b1602c6e6ff5bde4f9dfa91f8b5c85e4) path("Packages/com.unity.probuilder/Editor/EditorCore/UnityScenePostProcessor.cs") state(2)
-Script is not up to date after domain reload: guid(a931ba2bdb160804eb3438f28aa0def3) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorGUIUtility.cs") state(2)
-Script is not up to date after domain reload: guid(018f1adb8258a4133b73805294498947) path("Packages/com.unity.settings-manager/Tests/Editor/MultipleProjectSettings.cs") state(2)
-Script is not up to date after domain reload: guid(c23e2e2798e8047eabd581579b050162) path("Packages/com.unity.probuilder/Runtime/Core/SerializationUtility.cs") state(2)
-Script is not up to date after domain reload: guid(b6cb3471ccbde8148a2b76fa987fa0a8) path("Packages/com.unity.progrids/Editor/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(c3ec6d10638d94feaa03c223b6fee2cc) path("Packages/com.unity.settings-manager/Editor/UserSetting.cs") state(2)
-Script is not up to date after domain reload: guid(d9930631c9404fb0b63a91644558eb39) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/DetachFaces.cs") state(2)
-Script is not up to date after domain reload: guid(916d519062254e79b6adc87200d2c142) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/ConformObjectNormals.cs") state(2)
-Script is not up to date after domain reload: guid(bb36fee1f817e4860a9937f064b1a192) path("Packages/com.unity.probuilder/Runtime/MeshOperations/CombineMeshes.cs") state(2)
-Script is not up to date after domain reload: guid(e6d7500d036914f3b9768689959295b4) path("Packages/com.unity.probuilder/External/Poly2Tri/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(a9ea06f47bdbe427294162ab3d8e4ef3) path("Packages/com.unity.probuilder/Runtime/MeshOperations/InternalMeshUtility.cs") state(2)
-Script is not up to date after domain reload: guid(1356ec15a14344c2f92417f250ccceae) path("Packages/com.unity.probuilder/Runtime/Shapes/Cube.cs") state(2)
-Script is not up to date after domain reload: guid(a91947f03a49147a49e5f05ea5737edc) path("Packages/com.unity.probuilder/Runtime/Core/Log.cs") state(2)
-Script is not up to date after domain reload: guid(51cb791f07b14fc08dd10dd56890d5c0) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectMaterial.cs") state(2)
-Script is not up to date after domain reload: guid(5f3c839e57094cf6b2e99af5515b2ca0) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectEdgeLoop.cs") state(2)
-Script is not up to date after domain reload: guid(38d00192cfb7943ebaa2898af4577852) path("Packages/com.unity.probuilder/Runtime/Core/SelectionPicker.cs") state(2)
-Script is not up to date after domain reload: guid(9eda47df4ab94d8a8174832a11359a8a) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/ConnectEdges.cs") state(2)
-Script is not up to date after domain reload: guid(485f27eb54532614d89e7e2dc5c9aebc) path("Packages/com.unity.progrids/Editor/SnapSettings.cs") state(2)
-Script is not up to date after domain reload: guid(efd5cca1cb8dabd418d215e770d3fb01) path("Packages/com.unity.probuilder/Runtime/Core/VectorMask.cs") state(2)
-Script is not up to date after domain reload: guid(460d1e5b4c054bfc8d012b87f9960bb9) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/CenterPivot.cs") state(2)
-Script is not up to date after domain reload: guid(aa15474f4b771974c86469106f4a4cb3) path("Packages/com.unity.probuilder/Editor/EditorCore/PolyShapeEditor.cs") state(2)
-Script is not up to date after domain reload: guid(e91b0af086a401648866099dfaf3e377) path("Packages/com.unity.probuilder/Editor/EditorCore/ProGridsInterface.cs") state(2)
-Script is not up to date after domain reload: guid(3a73369e033539a42ae8067a8fa967c0) path("Packages/com.unity.probuilder/External/Poly2Tri/Polygon/PolygonSet.cs") state(2)
-Script is not up to date after domain reload: guid(52ebe52d390074084bebc0878e3f74b6) path("Packages/com.unity.probuilder/External/CSG/Classes/Polygon.cs") state(2)
-Script is not up to date after domain reload: guid(cf31008f4dc1fb548a315685bb054730) path("Packages/com.unity.probuilder/Runtime/Core/SelectPathFaces.cs") state(2)
-Script is not up to date after domain reload: guid(244d57cf7fd6842e19000793e2bbac4e) path("Packages/com.unity.progrids/Tests/Editor/IgnoreAttributeIsRespected.cs") state(2)
-Script is not up to date after domain reload: guid(0c114c138e13b8248ae37c8cf12c6979) path("Packages/com.unity.probuilder/Editor/EditorCore/StripProBuilderScripts.cs") state(2)
-Script is not up to date after domain reload: guid(67c0fca06520e4f78923163f9541ba6c) path("Packages/com.unity.settings-manager/Editor/SettingsDictionary.cs") state(2)
-Script is not up to date after domain reload: guid(214db8084d63e06499f41c215a8547a4) path("Packages/com.unity.probuilder/Runtime/MeshOperations/SurfaceTopology.cs") state(2)
-Script is not up to date after domain reload: guid(8233d90336aea43098adf6dbabd606a2) path("Packages/com.unity.probuilder/Runtime/Core/ProBuilderMesh.cs") state(2)
-Script is not up to date after domain reload: guid(752d48e9eaa76c54ba0ff161eff2a3f2) path("Packages/com.unity.probuilder/Editor/MenuActions/Object/GenerateUV2.cs") state(2)
-Script is not up to date after domain reload: guid(5b6fe112f5d10423ab960f97d7b6e699) path("Packages/com.unity.probuilder/External/CSG/Classes/Node.cs") state(2)
-Script is not up to date after domain reload: guid(c9e17f9cc89704707b15d2340fd8a585) path("Packages/com.unity.probuilder/Editor/EditorCore/MenuActionShortcutAttribute.cs") state(2)
-Script is not up to date after domain reload: guid(85900fb5729b6db42a6e417ad0d4c0f2) path("Packages/com.unity.probuilder/Editor/EditorCore/TextureRotateTool.cs") state(2)
-Script is not up to date after domain reload: guid(72b17ff6fd2249038e3d0e0d8969cef0) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/MergeFaces.cs") state(2)
-Script is not up to date after domain reload: guid(d790e5dd7e634bac936d5dc0e026ae20) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/ExtrudeFaces.cs") state(2)
-Script is not up to date after domain reload: guid(50cd975dde7f63e4780b557b46379820) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorToolbar.cs") state(2)
-Script is not up to date after domain reload: guid(e95f50cd644f90741bb903cb56bcd67e) path("Packages/com.unity.probuilder/Editor/EditorCore/BezierSplineEditor.cs") state(2)
-Script is not up to date after domain reload: guid(a61c5819f2b24f3fa336247228361725) path("Packages/com.unity.probuilder/Editor/MenuActions/Interaction/ToggleSelectBackFaces.cs") state(2)
-Script is not up to date after domain reload: guid(0c96b34c870fc49b6b189786a55e14ad) path("Packages/com.unity.probuilder/Runtime/Core/ActionResult.cs") state(2)
-Script is not up to date after domain reload: guid(c04d9be0543234e9cbb340e7ee259a5c) path("Packages/com.unity.probuilder/Runtime/Core/PreferenceDictionary.cs") state(2)
-Script is not up to date after domain reload: guid(8459d3ed1cc648cba5015df2ff4850cb) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectFaceRing.cs") state(2)
-Script is not up to date after domain reload: guid(d3ba8385f1f540519a3524dceb13733b) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/InsertEdgeLoop.cs") state(2)
-Script is not up to date after domain reload: guid(ec676d2a8ccecde4f8eb0d32aeaafb98) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/DelaunayTriangle.cs") state(2)
-Script is not up to date after domain reload: guid(9f21d9e5e308b409f9173967b37d19be) path("Packages/com.unity.probuilder/Runtime/Core/IntVec2.cs") state(2)
-Script is not up to date after domain reload: guid(4ca7e8f303d863c40930ccc1085e6990) path("Packages/com.unity.probuilder/Editor/EditorCore/Pref.cs") state(2)
-Script is not up to date after domain reload: guid(ff4f787bd1deaee4d82db29948ed6099) path("Packages/com.unity.probuilder/Editor/EditorCore/BooleanEditor.cs") state(2)
-Script is not up to date after domain reload: guid(ffea9638e10c9644aab23c2652f86279) path("Packages/com.unity.probuilder/Editor/EditorCore/TextureScaleTool.cs") state(2)
-Script is not up to date after domain reload: guid(6965211c873de4048aa9043e5e287c73) path("Packages/com.unity.settings-manager/Editor/UserSettingsRepository.cs") state(2)
-Script is not up to date after domain reload: guid(729d0f7265af462a8b41492704404f59) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/TriangulateFaces.cs") state(2)
-Script is not up to date after domain reload: guid(876d5900da5ecbb4885bf2be031e50e8) path("Packages/com.unity.progrids/Tests/Runtime/IgnoreSnapConditionalAttribute.cs") state(2)
-Script is not up to date after domain reload: guid(e0a94bc67627046b3a6a1f7ebfeafa2a) path("Packages/com.unity.progrids/Editor/PlayModeStateListener.cs") state(2)
-Script is not up to date after domain reload: guid(136c7ff4a0ec419280b8df0d260180d0) path("Packages/com.unity.probuilder/External/CSG/CSG.cs") state(2)
-Script is not up to date after domain reload: guid(a419cef8f67fa48b8a2420ecc4ea4936) path("Packages/com.unity.probuilder/Runtime/Core/MaterialUtility.cs") state(2)
-Script is not up to date after domain reload: guid(99a28d28a160b4da78802caf2a3484a0) path("Packages/com.unity.probuilder/Editor/EditorCore/EditShapeTool.cs") state(2)
-Script is not up to date after domain reload: guid(563a1db348c114475a2d8289cc3e5a84) path("Packages/com.unity.probuilder/Runtime/Core/Edge.cs") state(2)
-Script is not up to date after domain reload: guid(361cb9f8460027f4a88a1b9610de18c0) path("Packages/com.unity.progrids/Editor/ScenePreferencesWindow.cs") state(2)
-Script is not up to date after domain reload: guid(65392811987f9438d8e3d2510255814f) path("Packages/com.unity.probuilder/Runtime/Core/BuiltinMaterials.cs") state(2)
-Script is not up to date after domain reload: guid(2734476e9b233c14987be5fbd0b43264) path("Packages/com.unity.probuilder/Runtime/Core/MeshHandles.cs") state(2)
-Script is not up to date after domain reload: guid(df1c6ba8c6074cd4872ff79d66cc49f5) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectFaceLoop.cs") state(2)
-Script is not up to date after domain reload: guid(319d9808ed35cae4ca212b4b97a9ee0b) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/TriangulationMode.cs") state(2)
-Script is not up to date after domain reload: guid(0baa0b710695b7441836813416aa41af) path("Packages/com.unity.probuilder/Editor/MenuActions/Interaction/ToggleXRay.cs") state(2)
-Script is not up to date after domain reload: guid(6ccb8b5f00388f545b4b986d5149d926) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/TriangulationDebugContext.cs") state(2)
-Script is not up to date after domain reload: guid(287e3d97419a8431098a54977c657d14) path("Packages/com.unity.probuilder/Runtime/Core/UvUnwrapping.cs") state(2)
-Script is not up to date after domain reload: guid(396694d6dbd4734419cea5be4a942c9a) path("Packages/com.unity.probuilder/External/StlExporter/Code/pb_Stl.cs") state(2)
-Script is not up to date after domain reload: guid(09802f6381a8fb2478f18a624b459ff8) path("Packages/com.unity.probuilder/Editor/EditorCore/IHasPreferences.cs") state(2)
-Script is not up to date after domain reload: guid(89809d92ed2419a43b46b08b6f4237ba) path("Packages/com.unity.probuilder/Editor/EditorCore/VersionValidator.cs") state(2)
-Script is not up to date after domain reload: guid(2197ea2611109104aa25635ed7b59bcb) path("Packages/com.unity.probuilder/Editor/EditorCore/DestroyListener.cs") state(2)
-Script is not up to date after domain reload: guid(2e52c205e35f30d4c81ff62d3f94e234) path("Packages/com.unity.probuilder/Runtime/Core/HandleOrientation.cs") state(2)
-Script is not up to date after domain reload: guid(9e11b000caeb5451a8d9160606edb8e5) path("Packages/com.unity.probuilder/Runtime/Core/InternalUtility.cs") state(2)
-Script is not up to date after domain reload: guid(da5baec4bf414efb91d2253bef40dd19) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/SmartSubdivide.cs") state(2)
-Script is not up to date after domain reload: guid(b360b08870ee97249b28c408f0d1e0d8) path("Packages/com.unity.probuilder/Editor/EditorCore/FileUtility.cs") state(2)
-Script is not up to date after domain reload: guid(9b0cf5260e6d70b428dab29748b1b3fe) path("Packages/com.unity.probuilder/Runtime/Core/Normal.cs") state(2)
-Script is not up to date after domain reload: guid(d9ed04c4f3db58d488f75533eee62283) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/PriorityQueue.cs") state(2)
-Script is not up to date after domain reload: guid(3e8bafb60e2ac40ef92c924f855c65b3) path("Packages/com.unity.probuilder/Runtime/Core/HandleUtility.cs") state(2)
-Script is not up to date after domain reload: guid(171420d62f80b4556a8833c039a00a3c) path("Packages/com.unity.probuilder/Runtime/Core/Smoothing.cs") state(2)
-Script is not up to date after domain reload: guid(709975e9e21e4a52a8ea44cd4a779feb) path("Packages/com.unity.probuilder/AssetIdRemapUtility/Editor/AssetTreeView.cs") state(2)
-Script is not up to date after domain reload: guid(415a296d21e75094fbcad592c4303607) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/NewPolyShapeToggle.cs") state(2)
-Script is not up to date after domain reload: guid(0b8caa3be45dde847b41aafc7d7db796) path("Packages/com.unity.probuilder/Runtime/MeshOperations/QuadUtility.cs") state(2)
-Script is not up to date after domain reload: guid(ac7a7f49f26f45b29857e71b0d156fff) path("Packages/com.unity.probuilder/Editor/MenuActions/Export/ExportPly.cs") state(2)
-Script is not up to date after domain reload: guid(3abdb0569285bbf4389d38655d5a90a3) path("Packages/com.unity.probuilder/Runtime/Core/PivotPoint.cs") state(2)
-Script is not up to date after domain reload: guid(9d6fbeb339bff0f4cb3744bd60aec40f) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/AdvancingFrontNode.cs") state(2)
-Script is not up to date after domain reload: guid(389ebe3277e864eb2bb6f14edb419a33) path("Packages/com.unity.probuilder/External/StlExporter/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(4daa0ba8c6e93d54a9b542d76b235c55) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/Math/TypeMath.cs") state(2)
-Script is not up to date after domain reload: guid(6420831531bc2054281143153f7d6659) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorSceneViewPicker.cs") state(2)
-Script is not up to date after domain reload: guid(bdb300e663dad44ca9f0a74c96e6f937) path("Packages/com.unity.progrids/Editor/EditorUtility.cs") state(2)
-Script is not up to date after domain reload: guid(483554fdb1324da4ead26f33de2c9990) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/Math/FloatMath.cs") state(2)
-Script is not up to date after domain reload: guid(1cd423070c2f8094db80d14ac61e4a89) path("Packages/com.unity.probuilder/Runtime/Core/SelectionPickerRenderer.cs") state(2)
-Script is not up to date after domain reload: guid(2f90915a295ab524097b6e004b64d015) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorEnum.cs") state(2)
-Script is not up to date after domain reload: guid(c6d73444bb8cc9b468d5ff190d7de759) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/ConnectVertices.cs") state(2)
-Script is not up to date after domain reload: guid(53c376f349984575aa8d0dfd15cddc99) path("Packages/com.unity.probuilder/Editor/StateMachines/ShapeState_InitShape.cs") state(2)
-Script is not up to date after domain reload: guid(cd9b9131766d54225a24d2221d1f49b5) path("Packages/com.unity.probuilder/Runtime/Core/IHasDefault.cs") state(2)
-Script is not up to date after domain reload: guid(a893ddeb6fc42463f9d81a87e03c8455) path("Packages/com.unity.probuilder/Runtime/Core/SelectionPickerSettings.cs") state(2)
-Script is not up to date after domain reload: guid(4c7381a66e715734f82749b2e115722c) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/IPriorityQueue.cs") state(2)
-Script is not up to date after domain reload: guid(d2c71b118edf0476f868fa213864aac6) path("Packages/com.unity.probuilder/Editor/EditorCore/Experimental.cs") state(2)
-Script is not up to date after domain reload: guid(2799d938bc097b0478b150b315487a18) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/Math/ITypeMath.cs") state(2)
-Script is not up to date after domain reload: guid(0108f8c9cba0ec64cb96fa884a3478bd) path("Packages/com.unity.probuilder/Editor/EditorCore/ReflectionUtility.cs") state(2)
-Script is not up to date after domain reload: guid(f659ed41facdbb947a1ed57354dee7c8) path("Packages/com.unity.probuilder/Editor/EditorCore/ProBuilderAnalytics.cs") state(2)
-Script is not up to date after domain reload: guid(2b43eb0a521a4a6a90bde45149e1c656) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/OpenMaterialEditor.cs") state(2)
-Script is not up to date after domain reload: guid(f5f37a0a7c6f54d4995a8f0806351e89) path("Packages/com.unity.probuilder/Runtime/MeshOperations/UV/TextureStitching.cs") state(2)
-Script is not up to date after domain reload: guid(5e41f6d30b7fa6543a40193098cf4eae) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Util/PointGenerator.cs") state(2)
-Script is not up to date after domain reload: guid(fdadef59afbc0447793550ae30addc32) path("Packages/com.unity.probuilder/Runtime/Core/AutoUnwrapSettings.cs") state(2)
-Script is not up to date after domain reload: guid(8b2cff15c28de0f4ba38eafc29cd64fa) path("Packages/com.unity.progrids/Editor/PreferenceKeys.cs") state(2)
-Script is not up to date after domain reload: guid(92c923034fe494e2d83cc342e7f8020b) path("Packages/com.unity.probuilder/Runtime/Core/BezierPoint.cs") state(2)
-Script is not up to date after domain reload: guid(22bc27ec00c948759f18d3b55ad227eb) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/NewShapeToggle.cs") state(2)
-Script is not up to date after domain reload: guid(0c5b58425874c468e91bd42508d26f0b) path("Packages/com.unity.probuilder/Runtime/Core/Vertex.cs") state(2)
-Script is not up to date after domain reload: guid(659601bba69c8e747bcc79ca9e877a2f) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/PointOnEdgeException.cs") state(2)
-Script is not up to date after domain reload: guid(8704e3cfa2526d34baf80d67fda2aa11) path("Packages/com.unity.probuilder/Editor/MenuActions/Selection/SelectRing.cs") state(2)
-Script is not up to date after domain reload: guid(a9809eb838f424cce87ddc1b066c4f1a) path("Packages/com.unity.probuilder/Editor/EditorCore/ProbuilderMoveTool.cs") state(2)
-Script is not up to date after domain reload: guid(13fe1d05e56c65b4ca8c935f648e6cbb) path("Packages/com.unity.probuilder/Runtime/Core/Normals.cs") state(2)
-Script is not up to date after domain reload: guid(158fff462a95744008bbad18ab5e029e) path("Packages/com.unity.probuilder/Runtime/MeshOperations/Bevel.cs") state(2)
-Script is not up to date after domain reload: guid(4e5c2292defe6460881281240c415f3d) path("Packages/com.unity.probuilder/Runtime/Core/VectorHash.cs") state(2)
-Script is not up to date after domain reload: guid(2abd1512cbef74d89a4b0793e3ec970b) path("Packages/com.unity.probuilder/Runtime/Core/UvAutoManualConversion.cs") state(2)
-Script is not up to date after domain reload: guid(48a7fe196a624a7bae17c8621899b11c) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/SubdivideEdges.cs") state(2)
-Script is not up to date after domain reload: guid(c5b66ff70e896a64ebe5aa9cb28dd535) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/TriangulationAlgorithm.cs") state(2)
-Script is not up to date after domain reload: guid(2d65bb50aabd144ed9c1a4c2bc6d072e) path("Packages/com.unity.settings-manager/Editor/ValueWrapper.cs") state(2)
-Script is not up to date after domain reload: guid(6367e9291991f466897f892a41dd75ff) path("Packages/com.unity.progrids/Editor/GridRenderer.cs") state(2)
-Script is not up to date after domain reload: guid(7aeb98aaff5054383b10b45f4518f968) path("Packages/com.unity.probuilder/External/CSG/Classes/VertexAttributes.cs") state(2)
-Script is not up to date after domain reload: guid(599cab2fb037142fd9fe246b0b364bc1) path("Packages/com.unity.probuilder/Runtime/Core/ProGridsIgnoreSnap.cs") state(2)
-Script is not up to date after domain reload: guid(c4897f4be94b09d4a90eb6a4d9b85c55) path("Packages/com.unity.probuilder/Editor/EditorCore/HierarchyListener.cs") state(2)
-Script is not up to date after domain reload: guid(a2c22c8685df2d44b943673a11597711) path("Packages/com.unity.probuilder/External/KdTree/KdTreeLib/Math/DoubleMath.cs") state(2)
-Script is not up to date after domain reload: guid(90c015bd1316c423b9aad70704f602ff) path("Packages/com.unity.probuilder/External/CSG/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(4891ddee861208843a4495ed6e404a57) path("Packages/com.unity.probuilder/Editor/EditorCore/EditorGUILayout.cs") state(2)
-Script is not up to date after domain reload: guid(d9e3db3de6fd8480bb4e763ca2dcbe03) path("Packages/com.unity.probuilder/Runtime/MeshOperations/MergeElements.cs") state(2)
-Script is not up to date after domain reload: guid(c6624e07ef7bd4f379420666341dd539) path("Packages/com.unity.probuilder/Editor/EditorCore/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(736319124efd40fda31c36ae2599181a) path("Packages/com.unity.probuilder/Editor/MenuActions/Export/Export.cs") state(2)
-Script is not up to date after domain reload: guid(eace57ffc03f348e48d541e3ac67ae90) path("Packages/com.unity.probuilder/External/CSG/Classes/Vertex.cs") state(2)
-Script is not up to date after domain reload: guid(ab8e2d6a92a04e42baab6202f8650fb3) path("Packages/com.unity.probuilder/Runtime/MeshOperations/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(6d247d7d3f9b23a468d61e433994dd7b) path("Packages/com.unity.probuilder/Runtime/MeshOperations/AppendElements.cs") state(2)
-Script is not up to date after domain reload: guid(d123c179cb7a941d0993a60fe2e20cff) path("Packages/com.unity.probuilder/Editor/EditorCore/VertexManipulationToolSettings.cs") state(2)
-Script is not up to date after domain reload: guid(848eabc153ab891409f3d562463a0efe) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/TriangulationContext.cs") state(2)
-Script is not up to date after domain reload: guid(a84ca2d947f34a09bd44bc592e22d49c) path("Packages/com.unity.probuilder/AssetIdRemapUtility/Editor/AssemblyInfo.cs") state(2)
-Script is not up to date after domain reload: guid(d4e65de48089c1f428c3752b69114f23) path("Packages/com.unity.progrids/Editor/Version.cs") state(2)
-Script is not up to date after domain reload: guid(4bddc56d76fd9ac49afc63c7dc797ace) path("Packages/com.unity.progrids/Tests/Editor/ReflectedMethodExist.cs") state(2)
-Script is not up to date after domain reload: guid(4ce1c67454d65d14eb3eae2f44b0ffa7) path("Packages/com.unity.probuilder/AssetIdRemapUtility/Editor/AssetId.cs") state(2)
-Script is not up to date after domain reload: guid(fe5e031b8d5fd9d43b054ae08c843652) path("Packages/com.unity.probuilder/External/Poly2Tri/Triangulation/Delaunay/Sweep/DTSweepDebugContext.cs") state(2)
-Script is not up to date after domain reload: guid(b300db76e48084b5680ab36214d3bea3) path("Packages/com.unity.probuilder/Runtime/MeshOperations/DeleteElements.cs") state(2)
-Script is not up to date after domain reload: guid(ed8e5003f1d14f718326765fbb042572) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/NewBezierShape.cs") state(2)
-Script is not up to date after domain reload: guid(4746bcae5f2c20c4db633d37d4a2901d) path("Packages/com.unity.probuilder/Editor/EditorCore/EntityUtility.cs") state(2)
-Script is not up to date after domain reload: guid(22ff4377d8be47cdacb8aefc715b08c4) path("Packages/com.unity.progrids/Editor/Defaults.cs") state(2)
-Script is not up to date after domain reload: guid(08c8ab0f8013d492eb6d0d78a261f745) path("Packages/com.unity.probuilder/Runtime/MeshOperations/Subdivision.cs") state(2)
-Script is not up to date after domain reload: guid(09410b7978d32924c90d84fa25a07f4a) path("Packages/com.unity.probuilder/External/Poly2Tri/P2T.cs") state(2)
-Script is not up to date after domain reload: guid(0e04a5f326f647a40badbac91f38a704) path("Packages/com.unity.probuilder/Editor/StateMachines/ShapeState.cs") state(2)
-Script is not up to date after domain reload: guid(bec5fadb27a8bd249a3d1051e2e8f970) path("Packages/com.unity.probuilder/Editor/EditorCore/MeshSelection.cs") state(2)
-Script is not up to date after domain reload: guid(90d02d4062a613d43bc5e9309ec8ae8f) path("Packages/com.unity.probuilder/Runtime/Shapes/Prism.cs") state(2)
-Script is not up to date after domain reload: guid(2665d2fb2b90b4916bfb3868cda99ea3) path("Packages/com.unity.probuilder/External/CSG/Classes/Plane.cs") state(2)
-Script is not up to date after domain reload: guid(1fdc9faa599347a3b697e785ac4719b3) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/ConformFaceNormals.cs") state(2)
-Script is not up to date after domain reload: guid(c851f089cbc73c141be8cc62b5dc057a) path("Packages/com.unity.probuilder/Editor/MenuActions/Editors/OpenLightmapUVEditor.cs") state(2)
-Script is not up to date after domain reload: guid(c339ea7067e6fcd459cb4eac2f0dafb1) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/SplitVertices.cs") state(2)
-Script is not up to date after domain reload: guid(a62bb434134faa6439b1998669525768) path("Packages/com.unity.probuilder/Editor/MenuActions/Geometry/WeldVertices.cs") state(2)
-Refreshing native plugins compatible for Editor in 4.64 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5686 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 30 unused Assets / (0.7 MB). Loaded Objects now: 6307.
-Memory consumption went from 235.1 MB to 234.4 MB.
-Total: 5.492600 ms (FindLiveObjects: 0.544500 ms CreateObjectMapping: 0.583800 ms MarkObjects: 3.965800 ms  DeleteObjects: 0.397300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009426 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.460 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1461ms)
-		BeginReloadAssembly (221ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (104ms)
-		EndReloadAssembly (1135ms)
-			LoadAssemblies (119ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (313ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (608ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (95ms)
-				ProcessInitializeOnLoadAttributes (394ms)
-				ProcessInitializeOnLoadMethodAttributes (95ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (22ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6104 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 51 unused Assets / (2.7 MB). Loaded Objects now: 6721.
-Memory consumption went from 250.9 MB to 248.2 MB.
-Total: 4.632200 ms (FindLiveObjects: 0.452600 ms CreateObjectMapping: 0.369400 ms MarkObjects: 2.803200 ms  DeleteObjects: 1.006000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 17132.241257 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
-  artifactKey: Guid(c334973cef89a9840b0b0c507e0377ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc using Guid(c334973cef89a9840b0b0c507e0377ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813be9876ce871083baf22ddd510ea72') in 0.059273 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012925 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChang_TPS_Division\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.350 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1351ms)
-		BeginReloadAssembly (153ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (1084ms)
-			LoadAssemblies (102ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (319ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (542ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (98ms)
-				ProcessInitializeOnLoadAttributes (329ms)
-				ProcessInitializeOnLoadMethodAttributes (90ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.03 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6104 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 51 unused Assets / (2.6 MB). Loaded Objects now: 6737.
-Memory consumption went from 250.9 MB to 248.2 MB.
-Total: 4.980500 ms (FindLiveObjects: 0.530700 ms CreateObjectMapping: 0.473300 ms MarkObjects: 2.618400 ms  DeleteObjects: 1.357300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 27.072780 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/Icons/SnapsIcon.png
-  artifactKey: Guid(f3b461aa3ce4e164e80610d900c9b22d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/Icons/SnapsIcon.png using Guid(f3b461aa3ce4e164e80610d900c9b22d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5aa7766c3897a4d2a40e9f772c8d95') in 0.065231 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.497913 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/BlueWindow_snaps001.mat
-  artifactKey: Guid(50e8d87218c9f9649975e35ca3232d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/BlueWindow_snaps001.mat using Guid(50e8d87218c9f9649975e35ca3232d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e95e5c76f0de026844f2f0f65aeece10') in 0.314574 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/DeepBlue_snaps001.mat
-  artifactKey: Guid(0311cbb0184a51845912c30ec478cb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/DeepBlue_snaps001.mat using Guid(0311cbb0184a51845912c30ec478cb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536a97b497ca6f4509a8056c3badcf90') in 0.017719 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/Gray_snaps001.mat
-  artifactKey: Guid(8621dfcb3dbf229428e45425021e0875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/Gray_snaps001.mat using Guid(8621dfcb3dbf229428e45425021e0875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1f0f970f6bccfba9ba7cc58bdd7a1c9') in 0.017941 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/Red_snaps001.mat
-  artifactKey: Guid(329e1b1722fe9c946999242edace2ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/Red_snaps001.mat using Guid(329e1b1722fe9c946999242edace2ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b546b4419bcb059dc918f01b0b6fd2ec') in 0.018253 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/LightGray_snaps001.mat
-  artifactKey: Guid(ae2efeea9c901af48b6bb19d9981d5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/LightGray_snaps001.mat using Guid(ae2efeea9c901af48b6bb19d9981d5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608e573736168d30e4f6c38a1d17bb97') in 0.018591 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/BrownLight_snaps001.mat
-  artifactKey: Guid(9dd3f5b3049028f4e948921f3bf87f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/BrownLight_snaps001.mat using Guid(9dd3f5b3049028f4e948921f3bf87f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd84c673c7f750ebccfa4f222c4b81acf') in 0.015137 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.043771 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/Corridor_Joint.prefab
-  artifactKey: Guid(bbed235af7182284dbd1847f47029fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/Corridor_Joint.prefab using Guid(bbed235af7182284dbd1847f47029fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cbc153029713b54116d960eeeec4339') in 0.039277 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/Room_01.prefab
-  artifactKey: Guid(e74d3aa3601632946b6084f189714136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/Room_01.prefab using Guid(e74d3aa3601632946b6084f189714136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f634704a6cd30383398183367eef72') in 0.044681 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000073 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/Room_Small.prefab
-  artifactKey: Guid(a68ab25f011a3e84d9e3e7a8832599d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/Room_Small.prefab using Guid(a68ab25f011a3e84d9e3e7a8832599d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2bf99d5a915d4fc2575fdf8a7c9dd89') in 0.031246 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/PC_Set.prefab
-  artifactKey: Guid(f1a6eb82d2368ea43b3baab7edb33cfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/NestedPrefab/PC_Set.prefab using Guid(f1a6eb82d2368ea43b3baab7edb33cfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44de745e0f000310df137acc700e801d') in 0.031050 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.625582 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/AirDuct_01_snaps001.prefab
-  artifactKey: Guid(f8531c0160b625746812ddd8f8a3f1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/AirDuct_01_snaps001.prefab using Guid(f8531c0160b625746812ddd8f8a3f1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8173354c6c5f7c976dc74a1ee58d2575') in 0.016725 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Keyboard_01_snaps001.prefab
-  artifactKey: Guid(1ae56147953582b4280b244e7064132d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Keyboard_01_snaps001.prefab using Guid(1ae56147953582b4280b244e7064132d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0783dc2e95a4c866916b5a53ed034a5d') in 0.018494 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/PotPlant_02_snaps001.prefab
-  artifactKey: Guid(09bbc701d5952e2479584092953ee7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/PotPlant_02_snaps001.prefab using Guid(09bbc701d5952e2479584092953ee7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a5435cb07587e62d6e2e80cb2d0f360') in 0.021981 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Monitor_01_snaps001.prefab
-  artifactKey: Guid(a5a328fd0bdbc82418c900ec0e290bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Monitor_01_snaps001.prefab using Guid(a5a328fd0bdbc82418c900ec0e290bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f40eeba45b47dece7672435a084612') in 0.021313 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/ComputerDesk_01_snaps001.prefab
-  artifactKey: Guid(1311ead9e03725440bcd145a4ddd5518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/ComputerDesk_01_snaps001.prefab using Guid(1311ead9e03725440bcd145a4ddd5518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9532a49831557cc67cc390b8f03769bf') in 0.021623 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Cabinet_04_snaps001.prefab
-  artifactKey: Guid(6ceca4d01ca8690498194787a589d0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Cabinet_04_snaps001.prefab using Guid(6ceca4d01ca8690498194787a589d0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67a4f510e111664e3c6607bb5deb7721') in 0.019621 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/CoffeeMug_01_snaps001.prefab
-  artifactKey: Guid(8c8b047a2c0cdf442a97847b15e17227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/CoffeeMug_01_snaps001.prefab using Guid(8c8b047a2c0cdf442a97847b15e17227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '478b7420a95707264cead459e6fdb3c0') in 0.018026 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Cabinet_03_snaps001.prefab
-  artifactKey: Guid(52e174db68e69754b9b080b25a308977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Cabinet_03_snaps001.prefab using Guid(52e174db68e69754b9b080b25a308977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54822b1e93bf75412053c7d80332ca84') in 0.019767 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/ComputerDesk_02_snaps001.prefab
-  artifactKey: Guid(d11695e43d89ff24bb36886a4c039c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/ComputerDesk_02_snaps001.prefab using Guid(d11695e43d89ff24bb36886a4c039c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3acf30869a4557be90810936d5d87370') in 0.021720 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Shelf_04_snaps001.prefab
-  artifactKey: Guid(9207d796a4eef5c4fb42153a24ebf588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Shelf_04_snaps001.prefab using Guid(9207d796a4eef5c4fb42153a24ebf588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e57df87059ffc7b902adc20f418103ed') in 0.018998 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Printer01_snaps001.prefab
-  artifactKey: Guid(91449bd0e8b9dce41803f9c79a993462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Printer01_snaps001.prefab using Guid(91449bd0e8b9dce41803f9c79a993462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbfe8f56885183d3561a52fbe9575f4') in 0.018901 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Cabinet_02_snaps001.prefab
-  artifactKey: Guid(eab9a1e97bf14904698f6ed18fd7e3e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Cabinet_02_snaps001.prefab using Guid(eab9a1e97bf14904698f6ed18fd7e3e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32841b4b4945e50f71c3ad653f2a05f5') in 0.020927 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/PotPlant_01_snaps001.prefab
-  artifactKey: Guid(7e4d0f164b07d6045919c269526fcd64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/PotPlant_01_snaps001.prefab using Guid(7e4d0f164b07d6045919c269526fcd64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb36fed0a5dc9542b1c54e1a35396ae8') in 0.021196 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Shelf_02_snaps001.prefab
-  artifactKey: Guid(cdc15feda7052534a82cd0a14afc130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Shelf_02_snaps001.prefab using Guid(cdc15feda7052534a82cd0a14afc130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fad17c8b063e40acaf8b5ee24729f16') in 0.018409 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/OfficeChair_01_snaps001.prefab
-  artifactKey: Guid(247e5b33a1b1dba43a82e14ad7191756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/OfficeChair_01_snaps001.prefab using Guid(247e5b33a1b1dba43a82e14ad7191756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e8c24571d57196050449dbb8e0a7c50') in 0.021742 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.696062 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/AirDuct_01_Corner_snaps001.asset
-  artifactKey: Guid(fc0b5d78437d37148ae72498507177d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/AirDuct_01_Corner_snaps001.asset using Guid(fc0b5d78437d37148ae72498507177d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e575f015dd9587bff0b8c0f05d8052be') in 0.025753 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PaperTray_02_snaps001.asset
-  artifactKey: Guid(f8e00893c42ebe74b993fc250b15491e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PaperTray_02_snaps001.asset using Guid(f8e00893c42ebe74b993fc250b15491e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59856e27c5f4232252ddfc648f82b7f2') in 0.012937 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PotPlant_01_snaps001.asset
-  artifactKey: Guid(0bfbe2225365e40438cbc214738f9248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PotPlant_01_snaps001.asset using Guid(0bfbe2225365e40438cbc214738f9248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd690b442cb05ff1db465913b4f2518b') in 0.016299 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Laptop_01_snaps001.asset
-  artifactKey: Guid(f1bce716cf0d0044da48fc5385ec2d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Laptop_01_snaps001.asset using Guid(f1bce716cf0d0044da48fc5385ec2d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45ed1a85cd5735e96390e6859a89baf') in 0.015723 seconds 
+  Time since last request: 3775.350846 seconds.
+  path: Assets/Prefebs/Weapon/ClusterSub_prefab.prefab
+  artifactKey: Guid(c622a7dbd9b1a5042a24e5402c576c5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Weapon/ClusterSub_prefab.prefab using Guid(c622a7dbd9b1a5042a24e5402c576c5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca991cffd927fa342604de1b7656927') in 0.382090 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000036 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PotPlant_02_snaps001.asset
-  artifactKey: Guid(c6bf33614e1dd934fa5771cc0cc5527d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PotPlant_02_snaps001.asset using Guid(c6bf33614e1dd934fa5771cc0cc5527d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba962dbeb2536e08bb07faa9c42d894a') in 0.015717 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Keyboard_01_snaps001.asset
-  artifactKey: Guid(7481787203b67de40a4345292a46adc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Keyboard_01_snaps001.asset using Guid(7481787203b67de40a4345292a46adc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db83ca2fe4c1dc1adbe68bc4c14ce26') in 0.016603 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/OfficeChair_01_snaps001.asset
-  artifactKey: Guid(8fc3f5342b29a4645a192f335d0e21ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/OfficeChair_01_snaps001.asset using Guid(8fc3f5342b29a4645a192f335d0e21ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4ab40cdcc2876e36b7c9b90105f9fa9') in 0.016408 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Monitor_02_snaps001.asset
-  artifactKey: Guid(5bc19e4f43a7bad47bf0d498b3aeaeec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Monitor_02_snaps001.asset using Guid(5bc19e4f43a7bad47bf0d498b3aeaeec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c72e472866c47c92ad98f60e81259c3e') in 0.014304 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PaperTray_01_snaps001.asset
-  artifactKey: Guid(93749a3e31e4f7048bd85daca3e2a350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PaperTray_01_snaps001.asset using Guid(93749a3e31e4f7048bd85daca3e2a350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21632cda9987746fc59c9577498d4236') in 0.019156 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/CeilingLights_01_snaps001.asset
-  artifactKey: Guid(8c8289a7d2c48694088387edf71ac345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/CeilingLights_01_snaps001.asset using Guid(8c8289a7d2c48694088387edf71ac345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5bf0481daba18c7c94fae410bc26354') in 0.014329 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Monitor_01_snaps001.asset
-  artifactKey: Guid(934679b03cd0e784298507200fcd57d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Monitor_01_snaps001.asset using Guid(934679b03cd0e784298507200fcd57d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e10fe4d27ab64813b00ecfa82d4349ab') in 0.013728 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PenHolder_01_snaps001.asset
-  artifactKey: Guid(12876f32a9582bc42b01e2801126c4bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PenHolder_01_snaps001.asset using Guid(12876f32a9582bc42b01e2801126c4bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a1dbd03e493fe74d47ee433e31b069e') in 0.014529 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Shelf_01_snaps001.asset
-  artifactKey: Guid(4957c6dfc403e9547a9181e279c91443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Shelf_01_snaps001.asset using Guid(4957c6dfc403e9547a9181e279c91443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d42d1037bd0616d95035d662f9a996') in 0.013471 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/StairCase_01_Collider.asset
-  artifactKey: Guid(b2b1ef5883ed21a419cabf971d227a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/StairCase_01_Collider.asset using Guid(b2b1ef5883ed21a419cabf971d227a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2a56530bf5b19436612d5fc6145dcca') in 0.014528 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Cabinet_02_snaps001.asset
-  artifactKey: Guid(32c52341da320ff498bc99423fd2b8e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Cabinet_02_snaps001.asset using Guid(32c52341da320ff498bc99423fd2b8e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd55b837b731d8afd50ebcb4ae42bf45') in 0.013035 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.931718 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Classic_Floor_02_snaps001.prefab
-  artifactKey: Guid(a9a6af830b7d63749a8d69dc96895156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Classic_Floor_02_snaps001.prefab using Guid(a9a6af830b7d63749a8d69dc96895156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e7d5db493ac91edcd484f9b4f79a9c') in 0.016159 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Pillar_02_L_4m_snaps001.prefab
-  artifactKey: Guid(4d057e6b0c2f0b3438a341df00052ea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Pillar_02_L_4m_snaps001.prefab using Guid(4d057e6b0c2f0b3438a341df00052ea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb02fe210618a616169d038798a0f204') in 0.017700 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Pillar_01_M_4m_snaps001.prefab
-  artifactKey: Guid(9716301c1f7a89c4d8969bdeda62c4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Pillar_01_M_4m_snaps001.prefab using Guid(9716301c1f7a89c4d8969bdeda62c4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f646570d2f98b17cea562fbd883c987') in 0.016060 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallDoubleDoors_01_4m_snaps001.prefab
-  artifactKey: Guid(bdd155ddbbfc71d4299eec62806c436a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallDoubleDoors_01_4m_snaps001.prefab using Guid(bdd155ddbbfc71d4299eec62806c436a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b849605c9f4de45df708e97335da337') in 0.026916 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallDoubleDoorFrame_01_4m_snaps001.prefab
-  artifactKey: Guid(37721718c89802b4da02486a095a25a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallDoubleDoorFrame_01_4m_snaps001.prefab using Guid(37721718c89802b4da02486a095a25a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09281a0f60e52fea576d8adc8a0b7288') in 0.021324 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Wall_HeightGapFill_snaps001.prefab
-  artifactKey: Guid(3b79e730b71b17f4c99286faf9074382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Wall_HeightGapFill_snaps001.prefab using Guid(3b79e730b71b17f4c99286faf9074382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc8be19d8db0b69f4d5e98d5e65d4c6') in 0.020985 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallDoorFrame_01_4m_snaps001.prefab
-  artifactKey: Guid(78872c40a8151204e84292b05cf458d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallDoorFrame_01_4m_snaps001.prefab using Guid(78872c40a8151204e84292b05cf458d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1368fe440d8fed8ee9ed27971323536a') in 0.022016 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallWindowFrame_01_4m_snaps001.prefab
-  artifactKey: Guid(0b7c811c7ab4ad744a5a8dec4eb06d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_WallWindowFrame_01_4m_snaps001.prefab using Guid(0b7c811c7ab4ad744a5a8dec4eb06d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dfbcac9937f32f1b91b22a9159a0877') in 0.025134 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Pillar_01_L_4m_snaps001.prefab
-  artifactKey: Guid(60c2015a6316cec40bf8959981f04bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Pillar_01_L_4m_snaps001.prefab using Guid(60c2015a6316cec40bf8959981f04bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a55a754cd23baea1b72248c269823d') in 0.020977 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Wall_Corner_4m_snaps001.prefab
-  artifactKey: Guid(5a02e34e0575a924d810efcd291923c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Neo_Wall_Corner_4m_snaps001.prefab using Guid(5a02e34e0575a924d810efcd291923c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6942d0ef3bdb61189a04c33d43e7b7') in 0.034176 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.712708 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Ceiling_01_snaps001.asset
-  artifactKey: Guid(510a28ccdb55f8f4eb3c4923c28cc519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Ceiling_01_snaps001.asset using Guid(510a28ccdb55f8f4eb3c4923c28cc519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a81e4b982cee771a3570a3eb64c23497') in 0.012710 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_03_4m_snaps001.asset
-  artifactKey: Guid(a709eeaaf113f0440b68a900aee07892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_03_4m_snaps001.asset using Guid(a709eeaaf113f0440b68a900aee07892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8957f9954040899a8874112ec3b4668') in 0.012437 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_02_4m_Collider.asset
-  artifactKey: Guid(8ed440aea33cc014994e879f774790af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_02_4m_Collider.asset using Guid(8ed440aea33cc014994e879f774790af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bfbaeb0c15a364f5bab3bb8c7f990bf') in 0.016677 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Wall_Corner_4m_snaps001.asset
-  artifactKey: Guid(c719fe46f0e18f14a8f795e9e79eff6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Wall_Corner_4m_snaps001.asset using Guid(c719fe46f0e18f14a8f795e9e79eff6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c075d2bcbe5d5051dd102b81c95d8c42') in 0.012378 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_02_4m_snaps001.asset
-  artifactKey: Guid(f013a2addb1a76045b27eaaab51a4914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_02_4m_snaps001.asset using Guid(f013a2addb1a76045b27eaaab51a4914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0917b262ac4246b37a51e7b3dbc64399') in 0.020664 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_01_4m_Collider.asset
-  artifactKey: Guid(1379327424702ac48bcc33e40e93d671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallWindowFrame_01_4m_Collider.asset using Guid(1379327424702ac48bcc33e40e93d671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '625c2f0848bd82d69dbeac862cdb11d6') in 0.020388 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/StairCase_01_4m_snaps001.asset
-  artifactKey: Guid(3ffc2678d7607124495fadcf0070a2b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/StairCase_01_4m_snaps001.asset using Guid(3ffc2678d7607124495fadcf0070a2b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ee3ea1553ad29a87d630005496b43a5') in 0.018796 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Wall_4m_snaps001.asset
-  artifactKey: Guid(70ddce767e46ed34ba1426bc6c793c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Wall_4m_snaps001.asset using Guid(70ddce767e46ed34ba1426bc6c793c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '612b8aca07e6c3719665d916c32f5db9') in 0.017222 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.609445 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Classic_Window_01_snaps001.prefab
-  artifactKey: Guid(285813f2f8183d548b81784d33f4ee22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Classic_Window_01_snaps001.prefab using Guid(285813f2f8183d548b81784d33f4ee22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5ed58db6a4b09f558f09f0711fffbe') in 0.022231 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Neo_Window_03_snaps001.prefab
-  artifactKey: Guid(6304a01768bae4e468526e3fbe4e197b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Neo_Window_03_snaps001.prefab using Guid(6304a01768bae4e468526e3fbe4e197b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425cf801cfcf2500fdf579416e7dd9fd') in 0.024929 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.368504 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Meshes/Classic_Window_01_snaps001.asset
-  artifactKey: Guid(202be08c23bd4ed47baab4b4b81ff042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Meshes/Classic_Window_01_snaps001.asset using Guid(202be08c23bd4ed47baab4b4b81ff042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d2fa5238c4add03e79b1b275654e8ff') in 0.015823 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Meshes/Neo_Window_02_snaps001.asset
-  artifactKey: Guid(08a41706c5b9ce347ad875b0ec025ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Meshes/Neo_Window_02_snaps001.asset using Guid(08a41706c5b9ce347ad875b0ec025ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7250750e85f88fbdd27b1bce6e7baef8') in 0.014543 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Meshes/Neo_Door_01_snaps001.asset
-  artifactKey: Guid(01625494a6b2d354a9a6678c03bfbdd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Doors_Windows/Meshes/Neo_Door_01_snaps001.asset using Guid(01625494a6b2d354a9a6678c03bfbdd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf4e2fd9ad9787bd2cdfaafd8801a14') in 0.014188 seconds 
+  path: Assets/Prefebs/Weapon/Assault57_prefab.prefab
+  artifactKey: Guid(1d4cb47da91ca104f879a3e5e1a86b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Weapon/Assault57_prefab.prefab using Guid(1d4cb47da91ca104f879a3e5e1a86b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '882f974c4af4a8e560bedaf8d6f1f9a7') in 0.074564 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

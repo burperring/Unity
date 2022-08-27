@@ -373,18 +373,18 @@ public class Player : MonoBehaviour
 
     void TargetTransfrom()
     {
-        if (!isGameStart)
+        if (!isGameStart || isCrawl)
             return;
 
         // Player Chest Move for Target Aim
         aimTarget.position = cameraTransform.position + cameraTransform.forward * aimDistance + chestTransform.up * 2;
 
-        if (isAim && !isCrawl)
+        if (isAim)
         {
             aimTarget.position += cameraTransform.right * 5f;
             chestTransform.LookAt(aimTarget.position);
         }
-        else if (!isAim && !isCrawl && isEquipWeapon)
+        else if (!isAim && isEquipWeapon)
         {
             float hori = anim.GetFloat("Horizontal");
             float ver = anim.GetFloat("Vertical");
