@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private AudioSource screamSound;
 
+    // Move Enemy Check
+    public bool isMoveEnemy = false;
+
     private int count = 0;
     private float enemySpeed;
     private float missTarget = 0;
@@ -48,7 +51,8 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("MovetoNextWayPoint", 0f, 2f);
+        if(isMoveEnemy)
+            InvokeRepeating("MovetoNextWayPoint", 0f, 2f);
     }
 
     private void Awake()
@@ -134,7 +138,9 @@ public class Enemy : MonoBehaviour
             isChase = false;
             doScream = false;
             missTarget = 0;
-            InvokeRepeating("MovetoNextWayPoint", 0f, 2f);
+
+            if (isMoveEnemy)
+                InvokeRepeating("MovetoNextWayPoint", 0f, 2f);
         }
     }
 
