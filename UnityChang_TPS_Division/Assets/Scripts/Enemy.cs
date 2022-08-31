@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
     private Animator anim;
 
     protected Player player;
+    protected GameManager gameManager;
 
     NavMeshAgent nav = null;
     Transform target;
@@ -61,6 +62,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         nav = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<Player>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void Update()
@@ -277,7 +279,10 @@ public class Enemy : MonoBehaviour
             CancelInvoke();
 
             if (!isDead)
+            {
                 anim.SetTrigger("doDead");
+                gameManager.enemyCount--;
+            }
 
             isDead = true;
 

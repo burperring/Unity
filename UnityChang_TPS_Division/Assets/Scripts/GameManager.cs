@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public int enemyCount;
+
     public GameObject gamePanel;
     public Text playerHealthText;
     public Text playerAmmoText;
+    public Text enemyCountText;
     public GameObject startPanel;
     public GameObject pausePanel;
+    public GameObject clearPanel;
+    public Text clearTitleText;
     public RectTransform playerHPBar;
 
     public Player player;
@@ -17,6 +23,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         PlayerState();
+        ClearPanel();
     }
 
     private void PlayerState()
@@ -33,7 +40,25 @@ public class GameManager : MonoBehaviour
         else
             playerAmmoText.text = "-";
 
+        enemyCountText.text = enemyCount + " / 31";
+
         playerHPBar.localScale = new Vector3(player.playerHealth / player.playerMaxHealth, 1, 1);
+    }
+
+    private void ClearPanel()
+    {
+        if(enemyCount == 0)
+        {
+            gamePanel.SetActive(false);
+            clearPanel.SetActive(true);
+        }
+    }
+
+    public void FailPanel()
+    {
+        gamePanel.SetActive(false);
+        clearPanel.SetActive(true);
+        clearTitleText.text = "Fail";
     }
 
     public void GmaeStart()
@@ -41,6 +66,7 @@ public class GameManager : MonoBehaviour
         startPanel.SetActive(false);
         gamePanel.SetActive(true);
         player.isGameStart = true;
+        player.PauseOut();
     }
 
     public void GameExit()
@@ -64,5 +90,10 @@ public class GameManager : MonoBehaviour
     {
         pausePanel.SetActive(false);
         gamePanel.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }

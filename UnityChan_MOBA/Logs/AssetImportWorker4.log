@@ -1,0 +1,796 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'ko' Physical Memory: 16194 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+10429
+Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 90.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f14)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56680
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008126 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 90.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.662 seconds
+Domain Reload Profiling:
+	ReloadAssembly (663ms)
+		BeginReloadAssembly (76ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (466ms)
+			LoadAssemblies (74ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (111ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (273ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (91ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (124ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006286 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.105 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1105ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (862ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (298ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (388ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (237ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3493 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (10.7 MB). Loaded Objects now: 3888.
+Memory consumption went from 158.4 MB to 147.7 MB.
+Total: 7.885000 ms (FindLiveObjects: 0.396400 ms CreateObjectMapping: 0.236600 ms MarkObjects: 2.324800 ms  DeleteObjects: 4.926200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 28096.300401 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/Parts/Accessory_00.fbx
+  artifactKey: Guid(f6a92ea2a0c495f458a00ff908e394e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/Parts/Accessory_00.fbx using Guid(f6a92ea2a0c495f458a00ff908e394e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2abdffc6a1fb9f6c71da56df98a5ceeb') in 0.208272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_00_L.fbx
+  artifactKey: Guid(6131178e2a1e42242b6d58f6ba6aa6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_00_L.fbx using Guid(6131178e2a1e42242b6d58f6ba6aa6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52fad4e995c9052c081865adfc680814') in 0.025861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_01_R.fbx
+  artifactKey: Guid(9f5f7a3051964b14d8eb48a0ba574e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_01_R.fbx using Guid(9f5f7a3051964b14d8eb48a0ba574e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc47ef29f1068d8f981c03996e48c041') in 0.024047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/Parts/Hair_01_Base.fbx
+  artifactKey: Guid(0001e8f856c67ce4cbd40fee65534082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/Parts/Hair_01_Base.fbx using Guid(0001e8f856c67ce4cbd40fee65534082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee109afe8826f1c8c46487d61bc72539') in 0.035201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/Parts/Hair_02_Front.fbx
+  artifactKey: Guid(cade0cf166c5da34681e0c24647b45a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/Parts/Hair_02_Front.fbx using Guid(cade0cf166c5da34681e0c24647b45a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75906d22a7550131d0df0a7ae4ec0e64') in 0.030703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.038882 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/Prop/Prop_03_GreatSword.FBX
+  artifactKey: Guid(00ee1ce116088f34f8e78f315f67212e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/Prop/Prop_03_GreatSword.FBX using Guid(00ee1ce116088f34f8e78f315f67212e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29b22fd52f13f1319469bab4822195ed') in 0.025449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Shovel_00_dummy.FBX
+  artifactKey: Guid(4af84749dae5b5c4d87038ca37a860a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Shovel_00_dummy.FBX using Guid(4af84749dae5b5c4d87038ca37a860a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb4e847a632e8d8973b9329aba3f141') in 0.025912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.025924 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Models/rigProp/RigProp_R_FishingRod_00_dummy.FBX
+  artifactKey: Guid(f05a18b4b843c3f46a2adf89526d16c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Models/rigProp/RigProp_R_FishingRod_00_dummy.FBX using Guid(f05a18b4b843c3f46a2adf89526d16c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edfc8f86029e8ab426e60dbecf62c35c') in 0.026884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.017214 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Materials/_PSD/(psd) Accessory_01.mat
+  artifactKey: Guid(54e1c393243002b4195496f962065b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Materials/_PSD/(psd) Accessory_01.mat using Guid(54e1c393243002b4195496f962065b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632439a28c4f6cd9e6245543163c2258') in 0.033818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Materials/_PSD/(psd) Hair_02.mat
+  artifactKey: Guid(14c39d86099b5ea40803c2f359c7e82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Materials/_PSD/(psd) Hair_02.mat using Guid(14c39d86099b5ea40803c2f359c7e82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac9c47a725a603e91eec8cd5c3eddb0') in 0.019384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Materials/_PSD/(psd) FaceSkin_00.mat
+  artifactKey: Guid(68bf69987ba1a204baaa60e3eddae69a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Materials/_PSD/(psd) FaceSkin_00.mat using Guid(68bf69987ba1a204baaa60e3eddae69a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '248617e9b1df925cc1e6e759bd9276f9') in 0.020700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.284226 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Materials/Accessory/Accessory_00_00.mat
+  artifactKey: Guid(11f1d3ee889f6b14b97ff7d28355af34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Materials/Accessory/Accessory_00_00.mat using Guid(11f1d3ee889f6b14b97ff7d28355af34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da31cccc70dcc4e03cb83777a8cee376') in 0.015342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.301316 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Materials/Costume/Costume_01_00.mat
+  artifactKey: Guid(95ffce823b1abf14aacbd57f06bd890c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Materials/Costume/Costume_01_00.mat using Guid(95ffce823b1abf14aacbd57f06bd890c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65dc735672eb30c7fb6c475e793d962e') in 0.017245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.848958 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Accessory/Accessory_00.prefab
+  artifactKey: Guid(16ed58f9ae1796647a801007ccedee2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Accessory/Accessory_00.prefab using Guid(16ed58f9ae1796647a801007ccedee2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '093a5fba4ca3e41171d52118cd542bd1') in 0.017463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.309407 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Costume/Costume_01.prefab
+  artifactKey: Guid(4dbedd521225d1748b87e63abf3c4bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Costume/Costume_01.prefab using Guid(4dbedd521225d1748b87e63abf3c4bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f26424b1eb54db278c4ea625f4cb6a7') in 0.025620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.065329 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_00_L.prefab
+  artifactKey: Guid(afe05fa4689f7484394dfda61d7a08a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_00_L.prefab using Guid(afe05fa4689f7484394dfda61d7a08a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b19247b7064ea349ad58c6d83db68461') in 0.015235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_02_R Set.prefab
+  artifactKey: Guid(3694d68c5675ed949add84515f3a68fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_02_R Set.prefab using Guid(3694d68c5675ed949add84515f3a68fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2023c714282544d463de0f6499b651c5') in 0.023803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/EyeLight_00_L.prefab
+  artifactKey: Guid(37c201654ec515b47aec8ba63f686243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/EyeLight_00_L.prefab using Guid(37c201654ec515b47aec8ba63f686243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07457415bd29e16ae412d21502c07b69') in 0.018476 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_01_R Set.prefab
+  artifactKey: Guid(d38a2ac6dc2629d4cb26f4f686828062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_01_R Set.prefab using Guid(d38a2ac6dc2629d4cb26f4f686828062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9da0559e3a582af0ef4723e647847842') in 0.025518 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.383637 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Face/Face_00 BlendShapes.prefab
+  artifactKey: Guid(1970ec7f92222b94d98a2eb4d30ee4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Face/Face_00 BlendShapes.prefab using Guid(1970ec7f92222b94d98a2eb4d30ee4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29db34d2632c64c848bf684f86bcf3e9') in 0.019173 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.589248 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Base.prefab
+  artifactKey: Guid(e3d554dce716090459785515b25ecd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Base.prefab using Guid(e3d554dce716090459785515b25ecd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e56cb721a7b76a0aeab099401b914f48') in 0.019848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.771047 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Front.prefab
+  artifactKey: Guid(39c9654e00c16c04d852d0b398662dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Front.prefab using Guid(39c9654e00c16c04d852d0b398662dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a6ce3e14a1cce12dfbb142656e3bc70') in 0.016478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.564188 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Set/LS Preview SD Unity-chan.prefab
+  artifactKey: Guid(fdf678a7193c58346a367114b3da57ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Set/LS Preview SD Unity-chan.prefab using Guid(fdf678a7193c58346a367114b3da57ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5886f37e069403c6863ba2291351e2d') in 0.051426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_02 SD Unity-Chan.prefab
+  artifactKey: Guid(9d4dd85afa58a17438e34b09e8d15f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_02 SD Unity-Chan.prefab using Guid(9d4dd85afa58a17438e34b09e8d15f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60f99f64964142dbf6633becfd2ccead') in 0.046432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 91.505723 seconds.
+  path: Assets/Download
+  artifactKey: Guid(2e66f294d17492d489b2640f68aa5566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download using Guid(2e66f294d17492d489b2640f68aa5566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e96b7561b40b5190ff3d78683434bc54') in 0.005659 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006345 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.036 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1036ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (784ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (277ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (324ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (201ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3438 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 82 unused Assets / (10.6 MB). Loaded Objects now: 3938.
+Memory consumption went from 170.9 MB to 160.3 MB.
+Total: 7.682600 ms (FindLiveObjects: 0.274100 ms CreateObjectMapping: 0.168000 ms MarkObjects: 2.221300 ms  DeleteObjects: 5.018100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 346.367009 seconds.
+  path: Assets/Prefabs/UnityChan WGS.prefab
+  artifactKey: Guid(136f0b29b74ca544c9b41f55f36d88e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UnityChan WGS.prefab using Guid(136f0b29b74ca544c9b41f55f36d88e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Subshader: 0, Pass: FORWARD, Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_ANGELRING_OFF _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON FOG_EXP FOG_EXP2 FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON _EMISSIVE_ANIMATION
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Subshader: 0, Pass: FORWARD, Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_ANGELRING_OFF _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON FOG_EXP FOG_EXP2 FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON _EMISSIVE_ANIMATION
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Subshader: 0, Pass: FORWARD, Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_ANGELRING_OFF _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON FOG_EXP FOG_EXP2 FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON _EMISSIVE_ANIMATION
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Subshader: 0, Pass: FORWARD_DELTA, Vertex program with DIRECTIONAL _IS_ANGELRING_OFF _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: DIRECTIONAL_COOKIE FOG_EXP FOG_EXP2 FOG_LINEAR LIGHTMAP_SHADOW_MIXING POINT POINT_COOKIE SHADER_API_GLES30 SHADOWS_CUBE SHADOWS_DEPTH SHADOWS_SCREEN SHADOWS_SHADOWMASK SHADOWS_SOFT SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Subshader: 0, Pass: FORWARD, Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_ANGELRING_OFF _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON FOG_EXP FOG_EXP2 FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON _EMISSIVE_ANIMATION
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Subshader: 0, Pass: FORWARD_DELTA, Vertex program with DIRECTIONAL _IS_ANGELRING_OFF _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: DIRECTIONAL_COOKIE FOG_EXP FOG_EXP2 FOG_LINEAR LIGHTMAP_SHADOW_MIXING POINT POINT_COOKIE SHADER_API_GLES30 SHADOWS_CUBE SHADOWS_DEPTH SHADOWS_SCREEN SHADOWS_SHADOWMASK SHADOWS_SOFT SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+ -> (artifact id: 'fe6a96a93bdab83104bb056b206c0ae1') in 0.148990 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 82 unused Assets / (10.4 MB). Loaded Objects now: 3939.
+Memory consumption went from 105.6 MB to 95.2 MB.
+Total: 11.603900 ms (FindLiveObjects: 0.482900 ms CreateObjectMapping: 0.350900 ms MarkObjects: 4.106600 ms  DeleteObjects: 6.662100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 639.759596 seconds.
+  path: Assets/Prefabs/UnityChan WTD.prefab
+  artifactKey: Guid(d421eaeee899100418fbf5c4e3956dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UnityChan WTD.prefab using Guid(d421eaeee899100418fbf5c4e3956dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d7f32620fcb696bb6e1ad15ebc2e057') in 0.073646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15456.033949 seconds.
+  path: Assets/Prefabs/UnityChan.prefab
+  artifactKey: Guid(be4a7011c12b4454c90d65b3ff9b0e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UnityChan.prefab using Guid(be4a7011c12b4454c90d65b3ff9b0e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5864242cd0dcb2a099add8df5978c43d') in 0.212196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 88.973554 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_03_GreatSword.FBX
+  artifactKey: Guid(00ee1ce116088f34f8e78f315f67212e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_03_GreatSword.FBX using Guid(00ee1ce116088f34f8e78f315f67212e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '582b939269d35d710e77450ea8501229') in 0.069103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Shovel_00_dummy.FBX
+  artifactKey: Guid(4af84749dae5b5c4d87038ca37a860a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Shovel_00_dummy.FBX using Guid(4af84749dae5b5c4d87038ca37a860a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bad122ee67c2e6c6c5d31482bb4bd151') in 0.051513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_04_R_TwinDagger.FBX
+  artifactKey: Guid(c0ebdb230c595b04cb736b16f37c59c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_04_R_TwinDagger.FBX using Guid(c0ebdb230c595b04cb736b16f37c59c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4394cf4fbfaeadfb783928c84dbf7f70') in 0.042459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Axe_00_dummy.FBX
+  artifactKey: Guid(4f603373e0a26094182053027300dbc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Axe_00_dummy.FBX using Guid(4f603373e0a26094182053027300dbc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69433e0b34cccda086a4e5142fac420') in 0.038135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Pickax_00_dummy.FBX
+  artifactKey: Guid(3e8bab9e323b2514192d52b0cb710510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Pickax_00_dummy.FBX using Guid(3e8bab9e323b2514192d52b0cb710510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9eaa1c6c35ec02355885cda79152735') in 0.039436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.254760 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/rigProp/RigProp_R_FishingRod_00_dummy.FBX
+  artifactKey: Guid(f05a18b4b843c3f46a2adf89526d16c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/rigProp/RigProp_R_FishingRod_00_dummy.FBX using Guid(f05a18b4b843c3f46a2adf89526d16c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f3db8f0c6f76c3b9fb80d73c93eca1') in 0.039680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/rigProp/RigProp_R_Umbrella_00_dummy.FBX
+  artifactKey: Guid(9a198bea6d4318d498bb767996f7d68d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/rigProp/RigProp_R_Umbrella_00_dummy.FBX using Guid(9a198bea6d4318d498bb767996f7d68d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed684da4b136007a42965b42b878310') in 0.045496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 206.134698 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Accessory_01.fbx
+  artifactKey: Guid(dc94cc429b47dd84e8a527376d6e05d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Accessory_01.fbx using Guid(dc94cc429b47dd84e8a527376d6e05d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a18ac07db0ac8edb463c9c7f5c55bb40') in 0.065133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_02_L.fbx
+  artifactKey: Guid(040243e6c1a99954f8f374657c13f19d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_02_L.fbx using Guid(040243e6c1a99954f8f374657c13f19d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '758915e685866d65074f846a2009a3c6') in 0.023966 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_00_R.fbx
+  artifactKey: Guid(d0d3992b3ab5d664f86ebedbc2f7f32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_00_R.fbx using Guid(d0d3992b3ab5d664f86ebedbc2f7f32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12f6352bf95d96abd36559f5de9c9409') in 0.020983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Face_02.fbx
+  artifactKey: Guid(8f615bae3b4fc944cae59f91b568747f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Face_02.fbx using Guid(8f615bae3b4fc944cae59f91b568747f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b30c1c8340394f9c8efef3df0f5ae17b') in 0.042831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_02_R.fbx
+  artifactKey: Guid(9c92d641718bd7944bc1c13062d8a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_02_R.fbx using Guid(9c92d641718bd7944bc1c13062d8a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '744762c7c9170fd56ddedba267ee6c17') in 0.021157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Face_01.fbx
+  artifactKey: Guid(19b3520048fec7345982be6761526df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Face_01.fbx using Guid(19b3520048fec7345982be6761526df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1258b611ce720f50ef7a55f3e4856054') in 0.037576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_00_Base.fbx
+  artifactKey: Guid(2e82b72d6ee6004469434238fcc4887a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_00_Base.fbx using Guid(2e82b72d6ee6004469434238fcc4887a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b739f1a7824c5cb3c85d8cb5f28dfc91') in 0.029840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_02_Base.fbx
+  artifactKey: Guid(a146594ebbaebc84a801b8e87505f844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_02_Base.fbx using Guid(a146594ebbaebc84a801b8e87505f844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '674886eed6eb98b0cd965186222c0df3') in 0.048314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Costume_03.fbx
+  artifactKey: Guid(e2425d323ad15a14db2323ecd7b462ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Costume_03.fbx using Guid(e2425d323ad15a14db2323ecd7b462ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f043add59d0fd34bfdf589a84e3c1e3') in 0.054987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Eye_02_R.fbx
+  artifactKey: Guid(bd27e7964625c84449f2ac3e445385f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Eye_02_R.fbx using Guid(bd27e7964625c84449f2ac3e445385f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c327096b3570a3105884de7acf07692') in 0.042266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Eye_00_R.fbx
+  artifactKey: Guid(1916394ce5d6072439e502357a407567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Eye_00_R.fbx using Guid(1916394ce5d6072439e502357a407567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce1a9ca7267a6c09a2797efa988c55f7') in 0.033001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_01_Base.fbx
+  artifactKey: Guid(0001e8f856c67ce4cbd40fee65534082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_01_Base.fbx using Guid(0001e8f856c67ce4cbd40fee65534082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61240a6ace412fd1bd6291cc55333e1a') in 0.047746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_01_L.fbx
+  artifactKey: Guid(a5ef0863cbef51144b0d036586e669ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/EyeLight_01_L.fbx using Guid(a5ef0863cbef51144b0d036586e669ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '058ba3af93f2fe24630ed7b39f24f63c') in 0.021382 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Face_00.fbx
+  artifactKey: Guid(207f23503b6a22448a7c7139ed5e8286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Face_00.fbx using Guid(207f23503b6a22448a7c7139ed5e8286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf9d1e09d8a26ef8894aef0e432a1cc') in 0.024592 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_01_Front.fbx
+  artifactKey: Guid(731ecf5991c41524e81af48795bf9092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Parts/Hair_01_Front.fbx using Guid(731ecf5991c41524e81af48795bf9092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81bb817fba0f2704bf93c177199063c0') in 0.036835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.171777 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Accessory/Accessory_00.prefab
+  artifactKey: Guid(16ed58f9ae1796647a801007ccedee2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Accessory/Accessory_00.prefab using Guid(16ed58f9ae1796647a801007ccedee2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c393bbe46fbf83602e8e20d1a0836592') in 0.015704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.349204 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Costume/Costume_01.prefab
+  artifactKey: Guid(4dbedd521225d1748b87e63abf3c4bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Costume/Costume_01.prefab using Guid(4dbedd521225d1748b87e63abf3c4bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7c7dd6c9437f8109e7f13fe61e7890') in 0.039774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.450113 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_00_L.prefab
+  artifactKey: Guid(afe05fa4689f7484394dfda61d7a08a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_00_L.prefab using Guid(afe05fa4689f7484394dfda61d7a08a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33b371208f31c427b46151831f679771') in 0.014607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_02_R Set.prefab
+  artifactKey: Guid(3694d68c5675ed949add84515f3a68fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_02_R Set.prefab using Guid(3694d68c5675ed949add84515f3a68fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90c22e47f07edd9f76558df132a3180') in 0.021687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_01_R.prefab
+  artifactKey: Guid(40ec0896f832b4b4ea5d56bda0e7095c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/Eye_01_R.prefab using Guid(40ec0896f832b4b4ea5d56bda0e7095c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94444e921f398687a4cfdc196854ddf') in 0.020531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/EyeLight_01_R.prefab
+  artifactKey: Guid(97d483f9a19199540b28e90a250a9488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/EyeLight_01_R.prefab using Guid(97d483f9a19199540b28e90a250a9488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0abb57947ca8c0d4f1cffa4bb3a7fba') in 0.016105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/EyeLight_01_L.prefab
+  artifactKey: Guid(ce58bfa63e5f72b43afbc69a656e1b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Eye/EyeLight_01_L.prefab using Guid(ce58bfa63e5f72b43afbc69a656e1b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a67e0dd064d81cf154d726b7019935') in 0.019243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.411752 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Face/Face_00 BlendShapes.prefab
+  artifactKey: Guid(1970ec7f92222b94d98a2eb4d30ee4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Face/Face_00 BlendShapes.prefab using Guid(1970ec7f92222b94d98a2eb4d30ee4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b6d0cc0a0c5798cacad0d19008c945') in 0.017182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.964628 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Base.prefab
+  artifactKey: Guid(e3d554dce716090459785515b25ecd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Base.prefab using Guid(e3d554dce716090459785515b25ecd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bbd0c70e1387a3ee0b2178bcb000de7') in 0.022157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_02_Front.prefab
+  artifactKey: Guid(b08b87446df2eeb4d86f9c0f69265868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_02_Front.prefab using Guid(b08b87446df2eeb4d86f9c0f69265868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb41b7cf59f87a01eac96fb58abe9b2') in 0.017813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 105.869464 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Base.prefab
+  artifactKey: Guid(e3d554dce716090459785515b25ecd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_00_Base.prefab using Guid(e3d554dce716090459785515b25ecd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd80ce21a26b90c2e5c6acf1bb4bc9b06') in 0.013568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.647044 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_01_Base.prefab
+  artifactKey: Guid(be38d6b12ed58804eac2f990a0697bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_01_Base.prefab using Guid(be38d6b12ed58804eac2f990a0697bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c771b9d7ad297ee44fafbde3228ef633') in 0.011610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.335688 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_01_Front.prefab
+  artifactKey: Guid(f4d336f82e548f34c8b8de22f88e83c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_01_Front.prefab using Guid(f4d336f82e548f34c8b8de22f88e83c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ec7216d40ea7dc2523f435580e2370') in 0.012159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.179325 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_02_Base.prefab
+  artifactKey: Guid(106ffde3695d8f6469dd067f5698decd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_02_Base.prefab using Guid(106ffde3695d8f6469dd067f5698decd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9996337ad85ef8cc800f6a824e5e5fbe') in 0.011718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.581492 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_02_Front.prefab
+  artifactKey: Guid(b08b87446df2eeb4d86f9c0f69265868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Prefabs/Hair/Hair_02_Front.prefab using Guid(b08b87446df2eeb4d86f9c0f69265868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe21d26aa7fef3f5b36992890bbf317d') in 0.011926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.830449 seconds.
+  path: Assets/Prefabs/UnityChan WGS.prefab
+  artifactKey: Guid(136f0b29b74ca544c9b41f55f36d88e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UnityChan WGS.prefab using Guid(136f0b29b74ca544c9b41f55f36d88e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6e71d2f276f136d2506afbf9017090') in 0.112185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefabs/UnityChan.prefab
+  artifactKey: Guid(be4a7011c12b4454c90d65b3ff9b0e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UnityChan.prefab using Guid(be4a7011c12b4454c90d65b3ff9b0e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69e6ca004440ab99cb09a51fea90eccd') in 0.047545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.784379 seconds.
+  path: Assets/Prefabs/Misaki.prefab
+  artifactKey: Guid(e4fe91efcd657b04e9a8d1775ccd8b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Misaki.prefab using Guid(e4fe91efcd657b04e9a8d1775ccd8b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d51cca68fa55423c7f73c28da3eeec9') in 0.043342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 316.415039 seconds.
+  path: Assets/Prefabs/Yuko.prefab
+  artifactKey: Guid(3467cee03941a0c40bf7a845f353d034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Yuko.prefab using Guid(3467cee03941a0c40bf7a845f353d034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81e1b9f17e8346edb8fca8d257de0bb6') in 0.044889 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006010 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.286 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1287ms)
+		BeginReloadAssembly (252ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (105ms)
+		EndReloadAssembly (909ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (331ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (371ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (234ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3438 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 82 unused Assets / (10.6 MB). Loaded Objects now: 3941.
+Memory consumption went from 171.4 MB to 160.9 MB.
+Total: 9.079000 ms (FindLiveObjects: 0.276800 ms CreateObjectMapping: 0.214500 ms MarkObjects: 2.900200 ms  DeleteObjects: 5.686500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006790 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.311 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1312ms)
+		BeginReloadAssembly (234ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (81ms)
+		EndReloadAssembly (957ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (337ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (399ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (248ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3438 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 82 unused Assets / (10.5 MB). Loaded Objects now: 3944.
+Memory consumption went from 171.4 MB to 160.9 MB.
+Total: 10.142000 ms (FindLiveObjects: 0.277400 ms CreateObjectMapping: 0.363600 ms MarkObjects: 3.176900 ms  DeleteObjects: 6.323000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5490.956212 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(c818ae0ad82a4f94db738fda0a199384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(c818ae0ad82a4f94db738fda0a199384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1101495003ef4d7b02e1f36257df2d81') in 0.088653 seconds 

@@ -282,9 +282,14 @@ public class Player : MonoBehaviour
         }
         else if (crawlAction.triggered && isCrawl)
         {
-            isCrawl = false;
+            Invoke("CrawlOut", 1.5f);
             anim.SetBool("isDown", false);
         }
+    }
+
+    void CrawlOut()
+    {
+        isCrawl = false;
     }
 
     private void Reload()
@@ -574,6 +579,7 @@ public class Player : MonoBehaviour
     {
         anim.SetTrigger("doDead");
         isDead = true;
+        gameManager.FailPanel();
     }
 
     IEnumerator OnDamage()

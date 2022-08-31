@@ -1,0 +1,351 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'ko' Physical Memory: 16194 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+10429
+Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 85.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f14)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007795 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 83.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.668 seconds
+Domain Reload Profiling:
+	ReloadAssembly (669ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (474ms)
+			LoadAssemblies (74ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (111ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (278ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (84ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (133ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009419 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.107 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1107ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (866ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (293ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (392ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (246ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3377 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (110.9 KB). Loaded Objects now: 3834.
+Memory consumption went from 120.6 MB to 120.5 MB.
+Total: 2.792300 ms (FindLiveObjects: 0.263200 ms CreateObjectMapping: 0.269900 ms MarkObjects: 2.160700 ms  DeleteObjects: 0.097600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 27794.710008 seconds.
+  path: Assets/Material
+  artifactKey: Guid(efa3504bfbf5b084ca6d3dc8e1c6022e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material using Guid(efa3504bfbf5b084ca6d3dc8e1c6022e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dee3be0a9f6d3418edfa045733f1f2f7') in 0.009533 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022390 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.122 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1123ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (843ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (373ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (234ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3488 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 132 unused Assets / (20.5 MB). Loaded Objects now: 3841.
+Memory consumption went from 155.7 MB to 135.1 MB.
+Total: 14.370200 ms (FindLiveObjects: 0.247700 ms CreateObjectMapping: 0.151100 ms MarkObjects: 3.083300 ms  DeleteObjects: 10.886800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 86.617181 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Prop/Prop_04_L_TwinDagger.prefab
+  artifactKey: Guid(4630a0fc38ee5e24e95898b7c6c8aead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Prop/Prop_04_L_TwinDagger.prefab using Guid(4630a0fc38ee5e24e95898b7c6c8aead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8ce041b95823ed564bae9de87ed80bb') in 0.520258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_03 SD Unity-Chan.prefab
+  artifactKey: Guid(3ce5f30162abffb4cb663f89f504ae9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_03 SD Unity-Chan.prefab using Guid(3ce5f30162abffb4cb663f89f504ae9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91989a74e710a896555b0897f58c6bb1') in 0.077794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Set/LS Preview SD Unity-chan.prefab
+  artifactKey: Guid(fdf678a7193c58346a367114b3da57ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Set/LS Preview SD Unity-chan.prefab using Guid(fdf678a7193c58346a367114b3da57ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46e34a24ee56089cddc99de23232e26') in 0.056889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_02 SD Unity-Chan WTD.prefab
+  artifactKey: Guid(9567168e85118da4a9e668d51492efb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_02 SD Unity-Chan WTD.prefab using Guid(9567168e85118da4a9e668d51492efb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '280cbf1c2c6cd95ee4fa75f0f6dfe871') in 0.057090 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_02 SD Yuko.prefab
+  artifactKey: Guid(b2dfadfada0fd634ebbfc36909e42c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Set/Set Costume_02 SD Yuko.prefab using Guid(b2dfadfada0fd634ebbfc36909e42c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89fab3970fef8b9c1f6d02e63b123b71') in 0.050801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Prefabs/Prop/Prop_04_R_TwinDagger.prefab
+  artifactKey: Guid(2ac73b15156e1bc4fb0bc81c81f69bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Prefabs/Prop/Prop_04_R_TwinDagger.prefab using Guid(2ac73b15156e1bc4fb0bc81c81f69bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de05b4859206a27866be6d93490743f2') in 0.019482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.233085 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/Animation Setting/_Humanoid and Add-Bone Mask Base.FBX
+  artifactKey: Guid(e7f9062685a4c3c44a1bbecc3992d83c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/Animation Setting/_Humanoid and Add-Bone Mask Base.FBX using Guid(e7f9062685a4c3c44a1bbecc3992d83c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b20986da20e9a3f446eab017100e2cc') in 0.216931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.780104 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Animation/Guide Tose - RunA_Front 2.FBX
+  artifactKey: Guid(0336a024ddde674499682f530defb42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Animation/Guide Tose - RunA_Front 2.FBX using Guid(0336a024ddde674499682f530defb42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa9b20b04d4c5e7109896c1b898c1628') in 0.153817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.332814 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/_maskGuide.mat
+  artifactKey: Guid(b03f2410943eb5842942c17ef815be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/_maskGuide.mat using Guid(b03f2410943eb5842942c17ef815be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b58a231bb90177407930149b4468f8') in 0.022201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 09.mat
+  artifactKey: Guid(1961f6f72618b6d44ba1d4e3b406196f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 09.mat using Guid(1961f6f72618b6d44ba1d4e3b406196f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04500c1850e69dc7ef898cb8f1e223e6') in 0.022460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_14.mat
+  artifactKey: Guid(6c5c37d6532e08e40849552c31b841a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_14.mat using Guid(6c5c37d6532e08e40849552c31b841a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bae8b673958c7b1e937fc065867ebec') in 0.021139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_09.mat
+  artifactKey: Guid(5d1a31077a239cd4bbcf96855c11a197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_09.mat using Guid(5d1a31077a239cd4bbcf96855c11a197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b91153012e1d319e880e0dc0f99512d') in 0.019766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Tpose3.mat
+  artifactKey: Guid(65c68e7572da0004cb7e2e4b6fde6529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Tpose3.mat using Guid(65c68e7572da0004cb7e2e4b6fde6529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '840f8511280e9802ed72c3973465f5e3') in 0.042804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 02.mat
+  artifactKey: Guid(0570cdbb028a1e14aa10761a0fe991e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 02.mat using Guid(0570cdbb028a1e14aa10761a0fe991e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce7406a8360e5ca17ac8663179485061') in 0.018450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/preview_sky.mat
+  artifactKey: Guid(c30967cfbc7fee443bf7c441db6f4f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/preview_sky.mat using Guid(c30967cfbc7fee443bf7c441db6f4f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6da288e1cb46b492ebf187ea8baa691') in 0.191925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Models/GuideObject_Equal.fbx
+  artifactKey: Guid(51a151c5e238fe94095f2c8335d0dc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Models/GuideObject_Equal.fbx using Guid(51a151c5e238fe94095f2c8335d0dc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496faa17bb45b630849261d9dfd6e2d5') in 0.026820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 12.mat
+  artifactKey: Guid(da7163c98ffa51b40bcccbb53654a86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 12.mat using Guid(da7163c98ffa51b40bcccbb53654a86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d66d31ba8a1bdaaf9283fe3d3e45281') in 0.017196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Tpose.mat
+  artifactKey: Guid(4920f3cf8b8930742b70df0aa2a95608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Materials/Tpose.mat using Guid(4920f3cf8b8930742b70df0aa2a95608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d3f25b9344ea4f1e273a343784058a') in 0.012796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.078104 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Texture/Face_BlendShapes.png
+  artifactKey: Guid(cbf1281859f7d574a92c3275c02d533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Texture/Face_BlendShapes.png using Guid(cbf1281859f7d574a92c3275c02d533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3279aae885d2af83df6707559ca5c9f') in 0.023439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Texture/Tpose3.png
+  artifactKey: Guid(596c4a4cc282e4d4ca3e3ccde16c70f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Texture/Tpose3.png using Guid(596c4a4cc282e4d4ca3e3ccde16c70f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c9fefa1bd929649a5288c9b9040a28') in 0.016427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/SD Unity-Chan Haon Custom/_Guide/Texture/Install Spring Script 06.png
+  artifactKey: Guid(68de232f14915904f9a03eb89ea3ff35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Unity-Chan Haon Custom/_Guide/Texture/Install Spring Script 06.png using Guid(68de232f14915904f9a03eb89ea3ff35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9596e7794cb86f1cc8cac637eb95f0b4') in 0.012535 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
