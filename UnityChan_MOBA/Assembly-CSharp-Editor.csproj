@@ -60,7 +60,6 @@
     <Compile Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Editor\UTS2GUI.cs" />
     <Compile Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Editor\RemoveUnusedShaderKeywordsFromUTS2Material.cs" />
     <Compile Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Editor\CopyMaterialParameter.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\Editor\ChatEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -835,10 +834,6 @@
       <Project>{384F776A-D630-3F28-F5D1-9079468A002A}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{49298316-0BC0-5E94-95F7-DEC75F2BB7EC}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{A9191127-B49B-B989-9D37-D092D076C070}</Project>
       <Name>PhotonRealtime</Name>
@@ -850,14 +845,6 @@
     <ProjectReference Include="PhotonUnityNetworking.csproj">
       <Project>{E835B2FE-7A1B-9626-47A5-53BDDD9D8A25}</Project>
       <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{C60FA73C-285A-6CC4-A359-219F43B9D0BF}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{95581DD8-BFF9-94D3-980B-7B2A57542AA6}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
