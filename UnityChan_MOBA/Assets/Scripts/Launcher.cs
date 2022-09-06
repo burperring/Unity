@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
@@ -11,6 +12,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     // Photon -> PhotonUnityNetworking -> Resources -> Photon Server Settings\
 
     public static Launcher Instance;
+
+    public TMP_Dropdown dropdown;
 
     [SerializeField] TMP_InputField roomNameInputField;
     [SerializeField] TMP_Text errorText;
@@ -20,6 +23,11 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] Transform playerListContent;
     [SerializeField] GameObject playerListPrefab;
     [SerializeField] GameObject startGameButton;
+    [SerializeField] Sprite[] selectCharacterImg;
+    [SerializeField] Image clientCharacterImg;
+    [SerializeField] Image userCharacterImg;
+
+    List<RoomInfo> myList = new List<RoomInfo>();
 
     void Awake()
     {
@@ -88,6 +96,55 @@ public class Launcher : MonoBehaviourPunCallbacks
         MenuManager.Instance.OpenMenu("error");
     }
 
+    public void PlayerCharacterImg()
+    {
+        switch(dropdown.value)
+        {
+            case 0:
+                if (PhotonNetwork.IsMasterClient)
+                    clientCharacterImg.sprite = selectCharacterImg[0];
+                else
+                    userCharacterImg.sprite = selectCharacterImg[0];
+                break;
+            case 1:
+                if (PhotonNetwork.IsMasterClient)
+                    clientCharacterImg.sprite = selectCharacterImg[1];
+                else
+                    userCharacterImg.sprite = selectCharacterImg[1];
+                break;
+            case 2:
+                if (PhotonNetwork.IsMasterClient)
+                    clientCharacterImg.sprite = selectCharacterImg[2];
+                else
+                    userCharacterImg.sprite = selectCharacterImg[2];
+                break;
+            case 3:
+                if (PhotonNetwork.IsMasterClient)
+                    clientCharacterImg.sprite = selectCharacterImg[3];
+                else
+                    userCharacterImg.sprite = selectCharacterImg[3];
+                break;
+            case 4:
+                if (PhotonNetwork.IsMasterClient)
+                    clientCharacterImg.sprite = selectCharacterImg[4];
+                else
+                    userCharacterImg.sprite = selectCharacterImg[4];
+                break;
+            case 5:
+                if (PhotonNetwork.IsMasterClient)
+                    clientCharacterImg.sprite = selectCharacterImg[5];
+                else
+                    userCharacterImg.sprite = selectCharacterImg[5];
+                break;
+            case 6:
+                if (PhotonNetwork.IsMasterClient)
+                    clientCharacterImg.sprite = selectCharacterImg[6];
+                else
+                    userCharacterImg.sprite = selectCharacterImg[6];
+                break;
+        }
+    }
+
     public void StartGame()
     {
         PhotonNetwork.LoadLevel(1);
@@ -113,16 +170,21 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         // Do update destroy all room list
-        foreach(Transform trans in roomListContent)
+        foreach (Transform trans in roomListContent)
         {
             Destroy(trans.gameObject);
         }
 
         // Recreate room list
-        for(int i = 0; i<roomList.Count; i++)
+        for (int i = 0; i < roomList.Count; i++)
         {
-            if (roomList[i].RemovedFromList)
-                continue;
+            if (!roomList[i].RemovedFromList)
+            {
+                if (!myList.Contains(roomList[i]))
+                    myList.Add(roomList[i]);
+                else
+                    myList[myList.IndexOf(roomList[i])] = roomList[i];
+            }
 
             Instantiate(roomListPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
         }
