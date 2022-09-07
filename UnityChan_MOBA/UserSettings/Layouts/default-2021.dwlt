@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 548
     width: 437
     height: 391
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 103
+  controlID: 52
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 95
+  controlID: 78
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 88
+  controlID: 51
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: -160
+    m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -412,36 +412,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d85d0000
-    m_LastClickedID: 24024
-    m_ExpandedIDs: 00000000c05d0000c45d0000c65d00002af30000
+    m_SelectedIDs: ac5e0000
+    m_LastClickedID: 24236
+    m_ExpandedIDs: 00000000ac5e0000ae5e0000b05e0000b25e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Resources
+      m_OriginalName: Resources
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 24260
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -455,7 +455,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c05d0000c25d0000c45d0000c65d0000
+    m_ExpandedIDs: 00000000ac5e0000ae5e0000b05e0000b25e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -713,7 +713,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 25}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Camera
@@ -828,9 +828,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 450, y: 253, z: 0}
+    m_Target: {x: 375.41132, y: 262.33725, z: 1.9188683}
     speed: 2
-    m_Value: {x: 450, y: 253, z: 0}
+    m_Value: {x: 375.41132, y: 262.33725, z: 1.9188683}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -881,9 +881,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 516.2451
+    m_Target: 311.095
     speed: 2
-    m_Value: 516.2451
+    m_Value: 311.095
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -901,7 +901,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.33582136, y: 0.5372257, z: -0.24593979, w: -0.7335858}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -939,20 +939,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ae0f0200
-      m_LastClickedID: 135086
-      m_ExpandedIDs: 4a35fdff1245fdff7447fdffdc56fdfffa70fdff4a71fdff667ffdff6c7ffdff3a8bfdff8a8bfdffd69afdffdc9afdffb8a5fdff08a6fdff54b5fdff5ab5fdff8cc9fdfffccdfdff4ecefdff9addfdffa4ddfdff32e7fdff84e7fdffd0f6fdffd6f6fdff58fdfdffaafdfdfff60cfefffc0cfeffc013feff1214feff5e23feff6423feff1838feff6a38feff8646feff8c46feffb85dfeff085efeff246cfeff2a6cfeffa29dfefff49dfeff10acfeff16acfeff70ccfeffc4ccfeff10dcfeff16dcfeffa026ffff2e35ffff7c43ffff3e58ffff4258ffff165affff465affff4e5affff525affff565affffc25affffc65affffca5affffce5affffd25affffd65affff5e63ffff5a75ffff9e83ffff64cbffff30fbffff06d3000066d30000ece500004ce600002e270100a6270100e22701003e550100f2550100608001005e810100d681010012820100f488010090920100249e01009c9e0100d89e0100aea9010026aa010062aa010056b5010078cc0100f0cc0100bc03020062040200cc090200
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 387ffeff887ffeffd280feffde80feff7084feffc084feff0a86feff1686feffd423ffffc038fffffe38ffffde44ffffea44ffff2845ffff664affffe44effff5896ffffeabefffff8dbffff44dcffff8edcffff9cddffff66f2ffff30fbfffff4ffffff6e5d00009a5d00008e6c0000d6440100e04401002e450100ae450100a8500100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: RoomMenu
-        m_OriginalName: RoomMenu
+        m_Name: LobbyInfoText
+        m_OriginalName: LobbyInfoText
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 109154
+        m_UserData: -42970
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
