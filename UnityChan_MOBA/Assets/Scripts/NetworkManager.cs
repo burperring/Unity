@@ -28,6 +28,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [Header("RoomPanel")]
     public GameObject roomPanel;
     public GameObject gameStartBtn;
+    public GameObject clientReady;
+    public GameObject nonClientReady;
     public TMP_Text listText;
     public TMP_Text roomInfoText;
     public TMP_Text clientNameText;
@@ -40,14 +42,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [Header("CharacterSelectPanel")]
     public GameObject chSelectPanel;
 
-    [Header("ETC")]
-    public TMP_Text statusText;
-    public PhotonView PV;
-
     [Header("SetValue")]
     public Sprite[] CharacterImg;
     public int iClientSelectChar;
     public int iNonClientSelectChar;
+    public bool isClientReady;
+    public bool isNonClientReady;
+
+    [Header("ETC")]
+    public TMP_Text statusText;
+    public PhotonView PV;
+    public PlayerValueSet playerValue;
 
     List<RoomInfo> myList = new List<RoomInfo>();
     int currentPage = 1, maxPage, multiple;
@@ -157,7 +162,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         gameStartBtn.SetActive(PhotonNetwork.IsMasterClient);
 
-        PhotonNetwork.LocalPlayer.SetCustomProperties(new Hashtable { { "SelectCharacter", 5 }, { "IsReady", false } });
+        PhotonNetwork.LocalPlayer.SetCustomProperties(new Hashtable { { "SelectCharacter", 5 }});
 
         RoomRenewal();
         chatInput.text = "";
@@ -227,6 +232,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         nonClientCharImg.sprite = CharacterImg[5];
         iClientSelectChar = 5;
         iNonClientSelectChar = 5;
+        playerValue.selectCharNum = 5;
+        isClientReady = false;
+        isNonClientReady = false;
+        clientReady.SetActive(false);
+        nonClientReady.SetActive(false);
     }
 
     [PunRPC]
@@ -240,6 +250,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
+        if (!isClientReady || !isNonClientReady)
+        {
+            ChatRPC("모두 준비되지 않았습니다.");
+            return;
+        }
+
         PhotonNetwork.LoadLevel(1);
     }
 
@@ -249,7 +265,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-    #region Character select
+    #region Character select & Ready
     public void CloseCharacterPanel()
     {
         chSelectPanel.SetActive(false);
@@ -261,22 +277,50 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         SC = PhotonNetwork.LocalPlayer.CustomProperties;
 
         SC["SelectCharacter"] = num;
-
-        if (PhotonNetwork.IsMasterClient)
-            iClientSelectChar = num;
-        else
-            iNonClientSelectChar = num;
+        playerValue.selectCharNum = num;
 
         PV.RPC("SetCharacterPRC", RpcTarget.All, SC["SelectCharacter"], PhotonNetwork.IsMasterClient);
+    }
+
+    public void SetReady()
+    {
+        if (playerValue.selectCharNum == 5)
+        {
+            ChatRPC(PhotonNetwork.LocalPlayer.NickName + "의 캐릭터가 선택되지 않았습니다.");
+            return;
+        }
+
+        PV.RPC("SetPlayerReadyRPC", RpcTarget.All, PhotonNetwork.IsMasterClient);
     }
 
     [PunRPC]
     public void SetCharacterPRC(int num, bool isClient)
     {
         if (isClient)
+        {
+            iClientSelectChar = num;
             clientCharImg.sprite = CharacterImg[num];
+        }
         else
+        {
+            iNonClientSelectChar = num;
             nonClientCharImg.sprite = CharacterImg[num];
+        }
+    }
+
+    [PunRPC]
+    public void SetPlayerReadyRPC(bool isClient)
+    {
+        if (isClient)
+        {
+            isClientReady = true;
+            clientReady.SetActive(true);
+        }
+        else
+        {
+            isNonClientReady = true;
+            nonClientReady.SetActive(true);
+        }
     }
     #endregion
 
