@@ -26,6 +26,9 @@ public class PlayerManager : MonoBehaviour
     void CreateController()
     {
         // Instantiate our player controller
-        PhotonNetwork.Instantiate("PlayerController_" + playerValue.selectCharNum.ToString(), Vector3.zero, Quaternion.identity);
+        if(PhotonNetwork.IsMasterClient)
+            PhotonNetwork.Instantiate("PlayerController_" + playerValue.selectCharNum.ToString(), new Vector3(0,0,3) , Quaternion.identity);
+        else
+            PhotonNetwork.Instantiate("PlayerController_" + playerValue.selectCharNum.ToString(), new Vector3(0, 0, -3), Quaternion.identity);
     }
 }
