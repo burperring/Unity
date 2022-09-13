@@ -206,8 +206,8 @@ GameObject:
   - component: {fileID: 239361074927189648}
   - component: {fileID: 5507704439027358794}
   - component: {fileID: 8180083674511075086}
-  - component: {fileID: -7528308533297536134}
   - component: {fileID: 3940086872190620437}
+  - component: {fileID: -7528308533297536134}
   m_Layer: 0
   m_Name: PlayerController_0
   m_TagString: Player
@@ -263,22 +263,6 @@ MonoBehaviour:
   selectCharType: 0
   speed: 5
   mainCamera: {fileID: 239361076435463957}
---- !u!114 &-7528308533297536134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239361074927189649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &3940086872190620437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +286,22 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-7528308533297536134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239361074927189649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 0
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &239361076435463960
 GameObject:
   m_ObjectHideFlags: 0

@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         PlayerMove();
     }
 
+    #region Player move controller
     void SetTransformPos()
     {
         if(Input.GetMouseButtonDown(1))
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour
         if(isMove)
         {
             var dir = destination - transform.position;
-            animator.transform.forward = dir;
+            PV.RPC("PlayerLookRPC", RpcTarget.AllBuffered, dir);
             rigid.MovePosition(transform.position + dir.normalized * speed * Time.deltaTime);
         }
 
@@ -87,4 +88,11 @@ public class PlayerController : MonoBehaviour
             isMove = false;
         }
     }
+
+    [PunRPC]
+    void PlayerLookRPC(Vector3 dir)
+    {
+        animator.transform.forward = dir;
+    }
+    #endregion
 }
