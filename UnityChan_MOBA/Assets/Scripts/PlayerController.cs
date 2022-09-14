@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Type selectCharType;
 
     // Player set
-    public float speed = 8.0f;
+    public float speed = 5.0f;
     private bool isMove;
 
     public Camera mainCamera;
@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         destination = dest;
         isMove = true;
+        animator.SetBool("isRun", true);
     }
 
     private void PlayerMove()
@@ -86,6 +87,7 @@ public class PlayerController : MonoBehaviour
         if(Vector3.Distance(transform.position, destination) <= 0.1f)
         {
             isMove = false;
+            animator.SetBool("isRun", false);
         }
     }
 

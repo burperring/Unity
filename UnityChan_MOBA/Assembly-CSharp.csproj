@@ -54,14 +54,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\Photon3Unity3D.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\PlayerValueSet.cs" />
-    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\NetworkManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +74,7 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess_Light_StencilMask.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess.shader" />
-    <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
+    <None Include="Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\UCTS_DoubleShadeWithFeather.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess.shader" />
@@ -80,7 +84,7 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_Clipping_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing_StencilOut.shader" />
-    <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
+    <None Include="Assets\Resources\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_Tess_Light.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Tess_StencilOut.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_Outline_Tess.cginc" />
@@ -107,7 +111,7 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Clipping.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_StencilMask.shader" />
-    <None Include="Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
+    <None Include="Assets\Resources\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess_StencilOut.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_TransClipping.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess_StencilOut.shader" />
@@ -142,7 +146,7 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_Tess_Light_StencilOut.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
+    <None Include="Assets\Resources\Photon\PhotonLibs\changes-library.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_Mobile_TransClipping_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_TransClipping.shader" />
@@ -153,7 +157,7 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_Tess_Light_StencilOut.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_TransClipping_StencilMask.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
+    <None Include="Assets\Resources\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Tess.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess_StencilOut.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_Mobile.shader" />
@@ -162,15 +166,15 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess_StencilOut.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_Tess.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilMask.shader" />
-    <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
+    <None Include="Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Clipping_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing.shader" />
-    <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.dll" />
+    <None Include="Assets\Resources\Photon\PhotonLibs\Photon3Unity3D.dll" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_Transparent_StencilOut.shader" />
-    <None Include="Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
+    <None Include="Assets\Resources\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Clipping_Tess.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_TransClipping_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather.shader" />
@@ -193,7 +197,7 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_DoubleShadeWithFeather_tess.cginc" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_TransClipping_Tess_StencilMask.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing_Mobile_StencilOut.shader" />
-    <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
+    <None Include="Assets\Resources\Photon\PhotonLibs\Photon3Unity3D.xml" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_ShadingGradeMap_tess.cginc" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_TransClipping.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -207,7 +211,7 @@
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\UCTS_ShadowCaster.cginc" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_TransClipping.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_Transparent_StencilOut.shader" />
-    <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
+    <None Include="Assets\Resources\Photon\PhotonUnityNetworking\link.xml" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_StencilMask.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_TransClipping_Tess.shader" />
@@ -464,12 +468,6 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -478,6 +476,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Resources\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -928,6 +932,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
+      <Project>{384F776A-D630-3F28-F5D1-9079468A002A}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
+      <Project>{603401F4-5EAF-B849-20C0-5A41557FA07A}</Project>
+      <Name>PhotonUnityNetworking.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{A9191127-B49B-B989-9D37-D092D076C070}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{E835B2FE-7A1B-9626-47A5-53BDDD9D8A25}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
       <Project>{1F215789-B336-4A73-137B-6B1F21FA9815}</Project>
       <Name>PhotonChat</Name>
@@ -939,22 +959,6 @@
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
       <Project>{7AECF83D-3BE1-71A5-E91E-6714A0F9A358}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{384F776A-D630-3F28-F5D1-9079468A002A}</Project>
-      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{A9191127-B49B-B989-9D37-D092D076C070}</Project>
-      <Name>PhotonRealtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{603401F4-5EAF-B849-20C0-5A41557FA07A}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{E835B2FE-7A1B-9626-47A5-53BDDD9D8A25}</Project>
-      <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

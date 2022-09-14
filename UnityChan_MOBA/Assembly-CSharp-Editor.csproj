@@ -54,6 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\Photon3Unity3D.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Download\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Editor\RemoveUnusedMaterialProperties.cs" />
@@ -323,12 +327,6 @@
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
@@ -349,6 +347,12 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Resources\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -821,6 +825,22 @@
       <Project>{CE8997DD-AC5E-1ED9-1C8B-8C8684DEC54A}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
+      <Project>{384F776A-D630-3F28-F5D1-9079468A002A}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
+      <Project>{603401F4-5EAF-B849-20C0-5A41557FA07A}</Project>
+      <Name>PhotonUnityNetworking.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{A9191127-B49B-B989-9D37-D092D076C070}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{E835B2FE-7A1B-9626-47A5-53BDDD9D8A25}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
       <Project>{1F215789-B336-4A73-137B-6B1F21FA9815}</Project>
       <Name>PhotonChat</Name>
@@ -832,22 +852,6 @@
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
       <Project>{7AECF83D-3BE1-71A5-E91E-6714A0F9A358}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{384F776A-D630-3F28-F5D1-9079468A002A}</Project>
-      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{A9191127-B49B-B989-9D37-D092D076C070}</Project>
-      <Name>PhotonRealtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{603401F4-5EAF-B849-20C0-5A41557FA07A}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{E835B2FE-7A1B-9626-47A5-53BDDD9D8A25}</Project>
-      <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,521 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'ko' Physical Memory: 16194 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+6738
+Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 105.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f14)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56280
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008820 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 97.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.707 seconds
+Domain Reload Profiling:
+	ReloadAssembly (708ms)
+		BeginReloadAssembly (91ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (492ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (111ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (301ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (98ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (137ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.011452 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.170 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1171ms)
+		BeginReloadAssembly (123ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (911ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (305ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (411ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (257ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3650 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (10.6 MB). Loaded Objects now: 4041.
+Memory consumption went from 165.9 MB to 155.3 MB.
+Total: 8.758300 ms (FindLiveObjects: 0.535400 ms CreateObjectMapping: 0.492300 ms MarkObjects: 2.706800 ms  DeleteObjects: 5.023200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 38707.694081 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye-EyeBall_00_00.mat
+  artifactKey: Guid(957f2f44eb1eaa547b4a4ca7f8ada4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye-EyeBall_00_00.mat using Guid(957f2f44eb1eaa547b4a4ca7f8ada4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd21a84a3574ad7f73d955a089132ac68') in 0.138501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.198724 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye_00/Eye_00_00.mat
+  artifactKey: Guid(0abb7812f3946c042bb64628c9d54d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye_00/Eye_00_00.mat using Guid(0abb7812f3946c042bb64628c9d54d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31257d36660f351b4b01e46e32404c86') in 0.021490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.215622 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye_01/Eye_01_00.mat
+  artifactKey: Guid(88421aee3ec89704bbbcb5fa2e4dac3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye_01/Eye_01_00.mat using Guid(88421aee3ec89704bbbcb5fa2e4dac3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e002f59b87aaa576da49187ee73e6b3') in 0.015552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.202933 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye_02/Eye_02_00.mat
+  artifactKey: Guid(e2224e89cc1e56d4cae3c4928f7a3259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Eye/Eye_02/Eye_02_00.mat using Guid(e2224e89cc1e56d4cae3c4928f7a3259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e9b40a0c3dc65aa3813c3a039ab7691') in 0.013221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.006177 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Eyeblow/Eyeblow_00_00.mat
+  artifactKey: Guid(e3cfe04bc23b69a4ca0f8ea6ee436a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Eyeblow/Eyeblow_00_00.mat using Guid(e3cfe04bc23b69a4ca0f8ea6ee436a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ea695c4c5949d7eb6331f0751d6d1cc') in 0.018902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.274509 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Faceskin/FaceSkin_00_00.mat
+  artifactKey: Guid(81ad7b800dfff9140a1863646943009e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Faceskin/FaceSkin_00_00.mat using Guid(81ad7b800dfff9140a1863646943009e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19c1b3b3a4b348839868fb754ec939ac') in 0.015269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.070190 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Hair/Hair_00/Hair_00_00.mat
+  artifactKey: Guid(40a40e230ee63494289e259648cc4538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Hair/Hair_00/Hair_00_00.mat using Guid(40a40e230ee63494289e259648cc4538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a1e09e8b5b4e109e1a29c57bd11d58f') in 0.025659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.193203 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Hair/Hair_01/Hair_01_00.mat
+  artifactKey: Guid(81704c3286a636b439adff085faa4aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Hair/Hair_01/Hair_01_00.mat using Guid(81704c3286a636b439adff085faa4aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ef4acfcacaeaac7e1fd68594a74f060') in 0.016393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.189363 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Hair/Hair_02/Hair_02_00.mat
+  artifactKey: Guid(4ea1b709b079f794fbcc4c36e6e50c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Hair/Hair_02/Hair_02_00.mat using Guid(4ea1b709b079f794fbcc4c36e6e50c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ba07965dac0629a5dd7201f5619816') in 0.015056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.909918 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/RigProp/RigProp_R_Umbrella_01_10.mat
+  artifactKey: Guid(ce19c2630d2085d43bb43fd85536829a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/RigProp/RigProp_R_Umbrella_01_10.mat using Guid(ce19c2630d2085d43bb43fd85536829a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1272155bfb24d40d8a991981f4d27129') in 0.023215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.267303 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Materials/Prop/Prop_03.mat
+  artifactKey: Guid(d56895390028dcb43aaf44d3da374a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Materials/Prop/Prop_03.mat using Guid(d56895390028dcb43aaf44d3da374a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012bf4f1f41264692f2d79f0f4be6339') in 0.014318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.326568 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog 1.png
+  artifactKey: Guid(fd6bf5aa01d3795448bfd12106090fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog 1.png using Guid(fd6bf5aa01d3795448bfd12106090fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c27ef57ab7d3ea76150b9f9299ce287') in 0.046075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog Card 11.png
+  artifactKey: Guid(8b60baad41ac0074aa538b51d1b11262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog Card 11.png using Guid(8b60baad41ac0074aa538b51d1b11262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da2b2825d93edd8a0e5978c5d4d6fbff') in 0.022053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog Card 10.png
+  artifactKey: Guid(a03cd14bebe699c4492852fddf866ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog Card 10.png using Guid(a03cd14bebe699c4492852fddf866ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd8058f22331c31aa74b17b05d87a1bf') in 0.025596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog Card 09.png
+  artifactKey: Guid(a709ca85981e57e4d883103b7d42460f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/_Catalog/Catalog Card 09.png using Guid(a709ca85981e57e4d883103b7d42460f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3980581b9f7c879f5715b58bff87489') in 0.024985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.201083 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/_PSD/(psd)Accessory_01.psd
+  artifactKey: Guid(1f07b3051fac06e4baa910d86f41e521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/_PSD/(psd)Accessory_01.psd using Guid(1f07b3051fac06e4baa910d86f41e521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ba87f162d1d4ef85d5da5e24261d4c3') in 0.034538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/_PSD/(psd)Hair_00_subAB.psd
+  artifactKey: Guid(cfcf4a994b699ab479b16ea148fff96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/_PSD/(psd)Hair_00_subAB.psd using Guid(cfcf4a994b699ab479b16ea148fff96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fc0e077201ab3bf42466be39297055a') in 0.017702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/_PSD/(psd)Hair_01.psd
+  artifactKey: Guid(a0a4c019ff5ead240841b6b23ba27710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/_PSD/(psd)Hair_01.psd using Guid(a0a4c019ff5ead240841b6b23ba27710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5797aba5ea871791e9aace3378978266') in 0.021355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.983839 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/accessory/Accessory_00_00.png
+  artifactKey: Guid(dae1277838ffc2c4aa651dc1de2e8bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/accessory/Accessory_00_00.png using Guid(dae1277838ffc2c4aa651dc1de2e8bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79a54f6ac9052a68dd9899a5cb15aef2') in 0.013944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/accessory/Hair_00_subAB_00.png
+  artifactKey: Guid(d27853066484b5b469b300e6dadca7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/accessory/Hair_00_subAB_00.png using Guid(d27853066484b5b469b300e6dadca7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f5cd6afc5a40371eed717d50327491c') in 0.015407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.244906 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/Costume/Costume_01_00.png
+  artifactKey: Guid(9259530b2ea3a274ea55b45507f28f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/Costume/Costume_01_00.png using Guid(9259530b2ea3a274ea55b45507f28f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b20ef859629a227090f8e0c37732fbd') in 0.016958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.284731 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/Eyeblow/Eyeblow_00_00.png
+  artifactKey: Guid(fb5b5461efe390241aac0f71dc502057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/Eyeblow/Eyeblow_00_00.png using Guid(fb5b5461efe390241aac0f71dc502057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c084c2415130298a4652f29b7788af2d') in 0.015584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.697046 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/Faceskin/FaceSkin_00_00.png
+  artifactKey: Guid(a902d7d09062b3f40a29c77520f0b503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/Faceskin/FaceSkin_00_00.png using Guid(a902d7d09062b3f40a29c77520f0b503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '657f021e2e0741cd7fd148b1fc94f7d4') in 0.011144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.375217 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/Hair/Hair_00_00.png
+  artifactKey: Guid(31d908767d650984dbaa2191babebfb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/Hair/Hair_00_00.png using Guid(31d908767d650984dbaa2191babebfb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b32cdcba354fc64618c21868ef8e54') in 0.016022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/Hair/Hair_02_14.png
+  artifactKey: Guid(db1100c715040cb42adc6514c75f4d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/Hair/Hair_02_14.png using Guid(db1100c715040cb42adc6514c75f4d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae11c6f56ed86283befb8f1354511ac') in 0.019266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.255702 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/Prop/Prop_03_Manteau_00_00.png
+  artifactKey: Guid(81d10b0c49683694596ff9045924d881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/Prop/Prop_03_Manteau_00_00.png using Guid(81d10b0c49683694596ff9045924d881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0211e530ce9db3746476786b4a74d583') in 0.013340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.328807 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Texture/RigProp/RigProp_R_Umbrella_01_10.png
+  artifactKey: Guid(c6f684dabe814a447bdb818c6f0711e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Texture/RigProp/RigProp_R_Umbrella_01_10.png using Guid(c6f684dabe814a447bdb818c6f0711e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b15d091d41116d6fb3e7408902ba9ec') in 0.012588 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.626544 seconds.
+  path: Assets/Resources/PlayerController_0.prefab
+  artifactKey: Guid(68067b792cb204242ad6f3d6663435d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_0.prefab using Guid(68067b792cb204242ad6f3d6663435d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57c6a6f30daf1b97381fef7211f0d782') in 0.080590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.574825 seconds.
+  path: Assets/Resources/PlayerController_2.prefab
+  artifactKey: Guid(582ffe4a66fbab240b4a26faf38dc9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_2.prefab using Guid(582ffe4a66fbab240b4a26faf38dc9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19def3dc92be263919b3e3a46b042586') in 0.058643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 165.696620 seconds.
+  path: Assets/Animation/Katarina/katarina_run.dae
+  artifactKey: Guid(9b9c0abe5d9f52e4e9506a966b4c0381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Katarina/katarina_run.dae using Guid(9b9c0abe5d9f52e4e9506a966b4c0381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05edb208e42c7ed53a8bc6c6b4680f36') in 0.057454 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012225 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.130 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1131ms)
+		BeginReloadAssembly (222ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (87ms)
+		EndReloadAssembly (801ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (287ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (342ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (207ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3582 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (10.5 MB). Loaded Objects now: 4095.
+Memory consumption went from 177.0 MB to 166.5 MB.
+Total: 8.155800 ms (FindLiveObjects: 0.315300 ms CreateObjectMapping: 0.202600 ms MarkObjects: 2.783700 ms  DeleteObjects: 4.853200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2572.695766 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.009545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.681712 seconds.
+  path: Assets/Resources/Photon
+  artifactKey: Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Photon using Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10903759db0c65ccacfd961dd0ccb291') in 0.006933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.161445 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.001903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 75.311121 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Axe_00_dummy.FBX
+  artifactKey: Guid(4f603373e0a26094182053027300dbc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Axe_00_dummy.FBX using Guid(4f603373e0a26094182053027300dbc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66bc214c5c8767c76c8ccc3e37e591a0') in 0.147227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Shovel_00_dummy.FBX
+  artifactKey: Guid(4af84749dae5b5c4d87038ca37a860a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/Models/Prop/Prop_R_Shovel_00_dummy.FBX using Guid(4af84749dae5b5c4d87038ca37a860a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b264fb9f099bb3d75fec6352ca8b7e') in 0.026648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.759401 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.002967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.338419 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.007852 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 64.093724 seconds.
+  path: Assets/Animation/Yuko.controller
+  artifactKey: Guid(d1d2f57b0ac1c3147999c02150bf930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Yuko.controller using Guid(d1d2f57b0ac1c3147999c02150bf930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04244fd2d023f799e1004568cd75d5b') in 0.011306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.573398 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.002296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.157303 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.002121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.928483 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.002800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 549.256284 seconds.
+  path: Assets/Resources/PlayerController_1.prefab
+  artifactKey: Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_1.prefab using Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e005c9b1af08e93f4288e90b5582a1e') in 0.005438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.149274 seconds.
+  path: Assets/Resources/PlayerController_1.prefab
+  artifactKey: Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_1.prefab using Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa8ce8e994db75dedb4b6f13218f683a') in 0.002686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Resources/PlayerController_4.prefab
+  artifactKey: Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_4.prefab using Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '452aa5942c1a652b76feb4b5c1d2cf79') in 0.001959 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.830645 seconds.
+  path: Assets/Resources/PlayerController_3.prefab
+  artifactKey: Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_3.prefab using Guid(52fe9cf705bfb3944a054587be3bd3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2748bca5625a387e816d30e0c7f202b3') in 0.001985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.168281 seconds.
+  path: Assets/Resources/PlayerController_1.prefab
+  artifactKey: Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_1.prefab using Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b1d4657694fe53aa77d8f27bea68d9c') in 0.002085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Resources/PlayerController_4.prefab
+  artifactKey: Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_4.prefab using Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '452aa5942c1a652b76feb4b5c1d2cf79') in 0.001814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.136836 seconds.
+  path: Assets/Resources/PlayerController_1.prefab
+  artifactKey: Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_1.prefab using Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '528d41dca26dbddf39831f306e494e9d') in 0.002404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Resources/PlayerController_4.prefab
+  artifactKey: Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_4.prefab using Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '452aa5942c1a652b76feb4b5c1d2cf79') in 0.002045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.400309 seconds.
+  path: Assets/Resources/PlayerController_1.prefab
+  artifactKey: Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_1.prefab using Guid(3260db333c06a494d8ed662e246cf97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '528d41dca26dbddf39831f306e494e9d') in 0.001837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Resources/PlayerController_4.prefab
+  artifactKey: Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PlayerController_4.prefab using Guid(241adf09b9e484b4d8a8979df4cb1d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '452aa5942c1a652b76feb4b5c1d2cf79') in 0.002035 seconds 

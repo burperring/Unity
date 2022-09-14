@@ -54,31 +54,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\Photon3Unity3D.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
+    <Analyzer Include="C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\RegionHandler.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\Editor\AccountService.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Extensions.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\WebRpc.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadbalancingPeer.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPingClasses.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Room.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\RoomInfo.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Player.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\Editor\PhotonEditorUtils.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadBalancingClient.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Region.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\AppSettings.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\SupportLogger.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\FriendInfo.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\PhotonAppSettings.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPing.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\ConnectionHandler.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\CustomTypesUnity.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\RegionHandler.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\Unity\Editor\AccountService.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\Extensions.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\WebRpc.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\LoadbalancingPeer.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\PhotonPingClasses.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\Room.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\RoomInfo.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\Player.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\Unity\Editor\PhotonEditorUtils.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\LoadBalancingClient.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\Region.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\AppSettings.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\SupportLogger.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\FriendInfo.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\Unity\PhotonAppSettings.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\PhotonPing.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\ConnectionHandler.cs" />
+    <Compile Include="Assets\Resources\Photon\PhotonRealtime\Code\CustomTypesUnity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Photon\PhotonRealtime\Code\changes-realtime.txt" />
-    <None Include="Assets\Photon\PhotonRealtime\Code\PhotonRealtime.asmdef" />
+    <None Include="Assets\Resources\Photon\PhotonRealtime\Code\changes-realtime.txt" />
+    <None Include="Assets\Resources\Photon\PhotonRealtime\Code\PhotonRealtime.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -339,12 +343,6 @@
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
@@ -365,6 +363,12 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Resources\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Resources\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

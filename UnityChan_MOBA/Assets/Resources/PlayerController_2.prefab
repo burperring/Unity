@@ -1264,6 +1264,7 @@ GameObject:
   - component: {fileID: 3443235709817325332}
   - component: {fileID: 1447539696953856156}
   - component: {fileID: 2919779488742137931}
+  - component: {fileID: 2616130099645752356}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -1299,7 +1300,7 @@ Animator:
   m_GameObject: {fileID: 1859727569889827079}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: dd4802cc7972ecb4699ed0b29916793f, type: 3}
-  m_Controller: {fileID: 9100000, guid: e8cea038023f8844c83d4b9eecbb3f41, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7229e45ff3cb1af4798079ea7b47a843, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1323,6 +1324,27 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: -0.05}
+--- !u!114 &2616130099645752356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859727569889827079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: isRun
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &1882753844573943446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5962,6 +5984,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4983862061491269125}
+  - {fileID: 2616130099645752356}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
