@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 4643176788962235226}
   - component: {fileID: 6821627564478741658}
   - component: {fileID: 6807040483958441355}
+  - component: {fileID: 7344648781048195741}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -226,6 +227,27 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: -0.05}
+--- !u!114 &7344648781048195741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180685745583208120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: isRun
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &203368958222316878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,7 +3216,7 @@ GameObject:
   - component: {fileID: 6251157050465105820}
   - component: {fileID: 4316183391800129908}
   - component: {fileID: 4316183391800129909}
-  - component: {fileID: -2994176931566255683}
+  - component: {fileID: 1281734751607778455}
   m_Layer: 0
   m_Name: PlayerController_4
   m_TagString: Player
@@ -3269,11 +3291,12 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: -2994176931566255683}
+  - {fileID: 1281734751607778455}
+  - {fileID: 7344648781048195741}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &-2994176931566255683
+--- !u!114 &1281734751607778455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

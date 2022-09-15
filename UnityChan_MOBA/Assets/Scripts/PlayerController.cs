@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using Photon.Pun;
 
 public class PlayerController : MonoBehaviour
@@ -8,11 +9,17 @@ public class PlayerController : MonoBehaviour
     public enum Type { Misaki, UC, UCWGS, UCWTD, Yuko };
     public Type selectCharType;
 
-    // Player set
+    [Header("Player set")]
     public float speed = 5.0f;
     private bool isMove;
 
+    [Header("Object set")]
     public Camera mainCamera;
+    public CapsuleCollider skillQ;
+    public CapsuleCollider skillW;
+    public CapsuleCollider skillE;
+    public CapsuleCollider skillR;
+
     private Animator animator;
     private Vector3 destination;
 
