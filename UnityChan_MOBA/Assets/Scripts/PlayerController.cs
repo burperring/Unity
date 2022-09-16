@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using Photon.Pun;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPunObservable
 {
     public enum Type { Misaki, UC, UCWGS, UCWTD, Yuko };
     public Type selectCharType;
 
     [Header("Player set")]
     public float speed = 5.0f;
+    public float health = 550f;
     private bool isMove;
 
     [Header("Object set")]
     public Camera mainCamera;
-    public CapsuleCollider skillQ;
-    public CapsuleCollider skillW;
-    public CapsuleCollider skillE;
-    public CapsuleCollider skillR;
+    public Image healthImg;
 
     private Animator animator;
     private Vector3 destination;
 
+    Vector3 curPos;
     Rigidbody rigid;
     PhotonView PV;
 
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         SetTransformPos();
+        PlayerSkill();
     }
 
     void FixedUpdate()
@@ -84,24 +85,133 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerMove()
     {
-        if(isMove)
+        if (PV.IsMine)
         {
-            var dir = destination - transform.position;
-            PV.RPC("PlayerLookRPC", RpcTarget.AllBuffered, dir);
-            rigid.MovePosition(transform.position + dir.normalized * speed * Time.deltaTime);
-        }
+            if (isMove)
+            {
+                var dir = destination - transform.position;
+                PV.RPC("PlayerLookRPC", RpcTarget.AllBuffered, dir);
+                rigid.MovePosition(transform.position + dir.normalized * speed * Time.deltaTime);
+            }
 
-        if(Vector3.Distance(transform.position, destination) <= 0.1f)
-        {
-            isMove = false;
-            animator.SetBool("isRun", false);
+            if (Vector3.Distance(transform.position, destination) <= 0.1f)
+            {
+                isMove = false;
+                animator.SetBool("isRun", false);
+            }
         }
+        else if ((transform.position - curPos).sqrMagnitude >= 100)
+            transform.position = curPos;
+        else
+            transform.position = Vector3.Lerp(transform.position, curPos, Time.deltaTime * 20);
     }
 
     [PunRPC]
     void PlayerLookRPC(Vector3 dir)
     {
         animator.transform.forward = dir;
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.SendNext(transform.position);
+        }
+        else
+        {
+            curPos = (Vector3)stream.ReceiveNext();
+        }
+    }
+    #endregion
+
+    #region Player skill controller
+    void PlayerSkill()
+    {
+        if (Input.GetButtonDown("SkillQ"))
+        {
+            UseSkillQ();
+        }
+        else if (Input.GetButtonDown("SkillW"))
+        {
+            UseSkillW();
+        }
+        else if (Input.GetButtonDown("SkillE"))
+        {
+            UseSkillE();
+        }
+        else if (Input.GetButtonDown("SkillR"))
+        {
+            UseSkillR();
+        }
+    }
+
+    void UseSkillQ()
+    {
+        switch(selectCharType)
+        {
+            case Type.Misaki:
+                break;
+            case Type.UC:
+                break;
+            case Type.UCWGS:
+                break;
+            case Type.UCWTD:
+                break;
+            case Type.Yuko:
+                break;
+        }
+    }
+
+    void UseSkillW()
+    {
+        switch (selectCharType)
+        {
+            case Type.Misaki:
+                break;
+            case Type.UC:
+                break;
+            case Type.UCWGS:
+                break;
+            case Type.UCWTD:
+                break;
+            case Type.Yuko:
+                break;
+        }
+    }
+
+    void UseSkillE()
+    {
+        switch (selectCharType)
+        {
+            case Type.Misaki:
+                break;
+            case Type.UC:
+                break;
+            case Type.UCWGS:
+                break;
+            case Type.UCWTD:
+                break;
+            case Type.Yuko:
+                break;
+        }
+    }
+
+    void UseSkillR()
+    {
+        switch (selectCharType)
+        {
+            case Type.Misaki:
+                break;
+            case Type.UC:
+                break;
+            case Type.UCWGS:
+                break;
+            case Type.UCWTD:
+                break;
+            case Type.Yuko:
+                break;
+        }
     }
     #endregion
 }
