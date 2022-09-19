@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 using Photon.Pun;
 
@@ -153,10 +152,13 @@ public class PlayerController : MonoBehaviour, IPunObservable
             case Type.Misaki:
                 break;
             case Type.UC:
+                animator.SetTrigger("doSkillQ");
                 break;
             case Type.UCWGS:
+                animator.SetTrigger("doSkillQ");
                 break;
             case Type.UCWTD:
+                animator.SetTrigger("doSkillQ");
                 break;
             case Type.Yuko:
                 break;
@@ -187,10 +189,13 @@ public class PlayerController : MonoBehaviour, IPunObservable
             case Type.Misaki:
                 break;
             case Type.UC:
+                animator.SetTrigger("doSkillE");
                 break;
             case Type.UCWGS:
+                animator.SetTrigger("doSkillE");
                 break;
             case Type.UCWTD:
+                animator.SetTrigger("doSkillE");
                 break;
             case Type.Yuko:
                 break;
