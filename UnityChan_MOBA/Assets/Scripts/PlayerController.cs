@@ -150,6 +150,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
         switch(selectCharType)
         {
             case Type.Misaki:
+                animator.SetTrigger("doSkillQ");
                 break;
             case Type.UC:
                 animator.SetTrigger("doSkillQ");
@@ -170,10 +171,13 @@ public class PlayerController : MonoBehaviour, IPunObservable
         switch (selectCharType)
         {
             case Type.Misaki:
+                animator.SetTrigger("doSkillW");
                 break;
             case Type.UC:
+                animator.SetTrigger("doSkillW");
                 break;
             case Type.UCWGS:
+                animator.SetTrigger("doSkillW");
                 break;
             case Type.UCWTD:
                 break;
@@ -187,6 +191,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
         switch (selectCharType)
         {
             case Type.Misaki:
+                animator.SetTrigger("doSkillE");
                 break;
             case Type.UC:
                 animator.SetTrigger("doSkillE");
