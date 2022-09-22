@@ -206,7 +206,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d1d2f57b0ac1c3147999c02150bf930c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -245,6 +245,18 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 1
     Name: isRun
+  - Type: 9
+    SynchronizeType: 1
+    Name: doSkillQ
+  - Type: 9
+    SynchronizeType: 1
+    Name: doSkillW
+  - Type: 9
+    SynchronizeType: 1
+    Name: doSkillE
+  - Type: 9
+    SynchronizeType: 1
+    Name: doSkillR
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -6671,7 +6683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4f603373e0a26094182053027300dbc2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4f603373e0a26094182053027300dbc2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6683,7 +6695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4f603373e0a26094182053027300dbc2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4f603373e0a26094182053027300dbc2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6695,7 +6707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4f603373e0a26094182053027300dbc2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4f603373e0a26094182053027300dbc2, type: 3}
       propertyPath: m_Name

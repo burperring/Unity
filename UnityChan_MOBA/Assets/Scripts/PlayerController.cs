@@ -162,6 +162,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
                 animator.SetTrigger("doSkillQ");
                 break;
             case Type.Yuko:
+                animator.SetTrigger("doSkillQ");
                 break;
         }
     }
@@ -182,6 +183,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
             case Type.UCWTD:
                 break;
             case Type.Yuko:
+                animator.SetTrigger("doSkillW");
                 break;
         }
     }
@@ -203,6 +205,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
                 animator.SetTrigger("doSkillE");
                 break;
             case Type.Yuko:
+                animator.SetTrigger("doSkillE");
                 break;
         }
     }
@@ -212,14 +215,17 @@ public class PlayerController : MonoBehaviour, IPunObservable
         switch (selectCharType)
         {
             case Type.Misaki:
+                animator.SetTrigger("doSkillR");
                 break;
             case Type.UC:
                 break;
             case Type.UCWGS:
+                animator.SetTrigger("doSkillR");
                 break;
             case Type.UCWTD:
                 break;
             case Type.Yuko:
+                animator.SetTrigger("doSkillR");
                 break;
         }
     }
