@@ -181,6 +181,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
                 animator.SetTrigger("doSkillW");
                 break;
             case Type.UCWTD:
+                animator.SetTrigger("doSkillW");
                 break;
             case Type.Yuko:
                 animator.SetTrigger("doSkillW");
@@ -218,11 +219,13 @@ public class PlayerController : MonoBehaviour, IPunObservable
                 animator.SetTrigger("doSkillR");
                 break;
             case Type.UC:
+                animator.SetTrigger("doSkillR");
                 break;
             case Type.UCWGS:
                 animator.SetTrigger("doSkillR");
                 break;
             case Type.UCWTD:
+                animator.SetTrigger("doSkillR");
                 break;
             case Type.Yuko:
                 animator.SetTrigger("doSkillR");
