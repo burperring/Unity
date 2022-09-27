@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 20
+  controlID: 29
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: AnimatorControllerTool
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -243,15 +243,15 @@ MonoBehaviour:
     y: 0
     width: 1062
     height: 548
-  m_MinSize: {x: 201, y: 221}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 20}
   - {fileID: 19}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -532,9 +532,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: d1d2f57b0ac1c3147999c02150bf930c, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: a77904ac905b85845ab2688cc7c12cc1, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -5096557810986041686, guid: d1d2f57b0ac1c3147999c02150bf930c, type: 2}
+  - m_Target: {fileID: -4800647197394948234, guid: a77904ac905b85845ab2688cc7c12cc1, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -675,18 +675,18 @@ MonoBehaviour:
     m_ExpandedIDs: 000000002461000026610000286100002a6100002c6100002e61000030610000326100003461000036610000386100003a6100003c610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Scenes
+      m_OriginalName: Scenes
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 24914
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -925,8 +925,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffset: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
       index: 0
@@ -958,8 +958,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffset: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Camera
       index: 1
@@ -1073,9 +1073,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.7680662, y: 1.6950417, z: -0.47952652}
+    m_Target: {x: 1.8251112, y: -0.016622856, z: 0.12909277}
     speed: 2
-    m_Value: {x: -2.7680662, y: 1.6950417, z: -0.47952652}
+    m_Value: {x: 1.8251112, y: -0.016622856, z: 0.12909277}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1122,13 +1122,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.19405347, y: 0.3904832, z: -0.08463882, w: 0.89600503}
+    m_Target: {x: 0.09893889, y: 0.7803575, z: -0.12777202, w: 0.604137}
     speed: 2
-    m_Value: {x: 0.19391441, y: 0.39180276, z: -0.0849246, w: 0.89536345}
+    m_Value: {x: 0.09912777, y: 0.77942944, z: -0.12762003, w: 0.60529053}
   m_Size:
-    m_Target: 0.90979475
+    m_Target: 1.395281
     speed: 2
-    m_Value: 311.095
+    m_Value: 3.666548
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1146,7 +1146,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.10041408, y: 0.7774241, z: -0.12850009, w: 0.6074862}
+  m_LastSceneViewRotation: {x: 0.19405347, y: 0.3904832, z: -0.08463882, w: 0.89600503}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1186,7 +1186,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aaefffff2e6c0000746c0000866c0000ae6c0000c86c0000cc6c0000ba6d0000206e00002e6e0000c26e0000
+      m_ExpandedIDs: 5645feff6245fefff26c0100006d0100386d0100586d0100ca6d0100066e0100126e0100b46e0100e66e0100366f01006e6f0100ba6f0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
