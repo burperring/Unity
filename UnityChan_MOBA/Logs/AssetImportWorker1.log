@@ -15,7 +15,7 @@ C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-13592
+12837
 Successfully changed project path to: C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
 C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/USER/Unity_Program/Unity/UnityChan_MOBA
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 93.30 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 95.07 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.7f1 (24e8595d6d43)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56092
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56040
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008416 seconds.
+Registered in 0.006558 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 90.60 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 83.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.620 seconds
+- Completed reload, in  0.591 seconds
 Domain Reload Profiling:
-	ReloadAssembly (620ms)
-		BeginReloadAssembly (73ms)
+	ReloadAssembly (592ms)
+		BeginReloadAssembly (68ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (434ms)
-			LoadAssemblies (70ms)
+		EndReloadAssembly (411ms)
+			LoadAssemblies (66ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (95ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (267ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (245ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (91ms)
+				RefreshPlugins (83ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (121ms)
-				ProcessInitializeOnLoadMethodAttributes (46ms)
+				ProcessInitializeOnLoadAttributes (110ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007274 seconds.
+Registered in 0.007002 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\USER\Unity_Program\Unity\UnityChan_MOBA\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.054 seconds
+- Completed reload, in  0.952 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1055ms)
-		BeginReloadAssembly (119ms)
+	ReloadAssembly (952ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (814ms)
-			LoadAssemblies (90ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (748ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (259ms)
+			SetupTypeCache (247ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (372ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (344ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (1ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (98ms)
-				ProcessInitializeOnLoadAttributes (227ms)
-				ProcessInitializeOnLoadMethodAttributes (31ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (208ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3650 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 95 unused Assets / (10.5 MB). Loaded Objects now: 4044.
 Memory consumption went from 166.1 MB to 155.6 MB.
-Total: 8.179200 ms (FindLiveObjects: 0.301500 ms CreateObjectMapping: 0.275600 ms MarkObjects: 2.720300 ms  DeleteObjects: 4.881200 ms)
+Total: 8.439100 ms (FindLiveObjects: 0.279000 ms CreateObjectMapping: 0.179400 ms MarkObjects: 3.202500 ms  DeleteObjects: 4.777400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -157,3 +157,121 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 41303.104211 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_License/UCL2.0/License Logo/Others/png/Light_Frame.png
+  artifactKey: Guid(f39a3fa0e95f83346b04d74bf8e6ef54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_License/UCL2.0/License Logo/Others/png/Light_Frame.png using Guid(f39a3fa0e95f83346b04d74bf8e6ef54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64138596c8b0609641a93421a1d73bc5') in 0.274027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.188023 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/_maskGuide.mat
+  artifactKey: Guid(b03f2410943eb5842942c17ef815be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/_maskGuide.mat using Guid(b03f2410943eb5842942c17ef815be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '692bc3590c6884e456d75cb088f79b5a') in 0.145439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 07.mat
+  artifactKey: Guid(39c8b14bbf83b5a439de029f7d3aac24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 07.mat using Guid(39c8b14bbf83b5a439de029f7d3aac24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d131b866a4638ba2153eaba6e0c86a9') in 0.032977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/catalog 4.mat
+  artifactKey: Guid(94828942fea17534790f07767143807d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/catalog 4.mat using Guid(94828942fea17534790f07767143807d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3d827ff41789cd4cb1ed8bb41e401a') in 0.032124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_06.mat
+  artifactKey: Guid(f1bfaeffa2660714b89d9abd06616fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_06.mat using Guid(f1bfaeffa2660714b89d9abd06616fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01897dc5984b8f248dc2fa16a0e8ad82') in 0.021785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 05.mat
+  artifactKey: Guid(7c386f109d6ac8e4faf99c5a630aa980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 05.mat using Guid(7c386f109d6ac8e4faf99c5a630aa980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e709353ed573b45ee6ff0b97a53f93e') in 0.022706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/catalog 2.mat
+  artifactKey: Guid(21520ae71dc56694b873aa697736df0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/catalog 2.mat using Guid(21520ae71dc56694b873aa697736df0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80bf7b289256e4c5f665564a1b851467') in 0.025684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 01.mat
+  artifactKey: Guid(eea98f9e1c0ee964f9c84ae1b0add9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 01.mat using Guid(eea98f9e1c0ee964f9c84ae1b0add9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de398883d40002e3763bb967de594568') in 0.022947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_12.mat
+  artifactKey: Guid(aacc73bb37e19044b87908c29a39b792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_12.mat using Guid(aacc73bb37e19044b87908c29a39b792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd95be1a57a781e5167ce83a051e0f4e8') in 0.017650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 09.mat
+  artifactKey: Guid(1961f6f72618b6d44ba1d4e3b406196f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 09.mat using Guid(1961f6f72618b6d44ba1d4e3b406196f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01f88486f3745824efff841a70915d05') in 0.023001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Install Spring Script 03.mat
+  artifactKey: Guid(84a80bf8634c50341b59dc0d4f733fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Install Spring Script 03.mat using Guid(84a80bf8634c50341b59dc0d4f733fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '796b0011baecd29f8368e0328d2a9b79') in 0.022593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Install Spring Script 06.mat
+  artifactKey: Guid(555e11f89af72bc4ca6f043d611a1eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Install Spring Script 06.mat using Guid(555e11f89af72bc4ca6f043d611a1eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20507485daa33cb4a82896ea6aa81e53') in 0.023124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/catalog 3.mat
+  artifactKey: Guid(77595ffef6549ba4db0c0a9498d53169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/catalog 3.mat using Guid(77595ffef6549ba4db0c0a9498d53169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '784d544f6ab11f1318634116a99139c2') in 0.022944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_09.mat
+  artifactKey: Guid(5d1a31077a239cd4bbcf96855c11a197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_09.mat using Guid(5d1a31077a239cd4bbcf96855c11a197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '121f6e59c9bdb9443b1b84f911f86e9c') in 0.018092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 11.mat
+  artifactKey: Guid(11a8fd46caf5f064b8a639bfb07ce505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 11.mat using Guid(11a8fd46caf5f064b8a639bfb07ce505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fac97632fdf09507449f6fce041d3e6') in 0.022316 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_05.mat
+  artifactKey: Guid(e4d9371a04676084287dd669690b54fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_05.mat using Guid(e4d9371a04676084287dd669690b54fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bbf602c4c732c77f308f0068675fc17') in 0.018947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 08.mat
+  artifactKey: Guid(f52a6bb3894086c49b0e3952223dc1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Catalog Card 08.mat using Guid(f52a6bb3894086c49b0e3952223dc1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ccd606268855b06a52929853e74f83f') in 0.024684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_13.mat
+  artifactKey: Guid(7d8b6835179da674ab2fd69801edf39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Materials/Guide_13.mat using Guid(7d8b6835179da674ab2fd69801edf39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab4541b2b3728195aa4bf726f9a20b2e') in 0.018417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.491740 seconds.
+  path: Assets/Download/SD Unity-Chan Haon Custom/_Guide/Texture/Materials/Install Spring Script 03.mat
+  artifactKey: Guid(9cbb059c0899a794f96a115d2f3a72a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Download/SD Unity-Chan Haon Custom/_Guide/Texture/Materials/Install Spring Script 03.mat using Guid(9cbb059c0899a794f96a115d2f3a72a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce477b5405e409fe0b8fd8bffab4de49') in 0.017578 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
