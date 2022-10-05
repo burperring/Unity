@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour, IPunObservable
     public Camera mainCamera;
     public Image healthImg;
 
+    [Header("UCWTD")]
+    public CapsuleCollider qSkillRange;
+
     private Animator animator;
     private Vector3 destination;
 
@@ -30,6 +33,9 @@ public class PlayerController : MonoBehaviour, IPunObservable
         animator = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
+
+        //UCWTD
+        qSkillRange = GetComponentInChildren<CapsuleCollider>();
 
         if (PV.IsMine)
             mainCamera = GetComponentInChildren<Camera>();
@@ -160,6 +166,8 @@ public class PlayerController : MonoBehaviour, IPunObservable
                 break;
             case Type.UCWTD:
                 animator.SetTrigger("doSkillQ");
+
+                qSkillRange.enabled = true;
                 break;
             case Type.Yuko:
                 animator.SetTrigger("doSkillQ");
