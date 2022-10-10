@@ -12,14 +12,27 @@ public class PlayerController : MonoBehaviour, IPunObservable
     [Header("Player set")]
     public float speed = 5.0f;
     public float health = 550f;
+    public float qSkillDamage;
+    public float qSkillTime;
+    public float wSkillDamage;
+    public float wSkillTime;
+    public float eSkillDamage;
+    public float eSkillTime;
+    public float rSkillDamage;
+    public float rSkillTime;
     private bool isMove;
+    private float qSkillTimeCheck = 99f;
+    private float wSkillTimeCheck = 99f;
+    private float eSkillTimeCheck = 99f;
+    private float rSkillTimeCheck = 99f;
 
     [Header("Object set")]
     public Camera mainCamera;
     public Image healthImg;
-
-    [Header("UCWTD")]
-    public CapsuleCollider qSkillRange;
+    public GameObject qSkillRange;
+    public GameObject wSkillRange;
+    public GameObject eSkillRange;
+    public GameObject rSkillRange;
 
     private Animator animator;
     private Vector3 destination;
@@ -33,9 +46,6 @@ public class PlayerController : MonoBehaviour, IPunObservable
         animator = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
-
-        //UCWTD
-        qSkillRange = GetComponentInChildren<CapsuleCollider>();
 
         if (PV.IsMine)
             mainCamera = GetComponentInChildren<Camera>();
@@ -135,19 +145,56 @@ public class PlayerController : MonoBehaviour, IPunObservable
     {
         if (Input.GetButtonDown("SkillQ"))
         {
-            UseSkillQ();
+            qSkillRange.SetActive(true);
+            wSkillRange.SetActive(false);
+            eSkillRange.SetActive(false);
+            rSkillRange.SetActive(false);
         }
         else if (Input.GetButtonDown("SkillW"))
         {
-            UseSkillW();
+            qSkillRange.SetActive(false);
+            wSkillRange.SetActive(true);
+            eSkillRange.SetActive(false);
+            rSkillRange.SetActive(false);
         }
         else if (Input.GetButtonDown("SkillE"))
         {
-            UseSkillE();
+            qSkillRange.SetActive(false);
+            wSkillRange.SetActive(false);
+            eSkillRange.SetActive(true);
+            rSkillRange.SetActive(false);
         }
         else if (Input.GetButtonDown("SkillR"))
         {
-            UseSkillR();
+            qSkillRange.SetActive(false);
+            wSkillRange.SetActive(false);
+            eSkillRange.SetActive(false);
+            rSkillRange.SetActive(true);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (selectCharType)
+        {
+            case Type.Misaki:
+                if (other.tag == "SkillQRange")
+                    UseSkillQ();
+                else if (other.tag == "SkillWRange")
+                    UseSkillW();
+                else if (other.tag == "SkillERange")
+                    UseSkillE();
+                else if (other.tag == "SkillRRange")
+                    UseSkillR();
+                break;
+            case Type.UC:
+                break;
+            case Type.UCWGS:
+                break;
+            case Type.UCWTD:
+                break;
+            case Type.Yuko:
+                break;
         }
     }
 
@@ -166,8 +213,6 @@ public class PlayerController : MonoBehaviour, IPunObservable
                 break;
             case Type.UCWTD:
                 animator.SetTrigger("doSkillQ");
-
-                qSkillRange.enabled = true;
                 break;
             case Type.Yuko:
                 animator.SetTrigger("doSkillQ");
