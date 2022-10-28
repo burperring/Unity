@@ -831,10 +831,6 @@
       <Project>{2BDE0D45-C3D6-D682-6526-5AFB3EEBF88F}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{6100CD10-F70F-1E50-DF1D-43CF7E4DC720}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{7F99D1D8-7A61-91F0-21DF-977532497262}</Project>
       <Name>PhotonRealtime</Name>
@@ -846,14 +842,6 @@
     <ProjectReference Include="PhotonUnityNetworking.csproj">
       <Project>{8CA32E20-BFE6-4BB8-5629-2936941F0574}</Project>
       <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{4F67E5EF-4F4E-7FBD-DA93-C4398AF64B99}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{535491B1-0B38-0054-1605-F12B1DF955F6}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
