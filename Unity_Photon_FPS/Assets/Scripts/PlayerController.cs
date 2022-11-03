@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
-using Hashtable = ExitGames.Client.Photon.Hashtable; // if you use photon we have two hashtable(original, photon)
 using Photon.Realtime;
+using Hashtable = ExitGames.Client.Photon.Hashtable; // if you use photon we have two hashtable(original, photon)
 
 public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
+    [SerializeField] Image healthbarImage;
+
+    [SerializeField] GameObject UI;
+
     [SerializeField] GameObject cameraHolder;
 
     [SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);
             Destroy(rigid);
+            Destroy(UI);
         }
     }
 
@@ -60,14 +66,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         Look();
         Move();
         Jump();
+        Shoot();
         SwitchWeapon();
 
-        if(Input.GetMouseButton(0))
-        {
-            items[itemIndex].Use();
-        }
-
-        if(transform.position.y < -10f) // Die if you fall out of the world
+        if(transform.position.y < -20f) // Die if you fall out of the world
         {
             Die();
         }
@@ -95,6 +97,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             rigid.AddForce(transform.up * jumpForce);
+        }
+    }
+
+    void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            items[itemIndex].Use();
         }
     }
 
@@ -159,7 +169,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
     {
-        if(!PV.IsMine && targetPlayer == PV.Owner)
+        if(changedProps.ContainsKey("itemIndex") && !PV.IsMine && targetPlayer == PV.Owner)
         {
             EquipItem((int)changedProps["itemIndex"]);
         }
@@ -181,22 +191,20 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public void TakeDamage(float damage)
     {
         // runs on the shooter's computer
-        PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+        PV.RPC(nameof(RPC_TakeDamage), PV.Owner, damage);
     }
 
     [PunRPC]
-    void RPC_TakeDamage(float damage)
+    void RPC_TakeDamage(float damage, PhotonMessageInfo info)
     {
-        // runs on everyone's computer
-        // (!PV.IsMine) check makes it only run on the victim's computer
-        if (!PV.IsMine)
-            return;
-
         currentHealth -= damage;
 
-        if(currentHealth <= 0)
+        healthbarImage.fillAmount = currentHealth / maxHealth;
+
+        if (currentHealth <= 0)
         {
             Die();
+            PlayerManager.Find(info.Sender).GetKill();
         }
     }
 
