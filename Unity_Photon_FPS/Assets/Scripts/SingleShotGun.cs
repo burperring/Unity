@@ -1,6 +1,7 @@
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class SingleShotGun : Gun
@@ -42,12 +43,22 @@ public class SingleShotGun : Gun
 
         if (colliders.Length != 0)
         {
+            // set bullet impact img
             GameObject bulletImpactObj = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, 
                 Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
-
+            
             Destroy(bulletImpactObj, 7f);
 
             bulletImpactObj.transform.SetParent(colliders[0].transform);
+
+            // set bullet effect(stone break effect)
+            GameObject bulletPSObj = Instantiate(bulletParticlePrefab, hitPosition, Quaternion.LookRotation(hitNormal));
+
+            bulletPSObj.GetComponent<ParticleSystem>().Play();
+
+            Destroy(bulletPSObj, 2f);
+
+            bulletPSObj.transform.SetParent(colliders[0].transform);
         }
     }
 }
