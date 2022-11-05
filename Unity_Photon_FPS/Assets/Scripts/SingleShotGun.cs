@@ -15,13 +15,24 @@ public class SingleShotGun : Gun
         PV = GetComponent<PhotonView>();
     }
 
+    public override void Reload()
+    {
+        currentBullet = maxBullet;
+    }
+
     public override void Use()
     {
-        Shoot();
+        if(shotSpeed <= currentTime)
+            Shoot();
     }
 
     void Shoot()
     {
+        if (currentBullet == 0)
+            return;
+
+        currentBullet--;
+
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         ray.origin = cam.transform.position;
 
@@ -34,6 +45,8 @@ public class SingleShotGun : Gun
             if(hit.collider.gameObject.tag != "Player")
                 PV.RPC(nameof(RPC_Shoot), RpcTarget.All, hit.point, hit.normal);
         }
+
+        currentTime = 0;
     }
 
     [PunRPC]

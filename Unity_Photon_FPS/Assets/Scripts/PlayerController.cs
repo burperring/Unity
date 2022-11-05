@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
     [SerializeField] Image healthbarImage;
 
+    [SerializeField] GameObject hitEffectImage;
+
     [SerializeField] GameObject UI;
 
     [SerializeField] GameObject cameraHolder;
@@ -67,12 +69,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         Move();
         Jump();
         Shoot();
+        Reload();
+        FallDie();
         SwitchWeapon();
-
-        if(transform.position.y < -20f) // Die if you fall out of the world
-        {
-            Die();
-        }
     }
 
     void Look()
@@ -102,9 +101,25 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     void Shoot()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             items[itemIndex].Use();
+        }
+    }
+
+    void Reload()
+    {
+        if(Input.GetButtonDown("Reload"))
+        {
+            items[itemIndex].Reload();
+        }
+    }
+
+    void FallDie()
+    {
+        if (transform.position.y < -20f) // Die if you fall out of the world
+        {
+            Die();
         }
     }
 
@@ -201,6 +216,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
         healthbarImage.fillAmount = currentHealth / maxHealth;
 
+        StartCoroutine(PlayerHitEffect());
+
         if (currentHealth <= 0)
         {
             Die();
@@ -211,5 +228,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     void Die()
     {
         playerManager.Die();
+    }
+
+    IEnumerator PlayerHitEffect()
+    {
+        hitEffectImage.SetActive(true);
+
+        yield return new WaitForSeconds(0.1f);
+
+        hitEffectImage.SetActive(false);
     }
 }

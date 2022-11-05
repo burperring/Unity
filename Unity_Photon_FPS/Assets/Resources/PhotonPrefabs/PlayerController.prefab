@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbarImage: {fileID: 1910110256464714835}
+  hitEffectImage: {fileID: 763857378431962840}
   UI: {fileID: 6091040794469416769}
   cameraHolder: {fileID: 4843512978434834561}
   mouseSensitivity: 3
@@ -405,6 +406,82 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &763857378431962840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2346889601850741044}
+  - component: {fileID: 5846683380514740796}
+  - component: {fileID: 1720465492392224582}
+  m_Layer: 9
+  m_Name: HitImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2346889601850741044
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763857378431962840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961721112726186376}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5846683380514740796
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763857378431962840}
+  m_CullTransparentMesh: 1
+--- !u!114 &1720465492392224582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763857378431962840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.27450982}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1910717661017587452
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,11 +509,11 @@ RectTransform:
   m_GameObject: {fileID: 1910717661017587452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1961721112726186376}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -692,6 +769,10 @@ MonoBehaviour:
   itemGameObject: {fileID: 8299591210445627335}
   bulletImpactPrefab: {fileID: 1798113655056857683, guid: 6974dd3aedc10b044ba79395f95d4128, type: 3}
   bulletParticlePrefab: {fileID: 100002, guid: 54dd9cb5740188a488b8baebbf19207c, type: 3}
+  maxBullet: 30
+  currentBullet: 30
+  shotSpeed: 0.15
+  currentTime: 0.15
   cam: {fileID: 374519121225056888}
 --- !u!114 &242333644594886235
 MonoBehaviour:
@@ -863,7 +944,7 @@ RectTransform:
   m_Children:
   - {fileID: 7061139139484533345}
   m_Father: {fileID: 1961721112726186376}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -939,6 +1020,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2346889601850741044}
   - {fileID: 5817090144208154143}
   - {fileID: 3155846678246372294}
   m_Father: {fileID: 374519122963121608}
@@ -1234,6 +1316,10 @@ MonoBehaviour:
   itemGameObject: {fileID: 2592065015117459588}
   bulletImpactPrefab: {fileID: 1798113655056857683, guid: 6974dd3aedc10b044ba79395f95d4128, type: 3}
   bulletParticlePrefab: {fileID: 100002, guid: 54dd9cb5740188a488b8baebbf19207c, type: 3}
+  maxBullet: 7
+  currentBullet: 7
+  shotSpeed: 0.6
+  currentTime: 0.6
   cam: {fileID: 374519121225056888}
 --- !u!114 &7559936398169332516
 MonoBehaviour:
