@@ -7,7 +7,9 @@ using Photon.Pun;
 public class Scoreboard : MonoBehaviourPunCallbacks
 {
     [SerializeField] Transform container;
+
     [SerializeField] GameObject scoreboardItemPrefab;
+
     [SerializeField] CanvasGroup canvasGroup;
 
     Dictionary<Player, ScoreboardItem> scoreboardItems = new Dictionary<Player, ScoreboardItem>();

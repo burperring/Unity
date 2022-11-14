@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     [SerializeField] GameObject cameraHolder;
 
-    [SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
+    [SerializeField] float mouseNormalSensitivity, mouseJoomSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
 
     [SerializeField] Item[] items;
 
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     // Char State
     const float maxHealth = 100f;
     float currentHealth = maxHealth;
+    bool isJoom;
 
     Rigidbody rigid;
     PhotonView PV;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         Look();
         Move();
         Jump();
+        Joom();
         Shoot();
         Reload();
         FallDie();
@@ -76,9 +78,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     void Look()
     {
-        transform.Rotate(Vector3.up * Input.GetAxisRaw("Mouse X") * mouseSensitivity);
+        transform.Rotate(Vector3.up * Input.GetAxisRaw("Mouse X") * (isJoom ? mouseJoomSensitivity : mouseNormalSensitivity));
 
-        verticalLookRotation += Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
+        verticalLookRotation += Input.GetAxisRaw("Mouse Y") * (isJoom ? mouseJoomSensitivity : mouseNormalSensitivity);
         verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
 
         cameraHolder.transform.localEulerAngles = Vector3.left * verticalLookRotation;
@@ -99,11 +101,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         }
     }
 
-    void Shoot()
+    void Joom()
     {
-        if (Input.GetMouseButton(0))
+        if(Input.GetButtonDown("Joom"))
         {
-            items[itemIndex].Use();
+            isJoom = isJoom ? false : true;
+
+            items[itemIndex].Joom();
         }
     }
 
@@ -112,6 +116,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         if(Input.GetButtonDown("Reload"))
         {
             items[itemIndex].Reload();
+        }
+    }
+
+    void Shoot()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            items[itemIndex].Use();
         }
     }
 

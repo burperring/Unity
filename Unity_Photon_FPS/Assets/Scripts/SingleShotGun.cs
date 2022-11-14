@@ -8,21 +8,76 @@ public class SingleShotGun : Gun
 {
     [SerializeField] Camera cam;
 
+    Animator anim;
+
     PhotonView PV;
 
     private void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
         PV = GetComponent<PhotonView>();
+
+        wMode = WeaponMode.Normal;
+    }
+
+    public override void Joom()
+    {
+        if (!isRifle)
+            return;
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            switch(wMode)
+            {
+                case WeaponMode.Normal:
+                    SniperMode();
+                    break;
+                case WeaponMode.Sniper:
+                    NormalMode();
+                    break;
+            }
+        }
+    }
+
+    void SniperMode()
+    {
+        // change weapon joom mode
+        wMode = WeaponMode.Sniper;
+
+        cam.fieldOfView = 20f;
+    }
+
+    void NormalMode()
+    {
+        wMode = WeaponMode.Normal;
+
+        cam.fieldOfView = 60f;
     }
 
     public override void Reload()
     {
+        if (currentBullet == maxBullet || isShot)
+            return;
+
+        isReload = true;
+
+        gunReloadSound.Play();
+
+        anim.SetTrigger("doReload");
+        
         currentBullet = maxBullet;
+
+        Invoke(nameof(ReloadOut), reloadSpeed);
+    }
+
+    void ReloadOut()
+    {
+        isReload = false;
     }
 
     public override void Use()
     {
-        if(shotSpeed <= currentTime)
+        if(!isShot && !isReload)
             Shoot();
     }
 
@@ -31,7 +86,14 @@ public class SingleShotGun : Gun
         if (currentBullet == 0)
             return;
 
+        // play gun sound each other
+        gunShotSound.PlayOneShot(gunShotSound.clip);
+
+        isShot = true;
+
         currentBullet--;
+
+        anim.SetTrigger("doShot");
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         ray.origin = cam.transform.position;
@@ -46,7 +108,25 @@ public class SingleShotGun : Gun
                 PV.RPC(nameof(RPC_Shoot), RpcTarget.All, hit.point, hit.normal);
         }
 
-        currentTime = 0;
+        // gun fire effect start
+        StartCoroutine(ShootEffectOn(0.05f));
+
+        Invoke(nameof(ShotEnd) , shotSpeed);
+    }
+
+    void ShotEnd()
+    {
+        isShot = false;
+    }
+
+    IEnumerator ShootEffectOn(float duration)
+    {
+        int num = Random.Range(0, gunFlashPrefab.Length);
+        gunFlashPrefab[num].SetActive(true);
+
+        yield return new WaitForSeconds(duration);
+
+        gunFlashPrefab[num].SetActive(false);
     }
 
     [PunRPC]

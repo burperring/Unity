@@ -4,21 +4,30 @@ using UnityEngine;
 
 public abstract class Gun : Item
 {
-    public abstract override void Use();
+    public abstract override void Joom();
     public abstract override void Reload();
+    public abstract override void Use();
 
-    // Impact img, particle
+    // Impact img, particle, audio
     public GameObject bulletImpactPrefab;
     public GameObject bulletParticlePrefab;
+    public GameObject[] gunFlashPrefab;
+    public AudioSource gunShotSound;
+    public AudioSource gunReloadSound;
 
     // Gun state
     public float maxBullet;
     public float currentBullet;
+    public float reloadSpeed;
     public float shotSpeed;
-    public float currentTime;
+    public bool isRifle;
+    public bool isReload;
+    public bool isShot;
 
-    private void FixedUpdate()
+    public enum WeaponMode
     {
-        currentTime += Time.deltaTime;
+        Normal,
+        Sniper
     }
+    public WeaponMode wMode;
 }
