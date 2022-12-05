@@ -44,6 +44,10 @@ public class SingleShotGun : Gun
         // change weapon joom mode
         wMode = WeaponMode.Sniper;
 
+        isJoom = true;
+
+        anim.SetBool("isJoom", isJoom);
+
         cam.fieldOfView = 20f;
     }
 
@@ -51,12 +55,16 @@ public class SingleShotGun : Gun
     {
         wMode = WeaponMode.Normal;
 
+        isJoom = false;
+
+        anim.SetBool("isJoom", isJoom);
+
         cam.fieldOfView = 60f;
     }
 
     public override void Reload()
     {
-        if (currentBullet == maxBullet || isShot)
+        if (currentBullet == maxBullet || isShot || isJoom)
             return;
 
         isReload = true;
@@ -77,8 +85,10 @@ public class SingleShotGun : Gun
 
     public override void Use()
     {
-        if(!isShot && !isReload)
+        if(!isShot && !isReload && !isJoom)
             Shoot();
+        else if (!isShot && !isReload && isJoom)
+            JoomShot();
     }
 
     void Shoot()
@@ -114,9 +124,43 @@ public class SingleShotGun : Gun
         Invoke(nameof(ShotEnd) , shotSpeed);
     }
 
+    void JoomShot()
+    {
+        if (currentBullet == 0)
+            return;
+
+        // play gun sound each other
+        gunShotSound.PlayOneShot(gunShotSound.clip);
+
+        isShot = true;
+
+        currentBullet--;
+
+        anim.SetBool("isJoomShot", true);
+
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
+        ray.origin = cam.transform.position;
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            // get player damage
+            hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage);
+
+            // if collider not player set bullet hole, bullet effect
+            if (hit.collider.gameObject.tag != "Player")
+                PV.RPC(nameof(RPC_Shoot), RpcTarget.All, hit.point, hit.normal);
+        }
+
+        // gun fire effect start
+        StartCoroutine(ShootEffectOn(0.05f));
+
+        Invoke(nameof(ShotEnd), shotSpeed);
+    }
+
     void ShotEnd()
     {
         isShot = false;
+        anim.SetBool("isJoomShot", false);
     }
 
     IEnumerator ShootEffectOn(float duration)

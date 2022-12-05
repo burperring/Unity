@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
 using Hashtable = ExitGames.Client.Photon.Hashtable; // if you use photon we have two hashtable(original, photon)
@@ -9,6 +10,8 @@ using Hashtable = ExitGames.Client.Photon.Hashtable; // if you use photon we hav
 public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
     [SerializeField] Image healthbarImage;
+
+    [SerializeField] TMP_Text ammoText;
 
     [SerializeField] GameObject hitEffectImage;
 
@@ -23,7 +26,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     // Item Info
     int itemIndex;
     int previousItemIndex = -1;
-
+    
     // Char Move
     float verticalLookRotation;
     bool grounded;
@@ -69,6 +72,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         Look();
         Move();
         Jump();
+        CheckAmmo();
         Joom();
         Shoot();
         Reload();
@@ -99,6 +103,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         {
             rigid.AddForce(transform.up * jumpForce);
         }
+    }
+
+    void CheckAmmo()
+    {
+        ammoText.text = items[itemIndex].currentBullet + " / " + items[itemIndex].maxBullet;
     }
 
     void Joom()

@@ -15,15 +15,6 @@ public abstract class Gun : Item
     public AudioSource gunShotSound;
     public AudioSource gunReloadSound;
 
-    // Gun state
-    public float maxBullet;
-    public float currentBullet;
-    public float reloadSpeed;
-    public float shotSpeed;
-    public bool isRifle;
-    public bool isReload;
-    public bool isShot;
-
     public enum WeaponMode
     {
         Normal,
