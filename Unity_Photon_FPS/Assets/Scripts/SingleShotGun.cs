@@ -121,7 +121,7 @@ public class SingleShotGun : Gun
         // gun fire effect start
         StartCoroutine(ShootEffectOn(0.05f));
 
-        Invoke(nameof(ShotEnd) , shotSpeed);
+        Invoke(nameof(ShotEnd), shotSpeed);
     }
 
     void JoomShot()
